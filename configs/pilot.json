@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "model_id": "optical-dysthe-127-v1",
+  "status": "planning_only",
+  "methods": [
+    "fno",
+    "hybrid"
+  ],
+  "candidates": [
+    "reduced",
+    "deeponet",
+    "active-gp"
+  ],
+  "initial_families": [
+    "periodic-packet",
+    "perturbed-stripe"
+  ],
+  "family_bounds": null,
+  "horizon": null,
+  "reference_grid": null,
+  "reference_dt": null,
+  "acceptance_thresholds": null,
+  "split_unit": "initial_condition_id",
+  "locked_test": true,
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "early_stopping": {
+    "enabled": true,
+    "monitor": "validation_rollout_relative_l2",
+    "patience": null,
+    "minimum_epochs": null,
+    "minimum_improvement": null
+  },
+  "checkpoint": {
+    "save_best": true,
+    "save_last": true,
+    "save_optimizer_and_rng": true
+  }
+}

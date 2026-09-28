@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dysthe-experiments"
+version = "0.0.1"
+description = "Dataset campaigns, training protocols, held-out evaluation, and cluster orchestration."
+requires-python = ">=3.10"
+dependencies = ["dysthe-core @ git+https://github.com/matasvai/dysthe-core.git@45b2898231aa29e084a6b175d341807be52bd9a0", "dysthe-learning @ git+https://github.com/matasvai/dysthe-learning.git@975bdb9c561883f6ffb9bbf82d4ce5d47acedeba"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

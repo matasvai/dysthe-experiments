@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "template_only",
+  "run_id": null,
+  "code_commits": {
+    "dysthe-core": null,
+    "dysthe-learning": null,
+    "dysthe-experiments": null
+  },
+  "config_sha256": null,
+  "dataset_manifest_sha256": null,
+  "reference_audit": null,
+  "training": {
+    "seed": null,
+    "selected_epoch": null,
+    "stopping_reason": null,
+    "wall_seconds": null,
+    "hardware": null,
+    "environment": null
+  },
+  "artifacts": []
+}
