@@ -17,3 +17,11 @@ class Plan(unittest.TestCase):
             plan[key]=value
             with self.subTest(key=key), self.assertRaises(ValueError):
                 validate_plan(plan)
+
+    def test_rejects_wrong_physics_and_coordinates(self):
+        for key,value in [('model_id','optical-dysthe-127-v1'), ('physical_system','plasma'),
+                          ('schema_version',1), ('axis_order',['t','x','y','z'])]:
+            plan=copy.deepcopy(self.plan)
+            plan[key]=value
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                validate_plan(plan)

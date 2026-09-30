@@ -1,17 +1,19 @@
-# Campaign migration
+# Water-wave campaign migration
 
-Source snapshot: matasvai/dysthe-pinn `bca8aa3833d79e5030ed53efab3bd94c9480aa54`.
+Use only the qualified `water-wave-dysthe-spatial-v1` core revision. No previous
+campaign from another physical setting is a valid configuration or dataset.
 
-`codex/reference-campaign` first combines the accepted core port with explicit
-initial-family parameter bounds and resolved short horizons. Do not copy the
-plasma overnight configuration into this optical campaign.
+`codex/reference-campaign` defines initial-packet bounds, epsilon, periodic tau
+domain, resolution, propagation horizon and step `dxi`. All pilot values remain
+unqualified placeholders until refinement checks pass. A longer propagation
+distance is a testable extension, not an automatic training improvement.
 
-`codex/benchmark-suite` owns common splits, metric definitions, equal-cost/error
-comparisons and seed aggregation. Port applicable `field_fno/training.py`,
-`evaluation.py`, `campaign.py` pieces only after removing model assumptions.
+`codex/benchmark-suite` owns whole-initial-condition splits, metric definitions,
+matched-error costs and seed aggregation. Audit reusable training utilities;
+implement water-wave adapters and losses rather than copying prior assumptions.
 
-Port cluster scripts after local smoke runs work. `gpu2` is the user's current
-single-GPU target; account/module/env details remain site-specific. Keep the
-entrypoint a short `sbatch` command and log stage, progress, stopping reason,
-run directory and how to resume. No executable Slurm job is supplied yet because
-the underlying training/reference commands have not been migrated.
+Port cluster scripts after local smoke runs work. `gpu2` remains the intended
+single-GPU target; environment details are site-specific. Keep submission to
+one short sbatch command and log stage, progress, stopping reason, run directory
+and resume instructions. No runnable job is supplied before the core and
+training implementations are ready.

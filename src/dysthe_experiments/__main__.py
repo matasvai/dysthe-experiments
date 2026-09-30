@@ -1,11 +1,12 @@
 import argparse
 import json
 from pathlib import Path
-from dysthe_core import MODEL_ID
+from dysthe_core import MODEL_ID, require_water_wave_model
 from dysthe_learning import METHODS
 
 def validate_plan(plan):
-    if plan.get('schema_version') != 1 or plan.get('model_id') != MODEL_ID:
+    require_water_wave_model(plan)
+    if plan.get('schema_version') != 2 or plan.get('axis_order') != ['xi', 'tau']:
         raise ValueError('Unsupported campaign schema/model')
     if plan.get('status') != 'planning_only':
         raise ValueError('Execution is not implemented; only planning_only is supported')

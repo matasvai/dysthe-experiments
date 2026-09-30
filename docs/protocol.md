@@ -1,6 +1,6 @@
 # Promotion gates
 
-1. **Reference:** choose parameter bounds and horizon; independently check time,
+1. **Reference:** choose parameter bounds and horizon; independently check propagation-step,
    grid and domain sensitivity, projection error, and resolved spectrum.
 2. **Dataset:** freeze complete initial-condition groups across train/validation/
    test; include family holdouts. Hash arrays and store exact core commits.
@@ -9,8 +9,8 @@
 4. **Model selection:** tune using training and validation only. Use validation
    rollouts for early stopping, record the stopping rule and selected epoch.
 5. **Final evaluation:** freeze weights and settings before touching the test set.
-   Compare complex-field and phase errors, weighted spatial L1/L2/L4/Linf,
-   growth/event timing, invariant drift, spectral errors and runtime. Report
+   Compare complex-field and phase errors, weighted profile L1/L2/L4/Linf over tau,
+   growth/focusing distance, invariant drift, spectral errors and runtime. Report
    per-case distributions and multiple seeds, including failures. Set numerical
    acceptance thresholds before inspecting final test results.
 6. **Paper:** promote only traceable results with data/config/checkpoint hashes,

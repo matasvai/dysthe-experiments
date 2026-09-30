@@ -1,3 +1,8 @@
+## Water-wave scope
+
+- Equation/model ID and water-wave source provenance:
+- Confirm this stays within SCOPE.md; no unrelated physical setting:
+
 ## Change and reason
 
 ## Validation

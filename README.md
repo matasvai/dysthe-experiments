@@ -1,5 +1,8 @@
 # dysthe-experiments
 
+**Scope: water-wave Dysthe only.** See [SCOPE.md](SCOPE.md) for the fixed
+physical model, exclusions and enforced boundaries.
+
 Dataset campaigns, training protocols, held-out evaluation, and cluster orchestration.
 
 **Status: migration scaffold.** No solver or trained predictor has been ported

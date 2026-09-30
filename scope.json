@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "model_id": "water-wave-dysthe-spatial-v1",
+  "physical_system": "deep-water-gravity-waves",
+  "formulation": "spatial-free-surface-envelope",
+  "profile_dimensions": 1,
+  "axis_order": [
+    "xi",
+    "tau"
+  ],
+  "case_schema_version": 2
+}

@@ -8,6 +8,8 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
+from check_scope import check
+check(ROOT)
 if (ROOT / 'src').exists() and not compileall.compile_dir(ROOT / 'src', quiet=1):
     raise SystemExit('Python source compilation failed')
 for name in subprocess.check_output(['git', 'ls-files'], cwd=ROOT, text=True).splitlines():

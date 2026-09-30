@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "model_id": "optical-dysthe-127-v1",
+  "schema_version": 2,
+  "model_id": "water-wave-dysthe-spatial-v1",
   "status": "planning_only",
   "methods": [
     "fno",
@@ -12,13 +12,11 @@
     "active-gp"
   ],
   "initial_families": [
-    "periodic-packet",
-    "perturbed-stripe"
+    "periodic-wave-packet",
+    "modulated-wavetrain"
   ],
   "family_bounds": null,
-  "horizon": null,
   "reference_grid": null,
-  "reference_dt": null,
   "acceptance_thresholds": null,
   "split_unit": "initial_condition_id",
   "locked_test": true,
@@ -38,5 +36,12 @@
     "save_best": true,
     "save_last": true,
     "save_optimizer_and_rng": true
-  }
+  },
+  "physical_system": "deep-water-gravity-waves",
+  "axis_order": [
+    "xi",
+    "tau"
+  ],
+  "propagation_horizon": null,
+  "reference_dxi": null
 }

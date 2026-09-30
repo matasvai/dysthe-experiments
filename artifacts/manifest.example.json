@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "status": "template_only",
   "run_id": null,
   "code_commits": {
@@ -18,5 +18,7 @@
     "hardware": null,
     "environment": null
   },
-  "artifacts": []
+  "artifacts": [],
+  "model_id": "water-wave-dysthe-spatial-v1",
+  "physical_system": "deep-water-gravity-waves"
 }

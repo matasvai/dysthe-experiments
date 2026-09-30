@@ -15,3 +15,7 @@ manifests. Change shared contracts in core first, then update downstream pins.
 Never commit credentials, full cluster home paths, raw fields, or checkpoints.
 This scaffold does not choose a software license for future research code.
 Agree on a license with collaborators before describing the project as open source.
+
+Read [SCOPE.md](SCOPE.md) before proposing changes. A contribution that changes
+the physical setting is out of scope and must not be merged without a direct
+new instruction from the human project owner. Preserve water-wave provenance.
