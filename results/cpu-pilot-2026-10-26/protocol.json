@@ -1,0 +1,15 @@
+{
+  "model_id": "water-wave-dysthe-spatial-v1",
+  "physical_system": "deep-water-gravity-waves",
+  "status": "Fixed before neural training; bounded exploratory pilot, not a power analysis",
+  "operator_selection": "Minimize the mean across seeds of the worst validation-case H1 relative error at xi=0.5, with checkpoint selection by the same validation metric. Test fields and longer horizons do not select a method or checkpoint.",
+  "operator_candidates": ["fno", "pino"],
+  "operator_input_groups": {"train": 12, "validation": 3, "test": 3},
+  "pinn_selection": "Compare validation-case endpoint H1 errors at xi=2 separately. Each PINN checkpoint uses residual validation only. Per-instance optimization is required for every new field; PINNs are not ranked as operators.",
+  "pinn_candidates": ["scratch", "nls_warm", "slabs"],
+  "provisional_accuracy_gate": {"relative_l2": 0.01, "relative_h1": 0.05, "relative_peak": 0.05},
+  "gate_interpretation": "All held-out fields and both seeds at the claimed horizon. Passing is empirical, not a mathematical certificate. The A100 candidate may be selected for further study without passing; any failure must be reported.",
+  "cpu_budget": "400 Adam updates per operator or per-instance PINN; slabs divide 400 updates across 4 sequential solves. NLS continuation uses first quarter of updates at epsilon=0. Wall times are measured separately.",
+  "controls": ["refined numerical Dysthe", "coarse numerical Dysthe", "NLS epsilon=0"],
+  "deferred": ["L-BFGS and self-scaled Broyden comparison", "learned long-distance physical validation against HOS or lab data", "larger initial-field distribution", "rigorous interval or a-posteriori existence certification"]
+}

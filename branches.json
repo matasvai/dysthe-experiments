@@ -2,7 +2,8 @@
   "integration": "main",
   "workstreams": [
     "codex/reference-campaign",
-    "codex/benchmark-suite"
+    "codex/benchmark-suite",
+    "codex/cpu-pilot-a100"
   ],
-  "status": "Prepared starting points; implementations are not implied."
+  "status": "CPU pilot workstream added; measured qualification and limitations are recorded in experiment results."
 }

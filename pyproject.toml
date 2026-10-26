@@ -7,7 +7,10 @@ name = "dysthe-experiments"
 version = "0.0.2"
 description = "Dataset campaigns, training protocols, held-out evaluation, and cluster orchestration."
 requires-python = ">=3.10"
-dependencies = ["dysthe-core @ git+https://github.com/matasvai/dysthe-core.git@10889fed1d20f02f8318d281322585284711eadd", "dysthe-learning @ git+https://github.com/matasvai/dysthe-learning.git@27f94b0ebd7c42de3401c7430a380a2378b233b2"]
+dependencies = ["dysthe-core @ git+https://github.com/matasvai/dysthe-core.git@a47a42321475feb6bc55031f4b752419f4b7fda9", "dysthe-learning @ git+https://github.com/matasvai/dysthe-learning.git@db7274f8cfe959cf187351f56b3dd4bf89f0e9b4"]
+
+[project.optional-dependencies]
+pilot = ["numpy>=1.24", "scipy>=1.10", "torch>=2.6,<3", "matplotlib>=3.7"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
