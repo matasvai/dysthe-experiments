@@ -3,7 +3,8 @@
   "workstreams": [
     "codex/reference-campaign",
     "codex/benchmark-suite",
-    "codex/cpu-pilot-a100"
+    "codex/cpu-pilot-a100",
+    "codex/long-distance-a100"
   ],
-  "status": "CPU pilot workstream added; measured qualification and limitations are recorded in experiment results."
+  "status": "Measured CPU pilot retained; staged long-distance reference and A100 slab-PINN experiments are proposed and locally workflow-tested."
 }

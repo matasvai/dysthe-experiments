@@ -41,3 +41,22 @@ results are retained. These calculations do not prove global existence.
 
 This executable workstream is `codex/cpu-pilot-a100`. Core and learning are
 pinned to published commits. No GPU run or cluster job submission is claimed.
+
+## Staged long-distance experiments
+
+The `codex/long-distance-a100` workstream adds numerical horizons
+**xi=4, 8, 16, 32, 64** and slab-PINN horizons **xi=4, 8, 16**, with independent
+grid/step refinement, H2 and spectral diagnostics, NLS controls, perturbation
+sensitivity, and packet-domain doubling. Each task stops promotion after a
+failed gate; incomplete and failed cases remain visible in the summary.
+
+- [Cluster run guide and test goals](docs/long-distance.md)
+- [Proposed experiment protocol (PDF)](protocols/long-distance/protocol.pdf)
+- [Editable protocol](protocols/long-distance/protocol.tex)
+- [A100 configuration](configs/long-distance-a100.json) and [CPU workflow smoke](configs/long-distance-smoke.json)
+- [Print or submit the dependency plan](cluster/submit-long-distance.sh)
+- [CPU workflow verification and retained failures](results/long-distance-workflow-2026-10-26/verification.json)
+
+Run `bash cluster/submit-long-distance.sh` to print the job plan. Only the
+explicit `--submit` option submits jobs. These are prepared experiments;
+long-distance A100 performance and global existence are not established.

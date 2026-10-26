@@ -1,0 +1,281 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{royden-report}
+\usepackage{array}
+\title{Long-distance water-wave Dysthe experiments}
+\author{Experimental protocol}
+\date{26 October 2026}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\Dabs}{\lvert D_\tau\rvert}
+\begin{document}
+\maketitle
+
+\noindent\textbf{Status.} Proposed cluster experiments, following a completed CPU
+pilot. This document contains no A100 training results and no claim of global
+existence. Its objective is to determine how far resolved numerical solutions
+can be followed, and how accurately a slab PINN reproduces their nonlinear
+evolution across several initial wave profiles. A failed accuracy or resolution
+check is a result to retain, not a reason to omit a case.
+
+\section{Equation and meaning of distance}
+
+The approved model, \texttt{water-wave-dysthe-spatial-v1}, is the spatial
+free-surface-envelope equation
+\begin{equation}\label{eq:model}
+\begin{split}
+u_\xi={}&-\mathrm{i}u_{\tau\tau}-\mathrm{i}|u|^2u\\
+&-\epsilon\bigl(8|u|^2u_\tau+2u^2\overline{u_\tau}
+                  +2\mathrm{i}u\Dabs(|u|^2)\bigr).
+\end{split}
+\end{equation}
+Here \(u\colon[0,\Xi]\times\mathbb R/(L\mathbb Z)\to\mathbb C\),
+\(\xi\) is propagation distance, and \(\tau\) is retarded time. The Fourier
+multiplier of \(\Dabs\) is \(|k|\), with zero value at \(k=0\).
+The free-surface coefficient of \(u^2\overline{u_\tau}\) is \(2\); a
+potential-envelope equation is a different model. Equation~\eqref{eq:model}
+and its formal weakly nonlinear, narrowband setting follow the spatial
+formulation of Fedele and Dutykh~\cite{fedele}.
+
+If \(X\) and \(T\) denote dimensional distance and time, the carrier
+coordinates satisfy \(x=k_0X\), \(t=\omega_0T\). The present normalization is
+\[
+\xi=\epsilon^2k_0X,\qquad
+\tau=\epsilon(2k_0X-\omega_0T),\qquad B=\epsilon u.
+\]
+Consequently, reporting metres requires a specified carrier wavenumber
+\(k_0\) and \(\epsilon>0\). The limit \(\epsilon=0\) in
+\eqref{eq:model} defines an NLS control in the same computational coordinates;
+it is not an invertible physical coordinate transformation at zero steepness.
+
+A constant profile of amplitude \(A>0\) has solution
+\(u(\xi)=A\exp(-\mathrm{i}A^2\xi)\). Define the nonlinear distance scale by
+\[
+L_{\mathrm{NL}}=A^{-2},\qquad n_{\mathrm{NL}}(\xi)=A^2\xi.
+\]
+One such length corresponds to one radian of uniform-wave nonlinear phase;
+it is not a recurrence period. The machine diagnostics use
+\(A=\norm{u(0)}_\infty\), explicitly labelled as a peak-based comparison scale.
+For sideband perturbations this differs from the prescribed background
+amplitude; background-based distances must be labelled separately if reported.
+For example, if \(A=0.5\), the distances \(4,8,16,32,64\) correspond to
+\(1,2,4,8,16\) nonlinear lengths. These are research horizons, not guaranteed
+physical validity intervals.
+
+\section{Cases and staged comparisons}
+
+Use the new A100 campaign's 36 deterministic initial-condition groups:
+12 localized packets, 12 sideband-perturbed waves, and 12 random band-limited
+profiles. The existing split assigns 24 groups to training, six to validation,
+and six to testing. The long-distance study evaluates all 12 validation and
+test groups; refinements and perturbations retain their parent group identity.
+For PINNs, these names define evaluation cohorts: every new inlet is fitted
+individually, without reference trajectory labels. They do not imply learned
+operator generalization.
+
+\begin{center}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.20\linewidth}>{\raggedright\arraybackslash}p{0.48\linewidth}@{}}
+\toprule
+Experiment & Horizons \(\Xi\) & Question answered\\
+\midrule
+Reference qualification & \(4,8,16,32,64\) & Can the same trajectory be
+resolved independently in profile grid and propagation step?\\[3pt]
+Slab PINN & \(4,8,16\) & How far does a neural approximation remain accurate
+without resets to reference data?\\[3pt]
+NLS control & Matched reference horizons & Which changes arise from the
+higher-order Dysthe terms?\\[3pt]
+Sensitivity & \(4,8,16\) & Do nearby inlets separate
+reproducibly under a specified perturbation?\\[3pt]
+Packet domain check & \(4,8,16,32,64\) & Are periodic copies
+affecting the localized-packet evolution?\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Numerical and neural horizons must be reported separately. A resolved
+reference at \(\xi=64\) does not validate a PINN beyond its evaluated interval.
+Each PINN horizon is fitted independently from the same original inlet;
+checkpoint restart continues that fit, while the next horizon starts its own
+declared fit. There are 108 proposed fits: 12 inlets, three seeds and three
+horizons. A longer fit receives proportionally more total updates.
+Longer horizons are interpreted only while their independent checks pass.
+Preserve the first failure distance and the last qualified horizon. Retain
+all seeds, including failed fits; do not extend only successful cases and then
+report the surviving subset as the original campaign.
+
+\section{Numerical reference and diagnostics}
+
+\subsection{Resolution and regularity}
+
+Use the validated Fourier reference solver with integrating-factor RK4.
+For each case, use \(N=1024\), step \(h=0.00125\), and stored spacing
+\(\Delta\xi=0.05\). Compare independently against \(N/2\) at the same step
+and against \(2h\) at the same grid. Compare on common stations. Let \(v\)
+be the refined reference and \(w\) a
+comparison. For \(s=0,1,2\), record
+\[
+E_s(\xi)=\frac{\norm{w(\xi)-v(\xi)}_{H^s}}
+                       {\norm{v(\xi)}_{H^s}},\qquad
+\norm{v}_{H^s}^2=L\sum_k(1+k^2)^s|\widehat v_k|^2.
+\]
+Here Fourier coefficients use the \(1/N\) forward normalization. Decisions
+use the maximum over evaluated stations, not only the endpoint. Each independent
+comparison must satisfy \(E_0\leq10^{-5}\), \(E_1\leq10^{-4}\) and
+\(E_2\leq10^{-3}\). Also require action drift at most \(10^{-6}\) and spectral
+tail action fraction at most \(10^{-8}\), where the tail consists of modes
+at or above 80\% of the declared Fourier cutoff. These are numerical study tolerances,
+not theorem hypotheses or physical thresholds.
+
+Track \(\norm{u}_\infty\), \(\norm{u}_{H^1}\),
+\(\norm{u}_{H^2}\), and
+\(R_s(\xi)=\norm{u(\xi)}_{H^s}/\norm{u(0)}_{H^s}\).
+Record spectral-edge energy and mass drift as complementary diagnostics.
+A finite-dimensional Fourier solution is smooth by construction; bounded
+sampled norms on one grid do not certify continuum regularity. Increasing
+derivative norms require refinement and tail inspection before physical
+interpretation. Conservation alone does not establish trajectory accuracy.
+
+\subsection{Focusing, recurrence and spectrum}
+
+Record the maximum amplitude against distance, candidate focusing locations,
+spectral mean, spectral width, sideband asymmetry, and distances from the
+initial profile. Distinguish raw complex-field error from a diagnostic that
+removes a global phase; alignment must never conceal
+phase errors in the main accuracy gate. If repeated focusing and recovery
+occur, determine whether event locations and amplitudes survive refinement.
+The target is to resolve repeated events where they exist, not to manufacture
+a recurrence count in every case. Armaroli, Brunetti and Kasparian~\cite{armaroli}
+motivate examining recurrence and transient spectral shifts in deep-water
+Dysthe dynamics; their reduced-model results do not predict a universal
+recurrence interval for these inlets.
+
+The event finder marks interior amplitude peaks with prominence at least 2\%
+of the initial peak. Recurrence candidates are local minima of phase-aligned
+relative \(L^2\) distance no larger than 5\%, with prominence 0.02. These
+thresholded, sampled events are candidates for refined inspection, not exact
+continuous event times; no translation is removed.
+
+Run the NLS control with identical inlet, computational coordinates and
+numerical qualification. Compare the full complex field, focusing events and
+spectra. A discrepancy measures the consequence of the model terms at these
+parameters; it does not by itself establish that Dysthe is closer to a
+laboratory wave or the full water-wave equations.
+
+\subsection{Sensitivity and packet-domain checks}
+
+For a recorded smooth direction \(h\), normalized by
+\(\norm{h}_{H^1}=1\), compute the centered directional response
+\[
+q_\delta(\xi)=\frac{S_\xi(u_0+\delta h)-S_\xi(u_0-\delta h)}{2\delta},
+\qquad G_\delta(\xi)=\norm{q_\delta(\xi)}_{H^1}.
+\]
+Use \(\delta=10^{-3}\). Compare \(\delta\) and \(\delta/2\), then independently refine the numerical
+resolution for the signed response \(q_\delta\). Agreement of amplification
+norms alone can hide an incorrect response direction. The result concerns one
+declared direction per case, not the operator norm of a solution-map derivative
+and not a Lyapunov exponent. Growth can be genuine finite-distance instability.
+The signed-response comparison must agree within 1\% in \(H^1\) under both
+the perturbation-size and numerical-resolution checks.
+
+For localized packets, double the periodic domain while retaining physical
+profile spacing and the same localized inlet definition. Compare over the
+common central region and inspect boundary energy. A large discrepancy means
+the smaller periodic domain is inadequate for a whole-line interpretation;
+it does not automatically make its periodic solution incorrect. Sideband and
+random periodic waves are not silently reinterpreted as localized packets.
+Require initial central-profile consistency within 0.1\% in \(H^1\), then
+evolution agreement within 1\% in \(H^1\). Both domains must independently
+pass their grid/step qualifications before the comparison is interpreted.
+
+\section{Slab PINN experiment}
+
+Divide propagation into slabs of width \(0.5\). Train one spectral PINN on
+each slab, using its predicted endpoint as the next inlet. Every slab retains
+the complete periodic \(\tau\)-profile for the nonlocal term. The model uses
+a hard inlet constraint, exact linear propagation and a learned Fourier
+correction; a small neural network maps local distance to complex Fourier
+coefficients. Only the first inlet is prescribed from the case data. No slab
+interface is reset to the numerical trajectory.
+
+The proposed A100 setting fixes width 64, depth 3, output modes
+\(|m|\leq48\), 256 profile points, 64 distance collocation slices per update,
+and 400 Adam updates per slab. The intervals \(\Xi=4,8,16\) therefore contain
+8, 16 and 32 slabs and allow 3,200, 6,400 and 12,800 updates respectively.
+Use optimizer seeds 11, 29 and 47 on each evaluation inlet. This fixed work
+per unit distance makes longer runs interpretable; it does not promise that
+the training budget remains adequate when waves become more complicated.
+
+Training and checkpoint selection use the full Dysthe residual, without
+reference trajectory labels. Evaluate residuals on an independent denser
+set of stations and profile points. Residual size is diagnostic and is not
+substituted for solution error. At every stored station, require
+\[
+E_0\leq0.01,\quad E_1\leq0.05,\quad E_2\leq0.05,\quad
+\frac{|\norm{u_{\mathrm{PINN}}}_\infty-
+         \norm{u_{\mathrm{ref}}}_\infty|}
+        {\norm{u_{\mathrm{ref}}}_\infty}\leq0.05.
+\]
+The \(H^2\) condition is an additional long-distance criterion; the completed
+CPU pilot used \(L^2\), \(H^1\) and peak-amplitude gates. Report all four
+quantities separately for every case and seed, together with
+the worst-case and median summaries, first failed station, runtime, and peak
+GPU memory. A failed reference qualification invalidates a numerical accuracy
+claim; it is not counted as a PINN success or failure against trustworthy truth.
+
+The CPU pilot motivated this neural candidate, but the conventional solver
+remained faster and more accurate. Measure complete fitting cost for every
+new inlet, not only evaluation of an already fitted network. A GPU comparison
+must state hardware, precision, synchronization and whether setup/data
+generation are included. FNO comparisons from the earlier small-data pilot
+remain separate; this experiment is not a new operator-learning benchmark.
+
+\section{Decision and interpretation}
+
+The principal outcome is a table of the last qualified numerical horizon and
+last accurate PINN horizon for each inlet and seed, expressed both in \(\xi\)
+and in the stated nonlinear-length scale. Secondary outcomes are refined
+focusing and spectral diagnostics, directional sensitivity, NLS differences,
+and packet-domain sensitivity. Report diagnostic availability and failed checks
+explicitly. No predetermined bound such as \(\norm{u}_{H^2}<5\) is an objective.
+
+Monitor \(\epsilon\norm{u}_\infty\) and spectral bandwidth to expose movement
+outside the weakly nonlinear, narrowband regime. These are model-validity
+indicators; no universal numerical cutoff makes the asymptotic approximation
+valid for arbitrary distances. The experiments address a periodic reduced
+water-wave model, not wave breaking, dissipation, transverse dynamics or
+full Euler evolution.
+
+\begin{remark}
+Resolved finite-distance evolution and accurate neural approximation are
+empirical evidence. They do not prove global existence, exclude later
+singularity formation, or establish convergence as resolution tends to
+infinity. A rigorous existence certificate would require an applicable
+analytical or validated-numerical argument with controlled residual,
+stability and unresolved-tail bounds.
+\end{remark}
+
+The runnable configuration \texttt{configs/long-distance-a100.json} and cluster
+guide are the authoritative execution specification. A separate smoke
+configuration exercises the workflow and does not establish long-distance
+accuracy. The command module \texttt{dysthe\_experiments.long\_distance} has
+\texttt{reference}, \texttt{pinn}, \texttt{sensitivity}, \texttt{domain} and
+\texttt{summarize} stages. The cluster submission helper defaults to a dry run;
+actual submission requires its explicit \texttt{--submit} option. No cluster
+job has been run to produce this protocol.
+
+Preserve configuration hashes, code revision, environment, inlet hashes,
+checkpoints and raw traces. Publish compact summaries and failure reasons;
+keep large arrays and checkpoints outside Git. This protocol is editable
+LaTeX and is distributed with its style file and rendered PDF.
+
+\begin{thebibliography}{9}
+\raggedright
+\bibitem{fedele} F.~Fedele and D.~Dutykh, \emph{Hamiltonian description and
+traveling waves of the spatial Dysthe equations}, research report (2011;
+revised 2012), \href{https://arxiv.org/abs/1110.3605}{arXiv:1110.3605}.
+\bibitem{armaroli} A.~Armaroli, M.~Brunetti and J.~Kasparian,
+\emph{Recurrence in the high-order nonlinear Schr\"odinger equation:
+A low-dimensional analysis}, Physical Review E \textbf{96}, 012222 (2017),
+\href{https://doi.org/10.1103/PhysRevE.96.012222}{doi:10.1103/PhysRevE.96.012222}.
+\end{thebibliography}
+\end{document}

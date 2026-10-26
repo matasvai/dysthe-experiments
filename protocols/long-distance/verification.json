@@ -1,0 +1,17 @@
+{
+  "status": "proposed_experiment_protocol",
+  "date": "2026-10-26",
+  "compiler": "pdfLaTeX TeX Live 2023",
+  "pages": 5,
+  "compile_passes": 2,
+  "latex_warnings": [],
+  "text_check": "equation, counts, horizons, gates and interpretation checked",
+  "visual_check": "All five pages rendered using Poppler and inspected for clipping, equations, table and references",
+  "figures": "none; equations and table are native vector PDF content",
+  "scientific_limits": "No A100 training, cluster execution, long-distance result or existence proof is asserted",
+  "files": {
+    "protocol.tex": "ae4391ea3324b1cdb3f75d749a3cf209304737814d96b57e1b9bd9d498fce77d",
+    "royden-report.sty": "cb1d0cade75d47a5de899ef991ef5cb98ce6dc19d7d8626e751c4fefe0fd2b84",
+    "protocol.pdf": "de0416a12fc3a8d6ee54704c4621d9515b5975189329f06f8abc62cfb2dfc4d6"
+  }
+}
