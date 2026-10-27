@@ -315,7 +315,8 @@ def audit(run, results):
                     if sha256(path) != saved['checkpoints'][path.name]:
                         raise ValueError('PINN checkpoint differs from recorded training result')
                     model = SpectralPINN(previous, config['length'], max_mode=config['output_modes'],
-                                         width=32, depth=2).eval()
+                                         width=config.get('pinn_width',32), depth=config.get('pinn_depth',2),
+                                         coefficient_scaling=config.get('pinn_coefficient_scaling','none')).eval()
                     model.load_state_dict(ckpt['model'])
                     if slab == 0:
                         jump = float(torch.linalg.vector_norm(model.u0-previous)/torch.linalg.vector_norm(previous))

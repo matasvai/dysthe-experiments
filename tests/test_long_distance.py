@@ -1,5 +1,6 @@
 """Scientific gates and campaign isolation, independent of scheduler hardware."""
 import copy
+from concurrent.futures import ThreadPoolExecutor
 import json
 from pathlib import Path
 import tempfile
@@ -7,9 +8,10 @@ import unittest
 from unittest.mock import patch
 
 import torch
+import numpy as np
 
 from dysthe_experiments.long_distance import (
-    bind_run, cases, config, digest, exclusive, run_task, summarize, task, write_json,
+    bind_run, cases, config, digest, exclusive, initial_fields, run_task, summarize, task, write_json,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -53,6 +55,102 @@ class LongDistanceTests(unittest.TestCase):
                 with self.assertRaisesRegex(RuntimeError, 'Another process'):
                     with exclusive(run / 'held.lock'):
                         pass
+
+    def test_concurrent_initialization_materializes_inputs_exactly_once(self):
+        with tempfile.TemporaryDirectory() as directory:
+            run = Path(directory)
+            with patch('dysthe_experiments.long_distance.initial_fields', wraps=initial_fields) as generate:
+                with ThreadPoolExecutor(max_workers=3) as pool:
+                    bound = list(pool.map(lambda _: bind_run(self.c, run), range(3)))
+                self.assertEqual(generate.call_count, 1)
+            self.assertTrue(all(value == bound[0] for value in bound))
+            paths = [run / name for name in ('identity.json', 'config.json', 'cases.json',
+                                             'inlets.json', 'inlets.npz')]
+            before = [(digest(path), path.stat().st_mtime_ns) for path in paths]
+            with patch('dysthe_experiments.long_distance.initial_fields',
+                       side_effect=AssertionError('Do not regenerate canonical inlets')):
+                bind_run(self.c, run)
+                loaded = cases(self.c, run=run)
+                record, u0, seed = task(self.c, 'pinn', 4, run=run)
+            self.assertEqual(record['family'], 'random')
+            self.assertEqual(seed, self.c['seeds'][0])
+            np.testing.assert_array_equal(u0, loaded[4][1])
+            self.assertEqual(before, [(digest(path), path.stat().st_mtime_ns) for path in paths])
+
+    def test_canonical_input_and_metadata_tampering_are_rejected(self):
+        for name in ('inlets.npz', 'cases.json', 'inlets.json', 'config.json'):
+            with self.subTest(name=name), tempfile.TemporaryDirectory() as directory:
+                run = Path(directory)
+                bind_run(self.c, run)
+                path = run / name
+                if name == 'config.json':
+                    write_json(path, dict(self.c, model_id='unrelated-model'))
+                else:
+                    path.write_bytes(path.read_bytes() + b' ')
+                with self.assertRaisesRegex(ValueError, 'checksum|configuration'):
+                    task(self.c, 'pinn', 4, run=run)
+
+    def test_canonical_case_mapping_is_validated_beyond_file_checksums(self):
+        with tempfile.TemporaryDirectory() as directory:
+            run = Path(directory)
+            bind_run(self.c, run)
+            manifest = json.loads((run / 'inlets.json').read_text())
+            manifest['case_ids'] = list(reversed(manifest['case_ids']))
+            write_json(run / 'inlets.json', manifest)
+            bound = json.loads((run / 'identity.json').read_text())
+            bound['inlets']['sha256'] = digest(run / 'inlets.json')
+            write_json(run / 'identity.json', bound)
+            with self.assertRaisesRegex(ValueError, 'case IDs or ordering'):
+                cases(self.c, run=run)
+
+    def test_incomplete_initialization_requires_fresh_run_without_overwrite(self):
+        with tempfile.TemporaryDirectory() as directory:
+            run = Path(directory)
+            write_json(run / 'cases.json', {'partial': True})
+            before = (run / 'cases.json').read_bytes()
+            with self.assertRaisesRegex(ValueError, 'fresh run directory'):
+                bind_run(self.c, run)
+            self.assertEqual(before, (run / 'cases.json').read_bytes())
+
+    def test_random_inlet_roundoff_cannot_change_inputs_between_stages(self):
+        from dysthe_experiments.long_reference import load_reference
+        torch.set_num_threads(1)
+        c = dict(self.c, reference_horizons=[.1], horizon=.1,
+                 pinn_horizons=[.1], pinn_horizon=.1, pinn_slabs=1,
+                 pinn_epochs=self.c['epochs_per_slab'])
+        with tempfile.TemporaryDirectory() as directory:
+            run = Path(directory)
+            bind_run(c, run)
+            record, u0, _ = task(c, 'reference', 4, run=run)
+            self.assertEqual(record['family'], 'random')
+            reference = run_task(c, run, 'reference', 4, 'cpu')
+            self.assertEqual(reference['status'], 'completed')
+            changed = u0.copy()
+            changed.real[0] = np.nextafter(changed.real[0], np.inf)
+            # The exact numerical provenance guard is deliberately unchanged.
+            with self.assertRaisesRegex(ValueError, 'Prepared reference identity differs'):
+                load_reference(c, run, record, changed, .1)
+            with patch('dysthe_experiments.long_distance.initial_fields',
+                       side_effect=AssertionError('Another CPU must load the saved inlet')):
+                fit = run_task(c, run, 'pinn', 4, 'cpu')
+            self.assertNotEqual(fit['status'], 'execution_error')
+            self.assertEqual(len(fit['results']), 1)
+            self.assertTrue(all(np.isfinite(value) for value in fit['results'][0]['errors'].values()))
+            self.assertIn('spectral_error_audit', fit['results'][0])
+
+    def test_execution_exception_and_traceback_remain_in_campaign_summary(self):
+        with tempfile.TemporaryDirectory() as directory:
+            run = Path(directory)
+            with patch('dysthe_experiments.long_reference.reference_case',
+                       side_effect=ValueError('diagnostic failure')):
+                with self.assertRaisesRegex(ValueError, 'diagnostic failure'):
+                    run_task(self.c, run, 'reference', 0, 'cpu')
+            task_result = json.loads((run / 'tasks/reference-000.json').read_text())
+            self.assertEqual(task_result['error'], 'ValueError: diagnostic failure')
+            self.assertIn('Traceback (most recent call last)', task_result['traceback'])
+            row = summarize(self.c, run)['tasks'][0]
+            self.assertEqual(row['error'], task_result['error'])
+            self.assertEqual(row['traceback'], task_result['traceback'])
 
     def test_failed_reference_stops_later_horizons_but_is_retained(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -42,7 +42,7 @@ export MPLCONFIGDIR="$launcher_dir/matplotlib"
 mkdir -p -- "$MPLCONFIGDIR"
 printf 'Dysthe long-distance PINN: job=%s task=%s run=%s\n' "$SLURM_JOB_ID" "$task_index" "$run_dir"
 srun --ntasks=1 "$DYSTHE_PYTHON" "$repo_dir/cluster/long-preflight.py" \
-    "$long_config" "$launcher_dir" "$repo_dir" "$task_index"
+    "$long_config" "$launcher_dir" "$repo_dir" "$run_dir" "$task_index"
 srun --ntasks=1 "$DYSTHE_PYTHON" -m dysthe_experiments.long_distance \
     --config "$long_config" --run "$run_dir" --stage pinn \
     --task-index "$task_index" --device cuda

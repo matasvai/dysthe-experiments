@@ -4,7 +4,8 @@
     "codex/reference-campaign",
     "codex/benchmark-suite",
     "codex/cpu-pilot-a100",
-    "codex/long-distance-a100"
+    "codex/long-distance-a100",
+    "codex/pinn-h2-rerun"
   ],
-  "status": "Measured CPU pilot retained; staged long-distance reference and A100 slab-PINN experiments are proposed and locally workflow-tested."
+  "status": "Canonical-inlet and spectral PINN conditioning repair; historical evidence retained, A100 rerun pending."
 }

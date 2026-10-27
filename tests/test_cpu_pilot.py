@@ -9,7 +9,7 @@ import numpy as np
 
 from dysthe_core.contracts import validate_splits
 from dysthe_experiments.cpu_pilot import (
-    initial_fields, integrate, metric, read_config,
+    initial_fields, integrate, metric, read_config, pinn_tolerances, spectral_error_audit,
     restore_checkpoint, save_checkpoint,
 )
 
@@ -60,6 +60,7 @@ class PilotScientificContractTests(unittest.TestCase):
         expected = 2 * abs(np.sin(phase / 2))
         self.assertAlmostEqual(measured['l2'], expected, places=13)
         self.assertAlmostEqual(measured['h1'], expected, places=13)
+        self.assertAlmostEqual(measured['h2'], expected, places=13)
         self.assertLess(measured['peak'], 1e-14)
         self.assertGreater(measured['l2'], 0.3)
 
@@ -75,6 +76,34 @@ class PilotScientificContractTests(unittest.TestCase):
         self.assertAlmostEqual(interval_error['l2'], 2 * np.sin(0.125), places=13)
         self.assertAlmostEqual(interval_error['h1'], 2 * np.sin(0.125), places=13)
         self.assertLess(interval_error['peak'], 1e-14)
+
+    def test_h2_detects_small_spurious_high_modes_without_filtering(self):
+        tau = np.arange(128) * 2 * np.pi / 128
+        truth = np.ones(128, dtype=complex)
+        prediction = truth + 0.001 * np.exp(10j * tau)
+        errors = metric(prediction, truth, 2 * np.pi)
+        self.assertAlmostEqual(errors['l2'], .001, places=13)
+        self.assertAlmostEqual(errors['h1'], .001 * np.sqrt(101), places=13)
+        self.assertAlmostEqual(errors['h2'], .101, places=13)
+        gates = pinn_tolerances({})
+        self.assertTrue(all(errors[k] < gates[k] for k in ('l2', 'h1', 'peak')))
+        self.assertFalse(all(errors[k] <= gates[k] for k in gates))
+        self.assertEqual(pinn_tolerances({'pinn_h2_tolerance': .02})['h2'], .02)
+
+    def test_spectral_error_parts_sum_to_full_h2_and_floor_detects_truncation(self):
+        tau = np.arange(128) * 2 * np.pi / 128
+        truth = np.tile(1 + .001 * np.exp(25j * tau), (3, 1))
+        prediction = truth.copy()
+        prediction[1] += .0001 * np.exp(12j * tau)
+        audit = spectral_error_audit(prediction, truth, 2 * np.pi, 20)
+        parts = audit['relative_h2_error_squared_by_station']
+        for j in range(3):
+            self.assertAlmostEqual(sum(v[j] for v in parts.values()),
+                                   metric(prediction[j], truth[j], 2*np.pi)['h2']**2, places=14)
+        self.assertGreater(parts['upper_output'][1], 0)
+        self.assertLess(parts['low'][1], 1e-25)
+        floor = .626 / np.sqrt(1 + .626**2)
+        np.testing.assert_allclose(audit['reference_projection_floor_h2_by_station']['20'], floor)
 
     def test_plane_wave_refinement_approaches_exact_complex_phase(self):
         n, length, epsilon = 64, 2 * np.pi, 0.05

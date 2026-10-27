@@ -22,12 +22,11 @@ def main():
     import dysthe_experiments
     from dysthe_core.torch_spatial import rhs
     from dysthe_learning.pilot_models import SpectralPINN
+    from dysthe_experiments.long_distance import bind_run, config as read_config, task
 
-    config_path, launcher_path, repo_path = map(Path, sys.argv[1:4])
-    task_index = int(sys.argv[4])
-    config = json.loads(config_path.read_text())
-    if config['model_id'] != 'water-wave-dysthe-spatial-v1':
-        raise RuntimeError('Only the approved spatial water-wave Dysthe model is supported')
+    config_path, launcher_path, repo_path, run_path = map(Path, sys.argv[1:5])
+    task_index = int(sys.argv[5])
+    config = read_config(config_path)
     if config['threads'] > int(os.environ.get('SLURM_CPUS_PER_TASK', '1')):
         raise RuntimeError('Configuration requests more CPU threads than allocated')
     if torch.__version__.split('+')[0].split('.')[:2] != ['2', '10']:
@@ -43,6 +42,13 @@ def main():
     torch.use_deterministic_algorithms(True)
     torch.backends.cuda.matmul.allow_tf32 = False
     torch.backends.cudnn.allow_tf32 = False
+    # Read exactly the inlet persisted by the reference campaign. A GPU node
+    # must not regenerate nominally equivalent FFT data on a different CPU.
+    bound = bind_run(config, run_path)
+    record, canonical_u0, seed = task(config, 'pinn', task_index, run=run_path)
+    field_hash = hashlib.sha256(str(canonical_u0.dtype).encode()
+                                + str(canonical_u0.shape).encode()
+                                + np.ascontiguousarray(canonical_u0).tobytes()).hexdigest()
     tau = torch.arange(64, dtype=torch.float64) * (2 * np.pi / 64) - np.pi
     u = 0.5 + 0.1 * torch.exp(2j * tau) - 0.03j * torch.exp(-3j * tau)
     cpu_rhs = rhs(u, 0.05, 2 * np.pi)
@@ -52,7 +58,8 @@ def main():
                            / torch.linalg.vector_norm(cpu_rhs))
     torch.manual_seed(20261026)
     model = SpectralPINN(u.to(device='cuda', dtype=torch.complex64),
-                         2 * np.pi, max_mode=8, width=8, depth=1)
+                         2 * np.pi, max_mode=8, width=8, depth=1,
+                         coefficient_scaling=config.get('pinn_coefficient_scaling', 'none'))
     s = torch.tensor([0.0, 0.02, 0.05], device='cuda')
     y, dy = torch.func.jvp(model, (s,), (torch.ones_like(s),))
     loss = (dy - rhs(y, 0.05, 2 * np.pi)).abs().square().mean()
@@ -76,6 +83,8 @@ def main():
                      'cluster/submit-long-distance.sh'):
         sources[f'dysthe-experiments/{relative}'] = hashlib.sha256((repo_path / relative).read_bytes()).hexdigest()
     identity = {'config': config, 'task_index': task_index, 'source_sha256': sources,
+                'canonical_inlets': bound['inlets'], 'case_id': record['case_id'],
+                'seed': seed, 'canonical_field_sha256': field_hash,
                 'runtime': {
                     'python': platform.python_version(), 'torch': torch.__version__,
                     'cuda_build': torch.version.cuda, 'numpy': np.__version__, 'scipy': scipy.__version__,

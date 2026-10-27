@@ -28,6 +28,8 @@ def digest(path):
 def read_config(path):
     c = json.loads(Path(path).read_text())
     require_water_wave_model(c)
+    if c.get('pinn_coefficient_scaling', 'none') not in ('none', 'inverse_1_plus_k2'):
+        raise ValueError('pinn_coefficient_scaling must be none or inverse_1_plus_k2')
     for key in ('grid', 'reference_grid', 'initial_modes', 'output_modes',
                 'groups_per_family', 'train_per_family', 'validation_per_family',
                 'operator_epochs', 'operator_batch', 'pinn_epochs', 'pinn_slabs',
@@ -134,8 +136,49 @@ def metric(pred, truth, length):
     norm=lambda z:np.sqrt(np.sum(abs(z)**2,axis=-1))
     l2=norm(d)/norm(v)
     h1=norm(d*np.sqrt(1+k*k))/norm(v*np.sqrt(1+k*k))
+    h2=norm(d*(1+k*k))/norm(v*(1+k*k))
     peak=abs(np.max(abs(pred),axis=-1)-np.max(abs(truth),axis=-1))/np.max(abs(truth),axis=-1)
-    return {'l2':float(np.max(l2)),'h1':float(np.max(h1)),'peak':float(np.max(peak))}
+    return {'l2':float(np.max(l2)),'h1':float(np.max(h1)),
+            'h2':float(np.max(h2)),'peak':float(np.max(peak))}
+
+
+def pinn_tolerances(c):
+    """One full sampled accuracy gate for both trainer and campaign summaries."""
+    defaults = {'l2': .01, 'h1': .05, 'h2': .05, 'peak': .05}
+    return {key: c.get(f'pinn_{key}_tolerance', value) for key, value in defaults.items()}
+
+
+def spectral_error_audit(pred, truth, length, max_mode):
+    """Locate H2 error without filtering, aligning, or changing the pass gate.
+
+    Each per-station band's squared relative contribution sums to the squared
+    full relative H2 error. Projection floors concern the reference only.
+    """
+    pred, truth = np.atleast_2d(pred), np.atleast_2d(truth)
+    if pred.shape[-1] != truth.shape[-1]:
+        pred = np_resample(pred, truth.shape[-1], axis=-1)
+    n = truth.shape[-1]
+    mode = np.abs(np.fft.fftfreq(n) * n)
+    k = 2 * np.pi * np.fft.fftfreq(n, d=length/n)
+    weight = (1 + k*k)**2
+    reference_power = abs(np.fft.fft(truth, axis=-1))**2 * weight
+    error_power = abs(np.fft.fft(pred - truth, axis=-1))**2 * weight
+    denominator = reference_power.sum(axis=-1)
+    if np.any(denominator <= np.finfo(float).tiny):
+        raise ValueError('H2 error audit requires nonzero reference profiles')
+    cut = max_mode // 2
+    masks = {'low': mode <= cut, 'upper_output': (mode > cut) & (mode <= max_mode),
+             'outside_output': mode > max_mode}
+    return {
+        'bands': {'low': [0, cut], 'upper_output': [cut + 1, max_mode],
+                  'outside_output': [max_mode + 1, n // 2]},
+        'relative_h2_error_squared_by_station': {
+            name: (error_power[:, mask].sum(axis=-1)/denominator).tolist()
+            for name, mask in masks.items()},
+        'reference_projection_floor_h2_by_station': {
+            str(limit): np.sqrt(reference_power[:, mode > limit].sum(axis=-1)/denominator).tolist()
+            for limit in (cut, max_mode)},
+        'interpretation': 'Unfiltered complex H2 errors on the reference grid; output capacity is unchanged.'}
 
 
 def prepare(c,run):
@@ -300,7 +343,8 @@ def fit_pinns(c,run,manifest,data,device,variants=('scratch','nls_warm','slabs')
                 horizon=c['pinn_horizon']/slabs;epochs=c['pinn_epochs']//slabs
                 predictions=[];total_seconds=0.;histories=[];residual_audits=[]
                 for slab in range(slabs):
-                    model=SpectralPINN(u,c['length'],max_mode=c['output_modes'],width=c.get('pinn_width',32),depth=c.get('pinn_depth',2)).to(device)
+                    model=SpectralPINN(u,c['length'],max_mode=c['output_modes'],width=c.get('pinn_width',32),depth=c.get('pinn_depth',2),
+                                      coefficient_scaling=c.get('pinn_coefficient_scaling','none')).to(device)
                     opt=torch.optim.Adam(model.parameters(),lr=2e-3)
                     cfg={'campaign':c,'method':variant,'seed':seed,'case_id':r['case_id'],'slab':slab}
                     last=root/f'last-{slab}.pt';best_path=root/f'best-{slab}.pt'
@@ -320,13 +364,17 @@ def fit_pinns(c,run,manifest,data,device,variants=('scratch','nls_warm','slabs')
                         active_eps=eps*0 if variant=='nls_warm' and epoch<epochs//4 else eps
                         loss=(abs(resample(dy,q)-rhs(resample(y,q),active_eps,c['length']))**2).mean()/denominator
                         if not torch.isfinite(loss):raise RuntimeError('Nonfinite PINN loss')
-                        opt.zero_grad();loss.backward();torch.nn.utils.clip_grad_norm_(model.parameters(),1.);opt.step()
+                        opt.zero_grad();loss.backward()
+                        gradient_norm=torch.nn.utils.clip_grad_norm_(model.parameters(),1.,error_if_nonfinite=True)
+                        opt.step()
                         if (epoch+1)%min(c['validation_every'],epochs)==0 or epoch+1==epochs:
                             # Fixed residual validation slices, never numerical solution labels.
                             yv,dv=torch.func.jvp(model,(audit_s,),(torch.ones_like(audit_s),))
                             score=float(((abs(resample(dv,q)-rhs(resample(yv,q),eps,c['length']))**2).mean()/denominator).detach())
+                            if not np.isfinite(score):raise RuntimeError('Nonfinite PINN validation residual')
                             sync(device);seconds=elapsed+time.perf_counter()-tic
-                            history.append({'epoch':epoch+1,'training_loss':float(loss.detach()),'full_dysthe_residual_validation':score,'seconds':seconds,'training_epsilon':float(active_eps)})
+                            history.append({'epoch':epoch+1,'training_loss':float(loss.detach()),'full_dysthe_residual_validation':score,'seconds':seconds,'training_epsilon':float(active_eps),
+                                            'gradient_norm_before_clip':float(gradient_norm.detach())})
                             if score<best:
                                 best=score;save_checkpoint(best_path,model,opt,epoch+1,best,seconds,cfg,history)
                             save_checkpoint(last,model,opt,epoch+1,best,seconds,cfg,history)
@@ -343,10 +391,11 @@ def fit_pinns(c,run,manifest,data,device,variants=('scratch','nls_warm','slabs')
                     residual_audits.append(float(torch.sqrt((abs(fine_defect)**2).mean()/denominator).detach()))
                 pred=np.concatenate(predictions,axis=0)
                 interval_errors=metric(pred,data['high'][case,:len(pred)],c['length'])
-                interval_tolerances={'l2':0.01,'h1':0.05,'peak':0.05}
+                interval_tolerances=pinn_tolerances(c)
                 result={'method':f'pinn_{variant}','seed':seed,'case_id':r['case_id'],'split':r['split'],'training_seconds':total_seconds,
                     'history':histories,'full_residual_rms_relative':residual_audits,'metrics':[],
                     'sampled_interval_errors':interval_errors,'sampled_interval_tolerances':interval_tolerances,
+                    'sampled_interval_gate_version':'complex-l2-h1-h2-peak-v2',
                     'sampled_interval_pass':all(interval_errors[key]<=bound for key,bound in interval_tolerances.items()),
                     'sampled_station_count':len(pred),'resumed_from_checkpoint':resumed_from_checkpoint,
                     'checkpoints':{p.name:digest(p) for p in root.glob('best-*.pt')}}

@@ -197,3 +197,47 @@ Provenance, arrays, checkpoints, and summaries remain in `RUN_DIR`; no results
 are deleted or archived. Keep raw arrays and checkpoints out of Git. Preserve
 the configuration, dependency lock, source hashes, dataset checksum, allocation
 details, and total optimization time when reporting accuracy or cost.
+
+## Export long-distance evidence, including failures
+
+For the long-distance campaign, retain the complete run on cluster storage and
+export its small evidence files after the jobs have finished. Exporting only
+`summary.json` loses the per-task exceptions, per-horizon H2 errors, sampled
+station errors, and GPU provenance needed to diagnose a failed gate.
+
+Set `EVIDENCE_DIR` to a **new directory outside `RUN_DIR`**, then run in a CPU
+allocation because the exporter reads and hashes every numerical artifact:
+
+```bash
+"$DYSTHE_PYTHON" -m dysthe_experiments.export_evidence \
+  --run "$RUN_DIR" --destination "$EVIDENCE_DIR"
+"$DYSTHE_PYTHON" -m dysthe_experiments.export_evidence \
+  --verify "$EVIDENCE_DIR"
+```
+
+The export preserves every run JSON file, including task errors and tracebacks,
+all per-horizon `result.json` files, canonical `inlets.json` and `cases.json`,
+runtime locks, job records, source manifests, and small diagnostic logs. Their
+original bytes live under `metadata/`. `artifact-inventory.json` records the
+path, size, and SHA256 of arrays and checkpoints; `.npz`, `.pt`, and other raw
+research files remain on the cluster and are never deserialized by the exporter.
+`source-manifests.json` indexes the recorded run-time source identities.
+`evidence-manifest.json` lists checksums, missing expected evidence, malformed
+JSON retained verbatim, and declared artifact checksum mismatches. Such findings
+remain visible rather than preventing a diagnostic export or being repaired.
+
+The exporter rejects existing destinations, symlinks, and changes detected while
+reading the run. It fails loudly if a metadata file exceeds 4 MiB or the total
+exceeds 256 MiB; inspect the file and explicitly adjust `--max-file-bytes` or
+`--max-total-bytes` if needed. It never silently drops oversized task results.
+Those overrides do not change the repository's 5 MB per-file review limit.
+Runtime cache directories are excluded and listed. Other unrecognized file
+types are inventoried as not copied. Files outside `RUN_DIR` are not collected:
+the dependency submission helper places Slurm output in `RUN_DIR/logs`; for
+manual `sbatch` calls, choose an output path there before submission.
+
+Transfer the complete exported directory, then run `--verify` on the received
+copy. Verification detects altered, missing, or unexpected exported files; it
+does not prove scientific accuracy or authenticate the producer. Keep the raw
+cluster run and its prepared-environment lock for deeper investigation. A
+failed or incomplete run remains failed or incomplete in this evidence package.

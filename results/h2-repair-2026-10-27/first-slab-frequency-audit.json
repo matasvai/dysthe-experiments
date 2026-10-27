@@ -1,0 +1,234 @@
+{
+  "kind": "Bounded CPU first-slab reproduction, not exactGPUreproduction",
+  "case": "packet-008",
+  "seed": 11,
+  "horizon": 0.5,
+  "network": [
+    64,
+    3
+  ],
+  "epochs": 400,
+  "batch": 64,
+  "threads": 2,
+  "projection_floors": {
+    "12": {
+      "h0": 8.346708972727512e-06,
+      "h1": 1.8887944093910424e-05,
+      "h2": 4.277342792820991e-05
+    },
+    "24": {
+      "h0": 1.1839576988410727e-10,
+      "h1": 4.747083906615586e-10,
+      "h2": 1.9022487969589145e-09
+    },
+    "48": {
+      "h0": 4.1302991056849473e-16,
+      "h1": 1.6327865669720275e-14,
+      "h2": 1.0237185869894454e-12
+    }
+  },
+  "results": [
+    {
+      "case_id": "packet-008",
+      "K": 48,
+      "precision": "float32",
+      "best_epoch": 300,
+      "best_residual": 0.3318485617637634,
+      "errors": {
+        "h1": 0.01677007629992999,
+        "h2": 0.09051584150143203,
+        "l2": 0.004546969748253935,
+        "peak": 0.0007758949833590662
+      },
+      "bands": [
+        {
+          "lo": 0,
+          "hi": 6,
+          "fraction_H2_error_power_at_endpoint": 0.0010912039019636893
+        },
+        {
+          "lo": 7,
+          "hi": 12,
+          "fraction_H2_error_power_at_endpoint": 0.004709949272175619
+        },
+        {
+          "lo": 13,
+          "hi": 24,
+          "fraction_H2_error_power_at_endpoint": 0.06060772748562741
+        },
+        {
+          "lo": 25,
+          "hi": 48,
+          "fraction_H2_error_power_at_endpoint": 0.9335910154880324
+        },
+        {
+          "lo": 49,
+          "hi": 512,
+          "fraction_H2_error_power_at_endpoint": 1.038522008092179e-07
+        }
+      ],
+      "history": [
+        {
+          "epoch": 100,
+          "train_loss": 0.4653621017932892,
+          "residual_score": 0.38637036085128784,
+          "gradient_before_clip": 947.667724609375
+        },
+        {
+          "epoch": 200,
+          "train_loss": 2.5371198654174805,
+          "residual_score": 1.8988418579101562,
+          "gradient_before_clip": 2722.5458984375
+        },
+        {
+          "epoch": 300,
+          "train_loss": 0.3318295180797577,
+          "residual_score": 0.3318485617637634,
+          "gradient_before_clip": 863.900634765625
+        },
+        {
+          "epoch": 400,
+          "train_loss": 0.3122233748435974,
+          "residual_score": 0.34765174984931946,
+          "gradient_before_clip": 915.7536010742188
+        }
+      ],
+      "seconds": 1.8672505819995422
+    },
+    {
+      "case_id": "packet-008",
+      "K": 24,
+      "precision": "float32",
+      "best_epoch": 200,
+      "best_residual": 0.02269796095788479,
+      "errors": {
+        "h1": 0.00796340392187448,
+        "h2": 0.021981467214327727,
+        "l2": 0.0037320966405485524,
+        "peak": 0.00020408404179793853
+      },
+      "bands": [
+        {
+          "lo": 0,
+          "hi": 6,
+          "fraction_H2_error_power_at_endpoint": 0.024902486976213268
+        },
+        {
+          "lo": 7,
+          "hi": 12,
+          "fraction_H2_error_power_at_endpoint": 0.10950026301810764
+        },
+        {
+          "lo": 13,
+          "hi": 24,
+          "fraction_H2_error_power_at_endpoint": 0.8655961588971598
+        },
+        {
+          "lo": 25,
+          "hi": 48,
+          "fraction_H2_error_power_at_endpoint": 8.103732034435982e-09
+        },
+        {
+          "lo": 49,
+          "hi": 512,
+          "fraction_H2_error_power_at_endpoint": 1.0830047872824941e-06
+        }
+      ],
+      "history": [
+        {
+          "epoch": 100,
+          "train_loss": 0.030580729246139526,
+          "residual_score": 0.03572748973965645,
+          "gradient_before_clip": 58.19329071044922
+        },
+        {
+          "epoch": 200,
+          "train_loss": 0.028472475707530975,
+          "residual_score": 0.02269796095788479,
+          "gradient_before_clip": 66.53884887695312
+        },
+        {
+          "epoch": 300,
+          "train_loss": 0.04287388175725937,
+          "residual_score": 0.07141172885894775,
+          "gradient_before_clip": 83.85387420654297
+        },
+        {
+          "epoch": 400,
+          "train_loss": 0.08007864654064178,
+          "residual_score": 0.0573849119246006,
+          "gradient_before_clip": 107.35059356689453
+        }
+      ],
+      "seconds": 1.254716075000033
+    },
+    {
+      "case_id": "packet-008",
+      "K": 48,
+      "precision": "float64",
+      "best_epoch": 100,
+      "best_residual": 0.3163525020546896,
+      "errors": {
+        "h1": 0.017083883205357853,
+        "h2": 0.08815053571522695,
+        "l2": 0.005256869244517626,
+        "peak": 0.0006916767082673554
+      },
+      "bands": [
+        {
+          "lo": 0,
+          "hi": 6,
+          "fraction_H2_error_power_at_endpoint": 0.0014963363341751216
+        },
+        {
+          "lo": 7,
+          "hi": 12,
+          "fraction_H2_error_power_at_endpoint": 0.008715942213885983
+        },
+        {
+          "lo": 13,
+          "hi": 24,
+          "fraction_H2_error_power_at_endpoint": 0.08575974490462124
+        },
+        {
+          "lo": 25,
+          "hi": 48,
+          "fraction_H2_error_power_at_endpoint": 0.9040279765473177
+        },
+        {
+          "lo": 49,
+          "hi": 512,
+          "fraction_H2_error_power_at_endpoint": 6.492197828424882e-23
+        }
+      ],
+      "history": [
+        {
+          "epoch": 100,
+          "train_loss": 0.5226115363143897,
+          "residual_score": 0.3163525020546896,
+          "gradient_before_clip": 1217.9528436726935
+        },
+        {
+          "epoch": 200,
+          "train_loss": 0.4877320477285436,
+          "residual_score": 0.6093502082801463,
+          "gradient_before_clip": 860.5265281858802
+        },
+        {
+          "epoch": 300,
+          "train_loss": 0.7002121079419562,
+          "residual_score": 0.8468134307438353,
+          "gradient_before_clip": 1208.2075532661022
+        },
+        {
+          "epoch": 400,
+          "train_loss": 6.815836077060311,
+          "residual_score": 9.527998390755705,
+          "gradient_before_clip": 3680.861477876207
+        }
+      ],
+      "seconds": 2.609555476999958
+    }
+  ],
+  "torch": "2.10.0+cu128"
+}

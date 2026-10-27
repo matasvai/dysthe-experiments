@@ -60,3 +60,15 @@ failed gate; incomplete and failed cases remain visible in the summary.
 Run `bash cluster/submit-long-distance.sh` to print the job plan. Only the
 explicit `--submit` option submits jobs. These are prepared experiments;
 long-distance A100 performance and global existence are not established.
+
+## H2 / random-input repair and A100 rerun
+
+Workstream **`codex/pinn-h2-rerun`** repairs cross-host random-inlet identity
+failures and tests an invertible Fourier coefficient parameterization for the
+slab PINN. It preserves the 48-mode capacity, full water-wave Dysthe residual,
+and all accuracy thresholds. Both summaries now include H2 in their pass gate.
+
+Start with the [rerun guide](docs/h2-rerun.md): smoke, matched xi=4 candidate/control,
+then the gated longer study. Use fresh run directories and install this branch's
+pinned learning dependency. [CPU diagnosis and verification](results/h2-repair-2026-10-27/)
+records what was reproduced locally; the repaired A100 result is pending.

@@ -15,11 +15,14 @@ import os
 from pathlib import Path
 import platform
 import time
+import traceback
 
 import numpy as np
 from scipy.signal import resample
+from dysthe_core.contracts import validate_case, validate_splits
 
-from .cpu_pilot import digest, fit_pinns, initial_fields, metric, read_config
+from .cpu_pilot import (digest, fit_pinns, initial_fields, metric, pinn_tolerances,
+                        read_config, spectral_error_audit)
 
 
 def write_json(path, value):
@@ -94,13 +97,23 @@ def config(path):
     return c
 
 
-def cases(c):
+def cases(c, run=None):
+    """Read canonical inlets for a run; regenerate only for config-only planning.
+
+    BLAS dispatch can change the last bits of a random Fourier sum on different
+    CPU hosts. Scientific stages must therefore pass ``run`` and use the exact
+    arrays committed at initialization, rather than regenerate their inlets.
+    """
+    if run is not None:
+        run = Path(run)
+        bound = bind_run(c, run)
+        return _read_inlets(c, run, bound)
     records, fields = initial_fields(c)
     return [(r, u) for r, u in zip(records, fields) if r['split'] != 'train']
 
 
-def task(c, stage, index):
-    selected = cases(c)
+def task(c, stage, index, run=None):
+    selected = cases(c, run=run)
     count = len(selected) * (len(c['seeds']) if stage == 'pinn' else 1)
     if not 0 <= index < count:
         raise ValueError(f'{stage} task index must lie in 0..{count - 1}')
@@ -116,29 +129,107 @@ def identity(c):
                'dysthe_experiments.cpu_pilot', 'dysthe_experiments.pilot_sensitivity',
                'dysthe_core.contracts', 'dysthe_core.reference.spatial',
                'dysthe_core.torch_spatial', 'dysthe_learning.pilot_models')
-    return {'configuration': c, 'source_sha256': {
+    return {'inlet_schema_version': 1, 'configuration': c, 'source_sha256': {
         name: digest(importlib.import_module(name).__file__) for name in modules},
         'runtime': {'python': platform.python_version(), 'numpy': np.__version__,
                     'scipy': scipy.__version__, 'torch': torch.__version__,
                     'cuda_build': torch.version.cuda}}
 
 
+def _read_inlets(c, run, bound):
+    """Validate every persisted inlet identity before returning any arrays."""
+    artifact = bound.get('inlets')
+    if not isinstance(artifact, dict) or artifact.get('manifest') != 'inlets.json':
+        raise ValueError('Canonical inlet identity missing; use a fresh run directory')
+    manifest_path = run / 'inlets.json'
+    if not manifest_path.is_file() or digest(manifest_path) != artifact.get('sha256'):
+        raise ValueError('Canonical inlet manifest checksum mismatch')
+    manifest = json.loads(manifest_path.read_text())
+    if (manifest.get('schema_version') != 1 or manifest.get('path') != 'inlets.npz'
+            or manifest.get('model_id') != c['model_id']
+            or manifest.get('physical_system') != c['physical_system']):
+        raise ValueError('Canonical inlet model or schema differs from this campaign')
+    records_path = run / 'cases.json'
+    fields_path = run / 'inlets.npz'
+    config_path = run / 'config.json'
+    if not config_path.is_file() or json.loads(config_path.read_text()) != c:
+        raise ValueError('Canonical run configuration differs from this campaign')
+    if not records_path.is_file() or digest(records_path) != manifest.get('cases_sha256'):
+        raise ValueError('Canonical case metadata checksum mismatch')
+    if not fields_path.is_file() or digest(fields_path) != manifest.get('sha256'):
+        raise ValueError('Canonical inlet array checksum mismatch')
+    records = json.loads(records_path.read_text())
+    expected_ids = [f'{family}-{j:03d}' for family in ('packet', 'sideband', 'random')
+                    for j in range(c['train_per_family'], c['groups_per_family'])]
+    if (not isinstance(records, list) or not all(isinstance(r, dict) for r in records)
+            or [r.get('case_id') for r in records] != expected_ids
+            or manifest.get('case_ids') != expected_ids):
+        raise ValueError('Canonical inlet case IDs or ordering differ from this campaign')
+    validate_splits(records)
+    for record in records:
+        validate_case(record)
+        family, index = record['case_id'].rsplit('-', 1)
+        split = ('validation' if int(index) < c['train_per_family'] + c['validation_per_family']
+                 else 'test')
+        if (record['model_id'] != c['model_id']
+                or record['physical_system'] != c['physical_system']
+                or record['initial_condition_id'] != record['case_id']
+                or record['family'] != family or record['split'] != split
+                or record['shape'] != [c['reference_grid']]
+                or record['lengths'] != [c['length']]):
+            raise ValueError('Canonical case metadata differs from this campaign')
+    with np.load(fields_path, allow_pickle=False) as archive:
+        if set(archive.files) != {'fields'}:
+            raise ValueError('Canonical inlet archive has unexpected fields')
+        fields = archive['fields']
+    shape = (len(expected_ids), c['grid'])
+    if (fields.dtype != np.dtype('complex128') or fields.shape != shape
+            or not np.isfinite(fields).all() or manifest.get('shape') != list(shape)
+            or manifest.get('dtype') != 'complex128'):
+        raise ValueError('Canonical inlet arrays have invalid shape, precision or values')
+    return list(zip(records, fields))
+
+
 def bind_run(c, run):
+    run = Path(run)
     expected = identity(c)
     # Array members may initialize simultaneously. This tiny shared transaction
     # waits; only duplicate writers of the same scientific task are rejected.
     with exclusive(run / '.identity.lock', wait=True):
         path = run / 'identity.json'
         if path.exists():
-            if json.loads(path.read_text()) != expected:
+            bound = json.loads(path.read_text())
+            if {k: v for k, v in bound.items() if k != 'inlets'} != expected:
                 raise ValueError('Source, configuration or runtime changed; use a fresh run directory')
+            _read_inlets(c, run, bound)
         else:
-            if any(run.glob('**/*.pt')) or any(run.glob('**/*.npz')):
-                raise ValueError('Unidentified artifacts already exist; use a fresh run directory')
+            if (any(run.glob('**/*.pt')) or any(run.glob('**/*.npz'))
+                    or any((run / name).exists() for name in
+                           ('config.json', 'cases.json', 'inlets.json', 'inlets.npz.tmp'))):
+                raise ValueError('Unidentified or incomplete artifacts already exist; use a fresh run directory')
+            selected = cases(c)
+            records = [record for record, _ in selected]
+            fields = np.asarray([u for _, u in selected], dtype=np.complex128)
             write_json(run / 'config.json', c)
-            write_json(run / 'cases.json', [r for r, _ in cases(c)])
-            write_json(path, expected)
-    return expected
+            write_json(run / 'cases.json', records)
+            array_path = run / 'inlets.npz'
+            temporary = array_path.with_suffix('.npz.tmp')
+            with temporary.open('wb') as stream:
+                np.savez_compressed(stream, fields=fields)
+            temporary.replace(array_path)
+            write_json(run / 'inlets.json', {
+                'schema_version': 1, 'model_id': c['model_id'],
+                'physical_system': c['physical_system'], 'path': 'inlets.npz',
+                'sha256': digest(array_path), 'cases_sha256': digest(run / 'cases.json'),
+                'case_ids': [r['case_id'] for r in records],
+                'dtype': str(fields.dtype), 'shape': list(fields.shape),
+                'interpretation': 'Canonical sampled inlets generated once; all stages load these exact bytes.'})
+            bound = dict(expected, inlets={'manifest': 'inlets.json',
+                                          'sha256': digest(run / 'inlets.json')})
+            _read_inlets(c, run, bound)
+            # Commit the run only after all canonical artifacts are complete.
+            write_json(path, bound)
+    return bound
 
 
 def prediction(c, root, u0, seed, record, horizon, device):
@@ -154,7 +245,8 @@ def prediction(c, root, u0, seed, record, horizon, device):
         path = directory / f'best-{slab}.pt'
         saved = torch.load(path, map_location=device, weights_only=False)
         model = SpectralPINN(u, c['length'], max_mode=c['output_modes'],
-                            width=c['pinn_width'], depth=c['pinn_depth']).to(device)
+                            width=c['pinn_width'], depth=c['pinn_depth'],
+                            coefficient_scaling=c.get('pinn_coefficient_scaling', 'none')).to(device)
         model.load_state_dict(saved['model'])
         with torch.no_grad():
             values = model(torch.linspace(0, c['slab_length'], steps + 1, device=device))
@@ -203,7 +295,7 @@ def train_horizon(c, run, record, u0, seed, horizon, reference, device):
     pred, hashes = prediction(c, root, data['fields'][0, 0], seed, record, horizon, device)
     errors = metric(pred, high, c['length'])
     errors['h2'] = compare_fields(pred, high, c['length'])['h2']
-    thresholds = {key: c[f'pinn_{key}_tolerance'] for key in ('l2', 'h1', 'h2', 'peak')}
+    thresholds = pinn_tolerances(c)
     stations = []
     for j, x in enumerate(xi):
         err = metric(pred[j], high[j], c['length'])
@@ -218,6 +310,7 @@ def train_horizon(c, run, record, u0, seed, horizon, reference, device):
               'horizon': horizon, 'method': 'per-inlet spectral slab PINN',
               'qualified': all(errors[k] <= thresholds[k] for k in thresholds),
               'errors': errors, 'thresholds': thresholds, 'stations': stations,
+              'spectral_error_audit': spectral_error_audit(pred, high, c['length'], c['output_modes']),
               'reference_sha256': reference_id, 'checkpoints': hashes,
               'artifact': {'path': str(path.resolve()), 'sha256': digest(path)},
               'diagnostics': field_diagnostics(pred, xi, c['length'], record['physics']['epsilon'],
@@ -247,7 +340,8 @@ def train_horizon(c, run, record, u0, seed, horizon, reference, device):
 
 def run_task(c, run, stage, index, device):
     from .long_reference import reference_case, sensitivity_case, domain_case, load_reference
-    record, u0, seed = task(c, stage, index)
+    run = Path(run)
+    record, u0, seed = task(c, stage, index, run=run)
     outcome = {'stage': stage, 'task_index': index, 'case_id': record['case_id'],
                'split': record['split'], 'seed': seed, 'results': [], 'status': 'running'}
     path = run / 'tasks' / f'{stage}-{index:03d}.json'
@@ -284,20 +378,22 @@ def run_task(c, run, stage, index, device):
             write_json(path, outcome)
             return outcome
         except Exception as exc:
-            outcome.update(status='execution_error', error=f'{type(exc).__name__}: {exc}')
+            outcome.update(status='execution_error', error=f'{type(exc).__name__}: {exc}',
+                           traceback=traceback.format_exc())
             write_json(path, outcome)
             raise
 
 
 def summarize(c, run):
-    selected = cases(c)
+    run = Path(run)
+    selected = cases(c, run=run)
     rows, pinn_metrics = [], []
     for stage in ('reference', 'pinn', 'sensitivity', 'domain'):
         count = len(selected) * (len(c['seeds']) if stage == 'pinn' else 1)
         for i in range(count):
             path = run / 'tasks' / f'{stage}-{i:03d}.json'
             if not path.exists():
-                record, _, seed = task(c, stage, i)
+                record, _, seed = task(c, stage, i, run=run)
                 rows.append({'stage': stage, 'task_index': i, 'case_id': record['case_id'],
                              'seed': seed, 'status': 'missing', 'horizons': []})
                 continue
@@ -309,6 +405,7 @@ def summarize(c, run):
                             'split': value['split'], 'horizon': item['horizon'],
                             'errors': item['errors'], 'qualified': item['qualified']})
             rows.append({key: value[key] for key in ('stage', 'task_index', 'case_id', 'seed', 'status')}
+                        | {key: value[key] for key in ('error', 'traceback') if key in value}
                         | {'horizons': [{'horizon': r.get('horizon', r.get('xi_end')),
                                         'status': r.get('status'), 'qualified': r.get('qualified'),
                                         'first_failed_station': r.get('first_failed_station')}
