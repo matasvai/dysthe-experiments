@@ -1,0 +1,312 @@
+[
+  {
+    "method": "pinn_slabs",
+    "seed": 47,
+    "case_id": "sideband-009",
+    "split": "validation",
+    "training_seconds": 58.50584961473942,
+    "history": [
+      [
+        {
+          "epoch": 100,
+          "training_loss": 0.008095484226942062,
+          "full_dysthe_residual_validation": 0.009156901389360428,
+          "seconds": 2.597677948884666,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 200,
+          "training_loss": 0.012294374406337738,
+          "full_dysthe_residual_validation": 0.02075810357928276,
+          "seconds": 4.30559843685478,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 300,
+          "training_loss": 0.02748979814350605,
+          "full_dysthe_residual_validation": 0.012446947395801544,
+          "seconds": 6.003991769626737,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 400,
+          "training_loss": 0.011515744961798191,
+          "full_dysthe_residual_validation": 0.022560210898518562,
+          "seconds": 7.701963236555457,
+          "training_epsilon": 0.04430554062128067
+        }
+      ],
+      [
+        {
+          "epoch": 100,
+          "training_loss": 0.007093287538737059,
+          "full_dysthe_residual_validation": 0.009027152322232723,
+          "seconds": 1.6446109786629677,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 200,
+          "training_loss": 0.013510392047464848,
+          "full_dysthe_residual_validation": 0.021333515644073486,
+          "seconds": 3.3514734525233507,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 300,
+          "training_loss": 0.04320817440748215,
+          "full_dysthe_residual_validation": 0.029846491292119026,
+          "seconds": 5.402124923653901,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 400,
+          "training_loss": 0.02519233338534832,
+          "full_dysthe_residual_validation": 0.018829619511961937,
+          "seconds": 7.504326185211539,
+          "training_epsilon": 0.04430554062128067
+        }
+      ],
+      [
+        {
+          "epoch": 100,
+          "training_loss": 0.010758636519312859,
+          "full_dysthe_residual_validation": 0.012552897445857525,
+          "seconds": 2.101630792953074,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 200,
+          "training_loss": 0.011530203744769096,
+          "full_dysthe_residual_validation": 0.0072420029900968075,
+          "seconds": 4.205885444767773,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 300,
+          "training_loss": 0.3873070776462555,
+          "full_dysthe_residual_validation": 0.4253825545310974,
+          "seconds": 5.915365561842918,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 400,
+          "training_loss": 0.015060488134622574,
+          "full_dysthe_residual_validation": 0.0149011742323637,
+          "seconds": 7.624276380054653,
+          "training_epsilon": 0.04430554062128067
+        }
+      ],
+      [
+        {
+          "epoch": 100,
+          "training_loss": 0.02198297344148159,
+          "full_dysthe_residual_validation": 0.015189222991466522,
+          "seconds": 1.6852734982967377,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 200,
+          "training_loss": 0.003842134028673172,
+          "full_dysthe_residual_validation": 0.007905558682978153,
+          "seconds": 3.3926543407142162,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 300,
+          "training_loss": 0.06318212300539017,
+          "full_dysthe_residual_validation": 0.06149287521839142,
+          "seconds": 5.104326092638075,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 400,
+          "training_loss": 0.015568249858915806,
+          "full_dysthe_residual_validation": 0.018126165494322777,
+          "seconds": 6.804473368450999,
+          "training_epsilon": 0.04430554062128067
+        }
+      ],
+      [
+        {
+          "epoch": 100,
+          "training_loss": 0.01203054841607809,
+          "full_dysthe_residual_validation": 0.012642995454370975,
+          "seconds": 1.6853016037493944,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 200,
+          "training_loss": 0.006125978194177151,
+          "full_dysthe_residual_validation": 0.018685273826122284,
+          "seconds": 3.395919349975884,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 300,
+          "training_loss": 0.005163755267858505,
+          "full_dysthe_residual_validation": 0.025054331868886948,
+          "seconds": 5.1425076723098755,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 400,
+          "training_loss": 1.2179367542266846,
+          "full_dysthe_residual_validation": 0.5357822179794312,
+          "seconds": 7.231559560634196,
+          "training_epsilon": 0.04430554062128067
+        }
+      ],
+      [
+        {
+          "epoch": 100,
+          "training_loss": 0.011942824348807335,
+          "full_dysthe_residual_validation": 0.009252915158867836,
+          "seconds": 2.091624639928341,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 200,
+          "training_loss": 0.02890424244105816,
+          "full_dysthe_residual_validation": 0.02284243516623974,
+          "seconds": 4.191931123845279,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 300,
+          "training_loss": 0.014776518568396568,
+          "full_dysthe_residual_validation": 0.01300680823624134,
+          "seconds": 6.288568418473005,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 400,
+          "training_loss": 0.03653514385223389,
+          "full_dysthe_residual_validation": 0.023926425725221634,
+          "seconds": 8.031267636455595,
+          "training_epsilon": 0.04430554062128067
+        }
+      ],
+      [
+        {
+          "epoch": 100,
+          "training_loss": 0.03585807606577873,
+          "full_dysthe_residual_validation": 0.009990514256060123,
+          "seconds": 1.669357379898429,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 200,
+          "training_loss": 0.022609597072005272,
+          "full_dysthe_residual_validation": 0.018856285139918327,
+          "seconds": 3.375834334641695,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 300,
+          "training_loss": 0.010856647044420242,
+          "full_dysthe_residual_validation": 0.013281033374369144,
+          "seconds": 5.077916819602251,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 400,
+          "training_loss": 0.02079555206000805,
+          "full_dysthe_residual_validation": 0.018308790400624275,
+          "seconds": 6.786411653272808,
+          "training_epsilon": 0.04430554062128067
+        }
+      ],
+      [
+        {
+          "epoch": 100,
+          "training_loss": 0.020928610116243362,
+          "full_dysthe_residual_validation": 0.014406123198568821,
+          "seconds": 1.7034779014065862,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 200,
+          "training_loss": 0.015215402469038963,
+          "full_dysthe_residual_validation": 0.015409711748361588,
+          "seconds": 3.40977396722883,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 300,
+          "training_loss": 0.010571995750069618,
+          "full_dysthe_residual_validation": 0.013347571715712547,
+          "seconds": 5.111771387979388,
+          "training_epsilon": 0.04430554062128067
+        },
+        {
+          "epoch": 400,
+          "training_loss": 0.014994829893112183,
+          "full_dysthe_residual_validation": 0.029067138209939003,
+          "seconds": 6.821571594104171,
+          "training_epsilon": 0.04430554062128067
+        }
+      ]
+    ],
+    "full_residual_rms_relative": [
+      0.09549237787723541,
+      0.09485252946615219,
+      0.08496406674385071,
+      0.08875443041324615,
+      0.11224240064620972,
+      0.09618499875068665,
+      0.09971927106380463,
+      0.11525345593690872
+    ],
+    "metrics": [
+      {
+        "xi": 0.5,
+        "l2": 0.0016395125484926127,
+        "h1": 0.00655197516858629,
+        "peak": 0.0006907873883292341
+      },
+      {
+        "xi": 1.0,
+        "l2": 0.0021936921151681586,
+        "h1": 0.008623647739999785,
+        "peak": 0.0015714474195828293
+      },
+      {
+        "xi": 2.0,
+        "l2": 0.003464340632453098,
+        "h1": 0.012275761056949962,
+        "peak": 0.003649345145365904
+      },
+      {
+        "xi": 4.0,
+        "l2": 0.00603455073035774,
+        "h1": 0.020459160509572936,
+        "peak": 0.000837468962216827
+      }
+    ],
+    "sampled_interval_errors": {
+      "l2": 0.00603455073035774,
+      "h1": 0.020459160509572936,
+      "peak": 0.005036412302087815
+    },
+    "sampled_interval_tolerances": {
+      "l2": 0.01,
+      "h1": 0.05,
+      "peak": 0.05
+    },
+    "sampled_interval_pass": true,
+    "sampled_station_count": 81,
+    "resumed_from_checkpoint": false,
+    "checkpoints": {
+      "best-5.pt": "8eb1c2fd406fb4c864f102d99f7659be67f635b2206f1efa4f54b35a6105e1ee",
+      "best-4.pt": "fab18933559a879d163f99ce6002e1b9bf5d2c240b2924c3a4609dcb6c64b6cb",
+      "best-6.pt": "bff0c806ea4263686115c7701321997fe0ef90d7541c2f69159e946ee933ab1b",
+      "best-7.pt": "473d996c85be4cc27c4fd6b3f68911620f0ff133f6e456010415a6f5616cdb60",
+      "best-3.pt": "6a47b9f868dba9992d865ca8e0c6daacf003090828dc40dbbaa4892f34883720",
+      "best-2.pt": "63a255d1f84c72a90e5ecf614448300a1d3e4fb6ed8f4f1eae1984ab925cf700",
+      "best-0.pt": "35dcd3474f7d3d1829762f5f28d2ede45322e149825d79dfb24f5b0aa42bc2b3",
+      "best-1.pt": "02290df908a97389d640ba2c787bc027af6d0ed5115f4e73500d18c753899a1a"
+    },
+    "gpu_peak_allocated_bytes": 94955520,
+    "invocation_elapsed_seconds": 58.95344753470272
+  }
+]

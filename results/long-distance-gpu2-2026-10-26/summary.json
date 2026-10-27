@@ -1,0 +1,1615 @@
+{
+  "campaign": "long-distance-v1",
+  "model_id": "water-wave-dysthe-spatial-v1",
+  "tasks": [
+    {
+      "stage": "reference",
+      "task_index": 0,
+      "case_id": "packet-008",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 32.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 64.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 64.0
+    },
+    {
+      "stage": "reference",
+      "task_index": 1,
+      "case_id": "packet-009",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 32.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 64.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 64.0
+    },
+    {
+      "stage": "reference",
+      "task_index": 2,
+      "case_id": "packet-010",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 32.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 64.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 64.0
+    },
+    {
+      "stage": "reference",
+      "task_index": 3,
+      "case_id": "packet-011",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 32.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 64.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 64.0
+    },
+    {
+      "stage": "reference",
+      "task_index": 4,
+      "case_id": "sideband-008",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 32.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 64.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 64.0
+    },
+    {
+      "stage": "reference",
+      "task_index": 5,
+      "case_id": "sideband-009",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 32.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 64.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 64.0
+    },
+    {
+      "stage": "reference",
+      "task_index": 6,
+      "case_id": "sideband-010",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 32.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 64.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 64.0
+    },
+    {
+      "stage": "reference",
+      "task_index": 7,
+      "case_id": "sideband-011",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 32.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 64.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 64.0
+    },
+    {
+      "stage": "reference",
+      "task_index": 8,
+      "case_id": "random-008",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 32.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 64.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 64.0
+    },
+    {
+      "stage": "reference",
+      "task_index": 9,
+      "case_id": "random-009",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 32.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 64.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 64.0
+    },
+    {
+      "stage": "reference",
+      "task_index": 10,
+      "case_id": "random-010",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 32.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 64.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 64.0
+    },
+    {
+      "stage": "reference",
+      "task_index": 11,
+      "case_id": "random-011",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 32.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 64.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 64.0
+    },
+    {
+      "stage": "pinn",
+      "task_index": 0,
+      "case_id": "packet-008",
+      "seed": 11,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.30000000000000004
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 1,
+      "case_id": "packet-008",
+      "seed": 29,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.30000000000000004
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 2,
+      "case_id": "packet-008",
+      "seed": 47,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.30000000000000004
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 3,
+      "case_id": "packet-009",
+      "seed": 11,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.4
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 4,
+      "case_id": "packet-009",
+      "seed": 29,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.35000000000000003
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 5,
+      "case_id": "packet-009",
+      "seed": 47,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.30000000000000004
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 6,
+      "case_id": "packet-010",
+      "seed": 11,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.35000000000000003
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 7,
+      "case_id": "packet-010",
+      "seed": 29,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.45
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 8,
+      "case_id": "packet-010",
+      "seed": 47,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.4
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 9,
+      "case_id": "packet-011",
+      "seed": 11,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.30000000000000004
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 10,
+      "case_id": "packet-011",
+      "seed": 29,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.45
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 11,
+      "case_id": "packet-011",
+      "seed": 47,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.4
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 12,
+      "case_id": "sideband-008",
+      "seed": 11,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.5
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 13,
+      "case_id": "sideband-008",
+      "seed": 29,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.9
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 14,
+      "case_id": "sideband-008",
+      "seed": 47,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.9
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 15,
+      "case_id": "sideband-009",
+      "seed": 11,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 1.0
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 16,
+      "case_id": "sideband-009",
+      "seed": 29,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.8
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 17,
+      "case_id": "sideband-009",
+      "seed": 47,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.9500000000000001
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 18,
+      "case_id": "sideband-010",
+      "seed": 11,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 1.0
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 19,
+      "case_id": "sideband-010",
+      "seed": 29,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 1.0
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 20,
+      "case_id": "sideband-010",
+      "seed": 47,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.8
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 21,
+      "case_id": "sideband-011",
+      "seed": 11,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.9500000000000001
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 22,
+      "case_id": "sideband-011",
+      "seed": 29,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 1.1
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 23,
+      "case_id": "sideband-011",
+      "seed": 47,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "accuracy_gate_failed",
+          "qualified": false,
+          "first_failed_station": 0.8500000000000001
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 24,
+      "case_id": "random-008",
+      "seed": 11,
+      "status": "execution_error",
+      "horizons": [],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 25,
+      "case_id": "random-008",
+      "seed": 29,
+      "status": "execution_error",
+      "horizons": [],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 26,
+      "case_id": "random-008",
+      "seed": 47,
+      "status": "execution_error",
+      "horizons": [],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 27,
+      "case_id": "random-009",
+      "seed": 11,
+      "status": "execution_error",
+      "horizons": [],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 28,
+      "case_id": "random-009",
+      "seed": 29,
+      "status": "execution_error",
+      "horizons": [],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 29,
+      "case_id": "random-009",
+      "seed": 47,
+      "status": "execution_error",
+      "horizons": [],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 30,
+      "case_id": "random-010",
+      "seed": 11,
+      "status": "execution_error",
+      "horizons": [],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 31,
+      "case_id": "random-010",
+      "seed": 29,
+      "status": "execution_error",
+      "horizons": [],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 32,
+      "case_id": "random-010",
+      "seed": 47,
+      "status": "execution_error",
+      "horizons": [],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 33,
+      "case_id": "random-011",
+      "seed": 11,
+      "status": "execution_error",
+      "horizons": [],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 34,
+      "case_id": "random-011",
+      "seed": 29,
+      "status": "execution_error",
+      "horizons": [],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "pinn",
+      "task_index": 35,
+      "case_id": "random-011",
+      "seed": 47,
+      "status": "execution_error",
+      "horizons": [],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "sensitivity",
+      "task_index": 0,
+      "case_id": "packet-008",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 16.0
+    },
+    {
+      "stage": "sensitivity",
+      "task_index": 1,
+      "case_id": "packet-009",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 16.0
+    },
+    {
+      "stage": "sensitivity",
+      "task_index": 2,
+      "case_id": "packet-010",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 16.0
+    },
+    {
+      "stage": "sensitivity",
+      "task_index": 3,
+      "case_id": "packet-011",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 16.0
+    },
+    {
+      "stage": "sensitivity",
+      "task_index": 4,
+      "case_id": "sideband-008",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 16.0
+    },
+    {
+      "stage": "sensitivity",
+      "task_index": 5,
+      "case_id": "sideband-009",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 16.0
+    },
+    {
+      "stage": "sensitivity",
+      "task_index": 6,
+      "case_id": "sideband-010",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 16.0
+    },
+    {
+      "stage": "sensitivity",
+      "task_index": 7,
+      "case_id": "sideband-011",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 16.0
+    },
+    {
+      "stage": "sensitivity",
+      "task_index": 8,
+      "case_id": "random-008",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 16.0
+    },
+    {
+      "stage": "sensitivity",
+      "task_index": 9,
+      "case_id": "random-009",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 16.0
+    },
+    {
+      "stage": "sensitivity",
+      "task_index": 10,
+      "case_id": "random-010",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 16.0
+    },
+    {
+      "stage": "sensitivity",
+      "task_index": 11,
+      "case_id": "random-011",
+      "seed": null,
+      "status": "completed",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 16.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 16.0
+    },
+    {
+      "stage": "domain",
+      "task_index": 0,
+      "case_id": "packet-008",
+      "seed": null,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "domain_sensitive_or_unresolved",
+          "qualified": false,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 4.0
+    },
+    {
+      "stage": "domain",
+      "task_index": 1,
+      "case_id": "packet-009",
+      "seed": null,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "domain_sensitive_or_unresolved",
+          "qualified": false,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 4.0
+    },
+    {
+      "stage": "domain",
+      "task_index": 2,
+      "case_id": "packet-010",
+      "seed": null,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "domain_sensitive_or_unresolved",
+          "qualified": false,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 4.0
+    },
+    {
+      "stage": "domain",
+      "task_index": 3,
+      "case_id": "packet-011",
+      "seed": null,
+      "status": "stopped_at_gate",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "complete",
+          "qualified": true,
+          "first_failed_station": null
+        },
+        {
+          "horizon": 8.0,
+          "status": "domain_sensitive_or_unresolved",
+          "qualified": false,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": 4.0
+    },
+    {
+      "stage": "domain",
+      "task_index": 4,
+      "case_id": "sideband-008",
+      "seed": null,
+      "status": "not_applicable",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "not_applicable",
+          "qualified": null,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "domain",
+      "task_index": 5,
+      "case_id": "sideband-009",
+      "seed": null,
+      "status": "not_applicable",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "not_applicable",
+          "qualified": null,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "domain",
+      "task_index": 6,
+      "case_id": "sideband-010",
+      "seed": null,
+      "status": "not_applicable",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "not_applicable",
+          "qualified": null,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "domain",
+      "task_index": 7,
+      "case_id": "sideband-011",
+      "seed": null,
+      "status": "not_applicable",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "not_applicable",
+          "qualified": null,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "domain",
+      "task_index": 8,
+      "case_id": "random-008",
+      "seed": null,
+      "status": "not_applicable",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "not_applicable",
+          "qualified": null,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "domain",
+      "task_index": 9,
+      "case_id": "random-009",
+      "seed": null,
+      "status": "not_applicable",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "not_applicable",
+          "qualified": null,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "domain",
+      "task_index": 10,
+      "case_id": "random-010",
+      "seed": null,
+      "status": "not_applicable",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "not_applicable",
+          "qualified": null,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": null
+    },
+    {
+      "stage": "domain",
+      "task_index": 11,
+      "case_id": "random-011",
+      "seed": null,
+      "status": "not_applicable",
+      "horizons": [
+        {
+          "horizon": 4.0,
+          "status": "not_applicable",
+          "qualified": null,
+          "first_failed_station": null
+        }
+      ],
+      "last_passed_horizon": null
+    }
+  ],
+  "pinn_aggregates": [
+    {
+      "split": "validation",
+      "horizon": 4.0,
+      "expected_case_seed_pairs": 18,
+      "evaluated_case_seed_pairs": 12,
+      "passed_case_seed_pairs": 0,
+      "complete": false,
+      "worst_errors": {
+        "l2": 0.019684516682485383,
+        "h1": 0.058260846470379296,
+        "h2": 0.30741433040480765,
+        "peak": 0.013827729484728829
+      },
+      "median_errors": {
+        "l2": 0.013470581367529544,
+        "h1": 0.03419328283844631,
+        "h2": 0.14680514100050593,
+        "peak": 0.008196355103955822
+      }
+    },
+    {
+      "split": "validation",
+      "horizon": 8.0,
+      "expected_case_seed_pairs": 18,
+      "evaluated_case_seed_pairs": 0,
+      "passed_case_seed_pairs": 0,
+      "complete": false,
+      "worst_errors": null,
+      "median_errors": null
+    },
+    {
+      "split": "validation",
+      "horizon": 16.0,
+      "expected_case_seed_pairs": 18,
+      "evaluated_case_seed_pairs": 0,
+      "passed_case_seed_pairs": 0,
+      "complete": false,
+      "worst_errors": null,
+      "median_errors": null
+    },
+    {
+      "split": "test",
+      "horizon": 4.0,
+      "expected_case_seed_pairs": 18,
+      "evaluated_case_seed_pairs": 12,
+      "passed_case_seed_pairs": 0,
+      "complete": false,
+      "worst_errors": {
+        "l2": 0.015765930972724638,
+        "h1": 0.0413003135754998,
+        "h2": 0.22115309876000383,
+        "peak": 0.014980297239688665
+      },
+      "median_errors": {
+        "l2": 0.009340163726506576,
+        "h1": 0.029684040851984034,
+        "h2": 0.14900451558937433,
+        "peak": 0.006693845958492226
+      }
+    },
+    {
+      "split": "test",
+      "horizon": 8.0,
+      "expected_case_seed_pairs": 18,
+      "evaluated_case_seed_pairs": 0,
+      "passed_case_seed_pairs": 0,
+      "complete": false,
+      "worst_errors": null,
+      "median_errors": null
+    },
+    {
+      "split": "test",
+      "horizon": 16.0,
+      "expected_case_seed_pairs": 18,
+      "evaluated_case_seed_pairs": 0,
+      "passed_case_seed_pairs": 0,
+      "complete": false,
+      "worst_errors": null,
+      "median_errors": null
+    }
+  ],
+  "complete": false,
+  "all_requested_gates_passed": false,
+  "interpretation": "Missing, blocked and failed tasks remain visible. No global-existence conclusion."
+}
