@@ -39,6 +39,8 @@ git clone --branch codex/pinn-h2-rerun https://github.com/matasvai/dysthe-experi
 cd dysthe-h2-rerun
 export DYSTHE_PYTHON=/absolute/path/to/prepared/venv/bin/python
 "$DYSTHE_PYTHON" -m pip install -e '.[pilot]'
+"$DYSTHE_PYTHON" -m pip install --no-deps --force-reinstall \
+  'dysthe-learning @ git+https://github.com/matasvai/dysthe-learning.git@bdfe60e571e9c1e676bd87b8a0097a7f4b795951'
 "$DYSTHE_PYTHON" scripts/check.py
 ```
 
