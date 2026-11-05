@@ -1,0 +1,43 @@
+{
+  "T": 0.02,
+  "requested_horizon": 0.02,
+  "last_monitored_T": 0.02,
+  "first_failed_monitor_T": null,
+  "checkpoint_stream_times": {
+    "base-fine": 0.02,
+    "base-grid": 0.02,
+    "base-step": 0.02
+  },
+  "qualified": true,
+  "status": "qualified",
+  "numerical_checks_passed": true,
+  "domain_checks_passed": null,
+  "initial_domain_comparison": null,
+  "failure": null,
+  "max_checks": {
+    "base": {
+      "grid": {
+        "h0": 3.895549697391833e-15,
+        "h1": 1.9611484581119667e-14,
+        "h2": 1.0492393440018923e-13
+      },
+      "step": {
+        "h0": 4.5248910206599435e-15,
+        "h1": 6.059218804539426e-15,
+        "h2": 3.6838393859191916e-14
+      }
+    }
+  },
+  "monitor_count_total": 3,
+  "snapshot_count_this_stage": 3,
+  "artifact": {
+    "path": "gaussian-T0.02.npz",
+    "sha256": "0f8dfe7286da261518cd14d69bd8b836ff99fbdcd0f791267caa03e38cfcc9ed",
+    "contains": "Bounded snapshots and per-stream endpoint states; not every internal step."
+  },
+  "stream_total_seconds": {
+    "base-fine": 0.001404258975526318,
+    "base-grid": 0.0012015799875371158,
+    "base-step": 0.000675915987812914
+  }
+}

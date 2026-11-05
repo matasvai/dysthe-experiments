@@ -1,0 +1,630 @@
+[
+  {
+    "name": "prop_e0_s0",
+    "shape": [
+      2048
+    ],
+    "lengths": [
+      160.0
+    ],
+    "kind": "dysthe",
+    "epsilon": 0,
+    "epsilon1": 1.0,
+    "epsilon2": 1.0,
+    "nonlinear": true,
+    "dt": 0.0025,
+    "T": 20,
+    "profile": {
+      "mu": 2,
+      "speed": 0.0,
+      "epsilon": 0,
+      "iterations": 1,
+      "profile_residual": 5.855702005028101e-12,
+      "evolution_residual": 8.553217579380402e-12,
+      "history": [
+        [
+          0,
+          3.0667236179724453e-10
+        ]
+      ],
+      "mass": 5.656854249492382,
+      "peak": 1.9999999994733177,
+      "energy": -3.7712361663282583,
+      "momentum": -1.3860084741113303e-15,
+      "spectral_edge_mass": 6.116196347697143e-16
+    },
+    "final": {
+      "t": 20.0,
+      "mass": 5.656854250316808,
+      "peak": 1.9999999971719458,
+      "energy": -3.771236167977108,
+      "momentum": 5.303848231290939e-14,
+      "spectral_edge_mass": 6.117155375205517e-16,
+      "core_tail_fraction": 9.301062781757312e-13,
+      "width_about_peak": 0.6412749166950863,
+      "complex_error": 1.1399188459168966e-07,
+      "aligned_error": 6.524050765947289e-09,
+      "translation": -7.657553582935868e-09,
+      "phase": -2.3008880429458274
+    }
+  },
+  {
+    "name": "prop_e0_s2",
+    "shape": [
+      2048
+    ],
+    "lengths": [
+      160.0
+    ],
+    "kind": "dysthe",
+    "epsilon": 0,
+    "epsilon1": 1.0,
+    "epsilon2": 1.0,
+    "nonlinear": true,
+    "dt": 0.0025,
+    "T": 20,
+    "profile": {
+      "mu": 2,
+      "speed": 2.0,
+      "epsilon": 0,
+      "iterations": 0,
+      "profile_residual": 1.0314268893801818e-13,
+      "evolution_residual": 2.3561519648240714e-13,
+      "history": [
+        [
+          0,
+          1.0314268893801818e-13
+        ]
+      ],
+      "mass": 4.000000000000002,
+      "peak": 1.4142135623730057,
+      "energy": 2.6666666666666683,
+      "momentum": -8.000000000000004,
+      "spectral_edge_mass": 2.6566598089689004e-21
+    },
+    "final": {
+      "t": 20.0,
+      "mass": 4.000000000009098,
+      "peak": 1.414213562269146,
+      "energy": 2.6666666666665617,
+      "momentum": -8.00000000001809,
+      "spectral_edge_mass": 2.6568768134798754e-21,
+      "core_tail_fraction": 3.808634149429866e-09,
+      "width_about_peak": 0.9068996822478468,
+      "complex_error": 3.6833273824000578e-09,
+      "aligned_error": 1.1361233121612318e-10,
+      "translation": 39.99999999999967,
+      "phase": -2.300888153240579
+    }
+  },
+  {
+    "name": "prop_e0_s-2",
+    "shape": [
+      2048
+    ],
+    "lengths": [
+      160.0
+    ],
+    "kind": "dysthe",
+    "epsilon": 0,
+    "epsilon1": 1.0,
+    "epsilon2": 1.0,
+    "nonlinear": true,
+    "dt": 0.0025,
+    "T": 20,
+    "profile": {
+      "mu": 2,
+      "speed": -2.0,
+      "epsilon": 0,
+      "iterations": 0,
+      "profile_residual": 1.0444792297045886e-13,
+      "evolution_residual": 2.0645101462671684e-13,
+      "history": [
+        [
+          0,
+          1.0444792297045886e-13
+        ]
+      ],
+      "mass": 4.0,
+      "peak": 1.4142135623730057,
+      "energy": 2.666666666666667,
+      "momentum": 8.000000000000004,
+      "spectral_edge_mass": 2.6566611510416623e-21
+    },
+    "final": {
+      "t": 20.0,
+      "mass": 4.0000000000091145,
+      "peak": 1.414213562269152,
+      "energy": 2.666666666666568,
+      "momentum": 8.00000000001813,
+      "spectral_edge_mass": 2.656874905348572e-21,
+      "core_tail_fraction": 3.808634149396759e-09,
+      "width_about_peak": 0.9068996822478437,
+      "complex_error": 3.6832564111131153e-09,
+      "aligned_error": 1.1361047793963939e-10,
+      "translation": -39.99999999999969,
+      "phase": -2.300888153240665
+    }
+  },
+  {
+    "name": "prop_e0.05_s0",
+    "shape": [
+      2048
+    ],
+    "lengths": [
+      160.0
+    ],
+    "kind": "dysthe",
+    "epsilon": 0.05,
+    "epsilon1": 1.0,
+    "epsilon2": 1.0,
+    "nonlinear": true,
+    "dt": 0.0025,
+    "T": 20,
+    "profile": {
+      "mu": 2,
+      "speed": 0.0,
+      "epsilon": 0.05,
+      "iterations": 38,
+      "profile_residual": 1.1480144113818648e-11,
+      "evolution_residual": 1.9119466786323354e-11,
+      "history": [
+        [
+          0,
+          0.2963058552948781
+        ],
+        [
+          25,
+          3.269615621308073e-08
+        ]
+      ],
+      "mass": 4.681462850099881,
+      "peak": 1.8951644555205756,
+      "energy": -2.7696221400340186,
+      "momentum": 1.6618001820804214,
+      "spectral_edge_mass": 2.235028839254332e-12
+    },
+    "final": {
+      "t": 20.0,
+      "mass": 4.68146282018554,
+      "peak": 1.8951644121306306,
+      "energy": -2.769622080205329,
+      "momentum": 1.661799835340601,
+      "spectral_edge_mass": 2.2351204923240605e-12,
+      "core_tail_fraction": 7.310736601892241e-13,
+      "width_about_peak": 0.6061673010829004,
+      "complex_error": 1.3226553644733628e-06,
+      "aligned_error": 3.0505829576185266e-08,
+      "translation": 4.353212148874116e-07,
+      "phase": -2.3008867649718194
+    }
+  },
+  {
+    "name": "prop_e0.05_s2",
+    "shape": [
+      2048
+    ],
+    "lengths": [
+      160.0
+    ],
+    "kind": "dysthe",
+    "epsilon": 0.05,
+    "epsilon1": 1.0,
+    "epsilon2": 1.0,
+    "nonlinear": true,
+    "dt": 0.0025,
+    "T": 20,
+    "profile": {
+      "mu": 2,
+      "speed": 2.0,
+      "epsilon": 0.05,
+      "iterations": 38,
+      "profile_residual": 1.1966933104967827e-11,
+      "evolution_residual": 1.5083975164386177e-11,
+      "history": [
+        [
+          0,
+          0.28942129236989145
+        ],
+        [
+          25,
+          3.373988648704074e-08
+        ]
+      ],
+      "mass": 4.718124406807267,
+      "peak": 1.6005150741251242,
+      "energy": 2.1303689321671024,
+      "momentum": -8.24187911443224,
+      "spectral_edge_mass": 3.414646441464468e-18
+    },
+    "final": {
+      "t": 20.0,
+      "mass": 4.718124406319172,
+      "peak": 1.6005150727565305,
+      "energy": 2.130368936154479,
+      "momentum": -8.241879117443425,
+      "spectral_edge_mass": 3.4148596179583438e-18,
+      "core_tail_fraction": 2.9916497927958413e-09,
+      "width_about_peak": 0.8567819168715411,
+      "complex_error": 2.763866695678175e-08,
+      "aligned_error": 9.704208129941826e-10,
+      "translation": 39.99999999832445,
+      "phase": -2.300888127989844
+    }
+  },
+  {
+    "name": "prop_e0.05_s-2",
+    "shape": [
+      2048
+    ],
+    "lengths": [
+      160.0
+    ],
+    "kind": "dysthe",
+    "epsilon": 0.05,
+    "epsilon1": 1.0,
+    "epsilon2": 1.0,
+    "nonlinear": true,
+    "dt": 0.0025,
+    "T": 20,
+    "profile": {
+      "mu": 2,
+      "speed": -2.0,
+      "epsilon": 0.05,
+      "iterations": 34,
+      "profile_residual": 1.5912653376887365e-11,
+      "evolution_residual": 2.002360621871807e-11,
+      "history": [
+        [
+          0,
+          0.4289884010097747
+        ],
+        [
+          25,
+          5.606248171742668e-09
+        ]
+      ],
+      "mass": 2.808315792760505,
+      "peak": 1.211368563107697,
+      "energy": 2.330490472951009,
+      "momentum": 6.026209974851837,
+      "spectral_edge_mass": 5.835823033979185e-18
+    },
+    "final": {
+      "t": 20.0,
+      "mass": 2.8083157927232447,
+      "peak": 1.211368562825811,
+      "energy": 2.3304904724641498,
+      "momentum": 6.026209974290455,
+      "spectral_edge_mass": 5.836028334463781e-18,
+      "core_tail_fraction": 3.3284949495428254e-09,
+      "width_about_peak": 0.879335139895735,
+      "complex_error": 8.973998889324205e-09,
+      "aligned_error": 2.9705468833046593e-10,
+      "translation": -40.000000000424315,
+      "phase": -2.3008881484314316
+    }
+  },
+  {
+    "name": "prop_e0.1_s0",
+    "shape": [
+      2048
+    ],
+    "lengths": [
+      160.0
+    ],
+    "kind": "dysthe",
+    "epsilon": 0.1,
+    "epsilon1": 1.0,
+    "epsilon2": 1.0,
+    "nonlinear": true,
+    "dt": 0.0025,
+    "T": 20,
+    "profile": {
+      "mu": 2,
+      "speed": 0.0,
+      "epsilon": 0.1,
+      "iterations": 43,
+      "profile_residual": 1.171916582056455e-11,
+      "evolution_residual": 2.3075328700007326e-11,
+      "history": [
+        [
+          0,
+          0.5926117105897583
+        ],
+        [
+          25,
+          2.6556485525142223e-07
+        ]
+      ],
+      "mass": 3.7110675122951866,
+      "peak": 1.7468993827235342,
+      "energy": -1.8453192629536734,
+      "momentum": 2.214450717780925,
+      "spectral_edge_mass": 1.3868426209438997e-10
+    },
+    "final": {
+      "t": 20.0,
+      "mass": 3.711067257822332,
+      "peak": 1.7468989677780362,
+      "energy": -1.8453187540077227,
+      "momentum": 2.214447991089333,
+      "spectral_edge_mass": 1.386809925826309e-10,
+      "core_tail_fraction": 6.409535359768031e-13,
+      "width_about_peak": 0.5790838607303553,
+      "complex_error": 1.3290918544816114e-05,
+      "aligned_error": 2.877845543185938e-07,
+      "translation": 3.3903561865881795e-06,
+      "phase": -2.3008735851057334
+    }
+  },
+  {
+    "name": "prop_e0.1_s2",
+    "shape": [
+      2048
+    ],
+    "lengths": [
+      160.0
+    ],
+    "kind": "dysthe",
+    "epsilon": 0.1,
+    "epsilon1": 1.0,
+    "epsilon2": 1.0,
+    "nonlinear": true,
+    "dt": 0.0025,
+    "T": 20,
+    "profile": {
+      "mu": 2,
+      "speed": 2.0,
+      "epsilon": 0.1,
+      "iterations": 46,
+      "profile_residual": 1.7180678736916602e-11,
+      "evolution_residual": 2.3133098884696788e-11,
+      "history": [
+        [
+          0,
+          0.5788425847397833
+        ],
+        [
+          25,
+          9.945367361796663e-07
+        ]
+      ],
+      "mass": 4.764436899515941,
+      "peak": 1.722019683024433,
+      "energy": 1.120908379472279,
+      "momentum": -6.796157753520589,
+      "spectral_edge_mass": 1.2499229636061757e-13
+    },
+    "final": {
+      "t": 20.0,
+      "mass": 4.7644368680019085,
+      "peak": 1.722019614982327,
+      "energy": 1.1209086360455198,
+      "momentum": -6.796157947065763,
+      "spectral_edge_mass": 1.2498697644151287e-13,
+      "core_tail_fraction": 2.140439596406885e-09,
+      "width_about_peak": 0.7840133252756156,
+      "complex_error": 1.3382988638882821e-06,
+      "aligned_error": 5.240922178870634e-08,
+      "translation": 39.99999984655253,
+      "phase": -2.3008867414965084
+    }
+  },
+  {
+    "name": "prop_e0.1_s-2",
+    "shape": [
+      2048
+    ],
+    "lengths": [
+      160.0
+    ],
+    "kind": "dysthe",
+    "epsilon": 0.1,
+    "epsilon1": 1.0,
+    "epsilon2": 1.0,
+    "nonlinear": true,
+    "dt": 0.0025,
+    "T": 20,
+    "profile": {
+      "mu": 2,
+      "speed": -2.0,
+      "epsilon": 0.1,
+      "iterations": 37,
+      "profile_residual": 1.2935284807872071e-11,
+      "evolution_residual": 1.6284863272964933e-11,
+      "history": [
+        [
+          0,
+          0.8579768020195493
+        ],
+        [
+          25,
+          2.2338241347885072e-08
+        ]
+      ],
+      "mass": 2.123568264255961,
+      "peak": 1.0683249644451727,
+      "energy": 1.9636671818826124,
+      "momentum": 4.7268951286917025,
+      "spectral_edge_mass": 1.4077777874580525e-16
+    },
+    "final": {
+      "t": 20.0,
+      "mass": 2.1235682641149793,
+      "peak": 1.0683249637886127,
+      "energy": 1.9636671806636796,
+      "momentum": 4.726895127190808,
+      "spectral_edge_mass": 1.4078123918466726e-16,
+      "core_tail_fraction": 3.0751702292008313e-09,
+      "width_about_peak": 0.8626479413769632,
+      "complex_error": 2.042153191192442e-08,
+      "aligned_error": 7.114656520635738e-10,
+      "translation": -40.000000001211276,
+      "phase": -2.300888137960462
+    }
+  },
+  {
+    "name": "prop_e0.15_s0",
+    "shape": [
+      2048
+    ],
+    "lengths": [
+      160.0
+    ],
+    "kind": "dysthe",
+    "epsilon": 0.15,
+    "epsilon1": 1.0,
+    "epsilon2": 1.0,
+    "nonlinear": true,
+    "dt": 0.0025,
+    "T": 20,
+    "profile": {
+      "mu": 2,
+      "speed": 0.0,
+      "epsilon": 0.15,
+      "iterations": 45,
+      "profile_residual": 1.752619148754517e-11,
+      "evolution_residual": 3.922456293404891e-11,
+      "history": [
+        [
+          0,
+          0.8889175658846389
+        ],
+        [
+          25,
+          7.144590470994839e-07
+        ]
+      ],
+      "mass": 2.990648846421421,
+      "peak": 1.6067552239951568,
+      "energy": -1.2483271694979208,
+      "momentum": 2.247087573668562,
+      "spectral_edge_mass": 1.2434429489347668e-09
+    },
+    "final": {
+      "t": 20.0,
+      "mass": 2.990648075488461,
+      "peak": 1.6067536138928116,
+      "energy": -1.2483256276307013,
+      "momentum": 2.247078944234043,
+      "spectral_edge_mass": 1.2433350186060291e-09,
+      "core_tail_fraction": 8.510359731272802e-13,
+      "width_about_peak": 0.561274896766253,
+      "complex_error": 5.845161925769536e-05,
+      "aligned_error": 1.16173771578654e-06,
+      "translation": 9.698130231674907e-06,
+      "phase": -2.3008244801693105
+    }
+  },
+  {
+    "name": "prop_e0.15_s2",
+    "shape": [
+      2048
+    ],
+    "lengths": [
+      160.0
+    ],
+    "kind": "dysthe",
+    "epsilon": 0.15,
+    "epsilon1": 1.0,
+    "epsilon2": 1.0,
+    "nonlinear": true,
+    "dt": 0.0025,
+    "T": 20,
+    "profile": {
+      "mu": 2,
+      "speed": 2.0,
+      "epsilon": 0.15,
+      "iterations": 52,
+      "profile_residual": 1.4313908574567739e-11,
+      "evolution_residual": 2.1695545746859915e-11,
+      "history": [
+        [
+          0,
+          0.8682638771096751
+        ],
+        [
+          25,
+          6.487641465046738e-06
+        ],
+        [
+          50,
+          3.756134196677208e-11
+        ]
+      ],
+      "mass": 4.207570214895663,
+      "peak": 1.728583065996525,
+      "energy": 0.4379915645046557,
+      "momentum": -4.843857731620102,
+      "spectral_edge_mass": 6.250643460993223e-11
+    },
+    "final": {
+      "t": 20.0,
+      "mass": 4.207569694402908,
+      "peak": 1.728581424715123,
+      "energy": 0.437996671907761,
+      "momentum": -4.843861798038384,
+      "spectral_edge_mass": 6.249366111642218e-11,
+      "core_tail_fraction": 1.6144383878093833e-09,
+      "width_about_peak": 0.7223146529542357,
+      "complex_error": 4.134988971575887e-05,
+      "aligned_error": 1.0069853062284062e-06,
+      "translation": 39.99999180224715,
+      "phase": -2.300844980580584
+    }
+  },
+  {
+    "name": "prop_e0.15_s-2",
+    "shape": [
+      2048
+    ],
+    "lengths": [
+      160.0
+    ],
+    "kind": "dysthe",
+    "epsilon": 0.15,
+    "epsilon1": 1.0,
+    "epsilon2": 1.0,
+    "nonlinear": true,
+    "dt": 0.0025,
+    "T": 20,
+    "profile": {
+      "mu": 2,
+      "speed": -2.0,
+      "epsilon": 0.15,
+      "iterations": 38,
+      "profile_residual": 1.812672107161912e-11,
+      "evolution_residual": 2.2880033108729117e-11,
+      "history": [
+        [
+          0,
+          1.286965203029323
+        ],
+        [
+          25,
+          4.61389744867509e-08
+        ]
+      ],
+      "mass": 1.6964654383023603,
+      "peak": 0.9637420779243302,
+      "energy": 1.670564610220258,
+      "momentum": 3.859463717763073,
+      "spectral_edge_mass": 8.175710029940607e-16
+    },
+    "final": {
+      "t": 20.0,
+      "mass": 1.696465438056583,
+      "peak": 0.963742076853107,
+      "energy": 1.6705646082740517,
+      "momentum": 3.8594637153253117,
+      "spectral_edge_mass": 8.17586815439059e-16,
+      "core_tail_fraction": 2.925684743246187e-09,
+      "width_about_peak": 0.852012374545047,
+      "complex_error": 3.531535091646015e-08,
+      "aligned_error": 1.2403647722787502e-09,
+      "translation": -40.00000000207285,
+      "phase": -2.3008881241901027
+    }
+  }
+]

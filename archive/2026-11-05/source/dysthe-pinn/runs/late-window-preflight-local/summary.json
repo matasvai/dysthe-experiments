@@ -1,0 +1,83 @@
+{
+  "status": "paused",
+  "current_t": 1.0,
+  "observation_window": [
+    5000.0,
+    5001.0
+  ],
+  "integration_started_at": 0.0,
+  "saved_frames": 0,
+  "invocation_steps": 100,
+  "invocation_seconds": 6.540049890998489,
+  "remaining_steps": 500000,
+  "config": {
+    "equation": "Dysthe3D-1.27",
+    "seed": 20260916,
+    "dtype": "float64",
+    "device": "cuda",
+    "deterministic": true,
+    "cpu_threads": 1,
+    "physics": {
+      "epsilon1": 0.00831834509,
+      "epsilon2": 0.00498719622
+    },
+    "domain": {
+      "T": 5001.0,
+      "lengths": [
+        12.0,
+        12.0,
+        12.0
+      ]
+    },
+    "initial": {
+      "amplitude": 0.3,
+      "power": 3,
+      "phase": 0.0
+    },
+    "network": {
+      "width": 64,
+      "depth": 4,
+      "harmonics": 3
+    },
+    "training": {
+      "steps": 20000,
+      "batch_size": 512,
+      "validation_points": 512,
+      "learning_rate": 0.0003,
+      "log_every": 100,
+      "checkpoint_every": 500,
+      "gradient_clip": 100.0
+    },
+    "reference": {
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "dt": 0.01,
+      "snapshots": 101
+    }
+  },
+  "initial_projection_relative_l2": 3.8240423096405103e-16,
+  "max_relative_mass_drift": 7.337868418269811e-15,
+  "max_spectral_edge_fraction": 1.662620463245063e-22,
+  "rows": [
+    {
+      "step": 0,
+      "t": 0.0,
+      "mass": 1.7853456813097,
+      "peak": 0.30000000000000004,
+      "spectral_edge_fraction": 1.2756204438800318e-32,
+      "relative_mass_drift": 0.0
+    },
+    {
+      "step": 100,
+      "t": 1.0,
+      "mass": 1.7853456813096868,
+      "peak": 0.20781006344022315,
+      "spectral_edge_fraction": 1.662620463245063e-22,
+      "relative_mass_drift": -7.337868418269811e-15
+    }
+  ],
+  "qualification": "Exploratory periodic reference only. No grid/time refinement or PINN validation; accumulated error before the window is unresolved."
+}

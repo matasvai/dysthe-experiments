@@ -1,0 +1,66 @@
+{
+  "T": 0.02,
+  "requested_horizon": 0.02,
+  "last_monitored_T": 0.02,
+  "first_failed_monitor_T": null,
+  "checkpoint_stream_times": {
+    "base-fine": 0.02,
+    "base-grid": 0.02,
+    "base-step": 0.02,
+    "double-fine": 0.02,
+    "double-grid": 0.02,
+    "double-step": 0.02
+  },
+  "qualified": true,
+  "status": "qualified",
+  "numerical_checks_passed": true,
+  "domain_checks_passed": true,
+  "initial_domain_comparison": {
+    "h0": 1.4154502964108518e-08,
+    "h1": 3.107795141764529e-08,
+    "h2": 6.62177847031539e-08,
+    "global_peak_relative_difference": 5.698499775663893e-09
+  },
+  "failure": null,
+  "max_checks": {
+    "base": {
+      "grid": {
+        "h0": 3.895549697391833e-15,
+        "h1": 1.9611484581119667e-14,
+        "h2": 1.0492393440018923e-13
+      },
+      "step": {
+        "h0": 4.5248910206599435e-15,
+        "h1": 6.059218804539426e-15,
+        "h2": 3.6838393859191916e-14
+      }
+    },
+    "double": {
+      "grid": {
+        "h0": 3.204939254932297e-15,
+        "h1": 1.6280995468080683e-14,
+        "h2": 9.038729737563853e-14
+      },
+      "step": {
+        "h0": 4.511885408742423e-15,
+        "h1": 6.2188811760407706e-15,
+        "h2": 4.398925583671226e-14
+      }
+    }
+  },
+  "monitor_count_total": 3,
+  "snapshot_count_this_stage": 3,
+  "artifact": {
+    "path": "gaussian-T0.02.npz",
+    "sha256": "c9bce45d965a42174203da44744d38e5ac7ee82bd255f4b51db288f88af445e9",
+    "contains": "Bounded snapshots and per-stream endpoint states; not every internal step."
+  },
+  "stream_total_seconds": {
+    "base-fine": 0.0013927079999120906,
+    "base-grid": 0.0012561319745145738,
+    "base-step": 0.0006755349895684049,
+    "double-fine": 0.0017249200027436018,
+    "double-grid": 0.0013747839984716848,
+    "double-step": 0.0008694779971847311
+  }
+}

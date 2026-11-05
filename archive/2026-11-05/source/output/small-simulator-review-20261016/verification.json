@@ -1,0 +1,42 @@
+{
+  "status": "passed with recorded headless-focus limitation",
+  "project_path": "/home/matasvai/Documents/Projects/Dysthe",
+  "live_url": "http://127.0.0.1:8766/",
+  "original_files_unchanged": true,
+  "core_unchanged": true,
+  "installed_additions": 10,
+  "tests": 46,
+  "subtests": 45,
+  "installed_browser_checks": 12,
+  "verified_workflows": [
+    "three precomputed cases",
+    "initial/current amplitude, real/imaginary and phase",
+    "packet/full domain, linear/log heatmap",
+    "scrub, play, pause, heatmap selection",
+    "one fresh custom Gaussian CPU run",
+    "browser complex128 NPZ download",
+    "desktop and 390px layouts without horizontal overflow"
+  ],
+  "cases": {
+    "profile": {
+      "qualification": "qualified for this bounded demonstration",
+      "fields_sha256": "76ea33da5e6a26226729b7c6a6a1e8c55018351f9af359997f6944a9f13cf1c8"
+    },
+    "perturbed": {
+      "qualification": "qualified for this bounded demonstration",
+      "fields_sha256": "deacc4971eb091e8adaa2f4ae8b99f178fb0ed33a7df128f2b24cc893cd50ad8"
+    },
+    "gaussian": {
+      "qualification": "qualified for this bounded demonstration",
+      "fields_sha256": "ff3a1512776a371be4ab5d9aa6029cca20cba9af4812407d4f3e7aa7e08c2e1f"
+    }
+  },
+  "limitations": [
+    "Headless Firefox reports document.hasFocus()=false even after browsingContext.activate and the recommended focusmanager.testmode preference. Tab navigation works, but focus-outline rendering cannot be verified in this environment. The UI provides explicit 2px :focus outlines.",
+    "Numerical qualification applies only to the three exact defaults on xi in [0,4].",
+    "Custom input settings are explicitly exploratory and unqualified.",
+    "Two-level refinement agreement is not a rigorous error bound.",
+    "Exterior action is not automatically radiation; short persistence is not stability."
+  ],
+  "no_fno_or_large_dataset": true
+}

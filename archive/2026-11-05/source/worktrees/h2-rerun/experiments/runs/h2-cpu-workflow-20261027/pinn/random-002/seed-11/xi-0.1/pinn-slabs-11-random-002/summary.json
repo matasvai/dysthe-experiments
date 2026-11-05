@@ -1,0 +1,60 @@
+{
+  "method": "pinn_slabs",
+  "seed": 11,
+  "case_id": "random-002",
+  "split": "test",
+  "training_seconds": 0.056960556999911205,
+  "history": [
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.04556030035018921,
+        "full_dysthe_residual_validation": 0.04062822088599205,
+        "seconds": 0.030172872000548523,
+        "training_epsilon": 0.0379299595952034,
+        "gradient_norm_before_clip": 7.577123641967773
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.005776319187134504,
+        "full_dysthe_residual_validation": 0.005869818385690451,
+        "seconds": 0.056960556999911205,
+        "training_epsilon": 0.0379299595952034,
+        "gradient_norm_before_clip": 2.3069400787353516
+      }
+    ]
+  ],
+  "full_residual_rms_relative": [
+    0.07659205049276352
+  ],
+  "metrics": [
+    {
+      "xi": 0.1,
+      "l2": 0.0016523599454007273,
+      "h1": 0.001735582036201914,
+      "h2": 0.0018695813172988729,
+      "peak": 0.0005454580756938055
+    }
+  ],
+  "sampled_interval_errors": {
+    "l2": 0.0016523599454007273,
+    "h1": 0.001735582036201914,
+    "h2": 0.0018695813172988729,
+    "peak": 0.0005454580756938055
+  },
+  "sampled_interval_tolerances": {
+    "l2": 0.01,
+    "h1": 0.05,
+    "h2": 0.05,
+    "peak": 0.05
+  },
+  "sampled_interval_gate_version": "complex-l2-h1-h2-peak-v2",
+  "sampled_interval_pass": true,
+  "sampled_station_count": 3,
+  "resumed_from_checkpoint": false,
+  "checkpoints": {
+    "best-0.pt": "e65b18f2cadabe0ee38db62ca4326d0600bef021e70b2077d387bc759c680322"
+  },
+  "gpu_peak_allocated_bytes": null,
+  "invocation_elapsed_seconds": 0.06448826599989843
+}

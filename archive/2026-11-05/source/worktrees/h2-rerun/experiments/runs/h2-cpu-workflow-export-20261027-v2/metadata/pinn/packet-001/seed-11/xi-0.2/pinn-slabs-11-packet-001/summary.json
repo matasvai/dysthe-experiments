@@ -1,0 +1,80 @@
+{
+  "method": "pinn_slabs",
+  "seed": 11,
+  "case_id": "packet-001",
+  "split": "validation",
+  "training_seconds": 0.10951858400221681,
+  "history": [
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.20337162911891937,
+        "full_dysthe_residual_validation": 0.1673603504896164,
+        "seconds": 0.02974166400053946,
+        "training_epsilon": 0.03891041502356529,
+        "gradient_norm_before_clip": 71.44979858398438
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.05433441698551178,
+        "full_dysthe_residual_validation": 0.03155351057648659,
+        "seconds": 0.056642712001121254,
+        "training_epsilon": 0.03891041502356529,
+        "gradient_norm_before_clip": 29.9462833404541
+      }
+    ],
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.22293110191822052,
+        "full_dysthe_residual_validation": 0.22583988308906555,
+        "seconds": 0.025714806999530992,
+        "training_epsilon": 0.03891041502356529,
+        "gradient_norm_before_clip": 68.46399688720703
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.04434413090348244,
+        "full_dysthe_residual_validation": 0.04739899933338165,
+        "seconds": 0.05287587200109556,
+        "training_epsilon": 0.03891041502356529,
+        "gradient_norm_before_clip": 26.312192916870117
+      }
+    ]
+  ],
+  "full_residual_rms_relative": [
+    0.17761516571044922,
+    0.21767626702785492
+  ],
+  "metrics": [
+    {
+      "xi": 0.2,
+      "l2": 0.0028174234371146044,
+      "h1": 0.003187976884377323,
+      "h2": 0.003867959691541345,
+      "peak": 0.0012754236633918013
+    }
+  ],
+  "sampled_interval_errors": {
+    "l2": 0.0028174234371146044,
+    "h1": 0.003187976884377323,
+    "h2": 0.003867959691541345,
+    "peak": 0.0012754236633918013
+  },
+  "sampled_interval_tolerances": {
+    "l2": 0.01,
+    "h1": 0.05,
+    "h2": 0.05,
+    "peak": 0.05
+  },
+  "sampled_interval_gate_version": "complex-l2-h1-h2-peak-v2",
+  "sampled_interval_pass": true,
+  "sampled_station_count": 5,
+  "resumed_from_checkpoint": false,
+  "checkpoints": {
+    "best-0.pt": "7459ec84742351e77315ec228f041ff7d87d23c207985fd06f75dc4b20b9f788",
+    "best-1.pt": "acea3dcad52ff6ce3edb732a54d83be1438c016854afdad9de84f0d974f1392c"
+  },
+  "gpu_peak_allocated_bytes": null,
+  "invocation_elapsed_seconds": 0.12358622299871058
+}

@@ -1,0 +1,501 @@
+{
+  "key": "sideband-eps0.1-literal-T4",
+  "family": "sideband",
+  "epsilon": 0.1,
+  "model": "literal",
+  "model_id": "dysthe-1979-temporal-potential-1d-literal-v1",
+  "T": 4.0,
+  "parameters": {
+    "carrier_amplitude": 0.8,
+    "modulation_mode": 5,
+    "modulation_wavenumber": 0.7853981633974483,
+    "cosine_depth": 0.05,
+    "imaginary_sine_depth": 0.025,
+    "phase": -0.2
+  },
+  "source_sha256": "5689c66826e889d78da11f0931dc1e3bbb651169b29867e0cfaf1613b59d3d84",
+  "config_sha256": "1c022015b0ef150c5fb1a74c0df1795cf355716fe4632ed9921f17c8575dd29e",
+  "seconds": {
+    "fine": 0.06747688799805474,
+    "grid": 0.052609482998377644,
+    "step": 0.033958491003431845
+  },
+  "status": "complete",
+  "qualified": true,
+  "refinement": {
+    "grid": {
+      "h0": 4.578155530946761e-16,
+      "h1": 5.186076463508223e-15,
+      "h2": 1.0776714719739787e-13
+    },
+    "step": {
+      "h0": 2.703077674016972e-10,
+      "h1": 2.852195197558448e-10,
+      "h2": 3.1112606180010514e-10
+    }
+  },
+  "diagnostics": {
+    "rows": [
+      {
+        "T": 0.0,
+        "nonlinear_lengths": 0.0,
+        "peak": 0.8400000000000001,
+        "peak_ratio": 1.0,
+        "physical_envelope_peak": 0.08400000000000002,
+        "action": 25.640000000000004,
+        "action_relative_drift": 0.0,
+        "norms": {
+          "h0": 5.063595560468865,
+          "h1": 5.066031386697355,
+          "h2": 5.069967277259244
+        },
+        "h2_ratio": 1.0,
+        "spectral_centroid": 0.000980216116564678,
+        "spectral_width": 0.031005871999799064,
+        "scaled_bandwidth_indicator": 0.0031005871999799065,
+        "spectral_tail_fraction": 9.149792394765395e-34,
+        "boundary_action_fraction": 0.09325259723880026,
+        "phase_aligned_recurrence_l2": 0.0
+      },
+      {
+        "T": 0.2,
+        "nonlinear_lengths": 0.07056000000000001,
+        "peak": 0.8400368245283437,
+        "peak_ratio": 1.0000438387242185,
+        "physical_envelope_peak": 0.08400368245283438,
+        "action": 25.64000000000002,
+        "action_relative_drift": 5.542455037130266e-16,
+        "norms": {
+          "h0": 5.063595560468867,
+          "h1": 5.066056520108911,
+          "h2": 5.070033303969832
+        },
+        "h2_ratio": 1.0000130231038935,
+        "spectral_centroid": 0.0009796772760909112,
+        "spectral_width": 0.03116563901621749,
+        "scaled_bandwidth_indicator": 0.003116563901621749,
+        "spectral_tail_fraction": 3.659739891353518e-33,
+        "boundary_action_fraction": 0.09324726069769727,
+        "phase_aligned_recurrence_l2": 0.003852347774902004
+      },
+      {
+        "T": 0.4,
+        "nonlinear_lengths": 0.14112000000000002,
+        "peak": 0.8401473759243385,
+        "peak_ratio": 1.0001754475289744,
+        "physical_envelope_peak": 0.08401473759243386,
+        "action": 25.64000000000003,
+        "action_relative_drift": 9.699296314977964e-16,
+        "norms": {
+          "h0": 5.063595560468868,
+          "h1": 5.06613208106148,
+          "h2": 5.0702318121608965
+        },
+        "h2_ratio": 1.000052176845961,
+        "spectral_centroid": 0.000978057290468462,
+        "spectral_width": 0.031641108328267296,
+        "scaled_bandwidth_indicator": 0.00316411083282673,
+        "spectral_tail_fraction": 5.505449971717775e-33,
+        "boundary_action_fraction": 0.09323124504352247,
+        "phase_aligned_recurrence_l2": 0.007711352749162169
+      },
+      {
+        "T": 0.6000000000000001,
+        "nonlinear_lengths": 0.21168000000000006,
+        "peak": 0.8403318876671126,
+        "peak_ratio": 1.0003951043656103,
+        "physical_envelope_peak": 0.08403318876671127,
+        "action": 25.640000000000065,
+        "action_relative_drift": 2.355543390780363e-15,
+        "norms": {
+          "h0": 5.063595560468872,
+          "h1": 5.066258552814623,
+          "h2": 5.070564089178773
+        },
+        "h2_ratio": 1.000117715142306,
+        "spectral_centroid": 0.0009753457426939632,
+        "spectral_width": 0.032421351286115965,
+        "scaled_bandwidth_indicator": 0.003242135128611597,
+        "spectral_tail_fraction": 5.542758829546929e-33,
+        "boundary_action_fraction": 0.09320453218530794,
+        "phase_aligned_recurrence_l2": 0.011583681628528181
+      },
+      {
+        "T": 0.8,
+        "nonlinear_lengths": 0.28224000000000005,
+        "peak": 0.8405909318926662,
+        "peak_ratio": 1.000703490348412,
+        "physical_envelope_peak": 0.08405909318926663,
+        "action": 25.64000000000011,
+        "action_relative_drift": 4.156841277847699e-15,
+        "norms": {
+          "h0": 5.063595560468876,
+          "h1": 5.06643674449743,
+          "h2": 5.071032291198918
+        },
+        "h2_ratio": 1.0002100632768285,
+        "spectral_centroid": 0.0009715251895184055,
+        "spectral_width": 0.03348986702211578,
+        "scaled_bandwidth_indicator": 0.0033489867022115784,
+        "spectral_tail_fraction": 5.4618624784148365e-33,
+        "boundary_action_fraction": 0.09316709197685118,
+        "phase_aligned_recurrence_l2": 0.015476020167919621
+      },
+      {
+        "T": 1.0,
+        "nonlinear_lengths": 0.35280000000000006,
+        "peak": 0.8409256984799729,
+        "peak_ratio": 1.0011020219999676,
+        "physical_envelope_peak": 0.08409256984799729,
+        "action": 25.64000000000016,
+        "action_relative_drift": 6.096700540843292e-15,
+        "norms": {
+          "h0": 5.063595560468881,
+          "h1": 5.066667796689678,
+          "h2": 5.0716394592529355
+        },
+        "h2_ratio": 1.0003298210623945,
+        "spectral_centroid": 0.0009665710382239188,
+        "spectral_width": 0.034826630787912385,
+        "scaled_bandwidth_indicator": 0.0034826630787912387,
+        "spectral_tail_fraction": 5.953501999329821e-33,
+        "boundary_action_fraction": 0.09311888222476011,
+        "phase_aligned_recurrence_l2": 0.01939508278712256
+      },
+      {
+        "T": 1.2000000000000002,
+        "nonlinear_lengths": 0.4233600000000001,
+        "peak": 0.8413362175817308,
+        "peak_ratio": 1.0015907352163462,
+        "physical_envelope_peak": 0.08413362175817309,
+        "action": 25.640000000000214,
+        "action_relative_drift": 8.175121179767142e-15,
+        "norms": {
+          "h0": 5.063595560468886,
+          "h1": 5.066953189308892,
+          "h2": 5.072389541928663
+        },
+        "h2_ratio": 1.0004777673182002,
+        "spectral_centroid": 0.0009604513723788484,
+        "spectral_width": 0.03641017551923403,
+        "scaled_bandwidth_indicator": 0.0036410175519234027,
+        "spectral_tail_fraction": 5.5454314695457084e-33,
+        "boundary_action_fraction": 0.09305984869956312,
+        "phase_aligned_recurrence_l2": 0.023347622296175635
+      },
+      {
+        "T": 1.4000000000000001,
+        "nonlinear_lengths": 0.49392000000000014,
+        "peak": 0.8418233840599273,
+        "peak_ratio": 1.0021706953094371,
+        "physical_envelope_peak": 0.08418233840599273,
+        "action": 25.640000000000267,
+        "action_relative_drift": 1.0253541818690991e-14,
+        "norms": {
+          "h0": 5.063595560468891,
+          "h1": 5.067294751878298,
+          "h2": 5.0732874250123405
+        },
+        "h2_ratio": 1.00065486571639,
+        "spectral_centroid": 0.0009531267248004421,
+        "spectral_width": 0.03821934076635738,
+        "scaled_bandwidth_indicator": 0.003821934076635738,
+        "spectral_tail_fraction": 6.633361252583961e-33,
+        "boundary_action_fraction": 0.09298992514971452,
+        "phase_aligned_recurrence_l2": 0.02734043976763343
+      },
+      {
+        "T": 1.6,
+        "nonlinear_lengths": 0.5644800000000001,
+        "peak": 0.8423882518298744,
+        "peak_ratio": 1.0028431569403267,
+        "physical_envelope_peak": 0.08423882518298745,
+        "action": 25.640000000000356,
+        "action_relative_drift": 1.3717576216897408e-14,
+        "norms": {
+          "h0": 5.0635955604689,
+          "h1": 5.06769467627421,
+          "h2": 5.0743389684287195
+        },
+        "h2_ratio": 1.0008622720681224,
+        "spectral_centroid": 0.0009445497953927183,
+        "spectral_width": 0.04023451950254424,
+        "scaled_bandwidth_indicator": 0.004023451950254424,
+        "spectral_tail_fraction": 7.906767642702628e-33,
+        "boundary_action_fraction": 0.0929090333182492,
+        "phase_aligned_recurrence_l2": 0.03138039459346487
+      },
+      {
+        "T": 1.8,
+        "nonlinear_lengths": 0.6350400000000002,
+        "peak": 0.8430326231421972,
+        "peak_ratio": 1.0036102656454728,
+        "physical_envelope_peak": 0.08430326231421972,
+        "action": 25.64000000000043,
+        "action_relative_drift": 1.6627365111390797e-14,
+        "norms": {
+          "h0": 5.063595560468908,
+          "h1": 5.06815553207676,
+          "h2": 5.0755510509296595
+        },
+        "h2_ratio": 1.001101343137945,
+        "spectral_centroid": 0.0009346651109213805,
+        "spectral_width": 0.0424384009154771,
+        "scaled_bandwidth_indicator": 0.00424384009154771,
+        "spectral_tail_fraction": 7.895986366667838e-33,
+        "boundary_action_fraction": 0.09281708296174472,
+        "phase_aligned_recurrence_l2": 0.035474414765109506
+      },
+      {
+        "T": 2.0,
+        "nonlinear_lengths": 0.7056000000000001,
+        "peak": 0.8437587239726673,
+        "peak_ratio": 1.0044746713960324,
+        "physical_envelope_peak": 0.08437587239726674,
+        "action": 25.640000000000537,
+        "action_relative_drift": 2.0784206389238496e-14,
+        "norms": {
+          "h0": 5.063595560468918,
+          "h1": 5.068680284675434,
+          "h2": 5.0769316230865655
+        },
+        "h2_ratio": 1.0013736470960195,
+        "spectral_centroid": 0.0009234086231256077,
+        "spectral_width": 0.04481630275559259,
+        "scaled_bandwidth_indicator": 0.004481630275559259,
+        "spectral_tail_fraction": 8.047976045903854e-33,
+        "boundary_action_fraction": 0.0927139718711355,
+        "phase_aligned_recurrence_l2": 0.03962950741620372
+      },
+      {
+        "T": 2.2,
+        "nonlinear_lengths": 0.7761600000000002,
+        "peak": 0.8445669963205301,
+        "peak_ratio": 1.0054369003815833,
+        "physical_envelope_peak": 0.08445669963205302,
+        "action": 25.640000000000647,
+        "action_relative_drift": 2.5079609043014452e-14,
+        "norms": {
+          "h0": 5.063595560468929,
+          "h1": 5.0692723163110625,
+          "h2": 5.078489769259404
+        },
+        "h2_ratio": 1.0016809757408862,
+        "spectral_centroid": 0.0009107072408346045,
+        "spectral_width": 0.04735621616758634,
+        "scaled_bandwidth_indicator": 0.004735621616758634,
+        "spectral_tail_fraction": 5.831908259981808e-33,
+        "boundary_action_fraction": 0.09259958589377495,
+        "phase_aligned_recurrence_l2": 0.04385276966874159
+      },
+      {
+        "T": 2.4000000000000004,
+        "nonlinear_lengths": 0.8467200000000003,
+        "peak": 0.8454598515424051,
+        "peak_ratio": 1.006499823264768,
+        "physical_envelope_peak": 0.08454598515424051,
+        "action": 25.640000000000775,
+        "action_relative_drift": 3.0067818576431695e-14,
+        "norms": {
+          "h0": 5.063595560468942,
+          "h1": 5.069935450269592,
+          "h2": 5.080235779348156
+        },
+        "h2_ratio": 1.0020253586517156,
+        "spectral_centroid": 0.000896478290938881,
+        "spectral_width": 0.05004867510433351,
+        "scaled_bandwidth_indicator": 0.0050048675104333515,
+        "spectral_tail_fraction": 6.1011424413340874e-33,
+        "boundary_action_fraction": 0.09247379895597108,
+        "phase_aligned_recurrence_l2": 0.048151399824997755
+      },
+      {
+        "T": 2.6,
+        "nonlinear_lengths": 0.9172800000000002,
+        "peak": 0.8464408963023127,
+        "peak_ratio": 1.0076677336932294,
+        "physical_envelope_peak": 0.08464408963023128,
+        "action": 25.64000000000091,
+        "action_relative_drift": 3.5333150861705445e-14,
+        "norms": {
+          "h0": 5.063595560468955,
+          "h1": 5.070673978480556,
+          "h2": 5.082181231284545
+        },
+        "h2_ratio": 1.002409079458971,
+        "spectral_centroid": 0.0008806289021441104,
+        "spectral_width": 0.052886535608800876,
+        "scaled_bandwidth_indicator": 0.005288653560880088,
+        "spectral_tail_fraction": 5.587855373197267e-33,
+        "boundary_action_fraction": 0.09233647308500895,
+        "phase_aligned_recurrence_l2": 0.05253270894946093
+      },
+      {
+        "T": 2.8000000000000003,
+        "nonlinear_lengths": 0.9878400000000003,
+        "peak": 0.8475103452595112,
+        "peak_ratio": 1.0089408872137038,
+        "physical_envelope_peak": 0.08475103452595112,
+        "action": 25.640000000001066,
+        "action_relative_drift": 4.1429851402548735e-14,
+        "norms": {
+          "h0": 5.06359556046897,
+          "h1": 5.071492692815624,
+          "h2": 5.08433908539707
+        },
+        "h2_ratio": 1.002834694456962,
+        "spectral_centroid": 0.0008630553043877388,
+        "spectral_width": 0.055864722302991714,
+        "scaled_bandwidth_indicator": 0.0055864722302991715,
+        "spectral_tail_fraction": 4.980125119787532e-33,
+        "boundary_action_fraction": 0.09218745842942833,
+        "phase_aligned_recurrence_l2": 0.05700413288736799
+      },
+      {
+        "T": 3.0,
+        "nonlinear_lengths": 1.0584000000000002,
+        "peak": 0.8486739817262661,
+        "peak_ratio": 1.0103261687217453,
+        "physical_envelope_peak": 0.08486739817262662,
+        "action": 25.64000000000123,
+        "action_relative_drift": 4.780367469524854e-14,
+        "norms": {
+          "h0": 5.063595560468986,
+          "h1": 5.072396920430923,
+          "h2": 5.08672379198538
+        },
+        "h2_ratio": 1.0033050538218058,
+        "spectral_centroid": 0.00084364203560004,
+        "spectral_width": 0.05897997676780042,
+        "scaled_bandwidth_indicator": 0.005897997676780042,
+        "spectral_tail_fraction": 5.9275478294905e-33,
+        "boundary_action_fraction": 0.09202659327603156,
+        "phase_aligned_recurrence_l2": 0.061573244769252404
+      },
+      {
+        "T": 3.2,
+        "nonlinear_lengths": 1.1289600000000002,
+        "peak": 0.8499317783576915,
+        "peak_ratio": 1.0118235456639184,
+        "physical_envelope_peak": 0.08499317783576915,
+        "action": 25.640000000001393,
+        "action_relative_drift": 5.417749798794835e-14,
+        "norms": {
+          "h0": 5.063595560469003,
+          "h1": 5.073392563551961,
+          "h2": 5.089351413676734
+        },
+        "h2_ratio": 1.0038233257450073,
+        "spectral_centroid": 0.0008222610461123309,
+        "spectral_width": 0.06223062647977899,
+        "scaled_bandwidth_indicator": 0.006223062647977899,
+        "spectral_tail_fraction": 4.790933907982271e-33,
+        "boundary_action_fraction": 0.09185370406176015,
+        "phase_aligned_recurrence_l2": 0.06624776805430048
+      },
+      {
+        "T": 3.4000000000000004,
+        "nonlinear_lengths": 1.1995200000000004,
+        "peak": 0.8512907434456812,
+        "peak_ratio": 1.0134413612448585,
+        "physical_envelope_peak": 0.08512907434456812,
+        "action": 25.640000000001617,
+        "action_relative_drift": 6.290686467142851e-14,
+        "norms": {
+          "h0": 5.063595560469024,
+          "h1": 5.0744861441633295,
+          "h2": 5.092239764414445
+        },
+        "h2_ratio": 1.0043930238475307,
+        "spectral_centroid": 0.0007987706894203832,
+        "spectral_width": 0.06561638268107865,
+        "scaled_bandwidth_indicator": 0.006561638268107866,
+        "spectral_tail_fraction": 4.879948498243162e-33,
+        "boundary_action_fraction": 0.09166860537818591,
+        "phase_aligned_recurrence_l2": 0.07103559016932424
+      },
+      {
+        "T": 3.6,
+        "nonlinear_lengths": 1.2700800000000003,
+        "peak": 0.8527515410521473,
+        "peak_ratio": 1.0151804060144611,
+        "physical_envelope_peak": 0.08527515410521475,
+        "action": 25.64000000000184,
+        "action_relative_drift": 7.163623135490869e-14,
+        "norms": {
+          "h0": 5.063595560469047,
+          "h1": 5.0756848541385065,
+          "h2": 5.095408567254131
+        },
+        "h2_ratio": 1.0050180383035214,
+        "spectral_centroid": 0.0007730145861583184,
+        "spectral_width": 0.06913816947568802,
+        "scaled_bandwidth_indicator": 0.006913816947568802,
+        "spectral_tail_fraction": 4.531000300183854e-33,
+        "boundary_action_fraction": 0.0914710999659165,
+        "phase_aligned_recurrence_l2": 0.07594477680489994
+      },
+      {
+        "T": 3.8000000000000003,
+        "nonlinear_lengths": 1.3406400000000003,
+        "peak": 0.8543203257488953,
+        "peak_ratio": 1.017048006843923,
+        "physical_envelope_peak": 0.08543203257488953,
+        "action": 25.640000000002058,
+        "action_relative_drift": 8.008847528653234e-14,
+        "norms": {
+          "h0": 5.063595560469068,
+          "h1": 5.0769966114298235,
+          "h2": 5.0988796335285
+        },
+        "h2_ratio": 1.0057026711787547,
+        "spectral_centroid": 0.0007448203459776306,
+        "spectral_width": 0.0727979831653497,
+        "scaled_bandwidth_indicator": 0.007279798316534971,
+        "spectral_tail_fraction": 4.586238130606814e-33,
+        "boundary_action_fraction": 0.09126097869570612,
+        "phase_aligned_recurrence_l2": 0.08098358693578213
+      },
+      {
+        "T": 4.0,
+        "nonlinear_lengths": 1.4112000000000002,
+        "peak": 0.8560017254660628,
+        "peak_ratio": 1.0190496731738843,
+        "physical_envelope_peak": 0.08560017254660629,
+        "action": 25.640000000002328,
+        "action_relative_drift": 9.061913985707985e-14,
+        "norms": {
+          "h0": 5.0635955604690945,
+          "h1": 5.078430123037056,
+          "h2": 5.102677066396789
+        },
+        "h2_ratio": 1.006451676578715,
+        "spectral_centroid": 0.0007139981294963888,
+        "spectral_width": 0.07659877929920182,
+        "scaled_bandwidth_indicator": 0.007659877929920182,
+        "spectral_tail_fraction": 4.9062907508287075e-33,
+        "boundary_action_fraction": 0.09103802053249468,
+        "phase_aligned_recurrence_l2": 0.08616048863919808
+      }
+    ],
+    "max_peak": 0.8560017254660628,
+    "max_h2_ratio": 1.006451676578715,
+    "max_spectral_tail": 8.047976045903854e-33,
+    "max_action_drift": 9.061913985707985e-14,
+    "initial_peak": 0.8400000000000001,
+    "nonlinear_length": 2.8344671201814053,
+    "focusing_peaks": [],
+    "recurrence_candidates": [],
+    "definitions": {
+      "norm": "Hs\u00b2=L sum (1+k\u00b2)^s |fft(u)/N|\u00b2",
+      "nonlinear_length": "2/max|u(0)|\u00b2, because cubic coefficient is 1/2",
+      "tail": "action fraction at |mode|>=0.8*N/4",
+      "recurrence": "Global phase only, no translation alignment; sampled local minima <0.05",
+      "steepness_bandwidth": "epsilon*peak and epsilon*spectral width are formal indicators, no universal physical-validity threshold"
+    }
+  },
+  "artifact": {
+    "path": "sideband-eps0.1-literal-T4.npz",
+    "sha256": "8013d507f8eca3aa66e54d4ac4baf48c6bf422ebbdd37f403dbdb437ad4aa20f"
+  }
+}

@@ -1,0 +1,500 @@
+{
+  "kind": "CPU validation-only ablation throughxi4, notGPUresults or independenttestresult",
+  "config_sha256": "b9ae0899ac39c12d695fe5e61b3dd2281962a1ef482b777f4f375abb9adcec5c",
+  "source_files": {
+    "pilot": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/experiments/src/dysthe_experiments/cpu_pilot.py",
+    "campaign": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/experiments/src/dysthe_experiments/long_distance.py",
+    "models": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/learning/src/dysthe_learning/pilot_models.py",
+    "reference": "/home/matasvai/Documents/Projects/Dysthe/dysthe-core/src/dysthe_core/reference/spatial.py"
+  },
+  "source_sha256_at_start": {
+    "pilot": "351301aa0885ee4c8560edf09d4f2ef0d27e1997bffd6afd567501fb63532a14",
+    "campaign": "36487d86e47ba5b1248ac1c375cbdee58201dd92cef999d6059b1ce0c3506cd7",
+    "models": "fbe57fd4da3697b2ee11c4ed60c5646987e9cac6b44a951b0ad32991ecd37e71",
+    "reference": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8"
+  },
+  "environment": {
+    "python": "3.14.8",
+    "numpy": "2.4.2",
+    "scipy": "1.17.0",
+    "torch": "2.10.0+cu128",
+    "threads": 2
+  },
+  "design": {
+    "cases": [
+      "packet-008",
+      "sideband-008",
+      "random-008"
+    ],
+    "seed": 11,
+    "variants": [
+      "none",
+      "inverse_1_plus_k2"
+    ],
+    "horizon": 4.0,
+    "slab_length": 0.5,
+    "slabs": 8,
+    "epochs_per_slab": 400,
+    "output_modes": 48,
+    "reference_grid": 1024,
+    "reference_step": 0.00125,
+    "initial_condition": "sameinletperpair; eachlaterinletisthepreviouspredictedendpoint",
+    "selection": "fullDystheresidualcheckpoints; no solutionlabels"
+  },
+  "references": [
+    {
+      "case_id": "packet-008",
+      "epsilon": 0.04876348312215825,
+      "step_refinement": {
+        "h0": 9.472675170835231e-14,
+        "h1": 9.596876927728526e-14,
+        "h2": 7.234564695281492e-13
+      },
+      "grid_refinement": {
+        "h0": 8.231405348261753e-16,
+        "h1": 1.5466969242076013e-14,
+        "h2": 7.738361859235121e-13
+      },
+      "K48_projection_floor": {
+        "h0": 1.0664503830615703e-15,
+        "h1": 1.753519485328236e-14,
+        "h2": 1.0804790565094422e-12
+      }
+    },
+    {
+      "case_id": "sideband-008",
+      "epsilon": 0.04637988396889148,
+      "step_refinement": {
+        "h0": 2.0099850530789725e-13,
+        "h1": 2.2539115930534568e-13,
+        "h2": 5.4119853022831e-13
+      },
+      "grid_refinement": {
+        "h0": 3.0031087576470365e-16,
+        "h1": 8.795833549941795e-15,
+        "h2": 5.280648103432477e-13
+      },
+      "K48_projection_floor": {
+        "h0": 6.05380676723864e-15,
+        "h1": 4.912435378449784e-14,
+        "h2": 7.462357060751092e-13
+      }
+    },
+    {
+      "case_id": "random-008",
+      "epsilon": 0.041190447329660165,
+      "step_refinement": {
+        "h0": 1.2230200288552507e-13,
+        "h1": 1.2605566372845037e-13,
+        "h2": 7.220153703469855e-13
+      },
+      "grid_refinement": {
+        "h0": 6.321647877082615e-16,
+        "h1": 1.6216299127705145e-14,
+        "h2": 7.848309979642292e-13
+      },
+      "K48_projection_floor": {
+        "h0": 5.6236224181626515e-12,
+        "h1": 4.261636874490491e-11,
+        "h2": 3.215501617498481e-10
+      }
+    }
+  ],
+  "fits": [
+    {
+      "case_id": "packet-008",
+      "seed": 11,
+      "scaling": "none",
+      "errors": {
+        "l2": 0.014668994497686553,
+        "h1": 0.04944672287601893,
+        "h2": 0.2611187256358897,
+        "peak": 0.006891037130904199
+      },
+      "independent_sobolev_errors": {
+        "h0": 0.014668981471949477,
+        "h1": 0.049446718927664855,
+        "h2": 0.26111860445302093
+      },
+      "pass_combined_gates": false,
+      "gates": {
+        "l2": 0.01,
+        "h1": 0.05,
+        "h2": 0.05,
+        "peak": 0.05
+      },
+      "full_residual_rms_relative_by_slab": [
+        0.5748914480209351,
+        0.45810937881469727,
+        0.29736530780792236,
+        0.458731085062027,
+        0.253893107175827,
+        0.2977735102176666,
+        0.16040529310703278,
+        0.22593890130519867
+      ],
+      "best_epochs": [
+        300,
+        200,
+        200,
+        100,
+        200,
+        100,
+        100,
+        200
+      ],
+      "endpoint_h2_error_power_fraction_by_band": {
+        "0to12": 0.01131390874936854,
+        "13to24": 0.06008081718049942,
+        "25to48": 0.9286052566924693,
+        "above48": 1.737766293997159e-08
+      },
+      "training_seconds": 14.108652377997714,
+      "total_elapsed_seconds": 14.577658105999944,
+      "summary_sha256": "44c89d41b1eded0e92f6fc46be6e5cc1b286f624a68ef63469cedacfb09ecee7",
+      "prediction_reference_sha256": "64c277cf74f47f1d44961431abcd6ae3549550718f4da91a0b85ba5bd9961893",
+      "checkpoints": {
+        "pinn-slabs-11-packet-008/best-0.pt": "e58797120dad65a5cee67f476c700b16d50cc504904823ebfd52b2adc859c071",
+        "pinn-slabs-11-packet-008/best-1.pt": "85f7199e7ca9c58fb02fe0f407c665877ec76678c0fb1a78f1436fb89c07e7c5",
+        "pinn-slabs-11-packet-008/best-2.pt": "93e19de05226d0dc3b9e388affd8a209c0e542e869c130ce22c0fc8831c433c4",
+        "pinn-slabs-11-packet-008/best-3.pt": "ed51b9bd87eda1944390f58eeffec0b7267bc4144ead3fe6acc15adb4c5a17a7",
+        "pinn-slabs-11-packet-008/best-4.pt": "7f6ddda1cfb8c7cd4097e620d42eed6247893d0bc73a60e20185f4d06e2487fa",
+        "pinn-slabs-11-packet-008/best-5.pt": "854206ec992abcc4e979f9347f73b277f3cebf5a2a29dc2fa0be584372aa7da3",
+        "pinn-slabs-11-packet-008/best-6.pt": "cdde05d72a5c7a3d2331142d9e270cd79f61571e74a37ecd40ad10176e2fc039",
+        "pinn-slabs-11-packet-008/best-7.pt": "8711adc858ad3f165b5fbc68405d676b9af765a8cd37b4f8dc22a46add90be56"
+      }
+    },
+    {
+      "case_id": "packet-008",
+      "seed": 11,
+      "scaling": "inverse_1_plus_k2",
+      "errors": {
+        "l2": 0.003414725555736416,
+        "h1": 0.005501629527206033,
+        "h2": 0.01465812323325048,
+        "peak": 0.0019451214325098686
+      },
+      "independent_sobolev_errors": {
+        "h0": 0.003414730417634026,
+        "h1": 0.005501646713105152,
+        "h2": 0.014656007816137427
+      },
+      "pass_combined_gates": true,
+      "gates": {
+        "l2": 0.01,
+        "h1": 0.05,
+        "h2": 0.05,
+        "peak": 0.05
+      },
+      "full_residual_rms_relative_by_slab": [
+        0.038564883172512054,
+        0.05041876062750816,
+        0.04860904440283775,
+        0.03368621692061424,
+        0.03293783590197563,
+        0.03408493474125862,
+        0.03439369425177574,
+        0.04370315372943878
+      ],
+      "best_epochs": [
+        100,
+        300,
+        400,
+        200,
+        100,
+        100,
+        200,
+        400
+      ],
+      "endpoint_h2_error_power_fraction_by_band": {
+        "0to12": 0.1924181079681708,
+        "13to24": 0.2696534229027133,
+        "25to48": 0.5379254966064136,
+        "above48": 2.9725227023106564e-06
+      },
+      "training_seconds": 15.272247903003517,
+      "total_elapsed_seconds": 15.393057624998619,
+      "summary_sha256": "e0c83b5928a3100264dda4a6f8515ce9e135a431e3f6ee678260805a85fc347f",
+      "prediction_reference_sha256": "8ea2822afebbcdbc4ccbe2c7f88e469e5d9f1981c0acee82a80e8992c2150604",
+      "checkpoints": {
+        "pinn-slabs-11-packet-008/best-0.pt": "f02ba7c74869a67fb7a401a1c9f0aebd067da2a8c0b70a3a76f2ca24b64f8343",
+        "pinn-slabs-11-packet-008/best-1.pt": "037a75776996407e1c79ec93a45d020c7033f15290506db8b54f772333d351ff",
+        "pinn-slabs-11-packet-008/best-2.pt": "f6c8ca22207630058750cce326dbdc022458310f8f4d184bd275ae636e106b49",
+        "pinn-slabs-11-packet-008/best-3.pt": "091fff5fd7bd8b0ae020a32a1ce7c6da684d22841b88e3e5baccc4ffc4647961",
+        "pinn-slabs-11-packet-008/best-4.pt": "e160c66861bdf39ed1097c6f300fb66543d7f7ee88c21faefac113ddf2266bf0",
+        "pinn-slabs-11-packet-008/best-5.pt": "21055e7a73e70772b1a66ccfa9ee586fd1526ef997103cf0fd451a915e975662",
+        "pinn-slabs-11-packet-008/best-6.pt": "0ffc23e112342700ce9d176ed2e28ef692a6eed4c6086b6d496a173bc894cee9",
+        "pinn-slabs-11-packet-008/best-7.pt": "2bab77fdae66caaa709c47ec2da4a0217d6b58dee04e2af82e5e72bde1f0ef6f"
+      }
+    },
+    {
+      "case_id": "sideband-008",
+      "seed": 11,
+      "scaling": "none",
+      "errors": {
+        "l2": 0.011928113855549347,
+        "h1": 0.026697616627534174,
+        "h2": 0.1210756788235955,
+        "peak": 0.012139870365733338
+      },
+      "independent_sobolev_errors": {
+        "h0": 0.011928066392532364,
+        "h1": 0.02669766980319222,
+        "h2": 0.12107567318631533
+      },
+      "pass_combined_gates": false,
+      "gates": {
+        "l2": 0.01,
+        "h1": 0.05,
+        "h2": 0.05,
+        "peak": 0.05
+      },
+      "full_residual_rms_relative_by_slab": [
+        0.05308515951037407,
+        0.0704168900847435,
+        0.06494387239217758,
+        0.0731341764330864,
+        0.06921745091676712,
+        0.05820251628756523,
+        0.06029307469725609,
+        0.05232737585902214
+      ],
+      "best_epochs": [
+        200,
+        300,
+        400,
+        400,
+        100,
+        200,
+        200,
+        400
+      ],
+      "endpoint_h2_error_power_fraction_by_band": {
+        "0to12": 0.01708124900435775,
+        "13to24": 0.14049986233155382,
+        "25to48": 0.8424188725108078,
+        "above48": 1.6153280423274258e-08
+      },
+      "training_seconds": 14.174345079998602,
+      "total_elapsed_seconds": 14.298530850999668,
+      "summary_sha256": "1ff6acff33bb61bc966a1b6227cca2d47a452d5c22055579648b0fc7ebf565f6",
+      "prediction_reference_sha256": "1b2284fe3daaea5e80769a055d5d0d0d23ca37967ccaa43fa680282fe6ba5212",
+      "checkpoints": {
+        "pinn-slabs-11-sideband-008/best-0.pt": "ba9cdd69390f598b1ec468ab77e7d8d99db74e3df48465100d3e4848277c65b9",
+        "pinn-slabs-11-sideband-008/best-1.pt": "b5807c4468c43be5ad60c2485332a8a3417ce6188f3bc24132d0e4e38225820e",
+        "pinn-slabs-11-sideband-008/best-2.pt": "2cbfa5aad6ce4ee8a2f35039fe6219e8dd3123bc5ce5cc515d341f82d3057e25",
+        "pinn-slabs-11-sideband-008/best-3.pt": "0aa0c7032f4240e68e9027058149b56d65ec4f07ad2c25262dbbd1af8473c892",
+        "pinn-slabs-11-sideband-008/best-4.pt": "94588f17a5c24f6ed8d9afe311200eba96d8cab76dd35184b4f23f6eb797efc4",
+        "pinn-slabs-11-sideband-008/best-5.pt": "220550e21bcb04f213602d80046065fadb46f9ebee97c352dfb05858e704f896",
+        "pinn-slabs-11-sideband-008/best-6.pt": "053a378cc1a92648f2b5e50b61bb3e0a2abaf100c482da2881c6f164f1d1796c",
+        "pinn-slabs-11-sideband-008/best-7.pt": "07fb19f9c687d61489cdd75fb94252e2c82c204c2d51fcf8c6886b82548392fa"
+      }
+    },
+    {
+      "case_id": "sideband-008",
+      "seed": 11,
+      "scaling": "inverse_1_plus_k2",
+      "errors": {
+        "l2": 0.0025661467894807434,
+        "h1": 0.003190829279972928,
+        "h2": 0.006547486204738351,
+        "peak": 0.0024987793063882676
+      },
+      "independent_sobolev_errors": {
+        "h0": 0.0025661453990294915,
+        "h1": 0.003190795318702439,
+        "h2": 0.0065437171822819475
+      },
+      "pass_combined_gates": true,
+      "gates": {
+        "l2": 0.01,
+        "h1": 0.05,
+        "h2": 0.05,
+        "peak": 0.05
+      },
+      "full_residual_rms_relative_by_slab": [
+        0.009355869144201279,
+        0.00213925470598042,
+        0.0049860370345413685,
+        0.0028757648542523384,
+        0.0036320325452834368,
+        0.0026538728270679712,
+        0.004900035448372364,
+        0.0038482192903757095
+      ],
+      "best_epochs": [
+        200,
+        400,
+        200,
+        300,
+        200,
+        300,
+        100,
+        300
+      ],
+      "endpoint_h2_error_power_fraction_by_band": {
+        "0to12": 0.32335046223304414,
+        "13to24": 0.23302830719589557,
+        "25to48": 0.44361536558385267,
+        "above48": 5.86498720762364e-06
+      },
+      "training_seconds": 15.349439330999303,
+      "total_elapsed_seconds": 15.470614619000116,
+      "summary_sha256": "fc36575c3b6431f77f1f9826346110875b079c4e47762a05058c5aeab8a4133d",
+      "prediction_reference_sha256": "6942cc7e22e77f60edc2cfbd8e8b0ad18092b949a37b9e8fdfd656ae52f9a544",
+      "checkpoints": {
+        "pinn-slabs-11-sideband-008/best-0.pt": "a823e8f79010936e74837e46258dec6d0126e442bba75364f2e7b21e01e64cf4",
+        "pinn-slabs-11-sideband-008/best-1.pt": "329bd982ba2bbe607663a88d873fe764344c744f2763bc4e2136e55e23e1bc69",
+        "pinn-slabs-11-sideband-008/best-2.pt": "d265af7ebab7d1fbf171c7f3759874998784729fd24b1fe608c725ccbe232334",
+        "pinn-slabs-11-sideband-008/best-3.pt": "7df3e6c4ec403e4d26b5d7ff15853d3e0fa704bac8e4789a9fd50b3c67d0a8be",
+        "pinn-slabs-11-sideband-008/best-4.pt": "f47d079f5b45732c788698888f16e4963ddaaa5d0540c03bbe970fe8b9b40c3b",
+        "pinn-slabs-11-sideband-008/best-5.pt": "dc559b829473ded1a473881ca978c6d06d818f931b44498e849466cd09fadb4f",
+        "pinn-slabs-11-sideband-008/best-6.pt": "585529a64b6d80f9668ac09665de92ad3381996b70429549fcc20c1b16eeb0ed",
+        "pinn-slabs-11-sideband-008/best-7.pt": "2e1eab98116f1b81b10071feaa2418efbe5a8cb14a713aff02d8fd826ef487ea"
+      }
+    },
+    {
+      "case_id": "random-008",
+      "seed": 11,
+      "scaling": "none",
+      "errors": {
+        "l2": 0.01258511678100463,
+        "h1": 0.0322003812547738,
+        "h2": 0.15850480607151002,
+        "peak": 0.006503137087125506
+      },
+      "independent_sobolev_errors": {
+        "h0": 0.012585124681190421,
+        "h1": 0.03220040084562006,
+        "h2": 0.15850473120248948
+      },
+      "pass_combined_gates": false,
+      "gates": {
+        "l2": 0.01,
+        "h1": 0.05,
+        "h2": 0.05,
+        "peak": 0.05
+      },
+      "full_residual_rms_relative_by_slab": [
+        0.33713799715042114,
+        0.32795679569244385,
+        0.26931172609329224,
+        0.2306230068206787,
+        0.31536489725112915,
+        0.20365498960018158,
+        0.18602102994918823,
+        0.24550311267375946
+      ],
+      "best_epochs": [
+        200,
+        100,
+        100,
+        100,
+        100,
+        100,
+        300,
+        100
+      ],
+      "endpoint_h2_error_power_fraction_by_band": {
+        "0to12": 0.014787478253978529,
+        "13to24": 0.08508116924002974,
+        "25to48": 0.9001313129414997,
+        "above48": 3.9564492061423707e-08
+      },
+      "training_seconds": 14.369172480000998,
+      "total_elapsed_seconds": 14.489396510000006,
+      "summary_sha256": "c05fb3ad5afadb238eb67275fc6d87c54c4de8f621afbe0609b1390b66f40ba6",
+      "prediction_reference_sha256": "55373bab377d9ccd1200b772e7557313314f6df20ae3387940e47a37e84465ec",
+      "checkpoints": {
+        "pinn-slabs-11-random-008/best-0.pt": "c0dbe2805ca46718b5a796b0446bb1d7a4b83b01c17120b3700f48031725ccba",
+        "pinn-slabs-11-random-008/best-1.pt": "c5a21bea07ec0662f6e08fdf732aa161df16e83744796a582427671fae0d21cf",
+        "pinn-slabs-11-random-008/best-2.pt": "e40b51bd4b970c091202794697f480c660901a25bc1b2e93044963bbdeb65db5",
+        "pinn-slabs-11-random-008/best-3.pt": "c2de0c41d29cf3901f58308afae0ced0387e3ddfe7fe211932db58d4e200cb73",
+        "pinn-slabs-11-random-008/best-4.pt": "cd9064a0cab6671fe7ed905376293db3e7172dbdddd55c7d4650b7b182113b53",
+        "pinn-slabs-11-random-008/best-5.pt": "f217d774be29bb57b7a68621185d287a342f0dd78db7d79f086db38b38755205",
+        "pinn-slabs-11-random-008/best-6.pt": "542ea5982ee3bb9cca6fe650a46848124f5334e4c45e60ccd1b432095c6c0f0c",
+        "pinn-slabs-11-random-008/best-7.pt": "1f49e89101bd89366bc1e18028eb05f3f050d7a671562e01358e29e404dc31a9"
+      }
+    },
+    {
+      "case_id": "random-008",
+      "seed": 11,
+      "scaling": "inverse_1_plus_k2",
+      "errors": {
+        "l2": 0.0005775199422272153,
+        "h1": 0.0008839004921679312,
+        "h2": 0.002155615781638412,
+        "peak": 0.00028970658238563113
+      },
+      "independent_sobolev_errors": {
+        "h0": 0.0005775157614468842,
+        "h1": 0.0008838970825592431,
+        "h2": 0.0021409704893182078
+      },
+      "pass_combined_gates": true,
+      "gates": {
+        "l2": 0.01,
+        "h1": 0.05,
+        "h2": 0.05,
+        "peak": 0.05
+      },
+      "full_residual_rms_relative_by_slab": [
+        0.006872610654681921,
+        0.006111044902354479,
+        0.009764007292687893,
+        0.0069365669041872025,
+        0.011187448166310787,
+        0.009551776573061943,
+        0.005961872637271881,
+        0.004850816447287798
+      ],
+      "best_epochs": [
+        300,
+        400,
+        200,
+        400,
+        300,
+        300,
+        200,
+        400
+      ],
+      "endpoint_h2_error_power_fraction_by_band": {
+        "0to12": 0.21978263529538322,
+        "13to24": 0.33585362504868804,
+        "25to48": 0.44425907780061064,
+        "above48": 0.00010466185531803702
+      },
+      "training_seconds": 15.710366139999678,
+      "total_elapsed_seconds": 15.836250598998959,
+      "summary_sha256": "0433f6924693cbb0a092d034a17e1d778a06a3760d5f5f87dfd2d254de38ce42",
+      "prediction_reference_sha256": "e90bb3576ab3b0ff6e71c3c37c70b09cfabf8173d40fc6a03aa167215a764951",
+      "checkpoints": {
+        "pinn-slabs-11-random-008/best-0.pt": "552915e24b94479f40f289d02606846271681e33ffbca692deb12f71b1a74f23",
+        "pinn-slabs-11-random-008/best-1.pt": "6482b356f70b31ca477f484065366d270dc9405c16e5ed658f5d9f8340a1078c",
+        "pinn-slabs-11-random-008/best-2.pt": "d5e7a7b56d2d21946c3e4719ee042c8a30910d04151d02f31f019910c8115278",
+        "pinn-slabs-11-random-008/best-3.pt": "42a3c2dab2e40565ddd42871728b6c8e880b08ea492b6a03619a02267fadff3e",
+        "pinn-slabs-11-random-008/best-4.pt": "9ad4868c40f787c46f056f891e0880ad40829194933c8815ba3c4b0a329c015f",
+        "pinn-slabs-11-random-008/best-5.pt": "9e3ee7084991d031c02431d1f3671b6115393f49c4baee59fcdb6cbf4da39a1e",
+        "pinn-slabs-11-random-008/best-6.pt": "42783c33b2baa3d2a3e0c938410d7a2fcfb0ac4a0444e2a14536e6c0b8cd58f7",
+        "pinn-slabs-11-random-008/best-7.pt": "7b73c2ffa71acd46979b233bf3969c64c514d10ed3a0b985ec0f55785437340d"
+      }
+    }
+  ],
+  "source_sha256_at_end": {
+    "pilot": "351301aa0885ee4c8560edf09d4f2ef0d27e1997bffd6afd567501fb63532a14",
+    "campaign": "36487d86e47ba5b1248ac1c375cbdee58201dd92cef999d6059b1ce0c3506cd7",
+    "models": "fbe57fd4da3697b2ee11c4ed60c5646987e9cac6b44a951b0ad32991ecd37e71",
+    "reference": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8"
+  },
+  "source_files_changed_during_run": [],
+  "metric_precision_note": "Production metric interpolates the complex64 prediction before comparison. Independent Sobolev audit first promotes to complex128; differences are retained and immaterial to the observed 5% H2 gate outcomes.",
+  "diagnostic_origin_script_sha256": "70efa54bde7241ed5558bb950282b46ad629a7fd9f9d98eb78a002edfad2fbca",
+  "portable_reproduction_script": "scripts/diagnose-pinn-conditioning.py",
+  "interpretation": "Three validation inlets and one seed; selected candidate evidence, not untouched-test generalization or CUDA parity. Both parameterizations preserve K48 and the full Dysthe residual. No PDE coefficient or initial-condition filtering changed.",
+  "raw_artifact_location_at_review": "/tmp/dysthe-pinn-scaling-full-horizon",
+  "raw_artifact_retention": {
+    "retained_copy": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/experiments/runs/conditioning-validation-20261027",
+    "original_location": "/tmp/dysthe-pinn-scaling-full-horizon",
+    "raw_arrays_and_checkpoints_tracked": false
+  }
+}

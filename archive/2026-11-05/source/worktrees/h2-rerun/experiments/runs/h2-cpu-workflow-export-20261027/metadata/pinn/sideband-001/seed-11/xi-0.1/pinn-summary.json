@@ -1,0 +1,62 @@
+[
+  {
+    "method": "pinn_slabs",
+    "seed": 11,
+    "case_id": "sideband-001",
+    "split": "validation",
+    "training_seconds": 0.05674024499967345,
+    "history": [
+      [
+        {
+          "epoch": 10,
+          "training_loss": 0.05629619583487511,
+          "full_dysthe_residual_validation": 0.056010715663433075,
+          "seconds": 0.02779518100032874,
+          "training_epsilon": 0.04458474740386009,
+          "gradient_norm_before_clip": 10.521452903747559
+        },
+        {
+          "epoch": 20,
+          "training_loss": 0.012428872287273407,
+          "full_dysthe_residual_validation": 0.008369171060621738,
+          "seconds": 0.05674024499967345,
+          "training_epsilon": 0.04458474740386009,
+          "gradient_norm_before_clip": 4.245837211608887
+        }
+      ]
+    ],
+    "full_residual_rms_relative": [
+      0.09147360920906067
+    ],
+    "metrics": [
+      {
+        "xi": 0.1,
+        "l2": 0.0016144074781942756,
+        "h1": 0.0016761558289915977,
+        "h2": 0.0017816020314284698,
+        "peak": 0.0009132372767736167
+      }
+    ],
+    "sampled_interval_errors": {
+      "l2": 0.0016144074781942756,
+      "h1": 0.0016761558289915977,
+      "h2": 0.0017816020314284698,
+      "peak": 0.0009132372767736167
+    },
+    "sampled_interval_tolerances": {
+      "l2": 0.01,
+      "h1": 0.05,
+      "h2": 0.05,
+      "peak": 0.05
+    },
+    "sampled_interval_gate_version": "complex-l2-h1-h2-peak-v2",
+    "sampled_interval_pass": true,
+    "sampled_station_count": 3,
+    "resumed_from_checkpoint": false,
+    "checkpoints": {
+      "best-0.pt": "bcc32778b6baea26cc954a5f2cbf696c7fda798d01648f49a85a9c71bb06136b"
+    },
+    "gpu_peak_allocated_bytes": null,
+    "invocation_elapsed_seconds": 0.0646311339987733
+  }
+]

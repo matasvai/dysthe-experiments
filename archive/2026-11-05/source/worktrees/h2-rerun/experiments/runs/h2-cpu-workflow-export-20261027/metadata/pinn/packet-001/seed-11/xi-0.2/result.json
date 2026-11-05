@@ -1,0 +1,387 @@
+{
+  "case_id": "packet-001",
+  "split": "validation",
+  "seed": 11,
+  "horizon": 0.2,
+  "method": "per-inlet spectral slab PINN",
+  "qualified": true,
+  "errors": {
+    "l2": 0.0028174234371146044,
+    "h1": 0.003187976884377323,
+    "h2": 0.0038679596915413444,
+    "peak": 0.0012754236633918013
+  },
+  "thresholds": {
+    "l2": 0.01,
+    "h1": 0.05,
+    "h2": 0.05,
+    "peak": 0.05
+  },
+  "stations": [
+    {
+      "xi": 0.0,
+      "l2": 2.031264323126247e-07,
+      "h1": 6.352984935274895e-07,
+      "h2": 3.8746650080418575e-06,
+      "peak": 7.134017062353015e-08
+    },
+    {
+      "xi": 0.05,
+      "l2": 0.0009334712236484104,
+      "h1": 0.0010447890584291506,
+      "h2": 0.001242407994973813,
+      "peak": 5.117399526465032e-05
+    },
+    {
+      "xi": 0.1,
+      "l2": 0.0017615392494411944,
+      "h1": 0.0019930968453891486,
+      "h2": 0.0024007940830903162,
+      "peak": 9.461234043176112e-05
+    },
+    {
+      "xi": 0.15000000000000002,
+      "l2": 0.002158243648831647,
+      "h1": 0.0024434904666563013,
+      "h2": 0.0029611239812198428,
+      "peak": 0.0006194563607377396
+    },
+    {
+      "xi": 0.2,
+      "l2": 0.0028174234371146044,
+      "h1": 0.003187976884377323,
+      "h2": 0.0038679596915413444,
+      "peak": 0.0012754236633918013
+    }
+  ],
+  "spectral_error_audit": {
+    "bands": {
+      "low": [
+        0,
+        4
+      ],
+      "upper_output": [
+        5,
+        8
+      ],
+      "outside_output": [
+        9,
+        64
+      ]
+    },
+    "relative_h2_error_squared_by_station": {
+      "low": [
+        1.9892794694791952e-14,
+        7.498493655977856e-07,
+        2.5918988313151397e-06,
+        4.345881357082778e-06,
+        7.683341127264027e-06
+      ],
+      "upper_output": [
+        5.874608225848161e-15,
+        6.12558582188039e-07,
+        2.445948334521019e-06,
+        2.785795328553734e-06,
+        4.361727685188594e-06
+      ],
+      "outside_output": [
+        1.4987261521623384e-11,
+        1.8116967818902604e-07,
+        7.259650635653141e-07,
+        1.6365785465187423e-06,
+        2.916043362935992e-06
+      ]
+    },
+    "reference_projection_floor_h2_by_station": {
+      "4": [
+        1.2153521564386916e-14,
+        0.003415199981256464,
+        0.006831540557001319,
+        0.01024852982991744,
+        0.01366566594362001
+      ],
+      "8": [
+        1.2151062010793727e-14,
+        0.0004256938595255229,
+        0.0008520560995219223,
+        0.0012792949621556258,
+        0.0017076113179711992
+      ]
+    },
+    "interpretation": "Unfiltered complex H2 errors on the reference grid; output capacity is unchanged."
+  },
+  "reference_sha256": "39ca200d02064db72a4a52e43824c1b3e536e49ab9a6877a7f4ebaf76c9186d8",
+  "checkpoints": {
+    "pinn-slabs-11-packet-001/best-0.pt": "7459ec84742351e77315ec228f041ff7d87d23c207985fd06f75dc4b20b9f788",
+    "pinn-slabs-11-packet-001/best-1.pt": "acea3dcad52ff6ce3edb732a54d83be1438c016854afdad9de84f0d974f1392c"
+  },
+  "artifact": {
+    "path": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/experiments/runs/h2-cpu-workflow-20261027/pinn/packet-001/seed-11/xi-0.2/predictions.npz",
+    "sha256": "30dc20a425bb9845a4e0d34bf432956b918d6ace9e708cd6db98b05ab0da3327"
+  },
+  "diagnostics": {
+    "initial_peak": 0.4337890639722787,
+    "nonlinear_length_initial_peak": 5.314260042449539,
+    "initial_invariants": {
+      "action": 1.0209231545144162,
+      "energy": -0.008033015425262314,
+      "momentum": -0.010792822590984609
+    },
+    "maxima": {
+      "peak": 0.4347092884150308,
+      "h2_ratio": 1.0008237560120603,
+      "epsilon_peak": 0.01691471877140444,
+      "epsilon_spectral_width": 0.009648306030341365,
+      "epsilon_spectral_rms_wavenumber": 0.009648306999369385,
+      "spectral_tail_action_fraction": 7.4626497828849104e-06,
+      "boundary_action_fraction": 0.00025706771992869997,
+      "action_relative_drift": 0.00129446838128129
+    },
+    "stations": [
+      {
+        "xi": 0.0,
+        "nonlinear_lengths_initial_peak": 0.0,
+        "peak": 0.4337890639722787,
+        "peak_ratio": 1.0,
+        "norms": {
+          "h0": 1.0104074200610447,
+          "h1": 1.0409227309698033,
+          "h2": 1.0754997702853692
+        },
+        "h2_ratio": 1.0,
+        "epsilon_peak": 0.016878912456539448,
+        "spectral_centroid": 2.3141533585236173e-08,
+        "spectral_width": 0.24761682715750666,
+        "spectral_rms_wavenumber": 0.2476168271575077,
+        "epsilon_spectral_width": 0.009634873479947171,
+        "epsilon_spectral_rms_wavenumber": 0.009634873479947213,
+        "spectral_signed_power_asymmetry": 7.350500668919998e-08,
+        "spectral_skewness": -5.864169545520289e-08,
+        "spectral_tail_action_fraction": 1.5051492447244784e-14,
+        "outside_declared_cutoff_action_fraction": 1.3548536860137446e-14,
+        "boundary_action_fraction": 0.00025706771992869997,
+        "raw_recurrence_relative_l2": 0.0,
+        "phase_aligned_recurrence_relative_l2": 0.0,
+        "recurrence_global_phase": 0.0,
+        "invariants": {
+          "action": 1.0209231545144162,
+          "energy": -0.008033015425262314,
+          "momentum": -0.010792822590984609
+        },
+        "invariant_absolute_drift": {
+          "action": 0.0,
+          "energy": 0.0,
+          "momentum": 0.0
+        },
+        "invariant_relative_drift": {
+          "action": 0.0,
+          "energy": 0.0,
+          "momentum": 0.0
+        }
+      },
+      {
+        "xi": 0.05,
+        "nonlinear_lengths_initial_peak": 0.009408647601097284,
+        "peak": 0.43381713284101153,
+        "peak_ratio": 1.000064706261785,
+        "norms": {
+          "h0": 1.010103897789973,
+          "h1": 1.0406338046630774,
+          "h2": 1.0752268504988383
+        },
+        "h2_ratio": 0.9997462391029069,
+        "epsilon_peak": 0.01688000462786751,
+        "spectral_centroid": -7.818120561667268e-05,
+        "spectral_width": 0.24771467130095431,
+        "spectral_rms_wavenumber": 0.24771468363833576,
+        "epsilon_spectral_width": 0.00963868063616387,
+        "epsilon_spectral_rms_wavenumber": 0.009638681116216501,
+        "spectral_signed_power_asymmetry": -0.00036436345562022827,
+        "spectral_skewness": 0.0004924208599528333,
+        "spectral_tail_action_fraction": 5.700362658143944e-07,
+        "outside_declared_cutoff_action_fraction": 1.403694357318448e-14,
+        "boundary_action_fraction": 0.0002558358500220395,
+        "raw_recurrence_relative_l2": 0.004902351000091126,
+        "phase_aligned_recurrence_relative_l2": 0.003271234960560386,
+        "recurrence_global_phase": -0.003651870597171906,
+        "invariants": {
+          "action": 1.0203098843304959,
+          "energy": -0.007977920327850671,
+          "momentum": -0.010945928626045397
+        },
+        "invariant_absolute_drift": {
+          "action": 0.0006132701839203225,
+          "energy": 5.5095097411642785e-05,
+          "momentum": 0.00015310603506078768
+        },
+        "invariant_relative_drift": {
+          "action": 0.0006007016112902381,
+          "energy": 0.006858582300038803,
+          "momentum": 0.014185912329243624
+        }
+      },
+      {
+        "xi": 0.1,
+        "nonlinear_lengths_initial_peak": 0.018817295202194568,
+        "peak": 0.4338761322689064,
+        "peak_ratio": 1.0002007157484112,
+        "norms": {
+          "h0": 1.009834889990794,
+          "h1": 1.0403805084005981,
+          "h2": 1.0749934904130987
+        },
+        "h2_ratio": 0.9995292608271443,
+        "epsilon_peak": 0.01688230032008553,
+        "spectral_centroid": -0.00013884116905574193,
+        "spectral_width": 0.24781281828231627,
+        "spectral_rms_wavenumber": 0.24781285717632678,
+        "epsilon_spectral_width": 0.009642499575929461,
+        "epsilon_spectral_rms_wavenumber": 0.009642501089311547,
+        "spectral_signed_power_asymmetry": -0.0006417092551060728,
+        "spectral_skewness": 0.0009087314187605014,
+        "spectral_tail_action_fraction": 2.292539904076689e-06,
+        "outside_declared_cutoff_action_fraction": 1.5168147491744674e-14,
+        "boundary_action_fraction": 0.0002543128030650342,
+        "raw_recurrence_relative_l2": 0.009792102694106873,
+        "phase_aligned_recurrence_relative_l2": 0.006490485554002945,
+        "recurrence_global_phase": -0.007334215526003925,
+        "invariants": {
+          "action": 1.0197665050427192,
+          "energy": -0.007927535947397191,
+          "momentum": -0.011064495674147868
+        },
+        "invariant_absolute_drift": {
+          "action": 0.0011566494716970244,
+          "energy": 0.00010547947786512281,
+          "momentum": 0.0002716730831632593
+        },
+        "invariant_relative_drift": {
+          "action": 0.0011329446947916115,
+          "energy": 0.01313074509148953,
+          "momentum": 0.025171643550426885
+        }
+      },
+      {
+        "xi": 0.15000000000000002,
+        "nonlinear_lengths_initial_peak": 0.028225942803291854,
+        "peak": 0.43429145298606675,
+        "peak_ratio": 1.001158141261533,
+        "norms": {
+          "h0": 1.010470021903387,
+          "h1": 1.0410530928535555,
+          "h2": 1.0757120102815216
+        },
+        "h2_ratio": 1.0001973408103064,
+        "epsilon_peak": 0.01689846062150517,
+        "spectral_centroid": -0.00012796295882110562,
+        "spectral_width": 0.24788786209712946,
+        "spectral_rms_wavenumber": 0.24788789512520432,
+        "epsilon_spectral_width": 0.009645419561899226,
+        "epsilon_spectral_rms_wavenumber": 0.009645420847035322,
+        "spectral_signed_power_asymmetry": -0.0004844711402614909,
+        "spectral_skewness": 2.41068285082653e-05,
+        "spectral_tail_action_fraction": 4.493390614149982e-06,
+        "outside_declared_cutoff_action_fraction": 1.0689096631376605e-14,
+        "boundary_action_fraction": 0.0002529404620426521,
+        "raw_recurrence_relative_l2": 0.01460312410777543,
+        "phase_aligned_recurrence_relative_l2": 0.009518218595553673,
+        "recurrence_global_phase": -0.011074924769706904,
+        "invariants": {
+          "action": 1.0210496651654313,
+          "energy": -0.008014942703546787,
+          "momentum": -0.01107377125927925
+        },
+        "invariant_absolute_drift": {
+          "action": 0.00012651065101509928,
+          "energy": 1.8072721715526804e-05,
+          "momentum": 0.00028094866829464146
+        },
+        "invariant_relative_drift": {
+          "action": 0.00012391789769453492,
+          "energy": 0.0022498054290660905,
+          "momentum": 0.026031065175603062
+        }
+      },
+      {
+        "xi": 0.2,
+        "nonlinear_lengths_initial_peak": 0.037634590404389136,
+        "peak": 0.4347092884150308,
+        "peak_ratio": 1.0021213638590274,
+        "norms": {
+          "h0": 1.0110611787907064,
+          "h1": 1.041680188508116,
+          "h2": 1.0763857196871114
+        },
+        "h2_ratio": 1.0008237560120603,
+        "epsilon_peak": 0.01691471877140444,
+        "spectral_centroid": -0.0001111329518537133,
+        "spectral_width": 0.2479620445094694,
+        "spectral_rms_wavenumber": 0.24796206941354773,
+        "epsilon_spectral_width": 0.009648306030341365,
+        "epsilon_spectral_rms_wavenumber": 0.009648306999369385,
+        "spectral_signed_power_asymmetry": -0.0003755300839254844,
+        "spectral_skewness": -0.0004957631465095809,
+        "spectral_tail_action_fraction": 7.4626497828849104e-06,
+        "outside_declared_cutoff_action_fraction": 1.3640489373376416e-14,
+        "boundary_action_fraction": 0.00025097717057959834,
+        "raw_recurrence_relative_l2": 0.019360542315897667,
+        "phase_aligned_recurrence_relative_l2": 0.01258836800862119,
+        "recurrence_global_phase": -0.014705259655210755,
+        "invariants": {
+          "action": 1.022244707257653,
+          "energy": -0.008099228937270839,
+          "momentum": -0.0110694031648257
+        },
+        "invariant_absolute_drift": {
+          "action": 0.0013215527432368646,
+          "energy": 6.621351200852485e-05,
+          "momentum": 0.0002765805738410912
+        },
+        "invariant_relative_drift": {
+          "action": 0.00129446838128129,
+          "energy": 0.008242672085540366,
+          "momentum": 0.02562634301726804
+        }
+      }
+    ],
+    "conventions": {
+      "sobolev": "H_s^2=L*sum_k (1+k^2)^s*|fft(u)/N|^2; H0 is L2",
+      "spectral_tail": "Fraction of action at |mode| >= 0.8*8",
+      "asymmetry": "(power at k>0 minus power at k<0)/total power including zero mode",
+      "recurrence": "Same tau origin, global phase fit only; raw complex distance also recorded",
+      "invariants": "SpatialDysthe.invariants: action, modified energy and modified momentum for the noncanonical free-surface envelope; not all exactly conserved by the projected ODE",
+      "small_initial_invariant": "Relative drift is null if initial invariant is nearly zero; absolute drift remains reported",
+      "physical_indicators": "epsilon*peak and epsilon*spectral width/RMS are formal weak-nonlinearity/narrowband indicators, not validated universal physical cutoffs"
+    },
+    "limitation": "Sampled, two-level numerical refinement in periodic boxes; not a rigorous error bound, proof of smoothness/global existence, or validation of Dysthe against the full water-wave equations."
+  },
+  "training_seconds": 0.10951858400221681,
+  "invocation_seconds": 0.12934887899973546,
+  "gpu_peak_allocated_bytes": null,
+  "full_residual_rms_relative": [
+    0.17761516571044922,
+    0.21767626702785492
+  ],
+  "environment": {
+    "device": "cpu",
+    "gpu": null
+  },
+  "interpretation": "Fitted interval, not unseen-distance forecast; sampled errors, not continuum bounds.",
+  "status": "passed",
+  "events": {
+    "focusing_peaks": [],
+    "recurrence_candidates": [],
+    "peak_prominence_absolute": 0.008675781279445573,
+    "recurrence_tolerance": 0.05,
+    "interpretation": "Interior extrema of sampled traces; no promised recurrence, no continuous event-time accuracy, no translation alignment"
+  },
+  "focusing_comparison": {
+    "reference_peak_count": 0,
+    "predicted_peak_count": 0,
+    "reference_peaks": [],
+    "predicted_peaks": [],
+    "ordered_peak_distance_errors": null,
+    "interpretation": "Ordered matching only when nonzero counts agree; sampled events with spacing sample_step, no continuous event-time bound."
+  },
+  "first_failed_station": null
+}

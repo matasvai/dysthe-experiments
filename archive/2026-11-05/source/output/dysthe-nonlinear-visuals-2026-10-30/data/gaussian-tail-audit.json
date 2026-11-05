@@ -1,0 +1,243 @@
+{
+  "config": {
+    "T_max": 0.1,
+    "n": 1024,
+    "length": 40.0,
+    "epsilon": 0.05,
+    "fine_step": 0.0025,
+    "comparison_step": 0.005,
+    "cutoffs": [
+      12,
+      24
+    ]
+  },
+  "model_id": "dysthe-1979-temporal-potential-1d-stability-sign-v1",
+  "driver_sha256": "9b14d8eb40984528bd1c2e9f8d98ada2d58626861229e4006db2b56f27aba36a",
+  "solver_sha256": "5689c66826e889d78da11f0931dc1e3bbb651169b29867e0cfaf1613b59d3d84",
+  "original_gaussian_array_sha256": "1d57d10981ad1f1685b69fdf1b49fc516e4c999bbf09ddc7396622d822bbae37",
+  "artifact": {
+    "path": "gaussian-tail-audit.npz",
+    "sha256": "5de9f8dce3112024ad212f4e64d561f8940a5ab2ff6b5aa623e8596fec65e4e1"
+  },
+  "interpretation": "P12 and P24 define distinct initial profiles. Their differences measure sensitivity to initial spectral truncation, not solver discretization error. Original analytic profile is a periodized Gaussian. Tail region is fixed from analytic initial |u0|<1% initial peak; it is not a peak-aligned moving mask.",
+  "initial_projection": [
+    {
+      "cutoff": 12,
+      "max_absolute_complex_difference": 3.774867252373272e-09,
+      "relative_h0": 8.218486223533994e-09,
+      "relative_h2": 4.009800679757737e-08,
+      "tail_max_absolute_complex_difference": 3.6175649815790976e-09,
+      "tail_max_absolute_magnitude_difference": 3.4277890027006486e-09
+    },
+    {
+      "cutoff": 24,
+      "max_absolute_complex_difference": 2.3714374201337736e-16,
+      "relative_h0": 2.1042278135522179e-16,
+      "relative_h2": 5.506434993065087e-13,
+      "tail_max_absolute_complex_difference": 1.7105327510838122e-16,
+      "tail_max_absolute_magnitude_difference": 1.650884836247606e-16
+    }
+  ],
+  "high_cutoff_time_step_refinement": {
+    "h0": 2.25423758382822e-14,
+    "h1": 3.0095381561068765e-14,
+    "h2": 6.362897385965579e-13
+  },
+  "high_cutoff_step_qualified": true,
+  "baseline_initial_matches_projection_max_abs": 4.742874840267547e-16,
+  "seconds": {
+    "fine": 0.011897120013600215,
+    "comparison": 0.006044909998308867
+  },
+  "rows": [
+    {
+      "T": 0.0,
+      "tail_max_p12_p24_complex_difference": 3.6175649462383403e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.427789060801942e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 2.3714374201337736e-16,
+      "tail_max_p24_nonlinear_linear_complex_difference": 1.9279638981753175e-16,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 2.2960235689935223e-16,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 1.9045432628231527e-16
+    },
+    {
+      "T": 0.005,
+      "tail_max_p12_p24_complex_difference": 3.617556064935186e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.427942893006358e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 2.391029308238503e-08,
+      "tail_max_p24_nonlinear_linear_complex_difference": 2.3910283089998344e-08,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 1.8634014470331195e-10,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 1.8633997816985826e-10
+    },
+    {
+      "T": 0.01,
+      "tail_max_p12_p24_complex_difference": 3.617547069777336e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.4280856341419213e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 4.780825633714566e-08,
+      "tail_max_p24_nonlinear_linear_complex_difference": 4.780823630438015e-08,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 3.87906703286367e-10,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 3.8790648297648556e-10
+    },
+    {
+      "T": 0.015,
+      "tail_max_p12_p24_complex_difference": 3.617537830183877e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.428218113906109e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 7.169387902424086e-08,
+      "tail_max_p24_nonlinear_linear_complex_difference": 7.169384893347795e-08,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 6.046844466117696e-10,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 6.046841222184796e-10
+    },
+    {
+      "T": 0.02,
+      "tail_max_p12_p24_complex_difference": 3.617528578953191e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.4283400713668588e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 9.556715020330211e-08,
+      "tail_max_p24_nonlinear_linear_complex_difference": 9.556711008815392e-08,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 8.366582114616161e-10,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 8.366577326779367e-10
+    },
+    {
+      "T": 0.025,
+      "tail_max_p12_p24_complex_difference": 3.6175193865056836e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.428450946048045e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 1.1942806001272917e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 1.1942800952779524e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 1.0838124685913497e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 1.0838120366452042e-09
+    },
+    {
+      "T": 0.03,
+      "tail_max_p12_p24_complex_difference": 3.6175099777339116e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.428551193032999e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 1.4327659699462056e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 1.432765365402856e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 1.346132113763665e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 1.346131425078445e-09
+    },
+    {
+      "T": 0.035,
+      "tail_max_p12_p24_complex_difference": 3.6175005938076057e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.4286409889502085e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 1.6711275136018522e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 1.671126805757434e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 1.623601562222854e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 1.623600863129293e-09
+    },
+    {
+      "T": 0.04,
+      "tail_max_p12_p24_complex_difference": 3.617491107561133e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.4287201199555968e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 1.9093651223928979e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 1.9093643117664145e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 1.9162054738092182e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 1.9162045162418595e-09
+    },
+    {
+      "T": 0.045,
+      "tail_max_p12_p24_complex_difference": 3.617481449286881e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.4287886646009903e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 2.1474786943487038e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 2.1474777813554105e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 2.2239278543723096e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 2.223926843028523e-09
+    },
+    {
+      "T": 0.05,
+      "tail_max_p12_p24_complex_difference": 3.6174717114651965e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.4288465975109167e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 2.3854681220626793e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 2.385467107486134e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 2.5467534903872435e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 2.546752383633666e-09
+    },
+    {
+      "T": 0.055,
+      "tail_max_p12_p24_complex_difference": 3.6174620539931746e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.4288942351178804e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 2.623333306359848e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 2.6233321862333416e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 2.8846665004605976e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 2.8846652427860775e-09
+    },
+    {
+      "T": 0.06,
+      "tail_max_p12_p24_complex_difference": 3.617452190441431e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.428931516163663e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 2.8610741408230254e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 2.86107291852246e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 3.237651159324062e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 3.2376499953246096e-09
+    },
+    {
+      "T": 0.065,
+      "tail_max_p12_p24_complex_difference": 3.617442243787963e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.428957892008554e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 3.098690523975598e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 3.0986891984256485e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 3.605691967223379e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 3.6056905985265564e-09
+    },
+    {
+      "T": 0.07,
+      "tail_max_p12_p24_complex_difference": 3.6174322449840747e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.4289739288283805e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 3.3361823550522926e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 3.3361809250340286e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 3.988772624696768e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 3.98877110334428e-09
+    },
+    {
+      "T": 0.075,
+      "tail_max_p12_p24_complex_difference": 3.6174221443899283e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.428979716120161e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 3.5735495264471566e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 3.573547993170274e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 4.386877415149537e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 4.386875925022071e-09
+    },
+    {
+      "T": 0.08,
+      "tail_max_p12_p24_complex_difference": 3.6174119110930897e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.4289750665853666e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 3.81079194260233e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 3.81079030395083e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 4.7999905231077555e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 4.799988783180109e-09
+    },
+    {
+      "T": 0.085,
+      "tail_max_p12_p24_complex_difference": 3.6174016448233474e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.428959956751159e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 4.0479095003375476e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 4.0479077576706893e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 5.228095656048537e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 5.228093732240202e-09
+    },
+    {
+      "T": 0.09,
+      "tail_max_p12_p24_complex_difference": 3.617391173619756e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.4289346567402977e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 4.28490209745761e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 4.284900251824137e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 5.671176795535304e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 5.671174913360333e-09
+    },
+    {
+      "T": 0.095,
+      "tail_max_p12_p24_complex_difference": 3.6173806948500426e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.4288988688954928e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 4.521769636379385e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 4.521767683607611e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 6.129217995989866e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 6.1292159594245055e-09
+    },
+    {
+      "T": 0.1,
+      "tail_max_p12_p24_complex_difference": 3.6173701980585152e-09,
+      "tail_max_p12_p24_magnitude_difference": 3.4288526430679053e-09,
+      "tail_max_p12_nonlinear_linear_complex_difference": 4.7585120144858413e-07,
+      "tail_max_p24_nonlinear_linear_complex_difference": 4.758509955306767e-07,
+      "tail_max_p12_nonlinear_linear_magnitude_difference": 6.602202678659963e-09,
+      "tail_max_p24_nonlinear_linear_magnitude_difference": 6.602200525868129e-09
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "profile_check_N512_L40",
+  "shape": [
+    512
+  ],
+  "lengths": [
+    40
+  ],
+  "kind": "dysthe",
+  "epsilon": 0.15,
+  "epsilon1": 1.0,
+  "epsilon2": 1.0,
+  "nonlinear": true,
+  "diagnostics": [
+    {
+      "t": 0,
+      "mass": 4.207655253049879,
+      "peak": 1.7289475198910644,
+      "energy": 0.4380514871440422,
+      "momentum": -4.842456036824413,
+      "spectral_edge_mass": 6.125562207019885e-11
+    }
+  ],
+  "mu": 2,
+  "speed": 2,
+  "iterations": 52,
+  "profile_residual": 1.4243102539722192e-11,
+  "evolution_residual": 2.159331149593218e-11,
+  "history": [
+    [
+      0,
+      0.868630635178857
+    ],
+    [
+      25,
+      6.479506043993488e-06
+    ],
+    [
+      50,
+      3.738605102600178e-11
+    ]
+  ],
+  "mass": 4.207655253049879,
+  "peak": 1.7289475198910644,
+  "energy": 0.4380514871440422,
+  "momentum": -4.842456036824413,
+  "spectral_edge_mass": 6.125562207019885e-11
+}

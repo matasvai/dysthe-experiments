@@ -1,0 +1,67 @@
+{
+  "checked_utc": "2026-10-16T19:08:02.749168+00:00",
+  "url": "http://127.0.0.1:8765/",
+  "http": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 13741
+    },
+    {
+      "path": "/app.js",
+      "status": 200,
+      "bytes": 42929
+    },
+    {
+      "path": "/style.css",
+      "status": 200,
+      "bytes": 17239
+    },
+    {
+      "path": "/api/cases",
+      "status": 200,
+      "bytes": 102512,
+      "case_ids": [
+        "profile",
+        "perturbed",
+        "gaussian",
+        "custom"
+      ]
+    },
+    {
+      "path": "/api/data?case=profile",
+      "status": 200,
+      "bytes": 4018814
+    },
+    {
+      "path": "/api/data?case=perturbed",
+      "status": 200,
+      "bytes": 4011030
+    },
+    {
+      "path": "/api/data?case=gaussian",
+      "status": 200,
+      "bytes": 3989918
+    },
+    {
+      "path": "/api/jobs/33ac5f4954ce4b5a878089f101ab6e0a",
+      "status": 200,
+      "bytes": 271,
+      "status_from_disk": "complete"
+    },
+    {
+      "path": "/api/jobs/6793d6513ddf440ca50bdc2add3fd3bd",
+      "status": 200,
+      "bytes": 272,
+      "status_from_disk": "complete"
+    },
+    {
+      "path": "/api/jobs/ef2f43be842e4b88a961658f6e5e4cd2",
+      "status": 200,
+      "bytes": 271,
+      "status_from_disk": "complete"
+    }
+  ],
+  "unit": "LoadState=loaded\nActiveState=active\nSubState=running\nUnitFileState=transient\nMainPID=101194\nControlGroup=/user.slice/user-1000.slice/user@1000.service/app.slice/dysthe-small-simulator.service\n",
+  "listeners": "State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                             \nLISTEN 0      5          127.0.0.1:8765      0.0.0.0:*    users:((\"python3\",pid=101194,fd=4))\n"
+}

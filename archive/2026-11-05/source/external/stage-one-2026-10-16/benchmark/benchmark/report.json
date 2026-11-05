@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "model_id": "water-wave-dysthe-spatial-v1",
+  "physical_system": "deep-water-gravity-waves",
+  "case": {
+    "id": "benchmark",
+    "profile": "/home/matasvai/Documents/Projects/Dysthe/results/nonlinear/profile_mu2_s0_e0.025.npz",
+    "n": 16384,
+    "length": 640.0,
+    "epsilon": 0.025,
+    "mu": 2.0,
+    "speed": 0.0,
+    "dxi": 0.000625,
+    "xi_end": 0.0625,
+    "samples": 3,
+    "perturbations": [
+      {
+        "id": "control",
+        "kind": "control",
+        "delta": 0.0
+      },
+      {
+        "id": "odd_amplitude_plus",
+        "kind": "odd_amplitude",
+        "delta": 0.001
+      }
+    ],
+    "profile_mode": "recompute",
+    "profile_max_iterations": 200
+  },
+  "config_sha256": "d214d354ff3c81d716212eabb8a3a597cc51fc97d6b12045bbcc69f701088d76",
+  "qualification": {
+    "full_residual_max": 1e-08,
+    "projection_relative_l2_max": 1e-08,
+    "epsilon_peak_screen": 0.1,
+    "epsilon_spectral_sigma_screen": 0.1,
+    "epsilon_spectral_mean_screen": 0.1,
+    "boundary_action_max": 1e-08,
+    "spectral_edge_action_max": 1e-08
+  },
+  "profile_projection_relative_l2": 3.437190341042777e-16,
+  "profile_residual": {
+    "projected_relative_l2": 1.9006951235032745e-11,
+    "full_periodic_relative_l2": 2.0702082121074207e-11,
+    "discarded_rhs_relative_l2": 8.204389611469406e-12,
+    "oversampling_factor": 4
+  },
+  "perturbation_projection_relative_l2": {
+    "control": 3.667496512280704e-16,
+    "odd_amplitude_plus": 3.5946169404624455e-16
+  },
+  "profile_diagnostics": {
+    "action": 5.207761040038516,
+    "energy": -3.3093653946316595,
+    "momentum": 0.9928101383920002,
+    "peak": 1.9581112551203002,
+    "peak_tau": 0.0,
+    "width_about_peak": 0.6233603703518241,
+    "core_tail_action_fraction": 8.676831870613015e-13,
+    "boundary_action_fraction": 1.4417166582133188e-32,
+    "retained_spectral_edge_action_fraction": 5.163140275556799e-27,
+    "outside_retained_action_fraction": 4.8621454333879676e-32,
+    "raw_conjugate_reflection_defect": 3.9725834141971196e-16,
+    "epsilon_peak": 0.04895278137800751,
+    "epsilon_spectral_sigma": 0.021213696615194233,
+    "epsilon_spectral_mean": 0.003971676962703496
+  },
+  "source": {
+    "profile_path": "/home/matasvai/Documents/Projects/Dysthe/results/nonlinear/profile_mu2_s0_e0.025.npz",
+    "profile_sha256": "3d76bbc8ed8e2c4d164028282f9b1469ed6f6eae3f50f01400d89365c57c3ec2",
+    "sidecar_sha256": "c8e284e9b6b3b02160dc5d985e2882866997975e0bb42a90ec776e7b58f579cd",
+    "legacy_kind": "dysthe",
+    "source_grid": {
+      "n": 2048,
+      "length": 160.0
+    },
+    "regenerated_profile": {
+      "iterations": 34,
+      "symmetry_restricted": true,
+      "projected_relative_l2": 1.9006263086131056e-11,
+      "full_periodic_relative_l2": 2.0636702982579656e-11,
+      "discarded_rhs_relative_l2": 8.039618989229768e-12,
+      "oversampling_factor": 4
+    }
+  },
+  "core_source_sha256": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8",
+  "campaign_source_sha256": "d5fd1eada48a6ebd0fe120bc070bef58f4b81754c95d0214c5f15cce019e7b9a",
+  "environment": {
+    "python": "3.14.7",
+    "numpy": "2.4.2",
+    "scipy": "1.17.0",
+    "platform": "Linux-7.2.9-100.fc43.x86_64-x86_64-with-glibc2.42"
+  },
+  "actual_dxi": 0.000625,
+  "steps_per_trajectory": 100,
+  "trajectories": {
+    "control": [
+      {
+        "xi": 0.0,
+        "action": 5.20776104003852,
+        "energy": -3.309365394631665,
+        "momentum": 0.992810138391998,
+        "peak": 1.9581112551203006,
+        "peak_tau": 0.0,
+        "width_about_peak": 0.623360370351824,
+        "core_tail_action_fraction": 8.676831870530167e-13,
+        "boundary_action_fraction": 4.8285181837404935e-32,
+        "retained_spectral_edge_action_fraction": 5.163105690067753e-27,
+        "outside_retained_action_fraction": 1.1173499785085513e-31,
+        "raw_conjugate_reflection_defect": 9.663398100109982e-16,
+        "epsilon_peak": 0.048952781378007515,
+        "epsilon_spectral_sigma": 0.021213696615194233,
+        "epsilon_spectral_mean": 0.003971676962703489,
+        "orbital_relative_l2": 4.895872710447775e-16,
+        "translation": 0.0,
+        "global_phase": 1.3841267911602648e-17,
+        "raw_complex_relative_l2": 4.894874576433709e-16,
+        "raw_complex_l1": 2.0729309016970688e-14,
+        "raw_complex_l2": 1.117035800516905e-15,
+        "raw_complex_l4": 5.351486704272795e-16,
+        "raw_complex_linf": 7.11431226040132e-16,
+        "aligned_conjugate_reflection_defect": 1.2714674282264172e-15,
+        "weighted_phase_rmse": 9.036978270785478e-17,
+        "phase_excluded_reference_action_fraction": 5.190860410530158e-05,
+        "invariant_absolute_drifts": {
+          "action": 8.881784197001252e-16,
+          "energy": -2.6645352591003757e-15,
+          "momentum": -1.1102230246251565e-15
+        },
+        "invariant_relative_drifts": {
+          "action": 1.7054899655948038e-16,
+          "energy": -8.05149912857218e-16,
+          "momentum": -1.1182631821461097e-15
+        },
+        "boundary_flag": false,
+        "spectral_edge_flag": false,
+        "physical_screen_flag": false,
+        "reference_wrap_flag": false
+      },
+      {
+        "xi": 0.03125,
+        "action": 5.2077610400385135,
+        "energy": -3.3093653946316532,
+        "momentum": 0.9928101383918944,
+        "peak": 1.9581112551219964,
+        "peak_tau": 0.0,
+        "width_about_peak": 0.6233603703518333,
+        "core_tail_action_fraction": 8.67683186964107e-13,
+        "boundary_action_fraction": 1.959501408621823e-31,
+        "retained_spectral_edge_action_fraction": 5.160511945303767e-27,
+        "outside_retained_action_fraction": 4.791156740967851e-32,
+        "raw_conjugate_reflection_defect": 0.12491863568350174,
+        "epsilon_peak": 0.04895278137804991,
+        "epsilon_spectral_sigma": 0.021213696615193612,
+        "epsilon_spectral_mean": 0.003971676962703171,
+        "orbital_relative_l2": 8.853567448606733e-13,
+        "translation": 0.0,
+        "global_phase": -0.062499999999367846,
+        "raw_complex_relative_l2": 1.0869373598447051e-12,
+        "raw_complex_l1": 3.571032771055419e-12,
+        "raw_complex_l2": 2.480447506686601e-12,
+        "raw_complex_l4": 2.393661816224404e-12,
+        "raw_complex_linf": 3.0889787597163863e-12,
+        "aligned_conjugate_reflection_defect": 9.192952090134032e-13,
+        "weighted_phase_rmse": 8.351155604779441e-13,
+        "phase_excluded_reference_action_fraction": 5.1908604105301575e-05,
+        "invariant_absolute_drifts": {
+          "action": -5.329070518200751e-15,
+          "energy": 8.881784197001252e-15,
+          "momentum": -1.0480505352461478e-13
+        },
+        "invariant_relative_drifts": {
+          "action": -1.0232939793568821e-15,
+          "energy": 2.6838330428573933e-15,
+          "momentum": -1.0556404439459275e-13
+        },
+        "boundary_flag": false,
+        "spectral_edge_flag": false,
+        "physical_screen_flag": false,
+        "reference_wrap_flag": false
+      },
+      {
+        "xi": 0.0625,
+        "action": 5.207761040038509,
+        "energy": -3.309365394631643,
+        "momentum": 0.99281013839179,
+        "peak": 1.9581112551209412,
+        "peak_tau": 0.0,
+        "width_about_peak": 0.6233603703518605,
+        "core_tail_action_fraction": 8.676831868926005e-13,
+        "boundary_action_fraction": 5.7000299227269805e-31,
+        "retained_spectral_edge_action_fraction": 5.1611517077139494e-27,
+        "outside_retained_action_fraction": 4.8828900793309963e-32,
+        "raw_conjugate_reflection_defect": 0.24934946676794373,
+        "epsilon_peak": 0.04895278137802353,
+        "epsilon_spectral_sigma": 0.02121369661519077,
+        "epsilon_spectral_mean": 0.003971676962702682,
+        "orbital_relative_l2": 8.913673640714892e-13,
+        "translation": 0.0,
+        "global_phase": -0.12499999999873292,
+        "raw_complex_relative_l2": 1.5480541508033723e-12,
+        "raw_complex_l1": 5.853418772583006e-12,
+        "raw_complex_l2": 3.5327399723611312e-12,
+        "raw_complex_l4": 3.3659010756057436e-12,
+        "raw_complex_linf": 4.701970784036076e-12,
+        "aligned_conjugate_reflection_defect": 1.1860838342681794e-12,
+        "weighted_phase_rmse": 1.41954261469353e-12,
+        "phase_excluded_reference_action_fraction": 5.190860410530157e-05,
+        "invariant_absolute_drifts": {
+          "action": -9.769962616701378e-15,
+          "energy": 1.9095836023552692e-14,
+          "momentum": -2.091660178393795e-13
+        },
+        "invariant_relative_drifts": {
+          "action": -1.876038962154284e-15,
+          "energy": 5.770241042143396e-15,
+          "momentum": -2.1068078351632707e-13
+        },
+        "boundary_flag": false,
+        "spectral_edge_flag": false,
+        "physical_screen_flag": false,
+        "reference_wrap_flag": false
+      }
+    ],
+    "odd_amplitude_plus": [
+      {
+        "xi": 0.0,
+        "action": 5.207761320035454,
+        "energy": -3.3093659168068266,
+        "momentum": 0.9928100705566779,
+        "peak": 1.9581112551203002,
+        "peak_tau": 0.0,
+        "width_about_peak": 0.6233603921527051,
+        "core_tail_action_fraction": 8.676831404012966e-13,
+        "boundary_action_fraction": 4.969977646354712e-32,
+        "retained_spectral_edge_action_fraction": 5.164438601198889e-27,
+        "outside_retained_action_fraction": 1.186723515383e-31,
+        "raw_conjugate_reflection_defect": 0.0004637469830579086,
+        "epsilon_peak": 0.04895278137800751,
+        "epsilon_spectral_sigma": 0.021213698122930804,
+        "epsilon_spectral_mean": 0.003971676865466913,
+        "orbital_relative_l2": 3.0180156963512086e-05,
+        "translation": 0.00027093463904748205,
+        "global_phase": 4.3042594442930656e-05,
+        "raw_complex_relative_l2": 0.00023187349776247523,
+        "raw_complex_l1": 0.0010352100289304715,
+        "raw_complex_l2": 0.0005291473645489619,
+        "raw_complex_l4": 0.0004125359934490528,
+        "raw_complex_linf": 0.00038246121107278784,
+        "aligned_conjugate_reflection_defect": 6.036023057202321e-05,
+        "weighted_phase_rmse": 9.77941281557171e-17,
+        "phase_excluded_reference_action_fraction": 5.190860410530158e-05,
+        "invariant_absolute_drifts": {
+          "action": 2.6645352591003757e-15,
+          "energy": -1.7763568394002505e-15,
+          "momentum": -9.992007221626409e-16
+        },
+        "invariant_relative_drifts": {
+          "action": 5.116469621695791e-16,
+          "energy": -5.367665238766465e-16,
+          "momentum": -1.0064369326978913e-15
+        },
+        "boundary_flag": false,
+        "spectral_edge_flag": false,
+        "physical_screen_flag": false,
+        "reference_wrap_flag": false
+      },
+      {
+        "xi": 0.03125,
+        "action": 5.207761320035447,
+        "energy": -3.3093659168068146,
+        "momentum": 0.9928100705565746,
+        "peak": 1.958097732247054,
+        "peak_tau": 0.0,
+        "width_about_peak": 0.623362481639945,
+        "core_tail_action_fraction": 8.676831402848544e-13,
+        "boundary_action_fraction": 2.2392950027257266e-31,
+        "retained_spectral_edge_action_fraction": 5.137915227576436e-27,
+        "outside_retained_action_fraction": 4.7786310669724133e-32,
+        "raw_conjugate_reflection_defect": 0.12491914444821692,
+        "epsilon_peak": 0.04895244330617635,
+        "epsilon_spectral_sigma": 0.021213503169976514,
+        "epsilon_spectral_mean": 0.003971665175909825,
+        "orbital_relative_l2": 3.010083892854506e-05,
+        "translation": 0.0002711946237354823,
+        "global_phase": -0.06245674282813001,
+        "raw_complex_relative_l2": 0.00023208093933692247,
+        "raw_complex_l1": 0.001038814590127912,
+        "raw_complex_l2": 0.0005296207569956013,
+        "raw_complex_l4": 0.00041202572766395535,
+        "raw_complex_linf": 0.000387986940736365,
+        "aligned_conjugate_reflection_defect": 5.77704766636528e-05,
+        "weighted_phase_rmse": 7.053268886664041e-06,
+        "phase_excluded_reference_action_fraction": 5.1908604105301575e-05,
+        "invariant_absolute_drifts": {
+          "action": -4.440892098500626e-15,
+          "energy": 1.021405182655144e-14,
+          "momentum": -1.0436096431476471e-13
+        },
+        "invariant_relative_drifts": {
+          "action": -8.527449369492985e-16,
+          "energy": 3.0864075122907172e-15,
+          "momentum": -1.0511674630400197e-13
+        },
+        "boundary_flag": false,
+        "spectral_edge_flag": false,
+        "physical_screen_flag": false,
+        "reference_wrap_flag": false
+      },
+      {
+        "xi": 0.0625,
+        "action": 5.207761320035442,
+        "energy": -3.3093659168068013,
+        "momentum": 0.9928100705564707,
+        "peak": 1.9580881962813623,
+        "peak_tau": 0.0,
+        "width_about_peak": 0.6233645608398544,
+        "core_tail_action_fraction": 8.676831402241504e-13,
+        "boundary_action_fraction": 7.1888738907920535e-31,
+        "retained_spectral_edge_action_fraction": 5.143106251665424e-27,
+        "outside_retained_action_fraction": 5.091020765929155e-32,
+        "raw_conjugate_reflection_defect": 0.24934851367981406,
+        "epsilon_peak": 0.04895220490703406,
+        "epsilon_spectral_sigma": 0.021213330710810704,
+        "epsilon_spectral_mean": 0.003971654374510111,
+        "orbital_relative_l2": 3.0098777894007166e-05,
+        "translation": 0.00027189050643983137,
+        "global_phase": -0.12495611407575578,
+        "raw_complex_relative_l2": 0.0002326662264739288,
+        "raw_complex_l1": 0.00104603006861293,
+        "raw_complex_l2": 0.0005309564126399069,
+        "raw_complex_l4": 0.000411679035131157,
+        "raw_complex_linf": 0.000391419896522836,
+        "aligned_conjugate_reflection_defect": 5.210348704068222e-05,
+        "weighted_phase_rmse": 1.2566417685160836e-05,
+        "phase_excluded_reference_action_fraction": 5.190860410530157e-05,
+        "invariant_absolute_drifts": {
+          "action": -8.881784197001252e-15,
+          "energy": 2.353672812205332e-14,
+          "momentum": -2.0816681711721685e-13
+        },
+        "invariant_relative_drifts": {
+          "action": -1.705489873898597e-15,
+          "energy": 7.112156441365565e-15,
+          "momentum": -2.0967436097872733e-13
+        },
+        "boundary_flag": false,
+        "spectral_edge_flag": false,
+        "physical_screen_flag": false,
+        "reference_wrap_flag": false
+      }
+    ]
+  },
+  "resources": {
+    "wall_seconds": 0.7635637949997545,
+    "process_peak_rss_kib": 120700
+  },
+  "interpretation": "Finite-window periodic persistence only; no spectral/nonlinear stability theorem or physical validation. Screens are numerical design choices. Padded continuum E/M need not be invariants of the Galerkin ODE. Tail action is not a radiation error bar.",
+  "fields_sha256": "9de3e25a8b05b35e7ae7a79eb625859289a073cd5fc6430db1b6f0b0e7c976a1"
+}

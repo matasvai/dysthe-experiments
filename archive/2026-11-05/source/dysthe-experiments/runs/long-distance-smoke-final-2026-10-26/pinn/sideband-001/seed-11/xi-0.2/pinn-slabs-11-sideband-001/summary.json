@@ -1,0 +1,72 @@
+{
+  "method": "pinn_slabs",
+  "seed": 11,
+  "case_id": "sideband-001",
+  "split": "validation",
+  "training_seconds": 0.23330695999902673,
+  "history": [
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.04317349195480347,
+        "full_dysthe_residual_validation": 0.049283821135759354,
+        "seconds": 0.15882120099922759,
+        "training_epsilon": 0.04458474740386009
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.015177324414253235,
+        "full_dysthe_residual_validation": 0.010152230970561504,
+        "seconds": 0.18360595499871124,
+        "training_epsilon": 0.04458474740386009
+      }
+    ],
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.041003841906785965,
+        "full_dysthe_residual_validation": 0.06945788860321045,
+        "seconds": 0.02391978300147457,
+        "training_epsilon": 0.04458474740386009
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.017663804814219475,
+        "full_dysthe_residual_validation": 0.013125251978635788,
+        "seconds": 0.04970100500031549,
+        "training_epsilon": 0.04458474740386009
+      }
+    ]
+  ],
+  "full_residual_rms_relative": [
+    0.10074435919523239,
+    0.11455290019512177
+  ],
+  "metrics": [
+    {
+      "xi": 0.2,
+      "l2": 0.0033499829139087747,
+      "h1": 0.003483000554459464,
+      "peak": 0.003406148467306309
+    }
+  ],
+  "sampled_interval_errors": {
+    "l2": 0.0033499829139087747,
+    "h1": 0.003483000554459464,
+    "peak": 0.003406148467306309
+  },
+  "sampled_interval_tolerances": {
+    "l2": 0.01,
+    "h1": 0.05,
+    "peak": 0.05
+  },
+  "sampled_interval_pass": true,
+  "sampled_station_count": 5,
+  "resumed_from_checkpoint": false,
+  "checkpoints": {
+    "best-0.pt": "5e7e10436cb6a3403ef55ab776790dd4c7457bd920422b6869d566dd3dd226fa",
+    "best-1.pt": "fb05b0345178cfc0b14edf5ced6aceed25ad20ac7183e048e1a3ab97778134bc"
+  },
+  "gpu_peak_allocated_bytes": null,
+  "invocation_elapsed_seconds": 0.24594258300021465
+}

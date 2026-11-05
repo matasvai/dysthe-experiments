@@ -1,0 +1,74 @@
+[
+  {
+    "method": "pinn_slabs",
+    "seed": 11,
+    "case_id": "sideband-002",
+    "split": "test",
+    "training_seconds": 0.24838295800145715,
+    "history": [
+      [
+        {
+          "epoch": 10,
+          "training_loss": 0.24432627856731415,
+          "full_dysthe_residual_validation": 0.1751122772693634,
+          "seconds": 0.06238565500098048,
+          "training_epsilon": 0.022165115922689438
+        },
+        {
+          "epoch": 20,
+          "training_loss": 0.03967297449707985,
+          "full_dysthe_residual_validation": 0.03981871157884598,
+          "seconds": 0.12459703400054423,
+          "training_epsilon": 0.022165115922689438
+        }
+      ],
+      [
+        {
+          "epoch": 10,
+          "training_loss": 0.2793605625629425,
+          "full_dysthe_residual_validation": 0.20078276097774506,
+          "seconds": 0.05724290699981793,
+          "training_epsilon": 0.022165115922689438
+        },
+        {
+          "epoch": 20,
+          "training_loss": 0.030748646706342697,
+          "full_dysthe_residual_validation": 0.03244572505354881,
+          "seconds": 0.12378592400091293,
+          "training_epsilon": 0.022165115922689438
+        }
+      ]
+    ],
+    "full_residual_rms_relative": [
+      0.19954408705234528,
+      0.1801283210515976
+    ],
+    "metrics": [
+      {
+        "xi": 0.2,
+        "l2": 0.018303850242312878,
+        "h1": 0.018380508578751564,
+        "peak": 0.004287330113705344
+      }
+    ],
+    "sampled_interval_errors": {
+      "l2": 0.018303850242312878,
+      "h1": 0.018380508578751564,
+      "peak": 0.004287330113705344
+    },
+    "sampled_interval_tolerances": {
+      "l2": 0.01,
+      "h1": 0.05,
+      "peak": 0.05
+    },
+    "sampled_interval_pass": false,
+    "sampled_station_count": 5,
+    "resumed_from_checkpoint": false,
+    "checkpoints": {
+      "best-0.pt": "23114c8712b327efdfb0a7601ddcd66a920d6513866746b50cb80cc27caa9a9a",
+      "best-1.pt": "f3fe77933fbf94dd0292690abf76e0c58efeab9caf3193f34071d901ec7d1265"
+    },
+    "gpu_peak_allocated_bytes": null,
+    "invocation_elapsed_seconds": 0.275524492999466
+  }
+]

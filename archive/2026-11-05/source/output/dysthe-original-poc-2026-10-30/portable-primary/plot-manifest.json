@@ -1,0 +1,71 @@
+{
+  "artifacts": [
+    {
+      "path": "packet-eps0.05-stability-T16-plot.npz",
+      "sha256": "c7589f5b95baa1688ed86eb6febcac3332f944d1b90591de33a0ab3836882b37",
+      "source_array_sha256": "09f4279db55219a098362fed88e1a514c86f5c90a901f4f3f6680023c266064a",
+      "source_array": "results-audit/packet-eps0.05-stability-T16.npz",
+      "key": "packet-eps0.05-stability-T16",
+      "grid": 512,
+      "dtype": "complex64",
+      "usage": "Visualization only, not numerical refinement evidence",
+      "max_discarded_action_fraction": 1.0793211976733307e-09
+    },
+    {
+      "path": "packet-eps0.1-stability-T16-plot.npz",
+      "sha256": "c39e8934be2bcf1e8de4a2878a518e6790e31a0178d7e0ed9eaf2dc7d2521c61",
+      "source_array_sha256": "19e0a113ff3c3b4cbd94750053b692cea4982341f28354080108fca9897d748c",
+      "source_array": "results-audit/packet-eps0.1-stability-T16.npz",
+      "key": "packet-eps0.1-stability-T16",
+      "grid": 512,
+      "dtype": "complex64",
+      "usage": "Visualization only, not numerical refinement evidence",
+      "max_discarded_action_fraction": 4.756131743927579e-10
+    },
+    {
+      "path": "sideband-eps0.05-stability-T16-plot.npz",
+      "sha256": "2282c250f6955be25a4cd0dd048e195362a9447a7104f414474a26ece62e8c0b",
+      "source_array_sha256": "127df1d0c0a3fbae65ce3faebd8085e589f033a98cde318fb566d7b172df40bc",
+      "source_array": "results-audit/sideband-eps0.05-stability-T16.npz",
+      "key": "sideband-eps0.05-stability-T16",
+      "grid": 512,
+      "dtype": "complex64",
+      "usage": "Visualization only, not numerical refinement evidence",
+      "max_discarded_action_fraction": 1.7863889874589728e-09
+    },
+    {
+      "path": "sideband-eps0.1-stability-T16-plot.npz",
+      "sha256": "483652b4c1daa1f8f955904e40a0a19e794775a4213101123bdff96e11026b75",
+      "source_array_sha256": "f27f8a220dabf41a8062117d67f2897a510bf62079b18795d50d931efd6d51cc",
+      "source_array": "results-time-audit/fine.npz",
+      "key": "sideband-eps0.1-stability-T16",
+      "grid": 512,
+      "dtype": "complex64",
+      "usage": "Visualization only, not numerical refinement evidence",
+      "max_discarded_action_fraction": 7.291089655124596e-10
+    },
+    {
+      "path": "random-eps0.05-stability-T16-plot.npz",
+      "sha256": "eca01fbc870a3d54e41dd4271c531deb068532d89ce1c4ad08b839bc7ea55194",
+      "source_array_sha256": "abf4e1c2c50db27deaa6e308460982199bf94ee613c8ec5d5bb540570cb93795",
+      "source_array": "results-audit/random-eps0.05-stability-T16.npz",
+      "key": "random-eps0.05-stability-T16",
+      "grid": 512,
+      "dtype": "complex64",
+      "usage": "Visualization only, not numerical refinement evidence",
+      "max_discarded_action_fraction": 1.0112367282461917e-07
+    },
+    {
+      "path": "random-eps0.1-stability-T16-plot.npz",
+      "sha256": "58efb8e21ca5818fc3c01177378bcb098157d5b6202d38fa9e619875a28760b3",
+      "source_array_sha256": "3eb7218fdf2d34d29bee64a5506dc268d20a5f196a86aabcf55e9380076d6c5b",
+      "source_array": "results-audit/random-eps0.1-stability-T16.npz",
+      "key": "random-eps0.1-stability-T16",
+      "grid": 512,
+      "dtype": "complex64",
+      "usage": "Visualization only, not numerical refinement evidence",
+      "max_discarded_action_fraction": 4.4095593574367686e-09
+    }
+  ],
+  "source_summary_sha256": "dce3a8adf1ee852b901bfec3d9eb61d06d426079164b65036f7c01adb29ce56c"
+}

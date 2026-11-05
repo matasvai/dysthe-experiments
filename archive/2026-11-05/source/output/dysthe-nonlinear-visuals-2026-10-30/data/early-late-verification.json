@@ -1,0 +1,20 @@
+{
+  "checks": [
+    {
+      "case": "near-zero",
+      "records": 4,
+      "all_qualified": true,
+      "summary_sha256": "1ad27f6c0a786081ec7fbc8fdad2393e4a5a2eeff3c31f3ebb44dcf8d1561682",
+      "driver_sha256": "fba2f6e23915b0314df3da714c86ae237a62b9f39bd7d9b9be84da82a47eb423"
+    },
+    {
+      "case": "long-linear",
+      "records": 3,
+      "all_qualified": true,
+      "summary_sha256": "0ff02e03d9b504e756c14408f8221007230f7fe5b34f0c284708dc8ce154c420",
+      "driver_sha256": "3fa16dc6b6d1996ffe76dabb813ea8cb6e92068d401ba7219bb961704ed8fb5a"
+    }
+  ],
+  "driver_help": "both pass without data mutation",
+  "limitations": "Near-zero nonlinear evidence stops atT.01; longer exactlinear evidence is periodic only. No whole-line claim and no nonlinearT1024 results."
+}

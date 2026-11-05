@@ -1,0 +1,24 @@
+{
+  "case": "e0.025-grid",
+  "pid": 245774,
+  "started_utc": "2026-10-02T18:39:42.312822+00:00",
+  "total_steps": 224000,
+  "steps_done": 224000,
+  "status": "succeeded",
+  "config_sha256": "46c32b5753615bd69d94eb9f830fbdc4404adf54ab312788230180fdbe8dcfef",
+  "core_sha256": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8",
+  "runner_sha256": "d5fd1eada48a6ebd0fe120bc070bef58f4b81754c95d0214c5f15cce019e7b9a",
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "elapsed_seconds": 314.6106902590036,
+  "updated_utc": "2026-10-02T18:44:56.923505+00:00",
+  "resources": {
+    "wall_seconds": 314.58647747299983,
+    "process_peak_rss_kib": 138328
+  },
+  "fields_sha256": "4263c47028f8e06405466621ebdfc0fedf0e2e676d9e92d7476fdb14383d4dc7",
+  "report_sha256": "3175982e492ec8455a6174517ee5d51ee422238d8355c0f495e5dcb9052a88f5"
+}

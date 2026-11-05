@@ -1,0 +1,1651 @@
+{
+  "status": "complete",
+  "max_relative_errors": {
+    "grid": {
+      "h0": 2.9375668182173465e-07,
+      "h1": 7.750208621163147e-07,
+      "h2": 2.039798294363422e-06
+    },
+    "step": {
+      "h0": 6.807928123913549e-13,
+      "h1": 1.050425664235465e-12,
+      "h2": 1.8385641646695645e-12
+    }
+  },
+  "diagnostics": {
+    "initial_peak": 0.5767909857369815,
+    "nonlinear_length_initial_peak": 3.0058207006019186,
+    "initial_invariants": {
+      "action": 1.7925672165556115,
+      "energy": -0.10161093427818986,
+      "momentum": -0.025102093761688662
+    },
+    "maxima": {
+      "peak": 0.5776982118153289,
+      "h2_ratio": 1.0004622344686058,
+      "epsilon_peak": 0.016876673117467544,
+      "epsilon_spectral_width": 0.007461366323456334,
+      "epsilon_spectral_rms_wavenumber": 0.007461366359525491,
+      "spectral_tail_action_fraction": 2.8415860748077986e-23,
+      "boundary_action_fraction": 0.00032462660525616697,
+      "action_relative_drift": 8.670872813694567e-16
+    },
+    "stations": [
+      {
+        "xi": 0.0,
+        "nonlinear_lengths_initial_peak": 0.0,
+        "peak": 0.5767909857369815,
+        "peak_ratio": 1.0,
+        "norms": {
+          "h0": 1.3388678861469534,
+          "h1": 1.3815602940029568,
+          "h2": 1.4301394881710974
+        },
+        "h2_ratio": 1.0,
+        "epsilon_peak": 0.0168501697327335,
+        "spectral_centroid": -5.806388044884755e-17,
+        "spectral_width": 0.2545401129954642,
+        "spectral_rms_wavenumber": 0.2545401129954642,
+        "epsilon_spectral_width": 0.007436045662680578,
+        "epsilon_spectral_rms_wavenumber": 0.007436045662680578,
+        "spectral_signed_power_asymmetry": -1.5483701453026012e-16,
+        "spectral_skewness": 2.2004797500163646e-16,
+        "spectral_tail_action_fraction": 6.614883297766157e-32,
+        "outside_declared_cutoff_action_fraction": 2.9185912943221266e-32,
+        "boundary_action_fraction": 0.00032462660525616697,
+        "raw_recurrence_relative_l2": 0.0,
+        "phase_aligned_recurrence_relative_l2": 7.395243845125944e-21,
+        "recurrence_global_phase": -5.970411862375638e-19,
+        "invariants": {
+          "action": 1.7925672165556115,
+          "energy": -0.10161093427818986,
+          "momentum": -0.025102093761688662
+        },
+        "invariant_absolute_drift": {
+          "action": 0.0,
+          "energy": 0.0,
+          "momentum": 0.0
+        },
+        "invariant_relative_drift": {
+          "action": 0.0,
+          "energy": 0.0,
+          "momentum": 0.0
+        }
+      },
+      {
+        "xi": 0.05,
+        "nonlinear_lengths_initial_peak": 0.016634392061371944,
+        "peak": 0.5772043782779314,
+        "peak_ratio": 1.0007167111677753,
+        "norms": {
+          "h0": 1.3388678861469536,
+          "h1": 1.3816991024443637,
+          "h2": 1.4304562416955204
+        },
+        "h2_ratio": 1.000221484356626,
+        "epsilon_peak": 0.01686224643755986,
+        "spectral_centroid": 1.2166153239859014e-05,
+        "spectral_width": 0.2549600821835624,
+        "spectral_rms_wavenumber": 0.2549600824738339,
+        "epsilon_spectral_width": 0.0074483144953720794,
+        "epsilon_spectral_rms_wavenumber": 0.007448314503851968,
+        "spectral_signed_power_asymmetry": 7.397037561740913e-06,
+        "spectral_skewness": 0.0002404873786285987,
+        "spectral_tail_action_fraction": 1.6561427295115055e-25,
+        "outside_declared_cutoff_action_fraction": 2.8228295224928353e-32,
+        "boundary_action_fraction": 0.00032415838652460286,
+        "raw_recurrence_relative_l2": 0.00987305781409293,
+        "phase_aligned_recurrence_relative_l2": 0.004206708155767566,
+        "recurrence_global_phase": -0.008932083376597469,
+        "invariants": {
+          "action": 1.7925672165556124,
+          "energy": -0.10161093427819054,
+          "momentum": -0.02510209376168924
+        },
+        "invariant_absolute_drift": {
+          "action": 8.881784197001252e-16,
+          "energy": 6.800116025829084e-16,
+          "momentum": 5.759281940243e-16
+        },
+        "invariant_relative_drift": {
+          "action": 4.954784464968323e-16,
+          "energy": 6.6923073526828944e-15,
+          "momentum": 2.2943432507741387e-14
+        }
+      },
+      {
+        "xi": 0.1,
+        "nonlinear_lengths_initial_peak": 0.03326878412274389,
+        "peak": 0.5776982118153289,
+        "peak_ratio": 1.0015728853272354,
+        "norms": {
+          "h0": 1.3388678861469538,
+          "h1": 1.3818470056933199,
+          "h2": 1.4308005479374444
+        },
+        "h2_ratio": 1.0004622344686058,
+        "epsilon_peak": 0.016876673117467544,
+        "spectral_centroid": 2.5113449070585888e-05,
+        "spectral_width": 0.25540685375357,
+        "spectral_rms_wavenumber": 0.2554068549882379,
+        "epsilon_spectral_width": 0.007461366323456334,
+        "epsilon_spectral_rms_wavenumber": 0.007461366359525491,
+        "spectral_signed_power_asymmetry": 1.0585030011386986e-05,
+        "spectral_skewness": 0.0006302945592112724,
+        "spectral_tail_action_fraction": 2.8415860748077986e-23,
+        "outside_declared_cutoff_action_fraction": 2.4175333496464779e-32,
+        "boundary_action_fraction": 0.0003237183132783861,
+        "raw_recurrence_relative_l2": 0.019758468630712973,
+        "phase_aligned_recurrence_relative_l2": 0.008418422434716055,
+        "recurrence_global_phase": -0.017875879790056406,
+        "invariants": {
+          "action": 1.792567216555613,
+          "energy": -0.10161093427819143,
+          "momentum": -0.025102093761689363
+        },
+        "invariant_absolute_drift": {
+          "action": 1.5543122344752192e-15,
+          "energy": 1.5681900222830336e-15,
+          "momentum": 7.008282842946301e-16
+        },
+        "invariant_relative_drift": {
+          "action": 8.670872813694567e-16,
+          "energy": 1.5433280221493206e-14,
+          "momentum": 2.791911666604675e-14
+        }
+      }
+    ],
+    "conventions": {
+      "sobolev": "H_s^2=L*sum_k (1+k^2)^s*|fft(u)/N|^2; H0 is L2",
+      "spectral_tail": "Fraction of action at |mode| >= 0.8*32",
+      "asymmetry": "(power at k>0 minus power at k<0)/total power including zero mode",
+      "recurrence": "Same tau origin, global phase fit only; raw complex distance also recorded",
+      "invariants": "SpatialDysthe.invariants: action, modified energy and modified momentum for the noncanonical free-surface envelope; not all exactly conserved by the projected ODE",
+      "small_initial_invariant": "Relative drift is null if initial invariant is nearly zero; absolute drift remains reported",
+      "physical_indicators": "epsilon*peak and epsilon*spectral width/RMS are formal weak-nonlinearity/narrowband indicators, not validated universal physical cutoffs"
+    },
+    "limitation": "Sampled, two-level numerical refinement in periodic boxes; not a rigorous error bound, proof of smoothness/global existence, or validation of Dysthe against the full water-wave equations."
+  },
+  "events": {
+    "focusing_peaks": [],
+    "recurrence_candidates": [],
+    "peak_prominence_absolute": 0.01153581971473963,
+    "recurrence_tolerance": 0.05,
+    "interpretation": "Interior extrema of sampled traces; no promised recurrence, no continuous event-time accuracy, no translation alignment"
+  },
+  "artifact": {
+    "identity": {
+      "config": {
+        "model_id": "water-wave-dysthe-spatial-v1",
+        "physical_system": "deep-water-gravity-waves",
+        "seed": 20261028,
+        "length": 40.0,
+        "grid": 64,
+        "output_modes": 8,
+        "initial_modes": 4,
+        "groups_per_family": 3,
+        "train_per_family": 1,
+        "validation_per_family": 1,
+        "reference_grid": 128,
+        "reference_step": 0.005,
+        "sample_step": 0.05,
+        "horizon": 0.2,
+        "train_horizon": 0.05,
+        "operator_step": 0.05,
+        "operator_epochs": 400,
+        "operator_batch": 16,
+        "operator_width": 16,
+        "operator_modes": 8,
+        "operator_depth": 2,
+        "physics_weight": 0.1,
+        "pinn_epochs": 40,
+        "pinn_horizon": 0.2,
+        "pinn_slabs": 2,
+        "seeds": [
+          11
+        ],
+        "threads": 2,
+        "validation_every": 10,
+        "reference_l2_tolerance": 1e-05,
+        "reference_h1_tolerance": 0.0001,
+        "pinn_width": 16,
+        "pinn_depth": 2,
+        "pinn_collocation_slices": 4,
+        "campaign": "long-distance-h2-smoke-v2",
+        "reference_horizons": [
+          0.1,
+          0.2
+        ],
+        "pinn_horizons": [
+          0.1,
+          0.2
+        ],
+        "sensitivity_horizons": [
+          0.1
+        ],
+        "domain_horizons": [
+          0.1
+        ],
+        "slab_length": 0.1,
+        "epochs_per_slab": 20,
+        "reference_h2_tolerance": 0.001,
+        "diagnostics_tail_fraction": 0.8,
+        "spectral_tail_tolerance": 1e-08,
+        "action_drift_tolerance": 1e-06,
+        "recurrence_tolerance": 0.05,
+        "focusing_prominence": 0.02,
+        "sensitivity_delta": 0.001,
+        "sensitivity_tolerance": 0.01,
+        "domain_tolerance": 0.01,
+        "domain_initial_tolerance": 0.001,
+        "pinn_l2_tolerance": 0.01,
+        "pinn_h1_tolerance": 0.05,
+        "pinn_h2_tolerance": 0.05,
+        "pinn_peak_tolerance": 0.05,
+        "study_status": "CPU workflow smoke only; not the scientific long-distance experiment",
+        "interpretation": "Finite-distance periodic numerical evidence; no global existence or physical-validity certificate.",
+        "pinn_coefficient_scaling": "inverse_1_plus_k2"
+      },
+      "record": {
+        "case_id": "packet-002",
+        "initial_condition_id": "packet-002",
+        "split": "test",
+        "family": "packet",
+        "schema_version": 2,
+        "model_id": "water-wave-dysthe-spatial-v1",
+        "physical_system": "deep-water-gravity-waves",
+        "boundary": "periodic",
+        "axis_order": [
+          "xi",
+          "tau"
+        ],
+        "field_encoding": "complex128",
+        "shape": [
+          128
+        ],
+        "lengths": [
+          40.0
+        ],
+        "propagation_positions": [
+          0.0,
+          0.05,
+          0.1,
+          0.15000000000000002,
+          0.2
+        ],
+        "physics": {
+          "epsilon": 0.029213649570482766
+        },
+        "parameters": {
+          "amplitude_parameter": 0.6048701973042974,
+          "phase": 0.4264208331059134,
+          "width": 2.781120247066024,
+          "chirp": 0.12025069132838825,
+          "center": 3.937420452623286
+        }
+      },
+      "u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+      "horizon": 0.1,
+      "module_sha256": "05953daafb6af055bda6094097ebf9351fa0ba36876c9beaf0afa167ad8e7bbe",
+      "integrator_sha256": "2bb6dc73741124166244c6783ebb31902de78035ee4441476d43cdcc423c80bf",
+      "reference_sha256": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8",
+      "sensitivity_source_sha256": "ad65d7b3114137634554a012bd7f2650a1720b0a5a71dae68bb7d3caa2593e2e",
+      "runtime": {
+        "python": "3.14.8",
+        "numpy": "2.4.2",
+        "scipy": "1.17.0"
+      },
+      "role": "fine",
+      "trajectory_u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+      "epsilon": 0.029213649570482766,
+      "length": 40.0,
+      "n": 128,
+      "step": 0.005
+    },
+    "status": "complete",
+    "path": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/experiments/runs/h2-cpu-workflow-20261027/reference/packet-002/xi-0.1/fine.npz",
+    "sha256": "fa5a6484e3f2712c7a116341c8ee13907c16a8522c4fcc2273bf1f4578eb461d",
+    "seconds": 0.002366999999139807,
+    "n": 128,
+    "step": 0.005,
+    "length": 40.0,
+    "epsilon": 0.029213649570482766
+  },
+  "artifacts": [
+    {
+      "identity": {
+        "config": {
+          "model_id": "water-wave-dysthe-spatial-v1",
+          "physical_system": "deep-water-gravity-waves",
+          "seed": 20261028,
+          "length": 40.0,
+          "grid": 64,
+          "output_modes": 8,
+          "initial_modes": 4,
+          "groups_per_family": 3,
+          "train_per_family": 1,
+          "validation_per_family": 1,
+          "reference_grid": 128,
+          "reference_step": 0.005,
+          "sample_step": 0.05,
+          "horizon": 0.2,
+          "train_horizon": 0.05,
+          "operator_step": 0.05,
+          "operator_epochs": 400,
+          "operator_batch": 16,
+          "operator_width": 16,
+          "operator_modes": 8,
+          "operator_depth": 2,
+          "physics_weight": 0.1,
+          "pinn_epochs": 40,
+          "pinn_horizon": 0.2,
+          "pinn_slabs": 2,
+          "seeds": [
+            11
+          ],
+          "threads": 2,
+          "validation_every": 10,
+          "reference_l2_tolerance": 1e-05,
+          "reference_h1_tolerance": 0.0001,
+          "pinn_width": 16,
+          "pinn_depth": 2,
+          "pinn_collocation_slices": 4,
+          "campaign": "long-distance-h2-smoke-v2",
+          "reference_horizons": [
+            0.1,
+            0.2
+          ],
+          "pinn_horizons": [
+            0.1,
+            0.2
+          ],
+          "sensitivity_horizons": [
+            0.1
+          ],
+          "domain_horizons": [
+            0.1
+          ],
+          "slab_length": 0.1,
+          "epochs_per_slab": 20,
+          "reference_h2_tolerance": 0.001,
+          "diagnostics_tail_fraction": 0.8,
+          "spectral_tail_tolerance": 1e-08,
+          "action_drift_tolerance": 1e-06,
+          "recurrence_tolerance": 0.05,
+          "focusing_prominence": 0.02,
+          "sensitivity_delta": 0.001,
+          "sensitivity_tolerance": 0.01,
+          "domain_tolerance": 0.01,
+          "domain_initial_tolerance": 0.001,
+          "pinn_l2_tolerance": 0.01,
+          "pinn_h1_tolerance": 0.05,
+          "pinn_h2_tolerance": 0.05,
+          "pinn_peak_tolerance": 0.05,
+          "study_status": "CPU workflow smoke only; not the scientific long-distance experiment",
+          "interpretation": "Finite-distance periodic numerical evidence; no global existence or physical-validity certificate.",
+          "pinn_coefficient_scaling": "inverse_1_plus_k2"
+        },
+        "record": {
+          "case_id": "packet-002",
+          "initial_condition_id": "packet-002",
+          "split": "test",
+          "family": "packet",
+          "schema_version": 2,
+          "model_id": "water-wave-dysthe-spatial-v1",
+          "physical_system": "deep-water-gravity-waves",
+          "boundary": "periodic",
+          "axis_order": [
+            "xi",
+            "tau"
+          ],
+          "field_encoding": "complex128",
+          "shape": [
+            128
+          ],
+          "lengths": [
+            40.0
+          ],
+          "propagation_positions": [
+            0.0,
+            0.05,
+            0.1,
+            0.15000000000000002,
+            0.2
+          ],
+          "physics": {
+            "epsilon": 0.029213649570482766
+          },
+          "parameters": {
+            "amplitude_parameter": 0.6048701973042974,
+            "phase": 0.4264208331059134,
+            "width": 2.781120247066024,
+            "chirp": 0.12025069132838825,
+            "center": 3.937420452623286
+          }
+        },
+        "u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+        "horizon": 0.1,
+        "module_sha256": "05953daafb6af055bda6094097ebf9351fa0ba36876c9beaf0afa167ad8e7bbe",
+        "integrator_sha256": "2bb6dc73741124166244c6783ebb31902de78035ee4441476d43cdcc423c80bf",
+        "reference_sha256": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8",
+        "sensitivity_source_sha256": "ad65d7b3114137634554a012bd7f2650a1720b0a5a71dae68bb7d3caa2593e2e",
+        "runtime": {
+          "python": "3.14.8",
+          "numpy": "2.4.2",
+          "scipy": "1.17.0"
+        },
+        "role": "fine",
+        "trajectory_u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+        "epsilon": 0.029213649570482766,
+        "length": 40.0,
+        "n": 128,
+        "step": 0.005
+      },
+      "status": "complete",
+      "path": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/experiments/runs/h2-cpu-workflow-20261027/reference/packet-002/xi-0.1/fine.npz",
+      "sha256": "fa5a6484e3f2712c7a116341c8ee13907c16a8522c4fcc2273bf1f4578eb461d",
+      "seconds": 0.002366999999139807,
+      "n": 128,
+      "step": 0.005,
+      "length": 40.0,
+      "epsilon": 0.029213649570482766
+    },
+    {
+      "identity": {
+        "config": {
+          "model_id": "water-wave-dysthe-spatial-v1",
+          "physical_system": "deep-water-gravity-waves",
+          "seed": 20261028,
+          "length": 40.0,
+          "grid": 64,
+          "output_modes": 8,
+          "initial_modes": 4,
+          "groups_per_family": 3,
+          "train_per_family": 1,
+          "validation_per_family": 1,
+          "reference_grid": 128,
+          "reference_step": 0.005,
+          "sample_step": 0.05,
+          "horizon": 0.2,
+          "train_horizon": 0.05,
+          "operator_step": 0.05,
+          "operator_epochs": 400,
+          "operator_batch": 16,
+          "operator_width": 16,
+          "operator_modes": 8,
+          "operator_depth": 2,
+          "physics_weight": 0.1,
+          "pinn_epochs": 40,
+          "pinn_horizon": 0.2,
+          "pinn_slabs": 2,
+          "seeds": [
+            11
+          ],
+          "threads": 2,
+          "validation_every": 10,
+          "reference_l2_tolerance": 1e-05,
+          "reference_h1_tolerance": 0.0001,
+          "pinn_width": 16,
+          "pinn_depth": 2,
+          "pinn_collocation_slices": 4,
+          "campaign": "long-distance-h2-smoke-v2",
+          "reference_horizons": [
+            0.1,
+            0.2
+          ],
+          "pinn_horizons": [
+            0.1,
+            0.2
+          ],
+          "sensitivity_horizons": [
+            0.1
+          ],
+          "domain_horizons": [
+            0.1
+          ],
+          "slab_length": 0.1,
+          "epochs_per_slab": 20,
+          "reference_h2_tolerance": 0.001,
+          "diagnostics_tail_fraction": 0.8,
+          "spectral_tail_tolerance": 1e-08,
+          "action_drift_tolerance": 1e-06,
+          "recurrence_tolerance": 0.05,
+          "focusing_prominence": 0.02,
+          "sensitivity_delta": 0.001,
+          "sensitivity_tolerance": 0.01,
+          "domain_tolerance": 0.01,
+          "domain_initial_tolerance": 0.001,
+          "pinn_l2_tolerance": 0.01,
+          "pinn_h1_tolerance": 0.05,
+          "pinn_h2_tolerance": 0.05,
+          "pinn_peak_tolerance": 0.05,
+          "study_status": "CPU workflow smoke only; not the scientific long-distance experiment",
+          "interpretation": "Finite-distance periodic numerical evidence; no global existence or physical-validity certificate.",
+          "pinn_coefficient_scaling": "inverse_1_plus_k2"
+        },
+        "record": {
+          "case_id": "packet-002",
+          "initial_condition_id": "packet-002",
+          "split": "test",
+          "family": "packet",
+          "schema_version": 2,
+          "model_id": "water-wave-dysthe-spatial-v1",
+          "physical_system": "deep-water-gravity-waves",
+          "boundary": "periodic",
+          "axis_order": [
+            "xi",
+            "tau"
+          ],
+          "field_encoding": "complex128",
+          "shape": [
+            128
+          ],
+          "lengths": [
+            40.0
+          ],
+          "propagation_positions": [
+            0.0,
+            0.05,
+            0.1,
+            0.15000000000000002,
+            0.2
+          ],
+          "physics": {
+            "epsilon": 0.029213649570482766
+          },
+          "parameters": {
+            "amplitude_parameter": 0.6048701973042974,
+            "phase": 0.4264208331059134,
+            "width": 2.781120247066024,
+            "chirp": 0.12025069132838825,
+            "center": 3.937420452623286
+          }
+        },
+        "u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+        "horizon": 0.1,
+        "module_sha256": "05953daafb6af055bda6094097ebf9351fa0ba36876c9beaf0afa167ad8e7bbe",
+        "integrator_sha256": "2bb6dc73741124166244c6783ebb31902de78035ee4441476d43cdcc423c80bf",
+        "reference_sha256": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8",
+        "sensitivity_source_sha256": "ad65d7b3114137634554a012bd7f2650a1720b0a5a71dae68bb7d3caa2593e2e",
+        "runtime": {
+          "python": "3.14.8",
+          "numpy": "2.4.2",
+          "scipy": "1.17.0"
+        },
+        "role": "grid",
+        "trajectory_u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+        "epsilon": 0.029213649570482766,
+        "length": 40.0,
+        "n": 64,
+        "step": 0.005
+      },
+      "status": "complete",
+      "path": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/experiments/runs/h2-cpu-workflow-20261027/reference/packet-002/xi-0.1/grid.npz",
+      "sha256": "6367faddabdac2b640c0b7a60d188b26a4c743e3351821663f7d47d35ce1dffe",
+      "seconds": 0.002056899998933659,
+      "n": 64,
+      "step": 0.005,
+      "length": 40.0,
+      "epsilon": 0.029213649570482766
+    },
+    {
+      "identity": {
+        "config": {
+          "model_id": "water-wave-dysthe-spatial-v1",
+          "physical_system": "deep-water-gravity-waves",
+          "seed": 20261028,
+          "length": 40.0,
+          "grid": 64,
+          "output_modes": 8,
+          "initial_modes": 4,
+          "groups_per_family": 3,
+          "train_per_family": 1,
+          "validation_per_family": 1,
+          "reference_grid": 128,
+          "reference_step": 0.005,
+          "sample_step": 0.05,
+          "horizon": 0.2,
+          "train_horizon": 0.05,
+          "operator_step": 0.05,
+          "operator_epochs": 400,
+          "operator_batch": 16,
+          "operator_width": 16,
+          "operator_modes": 8,
+          "operator_depth": 2,
+          "physics_weight": 0.1,
+          "pinn_epochs": 40,
+          "pinn_horizon": 0.2,
+          "pinn_slabs": 2,
+          "seeds": [
+            11
+          ],
+          "threads": 2,
+          "validation_every": 10,
+          "reference_l2_tolerance": 1e-05,
+          "reference_h1_tolerance": 0.0001,
+          "pinn_width": 16,
+          "pinn_depth": 2,
+          "pinn_collocation_slices": 4,
+          "campaign": "long-distance-h2-smoke-v2",
+          "reference_horizons": [
+            0.1,
+            0.2
+          ],
+          "pinn_horizons": [
+            0.1,
+            0.2
+          ],
+          "sensitivity_horizons": [
+            0.1
+          ],
+          "domain_horizons": [
+            0.1
+          ],
+          "slab_length": 0.1,
+          "epochs_per_slab": 20,
+          "reference_h2_tolerance": 0.001,
+          "diagnostics_tail_fraction": 0.8,
+          "spectral_tail_tolerance": 1e-08,
+          "action_drift_tolerance": 1e-06,
+          "recurrence_tolerance": 0.05,
+          "focusing_prominence": 0.02,
+          "sensitivity_delta": 0.001,
+          "sensitivity_tolerance": 0.01,
+          "domain_tolerance": 0.01,
+          "domain_initial_tolerance": 0.001,
+          "pinn_l2_tolerance": 0.01,
+          "pinn_h1_tolerance": 0.05,
+          "pinn_h2_tolerance": 0.05,
+          "pinn_peak_tolerance": 0.05,
+          "study_status": "CPU workflow smoke only; not the scientific long-distance experiment",
+          "interpretation": "Finite-distance periodic numerical evidence; no global existence or physical-validity certificate.",
+          "pinn_coefficient_scaling": "inverse_1_plus_k2"
+        },
+        "record": {
+          "case_id": "packet-002",
+          "initial_condition_id": "packet-002",
+          "split": "test",
+          "family": "packet",
+          "schema_version": 2,
+          "model_id": "water-wave-dysthe-spatial-v1",
+          "physical_system": "deep-water-gravity-waves",
+          "boundary": "periodic",
+          "axis_order": [
+            "xi",
+            "tau"
+          ],
+          "field_encoding": "complex128",
+          "shape": [
+            128
+          ],
+          "lengths": [
+            40.0
+          ],
+          "propagation_positions": [
+            0.0,
+            0.05,
+            0.1,
+            0.15000000000000002,
+            0.2
+          ],
+          "physics": {
+            "epsilon": 0.029213649570482766
+          },
+          "parameters": {
+            "amplitude_parameter": 0.6048701973042974,
+            "phase": 0.4264208331059134,
+            "width": 2.781120247066024,
+            "chirp": 0.12025069132838825,
+            "center": 3.937420452623286
+          }
+        },
+        "u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+        "horizon": 0.1,
+        "module_sha256": "05953daafb6af055bda6094097ebf9351fa0ba36876c9beaf0afa167ad8e7bbe",
+        "integrator_sha256": "2bb6dc73741124166244c6783ebb31902de78035ee4441476d43cdcc423c80bf",
+        "reference_sha256": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8",
+        "sensitivity_source_sha256": "ad65d7b3114137634554a012bd7f2650a1720b0a5a71dae68bb7d3caa2593e2e",
+        "runtime": {
+          "python": "3.14.8",
+          "numpy": "2.4.2",
+          "scipy": "1.17.0"
+        },
+        "role": "step",
+        "trajectory_u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+        "epsilon": 0.029213649570482766,
+        "length": 40.0,
+        "n": 128,
+        "step": 0.01
+      },
+      "status": "complete",
+      "path": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/experiments/runs/h2-cpu-workflow-20261027/reference/packet-002/xi-0.1/step.npz",
+      "sha256": "81d7d9c2bc619bfb7f1476f08af072893d38a00d2472fd230a55a5f78b61d9fe",
+      "seconds": 0.0011985839992121328,
+      "n": 128,
+      "step": 0.01,
+      "length": 40.0,
+      "epsilon": 0.029213649570482766
+    }
+  ],
+  "qualified": true,
+  "checks": {
+    "grid_h0": true,
+    "grid_h1": true,
+    "grid_h2": true,
+    "step_h0": true,
+    "step_h1": true,
+    "step_h2": true,
+    "spectral_tail": true,
+    "action_drift": true
+  },
+  "tolerances": {
+    "h0": 1e-05,
+    "h1": 0.0001,
+    "h2": 0.001,
+    "spectral_tail": 1e-08,
+    "action_relative_drift": 1e-06
+  },
+  "identity": {
+    "config": {
+      "model_id": "water-wave-dysthe-spatial-v1",
+      "physical_system": "deep-water-gravity-waves",
+      "seed": 20261028,
+      "length": 40.0,
+      "grid": 64,
+      "output_modes": 8,
+      "initial_modes": 4,
+      "groups_per_family": 3,
+      "train_per_family": 1,
+      "validation_per_family": 1,
+      "reference_grid": 128,
+      "reference_step": 0.005,
+      "sample_step": 0.05,
+      "horizon": 0.2,
+      "train_horizon": 0.05,
+      "operator_step": 0.05,
+      "operator_epochs": 400,
+      "operator_batch": 16,
+      "operator_width": 16,
+      "operator_modes": 8,
+      "operator_depth": 2,
+      "physics_weight": 0.1,
+      "pinn_epochs": 40,
+      "pinn_horizon": 0.2,
+      "pinn_slabs": 2,
+      "seeds": [
+        11
+      ],
+      "threads": 2,
+      "validation_every": 10,
+      "reference_l2_tolerance": 1e-05,
+      "reference_h1_tolerance": 0.0001,
+      "pinn_width": 16,
+      "pinn_depth": 2,
+      "pinn_collocation_slices": 4,
+      "campaign": "long-distance-h2-smoke-v2",
+      "reference_horizons": [
+        0.1,
+        0.2
+      ],
+      "pinn_horizons": [
+        0.1,
+        0.2
+      ],
+      "sensitivity_horizons": [
+        0.1
+      ],
+      "domain_horizons": [
+        0.1
+      ],
+      "slab_length": 0.1,
+      "epochs_per_slab": 20,
+      "reference_h2_tolerance": 0.001,
+      "diagnostics_tail_fraction": 0.8,
+      "spectral_tail_tolerance": 1e-08,
+      "action_drift_tolerance": 1e-06,
+      "recurrence_tolerance": 0.05,
+      "focusing_prominence": 0.02,
+      "sensitivity_delta": 0.001,
+      "sensitivity_tolerance": 0.01,
+      "domain_tolerance": 0.01,
+      "domain_initial_tolerance": 0.001,
+      "pinn_l2_tolerance": 0.01,
+      "pinn_h1_tolerance": 0.05,
+      "pinn_h2_tolerance": 0.05,
+      "pinn_peak_tolerance": 0.05,
+      "study_status": "CPU workflow smoke only; not the scientific long-distance experiment",
+      "interpretation": "Finite-distance periodic numerical evidence; no global existence or physical-validity certificate.",
+      "pinn_coefficient_scaling": "inverse_1_plus_k2"
+    },
+    "record": {
+      "case_id": "packet-002",
+      "initial_condition_id": "packet-002",
+      "split": "test",
+      "family": "packet",
+      "schema_version": 2,
+      "model_id": "water-wave-dysthe-spatial-v1",
+      "physical_system": "deep-water-gravity-waves",
+      "boundary": "periodic",
+      "axis_order": [
+        "xi",
+        "tau"
+      ],
+      "field_encoding": "complex128",
+      "shape": [
+        128
+      ],
+      "lengths": [
+        40.0
+      ],
+      "propagation_positions": [
+        0.0,
+        0.05,
+        0.1,
+        0.15000000000000002,
+        0.2
+      ],
+      "physics": {
+        "epsilon": 0.029213649570482766
+      },
+      "parameters": {
+        "amplitude_parameter": 0.6048701973042974,
+        "phase": 0.4264208331059134,
+        "width": 2.781120247066024,
+        "chirp": 0.12025069132838825,
+        "center": 3.937420452623286
+      }
+    },
+    "u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+    "horizon": 0.1,
+    "module_sha256": "05953daafb6af055bda6094097ebf9351fa0ba36876c9beaf0afa167ad8e7bbe",
+    "integrator_sha256": "2bb6dc73741124166244c6783ebb31902de78035ee4441476d43cdcc423c80bf",
+    "reference_sha256": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8",
+    "sensitivity_source_sha256": "ad65d7b3114137634554a012bd7f2650a1720b0a5a71dae68bb7d3caa2593e2e",
+    "runtime": {
+      "python": "3.14.8",
+      "numpy": "2.4.2",
+      "scipy": "1.17.0"
+    }
+  },
+  "case_id": "packet-002",
+  "horizon": 0.1,
+  "nls_control": {
+    "status": "complete",
+    "max_relative_errors": {
+      "grid": {
+        "h0": 1.9736728774242579e-07,
+        "h1": 5.203732525298664e-07,
+        "h2": 1.3685518735555906e-06
+      },
+      "step": {
+        "h0": 5.591500867362565e-13,
+        "h1": 8.426508429200019e-13,
+        "h2": 1.44601533483833e-12
+      }
+    },
+    "diagnostics": {
+      "initial_peak": 0.5767909857369815,
+      "nonlinear_length_initial_peak": 3.0058207006019186,
+      "initial_invariants": {
+        "action": 1.7925672165556115,
+        "energy": -0.09867314151698144,
+        "momentum": 1.0675221390626506e-17
+      },
+      "maxima": {
+        "peak": 0.5776219901818461,
+        "h2_ratio": 1.0004472731549494,
+        "epsilon_peak": 0.0,
+        "epsilon_spectral_width": 0.0,
+        "epsilon_spectral_rms_wavenumber": 0.0,
+        "spectral_tail_action_fraction": 8.84448430516975e-25,
+        "boundary_action_fraction": 0.00032462660525616697,
+        "action_relative_drift": 1.1148265046178729e-15
+      },
+      "stations": [
+        {
+          "xi": 0.0,
+          "nonlinear_lengths_initial_peak": 0.0,
+          "peak": 0.5767909857369815,
+          "peak_ratio": 1.0,
+          "norms": {
+            "h0": 1.3388678861469534,
+            "h1": 1.3815602940029568,
+            "h2": 1.4301394881710974
+          },
+          "h2_ratio": 1.0,
+          "epsilon_peak": 0.0,
+          "spectral_centroid": -5.806388044884755e-17,
+          "spectral_width": 0.2545401129954642,
+          "spectral_rms_wavenumber": 0.2545401129954642,
+          "epsilon_spectral_width": 0.0,
+          "epsilon_spectral_rms_wavenumber": 0.0,
+          "spectral_signed_power_asymmetry": -1.5483701453026012e-16,
+          "spectral_skewness": 2.2004797500163646e-16,
+          "spectral_tail_action_fraction": 6.614883297766157e-32,
+          "outside_declared_cutoff_action_fraction": 2.9185912943221266e-32,
+          "boundary_action_fraction": 0.00032462660525616697,
+          "raw_recurrence_relative_l2": 0.0,
+          "phase_aligned_recurrence_relative_l2": 7.395243845125944e-21,
+          "recurrence_global_phase": -5.970411862375638e-19,
+          "invariants": {
+            "action": 1.7925672165556115,
+            "energy": -0.09867314151698144,
+            "momentum": 1.0675221390626506e-17
+          },
+          "invariant_absolute_drift": {
+            "action": 0.0,
+            "energy": 0.0,
+            "momentum": 0.0
+          },
+          "invariant_relative_drift": {
+            "action": 0.0,
+            "energy": 0.0,
+            "momentum": null
+          }
+        },
+        {
+          "xi": 0.05,
+          "nonlinear_lengths_initial_peak": 0.016634392061371944,
+          "peak": 0.5771677031454258,
+          "peak_ratio": 1.0006531263798495,
+          "norms": {
+            "h0": 1.3388678861469536,
+            "h1": 1.3816951129699746,
+            "h2": 1.4304469180674715
+          },
+          "h2_ratio": 1.0002149649729393,
+          "epsilon_peak": 0.0,
+          "spectral_centroid": -7.741850726513002e-17,
+          "spectral_width": 0.25494802125597893,
+          "spectral_rms_wavenumber": 0.25494802125597893,
+          "epsilon_spectral_width": 0.0,
+          "epsilon_spectral_rms_wavenumber": 0.0,
+          "spectral_signed_power_asymmetry": -1.5483701453026004e-16,
+          "spectral_skewness": 2.9199127455648653e-16,
+          "spectral_tail_action_fraction": 6.998835496581513e-27,
+          "outside_declared_cutoff_action_fraction": 2.681837220522728e-32,
+          "boundary_action_fraction": 0.0003241583831987193,
+          "raw_recurrence_relative_l2": 0.009660161823486533,
+          "phase_aligned_recurrence_relative_l2": 0.004094966516695475,
+          "recurrence_global_phase": -0.008749348881503922,
+          "invariants": {
+            "action": 1.7925672165556124,
+            "energy": -0.09867314151698202,
+            "momentum": -2.8182584471253977e-16
+          },
+          "invariant_absolute_drift": {
+            "action": 8.881784197001252e-16,
+            "energy": 5.828670879282072e-16,
+            "momentum": 2.925010661031663e-16
+          },
+          "invariant_relative_drift": {
+            "action": 4.954784464968323e-16,
+            "energy": 5.907049060841921e-15,
+            "momentum": null
+          }
+        },
+        {
+          "xi": 0.1,
+          "nonlinear_lengths_initial_peak": 0.03326878412274389,
+          "peak": 0.5776219901818461,
+          "peak_ratio": 1.0014407375729057,
+          "norms": {
+            "h0": 1.3388678861469543,
+            "h1": 1.381838063773661,
+            "h2": 1.4307791511719894
+          },
+          "h2_ratio": 1.0004472731549494,
+          "epsilon_peak": 0.0,
+          "spectral_centroid": -7.741850726512997e-17,
+          "spectral_width": 0.2553798649022042,
+          "spectral_rms_wavenumber": 0.2553798649022042,
+          "epsilon_spectral_width": 0.0,
+          "epsilon_spectral_rms_wavenumber": 0.0,
+          "spectral_signed_power_asymmetry": -3.8709253632564987e-16,
+          "spectral_skewness": 2.1788438917942156e-16,
+          "spectral_tail_action_fraction": 8.84448430516975e-25,
+          "outside_declared_cutoff_action_fraction": 2.699225045451451e-32,
+          "boundary_action_fraction": 0.0003237183024732546,
+          "raw_recurrence_relative_l2": 0.019332068894565454,
+          "phase_aligned_recurrence_relative_l2": 0.008194309788128873,
+          "recurrence_global_phase": -0.017510005760820863,
+          "invariants": {
+            "action": 1.7925672165556135,
+            "energy": -0.09867314151698287,
+            "momentum": -1.55858232303147e-16
+          },
+          "invariant_absolute_drift": {
+            "action": 1.9984014443252818e-15,
+            "energy": 1.429412144204889e-15,
+            "momentum": 1.665334536937735e-16
+          },
+          "invariant_relative_drift": {
+            "action": 1.1148265046178729e-15,
+            "energy": 1.448633460158852e-14,
+            "momentum": null
+          }
+        }
+      ],
+      "conventions": {
+        "sobolev": "H_s^2=L*sum_k (1+k^2)^s*|fft(u)/N|^2; H0 is L2",
+        "spectral_tail": "Fraction of action at |mode| >= 0.8*32",
+        "asymmetry": "(power at k>0 minus power at k<0)/total power including zero mode",
+        "recurrence": "Same tau origin, global phase fit only; raw complex distance also recorded",
+        "invariants": "SpatialDysthe.invariants: action, modified energy and modified momentum for the noncanonical free-surface envelope; not all exactly conserved by the projected ODE",
+        "small_initial_invariant": "Relative drift is null if initial invariant is nearly zero; absolute drift remains reported",
+        "physical_indicators": "epsilon*peak and epsilon*spectral width/RMS are formal weak-nonlinearity/narrowband indicators, not validated universal physical cutoffs"
+      },
+      "limitation": "Sampled, two-level numerical refinement in periodic boxes; not a rigorous error bound, proof of smoothness/global existence, or validation of Dysthe against the full water-wave equations."
+    },
+    "events": {
+      "focusing_peaks": [],
+      "recurrence_candidates": [],
+      "peak_prominence_absolute": 0.01153581971473963,
+      "recurrence_tolerance": 0.05,
+      "interpretation": "Interior extrema of sampled traces; no promised recurrence, no continuous event-time accuracy, no translation alignment"
+    },
+    "artifact": {
+      "identity": {
+        "config": {
+          "model_id": "water-wave-dysthe-spatial-v1",
+          "physical_system": "deep-water-gravity-waves",
+          "seed": 20261028,
+          "length": 40.0,
+          "grid": 64,
+          "output_modes": 8,
+          "initial_modes": 4,
+          "groups_per_family": 3,
+          "train_per_family": 1,
+          "validation_per_family": 1,
+          "reference_grid": 128,
+          "reference_step": 0.005,
+          "sample_step": 0.05,
+          "horizon": 0.2,
+          "train_horizon": 0.05,
+          "operator_step": 0.05,
+          "operator_epochs": 400,
+          "operator_batch": 16,
+          "operator_width": 16,
+          "operator_modes": 8,
+          "operator_depth": 2,
+          "physics_weight": 0.1,
+          "pinn_epochs": 40,
+          "pinn_horizon": 0.2,
+          "pinn_slabs": 2,
+          "seeds": [
+            11
+          ],
+          "threads": 2,
+          "validation_every": 10,
+          "reference_l2_tolerance": 1e-05,
+          "reference_h1_tolerance": 0.0001,
+          "pinn_width": 16,
+          "pinn_depth": 2,
+          "pinn_collocation_slices": 4,
+          "campaign": "long-distance-h2-smoke-v2",
+          "reference_horizons": [
+            0.1,
+            0.2
+          ],
+          "pinn_horizons": [
+            0.1,
+            0.2
+          ],
+          "sensitivity_horizons": [
+            0.1
+          ],
+          "domain_horizons": [
+            0.1
+          ],
+          "slab_length": 0.1,
+          "epochs_per_slab": 20,
+          "reference_h2_tolerance": 0.001,
+          "diagnostics_tail_fraction": 0.8,
+          "spectral_tail_tolerance": 1e-08,
+          "action_drift_tolerance": 1e-06,
+          "recurrence_tolerance": 0.05,
+          "focusing_prominence": 0.02,
+          "sensitivity_delta": 0.001,
+          "sensitivity_tolerance": 0.01,
+          "domain_tolerance": 0.01,
+          "domain_initial_tolerance": 0.001,
+          "pinn_l2_tolerance": 0.01,
+          "pinn_h1_tolerance": 0.05,
+          "pinn_h2_tolerance": 0.05,
+          "pinn_peak_tolerance": 0.05,
+          "study_status": "CPU workflow smoke only; not the scientific long-distance experiment",
+          "interpretation": "Finite-distance periodic numerical evidence; no global existence or physical-validity certificate.",
+          "pinn_coefficient_scaling": "inverse_1_plus_k2"
+        },
+        "record": {
+          "case_id": "packet-002",
+          "initial_condition_id": "packet-002",
+          "split": "test",
+          "family": "packet",
+          "schema_version": 2,
+          "model_id": "water-wave-dysthe-spatial-v1",
+          "physical_system": "deep-water-gravity-waves",
+          "boundary": "periodic",
+          "axis_order": [
+            "xi",
+            "tau"
+          ],
+          "field_encoding": "complex128",
+          "shape": [
+            128
+          ],
+          "lengths": [
+            40.0
+          ],
+          "propagation_positions": [
+            0.0,
+            0.05,
+            0.1,
+            0.15000000000000002,
+            0.2
+          ],
+          "physics": {
+            "epsilon": 0.029213649570482766
+          },
+          "parameters": {
+            "amplitude_parameter": 0.6048701973042974,
+            "phase": 0.4264208331059134,
+            "width": 2.781120247066024,
+            "chirp": 0.12025069132838825,
+            "center": 3.937420452623286
+          }
+        },
+        "u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+        "horizon": 0.1,
+        "module_sha256": "05953daafb6af055bda6094097ebf9351fa0ba36876c9beaf0afa167ad8e7bbe",
+        "integrator_sha256": "2bb6dc73741124166244c6783ebb31902de78035ee4441476d43cdcc423c80bf",
+        "reference_sha256": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8",
+        "sensitivity_source_sha256": "ad65d7b3114137634554a012bd7f2650a1720b0a5a71dae68bb7d3caa2593e2e",
+        "runtime": {
+          "python": "3.14.8",
+          "numpy": "2.4.2",
+          "scipy": "1.17.0"
+        },
+        "role": "nls-fine",
+        "trajectory_u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+        "epsilon": 0.0,
+        "length": 40.0,
+        "n": 128,
+        "step": 0.005
+      },
+      "status": "complete",
+      "path": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/experiments/runs/h2-cpu-workflow-20261027/reference/packet-002/xi-0.1/nls-fine.npz",
+      "sha256": "1b972b8fbccd0d7e0f741a6bdffe1830dec234f615427f711af0631e04a94e82",
+      "seconds": 0.0023686530003033113,
+      "n": 128,
+      "step": 0.005,
+      "length": 40.0,
+      "epsilon": 0.0
+    },
+    "artifacts": [
+      {
+        "identity": {
+          "config": {
+            "model_id": "water-wave-dysthe-spatial-v1",
+            "physical_system": "deep-water-gravity-waves",
+            "seed": 20261028,
+            "length": 40.0,
+            "grid": 64,
+            "output_modes": 8,
+            "initial_modes": 4,
+            "groups_per_family": 3,
+            "train_per_family": 1,
+            "validation_per_family": 1,
+            "reference_grid": 128,
+            "reference_step": 0.005,
+            "sample_step": 0.05,
+            "horizon": 0.2,
+            "train_horizon": 0.05,
+            "operator_step": 0.05,
+            "operator_epochs": 400,
+            "operator_batch": 16,
+            "operator_width": 16,
+            "operator_modes": 8,
+            "operator_depth": 2,
+            "physics_weight": 0.1,
+            "pinn_epochs": 40,
+            "pinn_horizon": 0.2,
+            "pinn_slabs": 2,
+            "seeds": [
+              11
+            ],
+            "threads": 2,
+            "validation_every": 10,
+            "reference_l2_tolerance": 1e-05,
+            "reference_h1_tolerance": 0.0001,
+            "pinn_width": 16,
+            "pinn_depth": 2,
+            "pinn_collocation_slices": 4,
+            "campaign": "long-distance-h2-smoke-v2",
+            "reference_horizons": [
+              0.1,
+              0.2
+            ],
+            "pinn_horizons": [
+              0.1,
+              0.2
+            ],
+            "sensitivity_horizons": [
+              0.1
+            ],
+            "domain_horizons": [
+              0.1
+            ],
+            "slab_length": 0.1,
+            "epochs_per_slab": 20,
+            "reference_h2_tolerance": 0.001,
+            "diagnostics_tail_fraction": 0.8,
+            "spectral_tail_tolerance": 1e-08,
+            "action_drift_tolerance": 1e-06,
+            "recurrence_tolerance": 0.05,
+            "focusing_prominence": 0.02,
+            "sensitivity_delta": 0.001,
+            "sensitivity_tolerance": 0.01,
+            "domain_tolerance": 0.01,
+            "domain_initial_tolerance": 0.001,
+            "pinn_l2_tolerance": 0.01,
+            "pinn_h1_tolerance": 0.05,
+            "pinn_h2_tolerance": 0.05,
+            "pinn_peak_tolerance": 0.05,
+            "study_status": "CPU workflow smoke only; not the scientific long-distance experiment",
+            "interpretation": "Finite-distance periodic numerical evidence; no global existence or physical-validity certificate.",
+            "pinn_coefficient_scaling": "inverse_1_plus_k2"
+          },
+          "record": {
+            "case_id": "packet-002",
+            "initial_condition_id": "packet-002",
+            "split": "test",
+            "family": "packet",
+            "schema_version": 2,
+            "model_id": "water-wave-dysthe-spatial-v1",
+            "physical_system": "deep-water-gravity-waves",
+            "boundary": "periodic",
+            "axis_order": [
+              "xi",
+              "tau"
+            ],
+            "field_encoding": "complex128",
+            "shape": [
+              128
+            ],
+            "lengths": [
+              40.0
+            ],
+            "propagation_positions": [
+              0.0,
+              0.05,
+              0.1,
+              0.15000000000000002,
+              0.2
+            ],
+            "physics": {
+              "epsilon": 0.029213649570482766
+            },
+            "parameters": {
+              "amplitude_parameter": 0.6048701973042974,
+              "phase": 0.4264208331059134,
+              "width": 2.781120247066024,
+              "chirp": 0.12025069132838825,
+              "center": 3.937420452623286
+            }
+          },
+          "u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+          "horizon": 0.1,
+          "module_sha256": "05953daafb6af055bda6094097ebf9351fa0ba36876c9beaf0afa167ad8e7bbe",
+          "integrator_sha256": "2bb6dc73741124166244c6783ebb31902de78035ee4441476d43cdcc423c80bf",
+          "reference_sha256": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8",
+          "sensitivity_source_sha256": "ad65d7b3114137634554a012bd7f2650a1720b0a5a71dae68bb7d3caa2593e2e",
+          "runtime": {
+            "python": "3.14.8",
+            "numpy": "2.4.2",
+            "scipy": "1.17.0"
+          },
+          "role": "nls-fine",
+          "trajectory_u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+          "epsilon": 0.0,
+          "length": 40.0,
+          "n": 128,
+          "step": 0.005
+        },
+        "status": "complete",
+        "path": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/experiments/runs/h2-cpu-workflow-20261027/reference/packet-002/xi-0.1/nls-fine.npz",
+        "sha256": "1b972b8fbccd0d7e0f741a6bdffe1830dec234f615427f711af0631e04a94e82",
+        "seconds": 0.0023686530003033113,
+        "n": 128,
+        "step": 0.005,
+        "length": 40.0,
+        "epsilon": 0.0
+      },
+      {
+        "identity": {
+          "config": {
+            "model_id": "water-wave-dysthe-spatial-v1",
+            "physical_system": "deep-water-gravity-waves",
+            "seed": 20261028,
+            "length": 40.0,
+            "grid": 64,
+            "output_modes": 8,
+            "initial_modes": 4,
+            "groups_per_family": 3,
+            "train_per_family": 1,
+            "validation_per_family": 1,
+            "reference_grid": 128,
+            "reference_step": 0.005,
+            "sample_step": 0.05,
+            "horizon": 0.2,
+            "train_horizon": 0.05,
+            "operator_step": 0.05,
+            "operator_epochs": 400,
+            "operator_batch": 16,
+            "operator_width": 16,
+            "operator_modes": 8,
+            "operator_depth": 2,
+            "physics_weight": 0.1,
+            "pinn_epochs": 40,
+            "pinn_horizon": 0.2,
+            "pinn_slabs": 2,
+            "seeds": [
+              11
+            ],
+            "threads": 2,
+            "validation_every": 10,
+            "reference_l2_tolerance": 1e-05,
+            "reference_h1_tolerance": 0.0001,
+            "pinn_width": 16,
+            "pinn_depth": 2,
+            "pinn_collocation_slices": 4,
+            "campaign": "long-distance-h2-smoke-v2",
+            "reference_horizons": [
+              0.1,
+              0.2
+            ],
+            "pinn_horizons": [
+              0.1,
+              0.2
+            ],
+            "sensitivity_horizons": [
+              0.1
+            ],
+            "domain_horizons": [
+              0.1
+            ],
+            "slab_length": 0.1,
+            "epochs_per_slab": 20,
+            "reference_h2_tolerance": 0.001,
+            "diagnostics_tail_fraction": 0.8,
+            "spectral_tail_tolerance": 1e-08,
+            "action_drift_tolerance": 1e-06,
+            "recurrence_tolerance": 0.05,
+            "focusing_prominence": 0.02,
+            "sensitivity_delta": 0.001,
+            "sensitivity_tolerance": 0.01,
+            "domain_tolerance": 0.01,
+            "domain_initial_tolerance": 0.001,
+            "pinn_l2_tolerance": 0.01,
+            "pinn_h1_tolerance": 0.05,
+            "pinn_h2_tolerance": 0.05,
+            "pinn_peak_tolerance": 0.05,
+            "study_status": "CPU workflow smoke only; not the scientific long-distance experiment",
+            "interpretation": "Finite-distance periodic numerical evidence; no global existence or physical-validity certificate.",
+            "pinn_coefficient_scaling": "inverse_1_plus_k2"
+          },
+          "record": {
+            "case_id": "packet-002",
+            "initial_condition_id": "packet-002",
+            "split": "test",
+            "family": "packet",
+            "schema_version": 2,
+            "model_id": "water-wave-dysthe-spatial-v1",
+            "physical_system": "deep-water-gravity-waves",
+            "boundary": "periodic",
+            "axis_order": [
+              "xi",
+              "tau"
+            ],
+            "field_encoding": "complex128",
+            "shape": [
+              128
+            ],
+            "lengths": [
+              40.0
+            ],
+            "propagation_positions": [
+              0.0,
+              0.05,
+              0.1,
+              0.15000000000000002,
+              0.2
+            ],
+            "physics": {
+              "epsilon": 0.029213649570482766
+            },
+            "parameters": {
+              "amplitude_parameter": 0.6048701973042974,
+              "phase": 0.4264208331059134,
+              "width": 2.781120247066024,
+              "chirp": 0.12025069132838825,
+              "center": 3.937420452623286
+            }
+          },
+          "u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+          "horizon": 0.1,
+          "module_sha256": "05953daafb6af055bda6094097ebf9351fa0ba36876c9beaf0afa167ad8e7bbe",
+          "integrator_sha256": "2bb6dc73741124166244c6783ebb31902de78035ee4441476d43cdcc423c80bf",
+          "reference_sha256": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8",
+          "sensitivity_source_sha256": "ad65d7b3114137634554a012bd7f2650a1720b0a5a71dae68bb7d3caa2593e2e",
+          "runtime": {
+            "python": "3.14.8",
+            "numpy": "2.4.2",
+            "scipy": "1.17.0"
+          },
+          "role": "nls-grid",
+          "trajectory_u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+          "epsilon": 0.0,
+          "length": 40.0,
+          "n": 64,
+          "step": 0.005
+        },
+        "status": "complete",
+        "path": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/experiments/runs/h2-cpu-workflow-20261027/reference/packet-002/xi-0.1/nls-grid.npz",
+        "sha256": "6d77f021cbc75155cc15102794755522ba7131b41ce13b893f0e7b86318473e7",
+        "seconds": 0.0020767869991686894,
+        "n": 64,
+        "step": 0.005,
+        "length": 40.0,
+        "epsilon": 0.0
+      },
+      {
+        "identity": {
+          "config": {
+            "model_id": "water-wave-dysthe-spatial-v1",
+            "physical_system": "deep-water-gravity-waves",
+            "seed": 20261028,
+            "length": 40.0,
+            "grid": 64,
+            "output_modes": 8,
+            "initial_modes": 4,
+            "groups_per_family": 3,
+            "train_per_family": 1,
+            "validation_per_family": 1,
+            "reference_grid": 128,
+            "reference_step": 0.005,
+            "sample_step": 0.05,
+            "horizon": 0.2,
+            "train_horizon": 0.05,
+            "operator_step": 0.05,
+            "operator_epochs": 400,
+            "operator_batch": 16,
+            "operator_width": 16,
+            "operator_modes": 8,
+            "operator_depth": 2,
+            "physics_weight": 0.1,
+            "pinn_epochs": 40,
+            "pinn_horizon": 0.2,
+            "pinn_slabs": 2,
+            "seeds": [
+              11
+            ],
+            "threads": 2,
+            "validation_every": 10,
+            "reference_l2_tolerance": 1e-05,
+            "reference_h1_tolerance": 0.0001,
+            "pinn_width": 16,
+            "pinn_depth": 2,
+            "pinn_collocation_slices": 4,
+            "campaign": "long-distance-h2-smoke-v2",
+            "reference_horizons": [
+              0.1,
+              0.2
+            ],
+            "pinn_horizons": [
+              0.1,
+              0.2
+            ],
+            "sensitivity_horizons": [
+              0.1
+            ],
+            "domain_horizons": [
+              0.1
+            ],
+            "slab_length": 0.1,
+            "epochs_per_slab": 20,
+            "reference_h2_tolerance": 0.001,
+            "diagnostics_tail_fraction": 0.8,
+            "spectral_tail_tolerance": 1e-08,
+            "action_drift_tolerance": 1e-06,
+            "recurrence_tolerance": 0.05,
+            "focusing_prominence": 0.02,
+            "sensitivity_delta": 0.001,
+            "sensitivity_tolerance": 0.01,
+            "domain_tolerance": 0.01,
+            "domain_initial_tolerance": 0.001,
+            "pinn_l2_tolerance": 0.01,
+            "pinn_h1_tolerance": 0.05,
+            "pinn_h2_tolerance": 0.05,
+            "pinn_peak_tolerance": 0.05,
+            "study_status": "CPU workflow smoke only; not the scientific long-distance experiment",
+            "interpretation": "Finite-distance periodic numerical evidence; no global existence or physical-validity certificate.",
+            "pinn_coefficient_scaling": "inverse_1_plus_k2"
+          },
+          "record": {
+            "case_id": "packet-002",
+            "initial_condition_id": "packet-002",
+            "split": "test",
+            "family": "packet",
+            "schema_version": 2,
+            "model_id": "water-wave-dysthe-spatial-v1",
+            "physical_system": "deep-water-gravity-waves",
+            "boundary": "periodic",
+            "axis_order": [
+              "xi",
+              "tau"
+            ],
+            "field_encoding": "complex128",
+            "shape": [
+              128
+            ],
+            "lengths": [
+              40.0
+            ],
+            "propagation_positions": [
+              0.0,
+              0.05,
+              0.1,
+              0.15000000000000002,
+              0.2
+            ],
+            "physics": {
+              "epsilon": 0.029213649570482766
+            },
+            "parameters": {
+              "amplitude_parameter": 0.6048701973042974,
+              "phase": 0.4264208331059134,
+              "width": 2.781120247066024,
+              "chirp": 0.12025069132838825,
+              "center": 3.937420452623286
+            }
+          },
+          "u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+          "horizon": 0.1,
+          "module_sha256": "05953daafb6af055bda6094097ebf9351fa0ba36876c9beaf0afa167ad8e7bbe",
+          "integrator_sha256": "2bb6dc73741124166244c6783ebb31902de78035ee4441476d43cdcc423c80bf",
+          "reference_sha256": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8",
+          "sensitivity_source_sha256": "ad65d7b3114137634554a012bd7f2650a1720b0a5a71dae68bb7d3caa2593e2e",
+          "runtime": {
+            "python": "3.14.8",
+            "numpy": "2.4.2",
+            "scipy": "1.17.0"
+          },
+          "role": "nls-step",
+          "trajectory_u0_sha256": "7aa67447ac40609e1d4cf5323a3037a5bf0d40c6394e17eaf37d88079378de9a",
+          "epsilon": 0.0,
+          "length": 40.0,
+          "n": 128,
+          "step": 0.01
+        },
+        "status": "complete",
+        "path": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/experiments/runs/h2-cpu-workflow-20261027/reference/packet-002/xi-0.1/nls-step.npz",
+        "sha256": "cb1b6ffdb60fb00bd6f9815cd600a03e8842d0299535c2fdd5b3acd2fc748c4e",
+        "seconds": 0.0011993940006505,
+        "n": 128,
+        "step": 0.01,
+        "length": 40.0,
+        "epsilon": 0.0
+      }
+    ],
+    "qualified": true,
+    "checks": {
+      "grid_h0": true,
+      "grid_h1": true,
+      "grid_h2": true,
+      "step_h0": true,
+      "step_h1": true,
+      "step_h2": true,
+      "spectral_tail": true,
+      "action_drift": true
+    },
+    "tolerances": {
+      "h0": 1e-05,
+      "h1": 0.0001,
+      "h2": 0.001,
+      "spectral_tail": 1e-08,
+      "action_relative_drift": 1e-06
+    },
+    "interpretation": "Mathematical epsilon=0 control at the same scaled inlet/grid/distance, not a zero-steepness physical coordinate transformation"
+  },
+  "limitation": "Sampled, two-level numerical refinement in periodic boxes; not a rigorous error bound, proof of smoothness/global existence, or validation of Dysthe against the full water-wave equations.",
+  "model_comparison": {
+    "qualified": true,
+    "interpretation": "Raw complex NLS minus Dysthe, relative to Dysthe; a model difference, not a numerical error estimate",
+    "max_relative_difference": {
+      "h0": 0.0011121541615603959,
+      "h1": 0.0012946170316819835,
+      "h2": 0.0015496986125945438
+    },
+    "stations": [
+      {
+        "xi": 0.0,
+        "h0": 0.0,
+        "h1": 0.0,
+        "h2": 0.0
+      },
+      {
+        "xi": 0.05,
+        "h0": 0.0005547176845690059,
+        "h1": 0.0006455359794920526,
+        "h2": 0.0007723703154263184
+      },
+      {
+        "xi": 0.1,
+        "h0": 0.0011121541615603959,
+        "h1": 0.0012946170316819835,
+        "h2": 0.0015496986125945438
+      }
+    ]
+  }
+}

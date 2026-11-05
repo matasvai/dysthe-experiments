@@ -1,0 +1,57 @@
+{
+  "config": {
+    "model_id": "dysthe-1979-temporal-potential-1d-stability-sign-v1",
+    "track": "periodic",
+    "n": 256,
+    "length": 40.0,
+    "epsilon": 0.05,
+    "step": 0.0025,
+    "monitor_interval": 0.01,
+    "max_snapshots_per_stage": 5,
+    "initial_kmax": 1.8849555921538759,
+    "seed": 19791030,
+    "horizons": [
+      0.02,
+      0.04
+    ],
+    "families": [
+      "gaussian"
+    ],
+    "gaussian": {
+      "amplitude": 0.85,
+      "width": 3.0,
+      "center": -2.0,
+      "phase": 0.3,
+      "chirp": 0.08
+    },
+    "two_packet": {
+      "amplitude_each": 0.6,
+      "width_each": 2.2,
+      "centres": [
+        -5.0,
+        5.0
+      ],
+      "phases": [
+        0.0,
+        1.0471975511965976
+      ]
+    },
+    "tolerances": {
+      "h0": 1e-05,
+      "h1": 0.0001,
+      "h2": 0.001,
+      "action": 1e-06,
+      "tail": 1e-08
+    },
+    "purpose": "Small execution and gate smoke only; not evidence of long-time qualification."
+  },
+  "runner_sha256": "552b36510d05b950de8e89d3d1ddc2356ef9fc34bf59d35c8bdb5d1737d870d3",
+  "solver_sha256": "5689c66826e889d78da11f0931dc1e3bbb651169b29867e0cfaf1613b59d3d84",
+  "initial_helper_sha256": "4b45ea85adc3ab9244d6a10d49f7b8007dc886ea213226919206a40b288cbeaf",
+  "runtime": {
+    "python": "3.14.8",
+    "numpy": "2.4.2",
+    "scipy": "1.17.0",
+    "platform": "Linux-7.2.11-100.fc43.x86_64-x86_64-with-glibc2.42"
+  }
+}

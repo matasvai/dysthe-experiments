@@ -1,0 +1,70 @@
+{
+  "regime": "inhomogeneous_plus",
+  "family": "gaussian",
+  "base": {
+    "peak": 5.772342779792693e-06,
+    "x": -9.0,
+    "r": 0.0
+  },
+  "longitudinal": {
+    "peak": 5.7723394152225835e-06,
+    "x": -9.0,
+    "r": 0.0,
+    "boundary_amplitude": 3.3852227802542185e-08
+  },
+  "radial_annulus": {
+    "peak": 3.361293994692531e-08,
+    "x": -810.75,
+    "r": 2050.0,
+    "boundary_amplitude": 1.1399060814204243e-11
+  },
+  "second_longitudinal": {
+    "peak": 5.7723418506346815e-06,
+    "x": -9.0,
+    "r": 0.0,
+    "boundary_amplitude": 1.139906081420424e-11
+  },
+  "checks": {
+    "first_longitudinal_change": 5.828780790285323e-07,
+    "transverse_expansion_change": 0.0,
+    "second_longitudinal_change": 4.219105799881175e-07,
+    "local_refinement_change": 4.2354585610707335e-05,
+    "quadrature_tightening_change": 2.2060383518153018e-14,
+    "final_spectral_integral_discrepancy": 6.930818862180282e-08,
+    "final_polished_peak_drift": 4.051450791645906e-07,
+    "final_polished_location_drift": 2.0405936703067442e-05,
+    "boundary_to_peak": 1.9746886630516876e-06
+  },
+  "polished": [
+    {
+      "length": 32768,
+      "peak": 5.7725869281304766e-06,
+      "x": -8.915412139892577,
+      "r": 3.4064054489135737e-06,
+      "success": true
+    },
+    {
+      "length": 65536,
+      "peak": 5.7725836422953496e-06,
+      "x": -8.91539173413359,
+      "r": 3.491569483458079e-06,
+      "success": true
+    },
+    {
+      "length": 131072,
+      "peak": 5.772585981030154e-06,
+      "x": -8.915412139892577,
+      "r": 3.4064054489135737e-06,
+      "success": true
+    }
+  ],
+  "continuum_candidate": {
+    "peak": 5.772586346137274e-06,
+    "ratio": 0.0037237775615150525,
+    "x": -8.915412139892577,
+    "r": 3.4064054489135737e-06,
+    "quadrature_error_estimate": 1.2734546868744188e-19,
+    "success": true
+  },
+  "passes_peak_screen": true
+}

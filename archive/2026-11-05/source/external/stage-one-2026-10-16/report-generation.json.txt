@@ -1,0 +1,58 @@
+{
+  "input_sha256": "052e4635061b7596c9093604ea3413d86902094092e41997acb327e9e1dba4c4",
+  "nls_ratios": [
+    null,
+    14.767150542561671,
+    15.547528237800629,
+    15.82323280742383
+  ],
+  "nls_orders": [
+    null,
+    3.8843195665751846,
+    3.958613332316206,
+    3.9839724784379666
+  ],
+  "original_profiles": 28,
+  "over_full_residual_gate": 22,
+  "over_epsilon_peak_screen": 16,
+  "outputs": [
+    "/home/matasvai/Documents/Codex/2026-10-16/task/stage1/report/figures/controls.pdf",
+    "/home/matasvai/Documents/Codex/2026-10-16/task/stage1/results/profile-audit.csv",
+    "/home/matasvai/Documents/Codex/2026-10-16/task/stage1/report/controls.tex"
+  ]
+}
+{
+  "stage": "reference-validation",
+  "next_step": "small initial-data simulator with per-case qualification after user review",
+  "fno_training": "no-go at this stage",
+  "sampled_one_percent_domain_horizons": {
+    "domain-L160-L320": 5.0,
+    "domain-L320-L640": 10.0,
+    "domain-L640-L1280": 20.0
+  },
+  "final_l640_l1280": {
+    "comparison": "domain-L640-L1280",
+    "kind": "domain",
+    "coarse": "domain-L640",
+    "fine": "domain-L1280",
+    "xi": 20.0,
+    "raw_control_field_relative_l2": 9.62955736326568e-08,
+    "raw_odd_field_relative_l2": 1.9965104967770657e-07,
+    "control_shape_field_difference_relative_l2": 4.2308719271031976e-13,
+    "signed_shape_field_difference_relative_l2": 1.7487818874955545e-07,
+    "signed_shape_core_difference_relative_l2": 1.6387501414588182e-10,
+    "signed_shape_exterior_difference_relative_l2": 1.7487811196746408e-07,
+    "signed_shape_difference_over_response": 0.0053782969454855886,
+    "signed_shape_core_difference_over_response": 5.0398994541533085e-06,
+    "fine_shape_relative_l2_on_common_window": 3.251553243008346e-05,
+    "shape_norm_scalar_difference": 4.749233434837396e-10,
+    "fine_shape_relative_l2_on_full_domain": 3.251600269756414e-05,
+    "signed_shape_difference_over_full_domain_response": 0.00537821916107345,
+    "signed_shape_core_difference_over_full_domain_response": 5.039826563864756e-06,
+    "large_domain_shape_outside_common_window_relative_l2": 1.7487771781771768e-07,
+    "large_domain_exterior_over_whole_shape": 0.00537820467799439,
+    "shape_difference_after_periodizing_large_domain_relative_l2": 3.345666604107073e-10
+  },
+  "new_case_total_process_wall_seconds": 809.2285406010005,
+  "peak_rss_mib": 177.8984375
+}

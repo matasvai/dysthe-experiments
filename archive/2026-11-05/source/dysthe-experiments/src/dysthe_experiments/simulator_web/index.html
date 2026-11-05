@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Dysthe · Packet workbench</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<header class="masthead">
+  <div class="wordmark">DYSTHE <span>/ WATER WAVES</span></div>
+  <div class="mast-meta">LOCAL REFERENCE SIMULATOR <span>01—PACKETS</span></div>
+</header>
+<main>
+  <div class="intro">
+    <div><p class="eyebrow">INITIAL DATA → PROPAGATION → REVIEW</p><h1>Packet workbench.</h1></div>
+    <p class="intro-copy">Explore a complex water-wave envelope over a short propagation distance. Select a reference run or compute a bounded local variation.</p>
+  </div>
+  <div id="global-error" class="notice error" role="alert" hidden></div>
+  <div class="layout">
+    <aside class="controls-column" aria-label="Simulation setup">
+      <section class="panel">
+        <div class="panel-title"><h2><span>01</span> Initial envelope</h2><span class="small-label">4 INPUTS</span></div>
+        <div id="case-list" class="case-list" role="group" aria-label="Initial envelope cases"><p class="loading-text">Loading cases…</p></div>
+        <div class="panel-body case-detail">
+          <p id="case-description" class="muted">Connecting to the local simulator.</p>
+          <div id="parameter-fields"></div>
+          <div id="custom-fields" class="custom-fields" hidden>
+            <label class="formula-label" for="custom-formula">Initial envelope u(0, τ)</label>
+            <textarea id="custom-formula" rows="5" maxlength="1024" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="formula-help custom-error"></textarea>
+            <div class="formula-examples" aria-label="Formula examples"><span>Insert example</span><button id="example-gaussian" type="button">Gaussian</button><button id="example-sech" type="button">Sech</button></div>
+            <label class="formula-label" for="custom-symbols">Real scalar parameters</label>
+            <input id="custom-symbols" type="text" maxlength="512" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="symbols-help custom-error">
+            <p id="symbols-help" class="helper">Declare up to 8 single letters, for example A=1, w=2, k=0.3, c=0. The letter i is the imaginary unit.</p>
+            <div class="parameter-grid custom-settings">
+              <label for="custom-horizon">Propagation end ξ<input id="custom-horizon" type="number" min="0.00125" max="4" step="0.00125" value="0.1" required></label>
+              <label for="custom-grid">Solver grid N<select id="custom-grid"><option value="1024">1024</option><option value="4096">4096</option></select></label>
+            </div>
+            <p class="helper">Periodic τ length 160 · Δξ = 0.00125 · up to 21 saved snapshots. The local work limit permits ξ ≤ 4 at N=1024, or ξ ≤ 2.44125 at N=4096. Preview the sampled formula and check the filtering diagnostics before running.</p>
+            <details class="syntax-help"><summary>Supported LaTeX syntax</summary><div id="formula-help">
+              <p>Use τ as <code>\tau</code> or <code>tau</code>, real numbers, declared letters, <code>i</code> and <code>\pi</code>.</p>
+              <p>Combine with <code>+ - * /</code>, parentheses, braces, implicit multiplication, <code>\frac{a}{b}</code>, <code>\cdot</code> or <code>\times</code>. Integer powers from −12 to 12 are supported: <code>\tau^2</code>, <code>w^{-2}</code>.</p>
+              <p>Functions: <code>\exp(…)</code>, <code>\sin(…)</code>, <code>\cos(…)</code>, <code>\sech(…)</code>. Plain function names work too. Use parentheses or braces around every function argument; <code>\left</code> and <code>\right</code> are optional.</p>
+              <p>This is a restricted expression language. Full LaTeX commands, assignments, integrals, sums and Python are unsupported.</p>
+            </div></details>
+            <div id="custom-error" class="custom-error" role="alert" hidden></div>
+            <button id="preview-custom" class="button secondary" type="button">Preview initial envelope</button>
+            <p id="custom-preview-status" class="helper" role="status" aria-live="polite">Preview is required before Run.</p>
+          </div>
+          <p id="parameter-notice" class="helper" hidden>Edits apply to the next local run. The precomputed reference uses the case defaults.</p>
+          <div class="actions stack">
+            <button id="load-reference" class="button secondary" disabled>View precomputed reference</button>
+            <button id="run-live" class="button primary" disabled>Run locally on CPU <span aria-hidden="true">↗</span></button>
+          </div>
+          <p id="run-help" class="helper">Reference playback reads saved numerical data. “Run locally” executes the solver with the parameters above; playback itself performs no simulation.</p>
+          <div id="job-status" class="run-status" role="status" aria-live="polite" hidden><span id="job-status-text"></span><progress id="job-progress" aria-label="Solver progress" hidden></progress></div>
+        </div>
+      </section>
+      <section class="panel model-panel">
+        <div class="panel-title"><h2><span>02</span> Numerical setup</h2></div>
+        <div class="panel-body">
+          <dl id="setup-values" class="setup-values"><div><dt>Model</dt><dd>Spatial water-wave Dysthe</dd></div></dl>
+          <p class="helper">ξ is scaled propagation distance downstream. τ is retarded time in the moving frame. A labels the scaled envelope stored as u; this is an envelope calculation, not the resolved carrier surface elevation. No conversion to seconds or meters is configured. Complex phase is retained in the downloadable data.</p>
+        </div>
+      </section>
+    </aside>
+
+    <div class="results-column">
+      <section id="custom-preview" class="panel custom-preview-panel" aria-label="Custom initial-envelope preview" hidden>
+        <div class="panel-title"><h2>Initial envelope · ξ = 0</h2><span id="preview-badge" class="badge">PREVIEW REQUIRED</span></div>
+        <div class="panel-body">
+          <p id="custom-preview-intro" class="qualification-summary">Preview the formula on the chosen periodic grid, inspect its amplitude and phase, then start a short exploratory run.</p>
+          <div id="custom-preview-plots" hidden>
+            <div class="preview-plots"><div><h3>Envelope |A|</h3><div class="preview-chart"><canvas id="custom-amplitude-chart" role="img" aria-label="Initial-envelope amplitude preview"></canvas></div></div><div><h3>Phase arg(A)</h3><div class="preview-chart"><canvas id="custom-phase-chart" role="img" aria-label="Initial-envelope phase preview"></canvas></div></div></div>
+            <p id="preview-range" class="helper"></p>
+            <div id="custom-preview-summary" class="preview-summary"></div>
+          </div>
+          <div id="custom-warnings" class="preview-warnings" aria-live="polite"></div>
+          <p class="helper">Custom inputs are exploratory. A successful preview checks the sampled input only; it does not establish grid, step or domain convergence, physical validity, stability, or solitary-wave behavior. The Dysthe model describes weakly nonlinear, narrow-band water-wave envelopes.</p>
+        </div>
+      </section>
+      <section class="panel viewer-panel" aria-label="Propagation viewer">
+        <div class="panel-title viewer-heading"><h2>Envelope evolution</h2><span id="source-badge" class="badge">NO RUN LOADED</span></div>
+        <div id="viewer-empty" class="empty-state"><span class="empty-mark" aria-hidden="true">∿</span><h3>A packet, then its evolution.</h3><p>Select a case to load its reference snapshots.</p></div>
+        <div id="viewer-content" hidden>
+          <div class="viewer-toolbar">
+            <div><h3 id="result-title"></h3><p id="result-description" class="mono muted"></p><p id="result-parameters" class="mono muted"></p></div>
+            <div class="plot-selects"><label>Display<select id="field-mode"><option value="amplitude">Envelope |A|</option><option value="complex">Real + imaginary</option><option value="phase">Phase arg(A)</option></select></label><label>τ range<select id="view-range"><option value="packet">Packet view</option><option value="domain">Full domain</option></select></label></div>
+          </div>
+          <div class="chart-container"><canvas id="envelope-chart" aria-label="Initial and current complex envelope" role="img"></canvas></div>
+          <div class="plot-legend" id="line-legend"><span><i class="line-key dashed"></i> Initial</span><span><i class="line-key"></i> Current snapshot</span></div>
+          <div class="playback">
+            <button id="play-pause" class="button square" aria-label="Play saved snapshots">▶</button>
+            <label class="snapshot-control" for="snapshot"><span>Propagation distance ξ <output id="snapshot-number">1</output><span id="xi-value">ξ = 0 · scaled</span></span><input id="snapshot" type="range" min="0" max="0" value="0" step="1" title="Scaled propagation distance downstream; this is not ordinary physical time."></label>
+            <label class="speed-control">Speed<select id="play-speed"><option value="160">1×</option><option value="80">2×</option><option value="320">½×</option></select></label>
+          </div>
+          <p id="coordinates-help" class="chart-note">Each snapshot is the packet trace in retarded time τ at one downstream station ξ. Playback moves downstream, not forward in ordinary time. Axes are scaled; A is the complex envelope stored as u, not the carrier surface elevation.</p>
+          <p id="phase-note" class="chart-note" hidden>Principal phase in [−π, π]; samples below 1% of the peak amplitude are omitted because their phase is poorly defined.</p>
+          <div class="metrics" aria-label="Current snapshot diagnostics">
+            <div><span>Peak |u|</span><strong id="stat-peak">—</strong><small id="stat-peak-change"></small></div>
+            <div><span>RMS width</span><strong id="stat-width">—</strong><small id="stat-width-change"></small></div>
+            <div><span>Displacement</span><strong id="stat-displacement">—</strong><small>relative to initial packet</small></div>
+            <div><span>Exterior action</span><strong id="stat-tail">—</strong><small>outside moving core window</small></div>
+          </div>
+          <div class="heatmap-heading"><h3>Propagation map <span>|A(ξ, τ)|</span></h3><div class="heatmap-options"><label for="heatmap-scale" class="sr-only">Heatmap amplitude scale</label><select id="heatmap-scale"><option value="linear">Linear |A|</option><option value="log">Log contrast</option></select><div class="heatmap-key"><span id="heatmap-min">0</span><i></i><span id="heatmap-max">peak</span></div></div></div>
+          <div class="heatmap-container"><canvas id="heatmap-chart" aria-label="Amplitude heatmap over propagation distance and retarded time" role="img"></canvas></div>
+          <div class="viewer-footer"><span id="data-resolution" class="mono muted"></span><a id="download-data" class="button secondary" href="#">Download complex data .npz <span aria-hidden="true">↓</span></a></div>
+        </div>
+      </section>
+
+      <section class="panel" id="qualification-panel">
+        <div class="panel-title"><h2><span>03</span> Numerical qualification</h2><span id="qualification-badge" class="small-label">AWAITING DATA</span></div>
+        <div class="panel-body">
+          <p id="qualification-summary" class="qualification-summary">Each input needs its own resolution and boundary checks. Qualifying a solitary profile does not qualify every packet.</p>
+          <div id="qualification-table"></div>
+          <p id="qualification-notes" class="muted"></p>
+          <div id="result-input-warnings" class="preview-warnings" hidden></div>
+          <div class="diagnostic-strip"><span>Action drift <strong id="stat-mass">—</strong></span><span>Boundary action <strong id="stat-boundary">—</strong></span><span>Fitted phase shift <strong id="stat-phase">—</strong></span><span>Aligned shape change <strong id="stat-shape">—</strong></span></div>
+        </div>
+      </section>
+
+      <section class="panel definitions-panel">
+        <details><summary>How to read these diagnostics <span aria-hidden="true">+</span></summary><div class="panel-body"><dl id="diagnostic-definitions" class="definitions">
+          <div><dt>Peak amplitude</dt><dd>Maximum envelope modulus |u| on the numerical grid at the selected ξ.</dd></div>
+          <div><dt>RMS width</dt><dd>Action-weighted root-mean-square extent around the packet center; it can increase when a small tail travels far from the core.</dd></div>
+          <div><dt>Displacement</dt><dd>Packet-center shift relative to ξ = 0. Translation and phase drift must be separated from genuine deformation.</dd></div>
+          <div><dt>Exterior action</dt><dd>Fraction of ∫|u|² dτ outside a moving core window. This includes pre-existing tails and dispersive transport; it is a radiation proxy, not a radiation measurement.</dd></div>
+          <div><dt>Accuracy limits</dt><dd>Conservation traces alone do not establish accuracy. Grid, step and domain comparisons apply to the case and propagation interval actually checked. Short persistence is not a stability result.</dd></div>
+        </dl></div></details>
+      </section>
+    </div>
+  </div>
+  <footer class="page-footer"><span>WATER-WAVE-DYSTHE-SPATIAL-V1</span><span>Bounded local demonstration · no learned model</span></footer>
+</main>
+</body>
+</html>

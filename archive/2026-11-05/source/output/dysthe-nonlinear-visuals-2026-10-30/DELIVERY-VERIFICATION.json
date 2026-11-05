@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-30",
+  "report": {
+    "pages": 7,
+    "visual_review": "All seven rendered pages reviewed; clipping fixes applied to figures 8 and 9.",
+    "compiler": "system pdfLaTeX; two successful final passes",
+    "layout_warnings": false,
+    "all_fonts_embedded": true,
+    "embedded_raster_images": 0,
+    "sha256": "b0ef7888ac03a3b33e8f04e1344fa557d247f3e4ba7715ed35a2859261de3311"
+  },
+  "animation": {
+    "full_decode": "passed",
+    "visual_frame_review": "passed",
+    "frames": 81,
+    "duration_seconds": 8.1,
+    "width": 1100,
+    "height": 494
+  },
+  "numerics": {
+    "short_time_cases": 3,
+    "short_time_nonlinear_model_cases": 6,
+    "near_zero_input_cases": 4,
+    "near_zero_nonlinear_model_cases": 8,
+    "near_zero_times": [
+      0,
+      0.0001,
+      0.001,
+      0.01
+    ],
+    "direct_periodic_linear_max_time": 1024,
+    "artifact_hash_checks": "passed",
+    "nonlinear_target_1024_executed": false,
+    "cluster_jobs_submitted": false
+  },
+  "long_horizon_tests": 7,
+  "limits": [
+    "Empirical refinement, not a rigorous continuum error bound.",
+    "Near-zero and T<=4 numerical fields are periodic.",
+    "Long nonlinear periodic and isolated configurations are targets, not achieved horizons.",
+    "Carrier plots are illustrative, not calibrated surface elevation.",
+    "No neural training performed."
+  ]
+}

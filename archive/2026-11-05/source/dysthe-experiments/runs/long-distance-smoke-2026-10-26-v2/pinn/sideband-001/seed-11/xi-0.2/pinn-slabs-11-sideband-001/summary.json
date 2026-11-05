@@ -1,0 +1,72 @@
+{
+  "method": "pinn_slabs",
+  "seed": 11,
+  "case_id": "sideband-001",
+  "split": "validation",
+  "training_seconds": 0.3987402389993804,
+  "history": [
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.04317349195480347,
+        "full_dysthe_residual_validation": 0.049283821135759354,
+        "seconds": 0.22904187199856096,
+        "training_epsilon": 0.04458474740386009
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.015177324414253235,
+        "full_dysthe_residual_validation": 0.010152230970561504,
+        "seconds": 0.2824813110000832,
+        "training_epsilon": 0.04458474740386009
+      }
+    ],
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.041003841906785965,
+        "full_dysthe_residual_validation": 0.06945788860321045,
+        "seconds": 0.05440392799937399,
+        "training_epsilon": 0.04458474740386009
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.017663804814219475,
+        "full_dysthe_residual_validation": 0.013125251978635788,
+        "seconds": 0.11625892799929716,
+        "training_epsilon": 0.04458474740386009
+      }
+    ]
+  ],
+  "full_residual_rms_relative": [
+    0.10074435919523239,
+    0.11455290019512177
+  ],
+  "metrics": [
+    {
+      "xi": 0.2,
+      "l2": 0.0033499829139087747,
+      "h1": 0.003483000554459464,
+      "peak": 0.003406148467306309
+    }
+  ],
+  "sampled_interval_errors": {
+    "l2": 0.0033499829139087747,
+    "h1": 0.003483000554459464,
+    "peak": 0.003406148467306309
+  },
+  "sampled_interval_tolerances": {
+    "l2": 0.01,
+    "h1": 0.05,
+    "peak": 0.05
+  },
+  "sampled_interval_pass": true,
+  "sampled_station_count": 5,
+  "resumed_from_checkpoint": false,
+  "checkpoints": {
+    "best-0.pt": "14f2b7d976698d1b048f6d7884c8c100b07e6a52c21deb584d4527ea72822bac",
+    "best-1.pt": "dc4ef63c410c49af251f03909851dc114a57ba415d93e2bb2ac81e74d17c1ae7"
+  },
+  "gpu_peak_allocated_bytes": null,
+  "invocation_elapsed_seconds": 0.4290280700006406
+}

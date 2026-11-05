@@ -1,0 +1,68 @@
+{
+  "status": "completed",
+  "step": 20000,
+  "config": {
+    "equation": "Dysthe3D-1.27",
+    "seed": 20260916,
+    "dtype": "float64",
+    "device": "cuda",
+    "deterministic": true,
+    "cpu_threads": 1,
+    "physics": {
+      "epsilon1": 0.00831834509,
+      "epsilon2": 0.00498719622
+    },
+    "domain": {
+      "T": 0.5,
+      "lengths": [
+        12.0,
+        12.0,
+        12.0
+      ]
+    },
+    "initial": {
+      "amplitude": 0.3,
+      "power": 3,
+      "phase": 0.0
+    },
+    "network": {
+      "width": 64,
+      "depth": 4,
+      "harmonics": 3
+    },
+    "training": {
+      "steps": 20000,
+      "batch_size": 512,
+      "validation_points": 512,
+      "learning_rate": 0.0003,
+      "log_every": 100,
+      "checkpoint_every": 500,
+      "gradient_clip": 100.0
+    },
+    "reference": {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "dt": 0.001,
+      "snapshots": 11
+    }
+  },
+  "environment": {
+    "python": "3.12.3",
+    "torch": "2.14.0+cu130",
+    "numpy": "2.5.3",
+    "device": "cuda",
+    "gpu": "NVIDIA A100-PCIE-40GB",
+    "git_revision": "d2bda062465b46f4ec1a4171fdd6b56bdbb37d90",
+    "git_dirty": false,
+    "peak_gpu_memory_bytes": 229175296
+  },
+  "train_residual_mse": 1.2063642855497754e-07,
+  "validation_residual_mse": 1.5244180422099975e-07,
+  "validation_residual_max": 0.001882950016638663,
+  "gradient_norm": 0.0005521365763083927,
+  "elapsed_seconds": 3584.134840613231,
+  "qualification": "Training execution complete; a low PDE residual is not proof of solution accuracy. Run independent reference evaluation."
+}

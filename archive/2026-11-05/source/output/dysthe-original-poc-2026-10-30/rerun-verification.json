@@ -1,0 +1,51 @@
+{
+  "new_cli_source_sha256": "8fd2571c627caf026ed05d1f1a14cf3cf17c3f0223600719f880130e7777c069",
+  "new_test_source_sha256": "166cce9c2c38b7cd04cf98d87ddb6459c1f6b13b6f68b4af7549def8e1184ca7",
+  "runtime": {
+    "python": "3.14.8",
+    "numpy": "2.4.2",
+    "scipy": "1.17.0"
+  },
+  "tests_passed": 4,
+  "help_verified": true,
+  "cli_fixture": {
+    "grid": 128,
+    "T": 0.04,
+    "fine_step": 0.0025,
+    "qualified": true,
+    "refinement": {
+      "grid": {
+        "h0": 2.980381883877203e-10,
+        "h1": 9.821369623962314e-10,
+        "h2": 3.2355260179760983e-09
+      },
+      "step": {
+        "h0": 1.0249628174579752e-14,
+        "h1": 1.0681611912131556e-14,
+        "h2": 1.1861008051634514e-14
+      }
+    },
+    "roles": [
+      {
+        "role": "fine",
+        "n": 128,
+        "step": 0.0025
+      },
+      {
+        "role": "grid",
+        "n": 64,
+        "step": 0.0025
+      },
+      {
+        "role": "step",
+        "n": 128,
+        "step": 0.005
+      }
+    ]
+  },
+  "original_time_audit_sha256": "d4a0489aeeeb6b46985df223b55528eabc263b14d2dcab827902032dd5c3476c",
+  "historical_time_audit_source_unchanged": true,
+  "fresh_output_required": true,
+  "historical_raw_arrays_required": false,
+  "long_run_repeated": false
+}

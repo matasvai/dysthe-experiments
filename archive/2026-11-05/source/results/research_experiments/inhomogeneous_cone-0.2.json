@@ -1,0 +1,194 @@
+[
+  {
+    "name": "inhomogeneous_cone-0.2",
+    "regime": "inhomogeneous",
+    "sign": 1,
+    "beta": 1.0,
+    "sx": 6.0,
+    "sy": 6.0,
+    "qx": 0.5,
+    "qy": 0.6660254037844386,
+    "kind": "gaussian",
+    "group": "curvature surface",
+    "offset": -0.2,
+    "t": 4,
+    "peak": 0.00023923901403795673,
+    "ratio": 0.001205689078970067,
+    "location": [
+      -9.0,
+      -24.0,
+      0.0
+    ],
+    "boundary_to_peak": 1.3697920506629392e-11,
+    "absolute_integral": 3.784423127911267e-06,
+    "domain_change": 1.1329696546833798e-16,
+    "grid_change": 0.0,
+    "passes_screen": true,
+    "levels": {
+      "small": {
+        "t": 4,
+        "peak": 0.0002392390140379567,
+        "ratio": 0.0012056890789700668,
+        "location": [
+          -9.0,
+          -24.0,
+          0.0
+        ],
+        "boundary_to_peak": 4.655442672813353e-06,
+        "absolute_integral": 3.7844231279258903e-06
+      },
+      "large": {
+        "t": 4,
+        "peak": 0.00023923901403795673,
+        "ratio": 0.001205689078970067,
+        "location": [
+          -9.0,
+          -24.0,
+          0.0
+        ],
+        "boundary_to_peak": 1.36794468830108e-11,
+        "absolute_integral": 3.784423127921539e-06
+      },
+      "fine": {
+        "t": 4,
+        "peak": 0.00023923901403795673,
+        "ratio": 0.001205689078970067,
+        "location": [
+          -9.0,
+          -24.0,
+          0.0
+        ],
+        "boundary_to_peak": 1.3697920506629392e-11,
+        "absolute_integral": 3.784423127911267e-06
+      }
+    }
+  },
+  {
+    "name": "inhomogeneous_cone-0.2",
+    "regime": "inhomogeneous",
+    "sign": 1,
+    "beta": 1.0,
+    "sx": 6.0,
+    "sy": 6.0,
+    "qx": 0.5,
+    "qy": 0.6660254037844386,
+    "kind": "gaussian",
+    "group": "curvature surface",
+    "offset": -0.2,
+    "t": 8,
+    "peak": 0.00014580227675561557,
+    "ratio": 0.0016495644577013365,
+    "location": [
+      -17.0,
+      -47.0,
+      0.0
+    ],
+    "boundary_to_peak": 0.00847575281294376,
+    "absolute_integral": 3.784423127911267e-06,
+    "domain_change": 5.594031238879274e-16,
+    "grid_change": 0.0030294180630909165,
+    "passes_screen": true,
+    "levels": {
+      "small": {
+        "t": 8,
+        "peak": 0.00014536058070477225,
+        "ratio": 0.0016445672373369424,
+        "location": [
+          -16.5,
+          -46.5,
+          0.0
+        ],
+        "boundary_to_peak": 0.2572065598548191,
+        "absolute_integral": 3.7844231279258903e-06
+      },
+      "large": {
+        "t": 8,
+        "peak": 0.00014536058070477233,
+        "ratio": 0.0016445672373369433,
+        "location": [
+          -16.5,
+          -46.5,
+          0.0
+        ],
+        "boundary_to_peak": 0.00848228742391591,
+        "absolute_integral": 3.784423127921539e-06
+      },
+      "fine": {
+        "t": 8,
+        "peak": 0.00014580227675561557,
+        "ratio": 0.0016495644577013365,
+        "location": [
+          -17.0,
+          -47.0,
+          0.0
+        ],
+        "boundary_to_peak": 0.00847575281294376,
+        "absolute_integral": 3.784423127911267e-06
+      }
+    }
+  },
+  {
+    "name": "inhomogeneous_cone-0.2",
+    "regime": "inhomogeneous",
+    "sign": 1,
+    "beta": 1.0,
+    "sx": 6.0,
+    "sy": 6.0,
+    "qx": 0.5,
+    "qy": 0.6660254037844386,
+    "kind": "gaussian",
+    "group": "curvature surface",
+    "offset": -0.2,
+    "t": 16,
+    "peak": 7.564029785944452e-05,
+    "ratio": 0.0019211438142923232,
+    "location": [
+      -34.0,
+      -94.0,
+      0.0
+    ],
+    "boundary_to_peak": 0.9976500156228593,
+    "absolute_integral": 3.784423127911267e-06,
+    "domain_change": 1.3237220375466558e-08,
+    "grid_change": 0.0012485291716971359,
+    "passes_screen": true,
+    "levels": {
+      "small": {
+        "t": 16,
+        "peak": 7.554585774099396e-05,
+        "ratio": 0.0019187451847983007,
+        "location": [
+          -33.0,
+          51.0,
+          0.0
+        ],
+        "boundary_to_peak": 0.7232352318459047,
+        "absolute_integral": 3.7844231279258903e-06
+      },
+      "large": {
+        "t": 16,
+        "peak": 7.554585874101114e-05,
+        "ratio": 0.0019187452101971539,
+        "location": [
+          -33.0,
+          -93.0,
+          0.0
+        ],
+        "boundary_to_peak": 0.9992987520931449,
+        "absolute_integral": 3.784423127921539e-06
+      },
+      "fine": {
+        "t": 16,
+        "peak": 7.564029785944452e-05,
+        "ratio": 0.0019211438142923232,
+        "location": [
+          -34.0,
+          -94.0,
+          0.0
+        ],
+        "boundary_to_peak": 0.9976500156228593,
+        "absolute_integral": 3.784423127911267e-06
+      }
+    }
+  }
+]

@@ -1,0 +1,394 @@
+{
+  "schema_version": 1,
+  "horizon": 4.0,
+  "default_settings": {
+    "n": 4096,
+    "length": 160.0,
+    "epsilon": 0.025,
+    "dxi": 0.00125,
+    "xi_end": 4.0,
+    "samples": 81
+  },
+  "cases": {
+    "profile": {
+      "parameters": {},
+      "settings": {
+        "n": 4096,
+        "length": 160.0,
+        "epsilon": 0.025,
+        "dxi": 0.00125,
+        "xi_end": 4.0,
+        "samples": 81
+      },
+      "metrics": {
+        "peak_amplitude": {
+          "initial": 1.958116008344167,
+          "final": 1.958116007917704,
+          "maximum": 1.958116008344167
+        },
+        "rms_width": {
+          "initial": 0.623358769000327,
+          "final": 0.6233587692486801,
+          "maximum": 0.6233587693146343
+        },
+        "displacement": {
+          "initial": 0.0,
+          "final": -3.21030862944763e-10,
+          "maximum": 3.21030862944763e-10
+        },
+        "tail_action_fraction": {
+          "initial": 2.7166262913429526e-10,
+          "final": 2.7166187355043623e-10,
+          "maximum": 2.7166367461926335e-10
+        },
+        "mass_relative_error": {
+          "initial": 3.410972243886207e-16,
+          "final": -3.952464087603142e-12,
+          "maximum": 3.952464087603142e-12
+        },
+        "orbital_shape_error": {
+          "initial": 0.0,
+          "final": 2.768101366047633e-10,
+          "maximum": 3.119633672533353e-10
+        },
+        "phase_shift": {
+          "initial": 0.0,
+          "final": -7.999999996898536,
+          "maximum": 7.999999996898536
+        },
+        "profile_exterior_residual_action": {
+          "initial": 3.0187646436909956e-31,
+          "final": 8.874419330551878e-21,
+          "maximum": 8.874419330551878e-21
+        }
+      },
+      "qualification_status": "qualified for this bounded demonstration",
+      "passed": true,
+      "checks": [
+        {
+          "kind": "grid",
+          "metrics": {
+            "raw_complex_relative_l2": 4.1739431683976716e-15,
+            "orbital_relative_l2": 2.236905364310377e-15,
+            "shape_change_discrepancy_relative_l2": 1.173167302159492e-14,
+            "shape_discrepancy_over_response": null
+          },
+          "thresholds": {
+            "raw_complex_relative_l2": 0.0002,
+            "orbital_relative_l2": 0.0001,
+            "shape_change_discrepancy_relative_l2": 0.0001,
+            "shape_discrepancy_over_response": 0.02
+          },
+          "passed": true,
+          "initial_complex_relative_l2": 7.271198168577371e-16,
+          "final_complex_relative_l2": 4.1739431683976716e-15,
+          "final_shape_discrepancy_over_response": null
+        },
+        {
+          "kind": "step",
+          "metrics": {
+            "raw_complex_relative_l2": 3.0708817083754607e-09,
+            "orbital_relative_l2": 3.073854252479972e-10,
+            "shape_change_discrepancy_relative_l2": 3.0738579178691854e-10,
+            "shape_discrepancy_over_response": null
+          },
+          "thresholds": {
+            "raw_complex_relative_l2": 0.0002,
+            "orbital_relative_l2": 0.0001,
+            "shape_change_discrepancy_relative_l2": 0.0001,
+            "shape_discrepancy_over_response": 0.02
+          },
+          "passed": true,
+          "initial_complex_relative_l2": 0.0,
+          "final_complex_relative_l2": 3.0708817083754607e-09,
+          "final_shape_discrepancy_over_response": null
+        },
+        {
+          "kind": "domain",
+          "metrics": {
+            "raw_complex_relative_l2": 1.5409462695302767e-06,
+            "orbital_relative_l2": 1.5409462694442234e-06,
+            "shape_change_discrepancy_relative_l2": 4.429512690155381e-12,
+            "shape_discrepancy_over_response": null
+          },
+          "thresholds": {
+            "raw_complex_relative_l2": 0.0002,
+            "orbital_relative_l2": 0.0001,
+            "shape_change_discrepancy_relative_l2": 0.0001,
+            "shape_discrepancy_over_response": 0.02
+          },
+          "passed": true,
+          "initial_complex_relative_l2": 1.5409462695302767e-06,
+          "final_complex_relative_l2": 1.540946257496606e-06,
+          "final_shape_discrepancy_over_response": null
+        }
+      ],
+      "large_domain_action_outside_common_window": {
+        "maximum": 1.9619302176862053e-23,
+        "final": 1.9619302176862053e-23,
+        "definition": "L320 action outside central[-80,80) divided by total L320 action; no folding."
+      },
+      "report_sha256": "e82e6d9307ac66ef4494fb3b232c1d4b2de52dfc462ea99165490b42f42262fe",
+      "fields_sha256": "76ea33da5e6a26226729b7c6a6a1e8c55018351f9af359997f6944a9f13cf1c8"
+    },
+    "perturbed": {
+      "parameters": {
+        "delta": 0.02
+      },
+      "settings": {
+        "n": 4096,
+        "length": 160.0,
+        "epsilon": 0.025,
+        "dxi": 0.00125,
+        "xi_end": 4.0,
+        "samples": 81
+      },
+      "metrics": {
+        "peak_amplitude": {
+          "initial": 1.9837832379154925,
+          "final": 2.018418756780169,
+          "maximum": 2.0246872979162167
+        },
+        "rms_width": {
+          "initial": 0.6226845974156513,
+          "final": 0.6064913026691878,
+          "maximum": 0.6226845974156513
+        },
+        "displacement": {
+          "initial": 0.0,
+          "final": 0.05452812458008895,
+          "maximum": 0.05452812458008895
+        },
+        "tail_action_fraction": {
+          "initial": 2.6481495225489747e-10,
+          "final": 4.9618754729451466e-05,
+          "maximum": 4.9618754729451466e-05
+        },
+        "mass_relative_error": {
+          "initial": 1.662496496733308e-16,
+          "final": -3.984339104071046e-12,
+          "maximum": 3.984339104071046e-12
+        },
+        "orbital_shape_error": {
+          "initial": 0.0,
+          "final": 0.025697597328649995,
+          "maximum": 0.028753181488611855
+        },
+        "phase_shift": {
+          "initial": 0.0,
+          "final": -8.44346018139405,
+          "maximum": 8.44346018139405
+        },
+        "profile_exterior_residual_action": {
+          "initial": 1.258180832440925e-14,
+          "final": 4.976512631211026e-05,
+          "maximum": 4.976512631211026e-05
+        }
+      },
+      "qualification_status": "qualified for this bounded demonstration",
+      "passed": true,
+      "checks": [
+        {
+          "kind": "grid",
+          "metrics": {
+            "raw_complex_relative_l2": 3.0892883496616564e-15,
+            "orbital_relative_l2": 1.7421496498244573e-15,
+            "shape_change_discrepancy_relative_l2": 1.3471138156249925e-09,
+            "shape_discrepancy_over_response": 5.535725546455387e-08
+          },
+          "thresholds": {
+            "raw_complex_relative_l2": 0.0002,
+            "orbital_relative_l2": 0.0001,
+            "shape_change_discrepancy_relative_l2": 0.0001,
+            "shape_discrepancy_over_response": 0.02
+          },
+          "passed": true,
+          "initial_complex_relative_l2": 7.185952465144901e-16,
+          "final_complex_relative_l2": 3.0870575802085087e-15,
+          "final_shape_discrepancy_over_response": 3.4420348451973074e-12
+        },
+        {
+          "kind": "step",
+          "metrics": {
+            "raw_complex_relative_l2": 4.082013042002117e-09,
+            "orbital_relative_l2": 3.9166893258756405e-10,
+            "shape_change_discrepancy_relative_l2": 1.3915514594317126e-09,
+            "shape_discrepancy_over_response": 5.704781886128427e-08
+          },
+          "thresholds": {
+            "raw_complex_relative_l2": 0.0002,
+            "orbital_relative_l2": 0.0001,
+            "shape_change_discrepancy_relative_l2": 0.0001,
+            "shape_discrepancy_over_response": 0.02
+          },
+          "passed": true,
+          "initial_complex_relative_l2": 0.0,
+          "final_complex_relative_l2": 4.082013042002117e-09,
+          "final_shape_discrepancy_over_response": 3.148311793248985e-08
+        },
+        {
+          "kind": "domain",
+          "metrics": {
+            "raw_complex_relative_l2": 2.257031550771905e-06,
+            "orbital_relative_l2": 1.8321779903049763e-06,
+            "shape_change_discrepancy_relative_l2": 8.9926481854142e-07,
+            "shape_discrepancy_over_response": 3.4994189903155305e-05
+          },
+          "thresholds": {
+            "raw_complex_relative_l2": 0.0002,
+            "orbital_relative_l2": 0.0001,
+            "shape_change_discrepancy_relative_l2": 0.0001,
+            "shape_discrepancy_over_response": 0.02
+          },
+          "passed": true,
+          "initial_complex_relative_l2": 1.54029779831587e-06,
+          "final_complex_relative_l2": 2.257031550771905e-06,
+          "final_shape_discrepancy_over_response": 3.4994189903155305e-05
+        }
+      ],
+      "large_domain_action_outside_common_window": {
+        "maximum": 6.212406476418139e-13,
+        "final": 6.212406476418139e-13,
+        "definition": "L320 action outside central[-80,80) divided by total L320 action; no folding."
+      },
+      "report_sha256": "b35b367aee38bedc4d9ab310e9ecb4548893d7f33a1202f2289b8621e59b42ef",
+      "fields_sha256": "deacc4971eb091e8adaa2f4ae8b99f178fb0ed33a7df128f2b24cc893cd50ad8"
+    },
+    "gaussian": {
+      "parameters": {
+        "amplitude": 1.0,
+        "width": 2.0,
+        "wavenumber": 0.3,
+        "chirp": 0.0
+      },
+      "settings": {
+        "n": 4096,
+        "length": 160.0,
+        "epsilon": 0.025,
+        "dxi": 0.00125,
+        "xi_end": 4.0,
+        "samples": 81
+      },
+      "metrics": {
+        "peak_amplitude": {
+          "initial": 1.0,
+          "final": 1.3255865963626634,
+          "maximum": 1.4066460945000783
+        },
+        "rms_width": {
+          "initial": 1.414213562373095,
+          "final": 1.4144916183329876,
+          "maximum": 1.4144916183329876
+        },
+        "displacement": {
+          "initial": 0.0,
+          "final": -1.9361733008264543,
+          "maximum": 1.9361733008264543
+        },
+        "tail_action_fraction": {
+          "initial": 1.6162115034178603e-08,
+          "final": 0.006224345816903435,
+          "maximum": 0.006224345816903435
+        },
+        "mass_relative_error": {
+          "initial": 3.7582575954503834e-16,
+          "final": 3.645509867586872e-13,
+          "maximum": 6.783654959787942e-13
+        },
+        "orbital_shape_error": {
+          "initial": 0.0,
+          "final": 0.39311602570311177,
+          "maximum": 0.4584761302987085
+        },
+        "phase_shift": {
+          "initial": 0.0,
+          "final": -3.772919262290146,
+          "maximum": 3.772919262290146
+        }
+      },
+      "qualification_status": "qualified for this bounded demonstration",
+      "passed": true,
+      "checks": [
+        {
+          "kind": "grid",
+          "metrics": {
+            "raw_complex_relative_l2": 9.277605970593719e-16,
+            "orbital_relative_l2": 9.110807057140776e-16,
+            "shape_change_discrepancy_relative_l2": 1.640188509093253e-08,
+            "shape_discrepancy_over_response": 4.4167467661656704e-08
+          },
+          "thresholds": {
+            "raw_complex_relative_l2": 0.0002,
+            "orbital_relative_l2": 0.0001,
+            "shape_change_discrepancy_relative_l2": 0.0001,
+            "shape_discrepancy_over_response": 0.02
+          },
+          "passed": true,
+          "initial_complex_relative_l2": 6.113919826486906e-16,
+          "final_complex_relative_l2": 9.174059494146338e-16,
+          "final_shape_discrepancy_over_response": 6.762936933835202e-15
+        },
+        {
+          "kind": "step",
+          "metrics": {
+            "raw_complex_relative_l2": 4.050662565601196e-11,
+            "orbital_relative_l2": 1.1102279577974098e-11,
+            "shape_change_discrepancy_relative_l2": 1.7006791069422967e-08,
+            "shape_discrepancy_over_response": 4.273641993491354e-08
+          },
+          "thresholds": {
+            "raw_complex_relative_l2": 0.0002,
+            "orbital_relative_l2": 0.0001,
+            "shape_change_discrepancy_relative_l2": 0.0001,
+            "shape_discrepancy_over_response": 0.02
+          },
+          "passed": true,
+          "initial_complex_relative_l2": 0.0,
+          "final_complex_relative_l2": 4.050662565601196e-11,
+          "final_shape_discrepancy_over_response": 2.4491966342345772e-11
+        },
+        {
+          "kind": "domain",
+          "metrics": {
+            "raw_complex_relative_l2": 2.1753160486933665e-05,
+            "orbital_relative_l2": 9.657620493450645e-09,
+            "shape_change_discrepancy_relative_l2": 2.655130499203232e-08,
+            "shape_discrepancy_over_response": 5.7913930915671146e-08
+          },
+          "thresholds": {
+            "raw_complex_relative_l2": 0.0002,
+            "orbital_relative_l2": 0.0001,
+            "shape_change_discrepancy_relative_l2": 0.0001,
+            "shape_discrepancy_over_response": 0.02
+          },
+          "passed": true,
+          "initial_complex_relative_l2": 4.557317015500015e-16,
+          "final_complex_relative_l2": 2.1753160486933665e-05,
+          "final_shape_discrepancy_over_response": 2.532801316716331e-08
+        }
+      ],
+      "large_domain_action_outside_common_window": {
+        "maximum": 1.2444386567317102e-27,
+        "final": 9.292439306826777e-28,
+        "definition": "L320 action outside central[-80,80) divided by total L320 action; no folding."
+      },
+      "report_sha256": "5f56a58721c129f0164100a10ae09ed295907552fda97e35175f7836595090d6",
+      "fields_sha256": "ff3a1512776a371be4ab5d9aa6029cca20cba9af4812407d4f3e7aa7e08c2e1f"
+    }
+  },
+  "caveats": [
+    "Agreement of two refinement levels is not a convergence order or rigorous error bound.",
+    "Global phase/translation and genuine shape evolution are separate diagnostics.",
+    "Exterior action is not automatically radiation.",
+    "A tiny profile orbital response is below the 1e-7 response-normalization floor.",
+    "Fitting translations can introduce ~1e-8 signed-shape comparison floor even when raw field agreement is near machine precision.",
+    "These finite-window checks qualify only the exact three default cases and interval xi=0..4."
+  ],
+  "resources": {
+    "total_solver_diagnostics_seconds": 106.30485729900101,
+    "process_peak_rss_mib": 197.0234375,
+    "trajectories": 12,
+    "steps": 48000,
+    "saved_snapshots_per_case": 81
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "times": [
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "levels": [
+    [
+      "base",
+      4096,
+      8192,
+      512,
+      4
+    ],
+    [
+      "expanded",
+      8192,
+      16384,
+      1024,
+      4
+    ],
+    [
+      "refined",
+      8192,
+      32768,
+      1024,
+      2
+    ]
+  ],
+  "extra_domain_at_256": {
+    "length": 32768,
+    "n": 131072,
+    "rmax": 2048,
+    "dr": 2
+  },
+  "alpha": 0.5,
+  "normalization": "exact continuum L1=(2*pi)^(3/2)*sx*sy^2",
+  "method": "analytic transverse Gaussian integration; longitudinal FFT quadrature; radial search; local peak optimization; independent adaptive quadrature",
+  "initial_data": "exp(-x^2/(2*sx^2)-r^2/(2*sy^2))*exp(i*q*x)/L1",
+  "families": {
+    "gaussian": {
+      "sx": 3,
+      "sy": 3,
+      "q": 0
+    },
+    "near_degeneracy": {
+      "sx": 6,
+      "sy": 3,
+      "q": "-beta"
+    }
+  },
+  "scope": "Two artificial families, two canonical regimes; no general-data or measured-data result",
+  "wall_seconds": 31.515873184995144
+}

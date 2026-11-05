@@ -1,0 +1,48 @@
+{
+  "equation": "Dysthe3D-1.27",
+  "seed": 20260916,
+  "dtype": "float64",
+  "device": "cuda",
+  "deterministic": true,
+  "cpu_threads": 1,
+  "physics": {
+    "epsilon1": 0.00831834509,
+    "epsilon2": 0.00498719622
+  },
+  "domain": {
+    "T": 0.5,
+    "lengths": [
+      12.0,
+      12.0,
+      12.0
+    ]
+  },
+  "initial": {
+    "amplitude": 0.3,
+    "power": 3,
+    "phase": 0.0
+  },
+  "network": {
+    "width": 64,
+    "depth": 4,
+    "harmonics": 3
+  },
+  "training": {
+    "steps": 20000,
+    "batch_size": 512,
+    "validation_points": 512,
+    "learning_rate": 0.0003,
+    "log_every": 100,
+    "checkpoint_every": 500,
+    "gradient_clip": 100.0
+  },
+  "reference": {
+    "shape": [
+      32,
+      32,
+      32
+    ],
+    "dt": 0.001,
+    "snapshots": 11
+  }
+}

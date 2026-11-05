@@ -1,0 +1,259 @@
+{
+  "status": "verified finite-time CPU numerical POC, not physical validation or existence proof",
+  "runtime": {
+    "python": "3.14.8",
+    "numpy": "2.4.2",
+    "scipy": "1.17.0",
+    "platform": "Linux-7.2.11-100.fc43.x86_64-x86_64-with-glibc2.42",
+    "integration_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1"
+    }
+  },
+  "source_files": {
+    "run.py": "5689c66826e889d78da11f0931dc1e3bbb651169b29867e0cfaf1613b59d3d84",
+    "test_run.py": "4aecef4b04b2f7f68fe8046736d9d2c25ccc98dc73243eb824ebc2ed0b539073",
+    "supplement.py": "4b70bcb356d3046016d7c44ecd8864a8296b851fe8066d80f5e21c1fae4e5932",
+    "time_audit.py": "d4a0489aeeeb6b46985df223b55528eabc263b14d2dcab827902032dd5c3476c",
+    "mi_check.py": "6869fa4aa253f8ea7ea8d72302d0e9466f56eef221dde5454cf808c0d58bd95e",
+    "collect_results.py": "7fb70fd4405107279ab5200fe06e86ed9dceeea7b00b05dec4c31ceac68f9f25",
+    "representation_windows.py": "7cea4f3208a3de7d8dc25eeb49bc25dc437ea6044dface38f0ea5d178e32bb5d"
+  },
+  "test_command": "python -m unittest discover -s . -p test_run.py -v",
+  "test_count": 10,
+  "test_log_sha256": "df7da9199401c4c5fc5e13201a105e15d4413a6753d64630438cd93bf9870df6",
+  "tests_passed": true,
+  "campaigns": {
+    "results": {
+      "configuration": {
+        "seed": 19791030,
+        "n": 512,
+        "length": 40.0,
+        "initial_modes": 12,
+        "step": 0.01,
+        "sample_step": 0.2,
+        "horizons": [
+          4.0,
+          8.0,
+          16.0,
+          32.0
+        ],
+        "epsilons": [
+          0.05,
+          0.1
+        ],
+        "models": [
+          "literal",
+          "stability",
+          "nls",
+          "meanflow"
+        ],
+        "tolerances": {
+          "h0": 1e-05,
+          "h1": 0.0001,
+          "h2": 0.001,
+          "tail": 1e-08,
+          "action": 1e-06
+        },
+        "equation_scope": "1D longitudinal restriction of the original temporal potential-envelope formulation, not the full 2D equation or active spatial free-surface baseline",
+        "model_ids": {
+          "literal": "dysthe-1979-temporal-potential-1d-literal-v1",
+          "stability": "dysthe-1979-temporal-potential-1d-stability-sign-v1",
+          "nls": "dysthe-1979-temporal-potential-1d-nls-control-v1",
+          "meanflow": "dysthe-1979-temporal-potential-1d-meanflow-only-v1"
+        },
+        "sign_ambiguity": "Printed-sign c=1 and stability-consistent c=1.5 are separate model hypotheses",
+        "coordinates": "A=epsilon*u; s=epsilon*(x-t/2); T=epsilon^2*t. epsilon=0 is an NLS mathematical control, not a coordinate transformation."
+      },
+      "statuses": {
+        "complete": 40,
+        "numerically_unresolved": 24,
+        "blocked_by_previous_refinement": 32
+      },
+      "sum_reported_integration_seconds": 16.500488577890792,
+      "summary_sha256": "31dd8af841626369853eeecf3da59a00d087e9bc9579b0243ee7d1009635a988"
+    },
+    "results-refined": {
+      "configuration": {
+        "seed": 19791030,
+        "n": 2048,
+        "length": 40.0,
+        "initial_modes": 12,
+        "step": 0.005,
+        "sample_step": 0.2,
+        "horizons": [
+          4.0,
+          8.0,
+          16.0,
+          32.0
+        ],
+        "epsilons": [
+          0.05,
+          0.1
+        ],
+        "models": [
+          "literal",
+          "stability",
+          "nls",
+          "meanflow"
+        ],
+        "tolerances": {
+          "h0": 1e-05,
+          "h1": 0.0001,
+          "h2": 0.001,
+          "tail": 1e-08,
+          "action": 1e-06
+        },
+        "equation_scope": "1D longitudinal restriction of the original temporal potential-envelope formulation, not the full 2D equation or active spatial free-surface baseline",
+        "model_ids": {
+          "literal": "dysthe-1979-temporal-potential-1d-literal-v1",
+          "stability": "dysthe-1979-temporal-potential-1d-stability-sign-v1",
+          "nls": "dysthe-1979-temporal-potential-1d-nls-control-v1",
+          "meanflow": "dysthe-1979-temporal-potential-1d-meanflow-only-v1"
+        },
+        "sign_ambiguity": "Printed-sign c=1 and stability-consistent c=1.5 are separate model hypotheses",
+        "coordinates": "A=epsilon*u; s=epsilon*(x-t/2); T=epsilon^2*t. epsilon=0 is an NLS mathematical control, not a coordinate transformation."
+      },
+      "statuses": {
+        "complete": 74,
+        "numerically_unresolved": 12,
+        "blocked_by_previous_refinement": 10
+      },
+      "sum_reported_integration_seconds": 137.85724540697265,
+      "summary_sha256": "7ed13277630cc93d06a701e98d4b34f3dfded7ac3884d9d9f6d93c833148a54b"
+    },
+    "results-audit": {
+      "configuration": {
+        "seed": 19791030,
+        "n": 4096,
+        "length": 40.0,
+        "initial_modes": 12,
+        "step": 0.0025,
+        "sample_step": 0.2,
+        "horizons": [
+          16.0
+        ],
+        "epsilons": [
+          0.05,
+          0.1
+        ],
+        "models": [
+          "literal",
+          "stability",
+          "nls",
+          "meanflow"
+        ],
+        "tolerances": {
+          "h0": 1e-05,
+          "h1": 0.0001,
+          "h2": 0.001,
+          "tail": 1e-08,
+          "action": 1e-06
+        },
+        "equation_scope": "1D longitudinal restriction of the original temporal potential-envelope formulation, not the full 2D equation or active spatial free-surface baseline",
+        "model_ids": {
+          "literal": "dysthe-1979-temporal-potential-1d-literal-v1",
+          "stability": "dysthe-1979-temporal-potential-1d-stability-sign-v1",
+          "nls": "dysthe-1979-temporal-potential-1d-nls-control-v1",
+          "meanflow": "dysthe-1979-temporal-potential-1d-meanflow-only-v1"
+        },
+        "sign_ambiguity": "Printed-sign c=1 and stability-consistent c=1.5 are separate model hypotheses",
+        "coordinates": "A=epsilon*u; s=epsilon*(x-t/2); T=epsilon^2*t. epsilon=0 is an NLS mathematical control, not a coordinate transformation.",
+        "purpose": "Independent higher-resolution audit at T16 after medium-grid failures; no automatic T32 continuation"
+      },
+      "statuses": {
+        "complete": 21,
+        "numerically_unresolved": 3
+      },
+      "sum_reported_integration_seconds": 194.23391514296964,
+      "summary_sha256": "4e935f8a3f597d086071d80074d712702b2b5c7278421ee735bf5bfef5231a45"
+    }
+  },
+  "targeted_timestep_audit": {
+    "qualified": true,
+    "fine_step": 0.0003125,
+    "sum_reported_integration_seconds": 77.85460333099763,
+    "result_sha256": "80f695c991fe22554924c58307516da0f49f61910777f99ba3e766077736d4df"
+  },
+  "primary_cases_qualified": 6,
+  "primary_case_count": 6,
+  "primary_summary_sha256": "dce3a8adf1ee852b901bfec3d9eb61d06d426079164b65036f7c01adb29ce56c",
+  "domain_check": {
+    "horizon": 8,
+    "passed": 4,
+    "count": 4,
+    "max_h1_difference": 0.0007604434703294819,
+    "json_sha256": "ee29280fe4ea68927535baa498d49c90618dbba2483557b3e5b1f21d11d06c5f"
+  },
+  "artifact_verification": [
+    {
+      "path": "results-audit/packet-eps0.05-stability-T16.npz",
+      "sha256": "09f4279db55219a098362fed88e1a514c86f5c90a901f4f3f6680023c266064a",
+      "matches_declared": true
+    },
+    {
+      "path": "results-audit/packet-eps0.1-stability-T16.npz",
+      "sha256": "19e0a113ff3c3b4cbd94750053b692cea4982341f28354080108fca9897d748c",
+      "matches_declared": true
+    },
+    {
+      "path": "results-audit/sideband-eps0.05-stability-T16.npz",
+      "sha256": "127df1d0c0a3fbae65ce3faebd8085e589f033a98cde318fb566d7b172df40bc",
+      "matches_declared": true
+    },
+    {
+      "path": "results-time-audit/fine.npz",
+      "sha256": "f27f8a220dabf41a8062117d67f2897a510bf62079b18795d50d931efd6d51cc",
+      "matches_declared": true
+    },
+    {
+      "path": "results-audit/random-eps0.05-stability-T16.npz",
+      "sha256": "abf4e1c2c50db27deaa6e308460982199bf94ee613c8ec5d5bb540570cb93795",
+      "matches_declared": true
+    },
+    {
+      "path": "results-audit/random-eps0.1-stability-T16.npz",
+      "sha256": "3eb7218fdf2d34d29bee64a5506dc268d20a5f196a86aabcf55e9380076d6c5b",
+      "matches_declared": true
+    },
+    {
+      "path": "portable-primary/packet-eps0.05-stability-T16-plot.npz",
+      "sha256": "c7589f5b95baa1688ed86eb6febcac3332f944d1b90591de33a0ab3836882b37",
+      "matches_declared": true
+    },
+    {
+      "path": "portable-primary/packet-eps0.1-stability-T16-plot.npz",
+      "sha256": "c39e8934be2bcf1e8de4a2878a518e6790e31a0178d7e0ed9eaf2dc7d2521c61",
+      "matches_declared": true
+    },
+    {
+      "path": "portable-primary/sideband-eps0.05-stability-T16-plot.npz",
+      "sha256": "2282c250f6955be25a4cd0dd048e195362a9447a7104f414474a26ece62e8c0b",
+      "matches_declared": true
+    },
+    {
+      "path": "portable-primary/sideband-eps0.1-stability-T16-plot.npz",
+      "sha256": "483652b4c1daa1f8f955904e40a0a19e794775a4213101123bdff96e11026b75",
+      "matches_declared": true
+    },
+    {
+      "path": "portable-primary/random-eps0.05-stability-T16-plot.npz",
+      "sha256": "eca01fbc870a3d54e41dd4271c531deb068532d89ce1c4ad08b839bc7ea55194",
+      "matches_declared": true
+    },
+    {
+      "path": "portable-primary/random-eps0.1-stability-T16-plot.npz",
+      "sha256": "58efb8e21ca5818fc3c01177378bcb098157d5b6202d38fa9e619875a28760b3",
+      "matches_declared": true
+    }
+  ],
+  "limits": [
+    "Only the one-dimensional longitudinal temporal potential-envelope restriction is solved.",
+    "The printed-sign branch remains separate from the later-standard stability-consistent branch.",
+    "Time samples are spaced by0.2; focusing times are sampled, not continuous event estimates.",
+    "Physical carrier-band diagnostics are descriptive, not universal validity cutoffs.",
+    "The three initial profiles are reused acrossepsilon; NLS traces coincide acrossepsilon byconstruction, not independent replications.",
+    "Portable fields are resampled visualization data, not numerical reference arrays.",
+    "No PINN training or GPU results are claimed by this numerical verification record."
+  ]
+}

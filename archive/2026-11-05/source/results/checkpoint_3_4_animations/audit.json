@@ -1,0 +1,79 @@
+[
+  {
+    "t": 0,
+    "extent": 24.0,
+    "sampled_peak": 0.001438353618712102,
+    "x_peak": -5.0,
+    "r_peak": 0.0,
+    "box_relative_field": 6.431005153672761e-17,
+    "grid_relative_field": 1.1019019036162042e-16,
+    "quadrature_relative_error": 1.5777103859983945e-16,
+    "view_boundary_to_peak": 1.949760645936994e-09
+  },
+  {
+    "t": 4,
+    "extent": 40.0,
+    "sampled_peak": 0.0011223811973616578,
+    "x_peak": -3.75,
+    "r_peak": 0.0,
+    "box_relative_field": 7.357373074728786e-17,
+    "grid_relative_field": 1.187042512081775e-16,
+    "quadrature_relative_error": 1.3286691428987254e-11,
+    "view_boundary_to_peak": 1.173897161465578e-05
+  },
+  {
+    "t": 8,
+    "extent": 56.0,
+    "sampled_peak": 0.0008441007917615336,
+    "x_peak": -3.0,
+    "r_peak": 0.0,
+    "box_relative_field": 6.966731278427417e-17,
+    "grid_relative_field": 1.1885852942696182e-16,
+    "quadrature_relative_error": 8.535285212830789e-11,
+    "view_boundary_to_peak": 0.0001494954485727494
+  },
+  {
+    "t": 32,
+    "extent": 152.0,
+    "sampled_peak": 0.00036321723566675146,
+    "x_peak": 5.5,
+    "r_peak": 0.0,
+    "box_relative_field": 8.033168038165608e-17,
+    "grid_relative_field": 1.350911493675003e-16,
+    "quadrature_relative_error": 2.24608131811168e-09,
+    "view_boundary_to_peak": 0.0013669159580012072
+  },
+  {
+    "t": 64,
+    "extent": 280.0,
+    "sampled_peak": 0.00022044345916567067,
+    "x_peak": 8.75,
+    "r_peak": 0.0,
+    "box_relative_field": 1.1347118986702978e-16,
+    "grid_relative_field": 1.5229661345166126e-16,
+    "quadrature_relative_error": 1.7923806175447648e-09,
+    "view_boundary_to_peak": 0.001935294850366357
+  },
+  {
+    "t": 128,
+    "extent": 536.0,
+    "sampled_peak": 0.00012407778206840193,
+    "x_peak": 10.75,
+    "r_peak": 0.0,
+    "box_relative_field": 2.413082187158434e-16,
+    "grid_relative_field": 1.7911521698870285e-16,
+    "quadrature_relative_error": 4.282800301558012e-10,
+    "view_boundary_to_peak": 0.0023228977986085803
+  },
+  {
+    "t": 256,
+    "extent": 1048.0,
+    "sampled_peak": 6.683918936703192e-05,
+    "x_peak": 18.75,
+    "r_peak": 0.0,
+    "box_relative_field": 1.3751276922491942e-08,
+    "grid_relative_field": 2.3205436967435097e-16,
+    "quadrature_relative_error": 6.116105487029217e-10,
+    "view_boundary_to_peak": 0.0024809917339228852
+  }
+]

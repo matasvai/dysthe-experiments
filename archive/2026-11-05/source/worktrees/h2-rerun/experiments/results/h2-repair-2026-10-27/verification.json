@@ -1,0 +1,55 @@
+{
+  "purpose": "CPU verification of repair; no A100 job submitted or run",
+  "software_checks": [
+    {
+      "suite": "experiments",
+      "tests": 58,
+      "passed": true,
+      "log": "experiments-checks.txt",
+      "sha256": "a8682a6fa6fc0f2cd62541807b5044e85657c18bd17255580d977a6ab08363d9"
+    },
+    {
+      "suite": "learning",
+      "tests": 14,
+      "passed": true,
+      "log": "learning-checks.txt",
+      "sha256": "305bd982c3cda1c2373354ab0d888ce4be731877c5f9285fbc02cfb0060ed0d4"
+    }
+  ],
+  "total_tests": 72,
+  "syntax_checks": [
+    "bash -n for all three long-distance launchers",
+    "py_compile for preflight and both diagnostic scripts"
+  ],
+  "cluster_plan_only": true,
+  "candidate_control_configuration_differences": [
+    "campaign",
+    "pinn_coefficient_scaling"
+  ],
+  "source_sha256": {
+    "src/dysthe_experiments/cpu_pilot.py": "351301aa0885ee4c8560edf09d4f2ef0d27e1997bffd6afd567501fb63532a14",
+    "src/dysthe_experiments/long_distance.py": "36487d86e47ba5b1248ac1c375cbdee58201dd92cef999d6059b1ce0c3506cd7",
+    "src/dysthe_experiments/long_reference.py": "05953daafb6af055bda6094097ebf9351fa0ba36876c9beaf0afa167ad8e7bbe",
+    "src/dysthe_experiments/export_evidence.py": "5fa720af7cb98a14d9256c3b2374e9d2af603e9a8891c3d04fa60729357b8f3f",
+    "cluster/long-preflight.py": "255413bdaba814239f2f259fc6d031d8b1784d7ee61190e3f7a33e74b7944a2e",
+    "cluster/run-long-pinn.sbatch": "52fd94649f0ac81fa4307d7474cc52032859a1b86ed70cd8f767de864353f197",
+    "scripts/diagnose-pinn-conditioning.py": "0e81f32be7d423ee9c5060ea2cc080b266b2ab5d945ba2ba91c85bfdc0bb0d60",
+    "scripts/check-cross-blas-inlets.py": "d0ea08ef20cb2529cdd74a4197ded0d74840eeaa02624c0c2444ef2f961d3fd0",
+    "pyproject.toml": "05ef7d0cdb86008ca26cef9989e444b9144c7525a01731a4b7ae462ea1c6e7da"
+  },
+  "learning_revision": "bdfe60e571e9c1e676bd87b8a0097a7f4b795951",
+  "core_revision": "a47a42321475feb6bc55031f4b752419f4b7fda9",
+  "runtime": {
+    "python": "3.14.8",
+    "numpy": "2.4.2",
+    "scipy": "1.17.0",
+    "torch": "2.10.0+cu128",
+    "cuda_available": false
+  },
+  "production_ablation_sources_match_final_checkout": true,
+  "limitations": [
+    "CPU validation ablation used three inlets and one seed through xi=4.",
+    "No repaired A100 accuracy or throughput verified.",
+    "No global-existence or continuum-error conclusion."
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "artifact_kind": "derived exact-field extract; not a byte-preserved original",
+  "source_original_path": "dysthe-pinn/results/breathing-preview-12288/summary.json",
+  "source_bytes": 8412627,
+  "source_sha256": "e0075b02b40ef521eb13892d52ae96f955c17d772c2eeb50f676536ff0c21c29",
+  "selection": "All original top-level fields except the full rows array; diagnostic row count and exact first/last rows are retained separately. No numerical values were recomputed.",
+  "selected_fields": {
+    "status": "failed_diagnostics",
+    "current_t": 10321.0,
+    "observation_window": [
+      1500.0,
+      2500.0
+    ],
+    "integration_started_at": 0.0,
+    "saved_frames": 726,
+    "invocation_steps": 20642,
+    "invocation_seconds": 121.23806532006711,
+    "remaining_steps": 3934,
+    "config": {
+      "equation": "Dysthe3D-1.27",
+      "seed": 20260916,
+      "dtype": "float64",
+      "device": "cuda",
+      "deterministic": true,
+      "cpu_threads": 1,
+      "physics": {
+        "epsilon1": 0.00831834509,
+        "epsilon2": 0.00498719622
+      },
+      "domain": {
+        "T": 12288.0,
+        "lengths": [
+          12.0,
+          12.0,
+          12.0
+        ]
+      },
+      "initial": {
+        "amplitude": 0.3,
+        "power": 3,
+        "phase": 0.0
+      },
+      "network": {
+        "width": 64,
+        "depth": 4,
+        "harmonics": 3
+      },
+      "training": {
+        "steps": 20000,
+        "batch_size": 512,
+        "validation_points": 512,
+        "learning_rate": 0.0003,
+        "log_every": 100,
+        "checkpoint_every": 500,
+        "gradient_clip": 100.0
+      },
+      "reference": {
+        "shape": [
+          32,
+          32,
+          32
+        ],
+        "dt": 0.5,
+        "snapshots": 776
+      }
+    },
+    "showcase_centers": [
+      1000,
+      2000,
+      3000,
+      4000,
+      5000,
+      6000,
+      7000,
+      8000,
+      9000,
+      10000,
+      11000,
+      12000
+    ],
+    "initial_projection_relative_l2": 3.0841090212998154e-16,
+    "max_relative_mass_drift": 0.0010000730586283897,
+    "max_spectral_edge_fraction": 2.6513468828319015e-06,
+    "qualification": "Exploratory periodic reference only. No grid/time refinement or PINN validation; accumulated error before the window is unresolved."
+  },
+  "source_row_count": 11322,
+  "first_diagnostic_row": {
+    "step": 0,
+    "t": 0.0,
+    "mass": 1.7853456813097,
+    "peak": 0.2999999999999999,
+    "spectral_edge_fraction": 4.2886398542279844e-33,
+    "effective_volume": 54.385151098199636,
+    "center_x": -2.936042657834518e-17,
+    "center_strength_x": 0.857142857142857,
+    "width_x": 1.0583625562565329,
+    "peak_x": 0.0,
+    "center_y": 1.3546675344157765e-17,
+    "center_strength_y": 0.857142857142857,
+    "width_y": 1.0583625562565329,
+    "peak_y": 0.0,
+    "center_z": -7.670249252645541e-18,
+    "center_strength_z": 0.8571428571428567,
+    "width_z": 1.0583625562565329,
+    "peak_z": 0.0,
+    "centers_well_defined": true,
+    "relative_mass_drift": 0.0
+  },
+  "last_diagnostic_row": {
+    "step": 20642,
+    "t": 10321.0,
+    "mass": 1.7871311574259163,
+    "peak": 0.11848673491013768,
+    "spectral_edge_fraction": 1.8520660095292908e-06,
+    "effective_volume": 609.4184878563723,
+    "center_x": 2.7575547251192333e-16,
+    "center_strength_x": 0.18151596596193537,
+    "width_x": 3.261019814618309,
+    "peak_x": 0.0,
+    "center_y": -2.223278497127388e-15,
+    "center_strength_y": 0.1815159659619349,
+    "width_y": 3.26101981461831,
+    "peak_y": 0.0,
+    "center_z": 3.438849907329832,
+    "center_strength_z": 0.13575120772572866,
+    "width_z": 3.1433976060469804,
+    "peak_z": 2.25,
+    "centers_well_defined": true,
+    "relative_mass_drift": 0.0010000730586283897
+  }
+}

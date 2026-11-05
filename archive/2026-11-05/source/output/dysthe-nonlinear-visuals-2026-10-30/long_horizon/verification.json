@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-30",
+  "tests_passed": 7,
+  "periodic_smoke_qualified_horizons": [
+    0.02,
+    0.04
+  ],
+  "isolated_smoke_qualified_horizons": [
+    0.02,
+    0.04
+  ],
+  "nonlinear_target_horizons_executed": false,
+  "cluster_jobs_submitted": false,
+  "slurm_shell_syntax": "passed",
+  "test_cases": [
+    "Model identity and isolated-random rejection",
+    "Common-domain derivatives before restriction",
+    "Immediate failed-gate stop with later targets blocked",
+    "Staged endpoint matches uninterrupted reference solve",
+    "Both isolated-domain streams and domain gates exercised",
+    "Calibration cannot be mistaken for a completed target run",
+    "Injected failed integration step preserves last completed state, time and elapsed cost"
+  ],
+  "files": {
+    "run_long_horizon.py": "cb870badb615fe1dfa1d973f54282c0cbfe9c47a28dc80743568523dabddfbc1",
+    "test_long_horizon.py": "25193c16ed8e0da16620b67312845594b91576ddd0156021fbe44baa2f6e7fde",
+    "run-cpu.sbatch": "aac96a9f2ab779f4521a74c1e5d407ac3ea40a7889353aa2e3a17862d8a2249b",
+    "README.md": "b355c391e8f6597b1ef05c2c2c4062bb42d14722f5a574423c87f438f911383f",
+    "configs/periodic-targets.json": "fc88108f83ebd770bf2f159e0378f580a3aa562a9c792182cbbd0a1707f832ad",
+    "configs/isolated-targets.json": "9f0065bbf5b91cf6cfbc90e778fea96991640bcdbf69a3576a2ca097db3e3d7a",
+    "configs/periodic-smoke.json": "64bc9d76e07356ee7cd76b8df00c2b96a9c9e5c1ffd726c93b531cd1d6d15a44",
+    "configs/isolated-smoke.json": "a7ac87e06ce0417b7fc86cf75e92b1671c661a49072e90b9c05dc1519a1b29cc",
+    "verification/periodic-smoke/summary.json": "6c643ebf8d52cef716edc52be422306c234d7975f19afa9cab1f5cb34cef9aa0",
+    "verification/periodic-smoke/gaussian-diagnostics.json": "7a0bcef2b93d1a84994b1c15f5641917721f19b985b6ce4e75968f8216c37fa2",
+    "verification/periodic-smoke/gaussian-T0.04.json": "70fcc562b960b6f5f7d57d5da640e2a3fb58c4f86f03ac1aa5e36c28fcf05fd8",
+    "verification/periodic-smoke/gaussian-T0.04.npz": "e75ae2dbac20370c485a98324afdace4a4d3680e21fd6e9baf94a715ede70b83",
+    "verification/periodic-smoke/gaussian-T0.02.json": "692920516379aa42d9e2d508d234833242fdcd5e6a2dbcd2ced8500ad4366494",
+    "verification/periodic-smoke/gaussian-T0.02.npz": "0f8dfe7286da261518cd14d69bd8b836ff99fbdcd0f791267caa03e38cfcc9ed",
+    "verification/periodic-smoke/identity.json": "5d936e87caff400f42bca4bdd86b22665f177afc304a3ad68c2f7f0ae688a77f",
+    "verification/isolated-smoke/summary.json": "02e16bbdc028b7646e17e34cd885d865ef545b308f4b661c061eff656067e022",
+    "verification/isolated-smoke/gaussian-diagnostics.json": "6d4d3a7c4e904aa4c5291f498b87422569abbd4e377a27f5b1b60dc8d9e891c0",
+    "verification/isolated-smoke/gaussian-T0.04.json": "842b695d4b3df38bd83fc9ef444463d60e0ed0105ba0e150bc4cdec6a2f4451b",
+    "verification/isolated-smoke/gaussian-T0.04.npz": "1ba71daa2846a1adb5bc8ca8c19c791b5b86cd63e9cbb8d00b7c880c9ccc33e4",
+    "verification/isolated-smoke/gaussian-T0.02.json": "5175ee7cceaa10952f906425cb45684162947e2ded0363266653247dfc52c7d8",
+    "verification/isolated-smoke/gaussian-T0.02.npz": "c9bce45d965a42174203da44744d38e5ac7ee82bd255f4b51db288f88af445e9",
+    "verification/isolated-smoke/identity.json": "12906b1ab92d735724abd38b093983c3095cc5cc9b733f44e924e166885ed61d",
+    "verification/periodic-calibration/summary.json": "1d149b33ea92e207677b0a1c905b4c488f7f27126d95c77c0b30f4163fb01835",
+    "verification/periodic-calibration/identity.json": "1fcec25bf80829040c40db5a45c05780aeaa18ec76fb9ee11c69bdf8aedaaccf",
+    "verification/isolated-calibration/summary.json": "5b096a21b5980aab661e3db3e991a2ac9edd08a50108c0391768ff576cd9a1e1",
+    "verification/isolated-calibration/identity.json": "fea8aabf22986a476aa79ff98a86c810215fbdd6e7381c69755bafa9bc81fc4b"
+  },
+  "calibration_limitation": "64-step fixed-grid extrapolation only; no future resolution/domain growth, diagnostics or retry costs included.",
+  "post_review_fix": "Failed integration blocks now update stream time and elapsed cost in finally using completed steps; all seven tests passed after the fix.",
+  "retained_artifact_provenance": "Saved smoke and calibration artifacts retain their original runner hashes from before the failure-checkpoint accounting fix. The current test suite re-exercised both successful smoke tracks and the injected failure path."
+}

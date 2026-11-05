@@ -1,0 +1,44 @@
+{
+  "name": "profile_mu2_s-2_e0.125",
+  "shape": [
+    2048
+  ],
+  "lengths": [
+    160.0
+  ],
+  "kind": "dysthe",
+  "epsilon": 0.125,
+  "epsilon1": 1.0,
+  "epsilon2": 1.0,
+  "nonlinear": true,
+  "diagnostics": [
+    {
+      "t": 0,
+      "mass": 1.8872497627251708,
+      "peak": 1.0122546126166796,
+      "energy": 1.807643332211656,
+      "momentum": 4.252247405122239,
+      "spectral_edge_mass": 3.794270963235773e-16
+    }
+  ],
+  "mu": 2.0,
+  "speed": -2.0,
+  "iterations": 34,
+  "profile_residual": 1.4845665865366566e-11,
+  "evolution_residual": 1.8712402916617374e-11,
+  "history": [
+    [
+      0,
+      0.12910008059020212
+    ],
+    [
+      25,
+      3.6323038716303284e-09
+    ]
+  ],
+  "mass": 1.8872497627251708,
+  "peak": 1.0122546126166796,
+  "energy": 1.807643332211656,
+  "momentum": 4.252247405122239,
+  "spectral_edge_mass": 3.794270963235773e-16
+}

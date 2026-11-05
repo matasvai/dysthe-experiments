@@ -1,0 +1,70 @@
+{
+  "regime": "inhomogeneous_plus",
+  "family": "near_degeneracy",
+  "base": {
+    "peak": 9.08734892625558e-06,
+    "x": -841.25,
+    "r": 0.0
+  },
+  "longitudinal": {
+    "peak": 9.087647390664946e-06,
+    "x": -841.25,
+    "r": 0.0,
+    "boundary_amplitude": 3.1087544727001355e-10
+  },
+  "radial_annulus": {
+    "peak": 3.872944348917461e-17,
+    "x": -4494.0,
+    "r": 2050.0,
+    "boundary_amplitude": 9.075773896734639e-28
+  },
+  "second_longitudinal": {
+    "peak": 9.087414369209705e-06,
+    "x": -841.25,
+    "r": 0.0,
+    "boundary_amplitude": 2.387547116371944e-10
+  },
+  "checks": {
+    "first_longitudinal_change": 3.284286862545958e-05,
+    "transverse_expansion_change": 0.0,
+    "second_longitudinal_change": 2.564221744193458e-05,
+    "local_refinement_change": 3.856488599260803e-06,
+    "quadrature_tightening_change": 3.671153502439772e-14,
+    "final_spectral_integral_discrepancy": 3.957995209073831e-06,
+    "final_polished_peak_drift": 2.5641814231259287e-05,
+    "final_polished_location_drift": 0.000213623046875,
+    "boundary_to_peak": 2.6273219498054146e-05
+  },
+  "polished": [
+    {
+      "length": 32768,
+      "peak": 9.087348958725676e-06,
+      "x": -841.2463073730469,
+      "r": 0.0,
+      "success": true
+    },
+    {
+      "length": 65536,
+      "peak": 9.087647417917905e-06,
+      "x": -841.2466125488281,
+      "r": 0.0,
+      "success": true
+    },
+    {
+      "length": 131072,
+      "peak": 9.087414400126015e-06,
+      "x": -841.2463989257812,
+      "r": 0.0,
+      "success": true
+    }
+  ],
+  "continuum_candidate": {
+    "peak": 9.087379323834946e-06,
+    "ratio": 0.005862082815221295,
+    "x": -841.2463607788086,
+    "r": 0.0,
+    "quadrature_error_estimate": 3.3361164432695434e-19,
+    "success": true
+  },
+  "passes_peak_screen": true
+}

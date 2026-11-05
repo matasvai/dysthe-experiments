@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-30",
+  "scientific_goal": "Reproduce and assess finite-time water-wave envelope evolution across whole initial profiles, then test derivative-faithful neural approximations; no continuum global-existence claim.",
+  "scope": {
+    "existing_spatial": "water-wave-dysthe-spatial-v1",
+    "new_temporal_primary": "dysthe-1979-temporal-potential-1d-stability-sign-v1",
+    "formulations_must_not_be_pooled": true
+  },
+  "stages": [
+    {
+      "id": "equation-controls",
+      "status": "executed CPU",
+      "purpose": "Verify equation signs, nonlocal symbol, dispersion and nonlinear phase",
+      "commands": [
+        "python -m unittest -v test_run.py",
+        "python mi_check.py --output-dir fresh-mi"
+      ],
+      "evidence": [
+        "verification.json",
+        "temporal-mi-check.json"
+      ]
+    },
+    {
+      "id": "temporal-reference",
+      "status": "executed CPU",
+      "purpose": "Separate multi-profile dynamics from grid and timestep error",
+      "families": [
+        "packet",
+        "sideband",
+        "random"
+      ],
+      "epsilon": [
+        0.05,
+        0.1
+      ],
+      "primary_time": 16,
+      "metrics": [
+        "independent H0 H1 H2 refinements",
+        "action drift",
+        "spectral tail",
+        "steepness/bandwidth indicators",
+        "physical-band action and H2 power"
+      ],
+      "acceptance": {
+        "grid_and_step_H0": 1e-05,
+        "grid_and_step_H1": 0.0001,
+        "grid_and_step_H2": 0.001,
+        "action_drift": 1e-06,
+        "edge_action_fraction": 1e-08
+      },
+      "evidence": [
+        "primary-results.json",
+        "results-audit/summary.json",
+        "results-time-audit/result.json"
+      ]
+    },
+    {
+      "id": "packet-domain",
+      "status": "executed CPU throughT8 only",
+      "purpose": "Test periodic domain influence",
+      "control": "L40 versus80 with matched initial physical cutoff and spacing",
+      "primary_metric": "common-interval relativeH1<=.01",
+      "evidence": [
+        "results-refined/domain-checks.json"
+      ]
+    },
+    {
+      "id": "representation-floor",
+      "status": "executed CPU",
+      "purpose": "Reject impossible fixed-mode neural error targets beforetraining",
+      "metric": "max Fourier projection relative H2 error",
+      "proposed_gate": "Use <=1% representation budget for final5% H2 target; do not treat <=5% floor alone as enough",
+      "evidence": [
+        "representation-windows.json",
+        "primary-results.json"
+      ]
+    },
+    {
+      "id": "spatial-pinn-repair",
+      "status": "paired CPU evidence reanalysed; A100 rerun pending",
+      "purpose": "Compare invertible spectral coefficient scaling with identical full residual and budgets",
+      "existing_branch": "codex/pinn-h2-rerun",
+      "training_seeds": 3,
+      "gates": {
+        "L2": 0.01,
+        "H1": 0.05,
+        "H2": 0.05,
+        "peak": 0.05
+      },
+      "supplementary_metrics": [
+        "curvature RMS error",
+        "phase error",
+        "cost",
+        "fine-grid residual"
+      ],
+      "commands_location": "cluster/README.md"
+    },
+    {
+      "id": "temporal-pinn-transfer",
+      "status": "proposed; not implemented or trained",
+      "purpose": "Transfer slab fitting to exactly the specified temporal model",
+      "prerequisites": [
+        "Torch/reference RHS parity",
+        "exact controls",
+        "qualified references",
+        "bandwidth floor below error budget"
+      ],
+      "horizons": [
+        4,
+        8,
+        16
+      ],
+      "control": "scaled versus unscaled same mode count, seed and budget",
+      "training_seeds": 3
+    },
+    {
+      "id": "operator-pilot",
+      "status": "proposed; no new validated FNO result",
+      "purpose": "Test reuse across unseen whole initial profiles and epsilon values",
+      "proposed_split_per_family": {
+        "train": 16,
+        "validation": 4,
+        "test": 8
+      },
+      "whole_profile_split": true,
+      "no_reference_resets": true,
+      "baseline": "matched-accuracy CPU/GPU Fourier solver plus full data/training/inference costs",
+      "metrics": [
+        "one-step and autonomous rollout L2 H1 H2",
+        "phase/peak/timing error",
+        "valid horizon",
+        "failure count",
+        "spectra/action",
+        "amortization cost"
+      ]
+    },
+    {
+      "id": "sensitivity-and-coherent-waves",
+      "status": "proposed",
+      "purpose": "Target finite-time data sensitivity or travelling profiles afterbaselinequalification",
+      "control": "fixed bandlimited perturbations and independently refined stationary residuals; no inferred integrability"
+    }
+  ],
+  "no_cluster_jobs_submitted": true,
+  "no_new_temporal_PINN_or_FNO_training": true
+}

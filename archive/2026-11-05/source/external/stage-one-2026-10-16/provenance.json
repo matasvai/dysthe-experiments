@@ -1,0 +1,45 @@
+{
+  "project_path": "/home/matasvai/Documents/Projects/Dysthe",
+  "python": "3.14.7",
+  "repositories": {
+    "dysthe-core": {
+      "head": "10889fed1d20f02f8318d281322585284711eadd",
+      "branch": "codex/reference-migration",
+      "status": " M README.md\n M pyproject.toml\n?? docs/reference-validation.md\n?? src/dysthe_core/reference/__init__.py\n?? src/dysthe_core/reference/spatial.py\n?? tests/test_reference.py\n",
+      "initial_file_sha256": {
+        "src/dysthe_core/__init__.py": "2535eadbeb21cee9354dddbd81074f5f1d98b128882ed7860be11da85beab0bd",
+        "src/dysthe_core/contracts.py": "aa6bba2a4dad1594004b0a922acc2f8c9852402cd66b96ac4780c4ec450c48c8",
+        "src/dysthe_core/reference/README.md": "622e0dc8b1b25ac77bea2d094ab80fd53c70ca743591ae8d5b30bc980e1c065a",
+        "src/dysthe_core/reference/__init__.py": "2d351152ec983b34d0ed5854e92db4957976a9da77f5ee7b38a9b111063cc2b2",
+        "src/dysthe_core/reference/spatial.py": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8",
+        "src/dysthe_core/initial_conditions/README.md": "4d62300e61eb5629738fb66697a3af538de14d27d70b02aac05f90fce2540fd6",
+        "src/dysthe_core/diagnostics/README.md": "c96eb5e479f8dae90a08e9093a91568eb6c1f33b78228533b8f33cf3523d7389",
+        "tests/test_contracts.py": "dd031f3b3a5b417fc282d91e5af440682e1c55df2bbf86284ab9d78f6a97c55f",
+        "tests/test_scope.py": "3e1ad33142f956573ece0378a8837002792560954d85b38286d97e065521e593",
+        "tests/test_reference.py": "abb287dfab92fdce1519de2a71f6fc4d9f8130a7a0db82a718f80dfc3e35f0d2",
+        "docs/model.md": "691b1adf33aa678c75efa24762c21e56b14ea10942ed2279bebb2d96bc840ac6",
+        "docs/migration.md": "f28193848ccdb49cb4296a7d812caa7199c1265f657757f25ad922ccfe9f0a5d",
+        "docs/reference-validation.md": "65e12c276a44b4c00467ca04effa4ebcfa1c7df82f0c23ab3c48879489dab92c"
+      }
+    },
+    "dysthe-experiments": {
+      "head": "87b534fba38a87d5146953765059998f3d43ecb7",
+      "branch": "codex/reference-campaign",
+      "status": " M README.md\n?? configs/solitary-refinement-plan.json\n?? configs/solitary-smoke.json\n?? docs/solitary-pilot.md\n?? src/dysthe_experiments/solitary.py\n?? tests/test_solitary.py\n",
+      "initial_file_sha256": {
+        "src/dysthe_experiments/__init__.py": "f96bad252245118c705e1ecf7e4aec3cf003b53e85de3b4fd1d4c2b08d7f96af",
+        "src/dysthe_experiments/__main__.py": "ed659973aa24131436c63bc689a368ed90b29765b93f89e7f40ae27bb0afa238",
+        "src/dysthe_experiments/solitary.py": "d5fd1eada48a6ebd0fe120bc070bef58f4b81754c95d0214c5f15cce019e7b9a",
+        "tests/test_plan.py": "8200da937239512add2cdce836f4ae47c4db675975f9e9a59f69420d90f72bbc",
+        "tests/test_scope.py": "3e1ad33142f956573ece0378a8837002792560954d85b38286d97e065521e593",
+        "tests/test_solitary.py": "8b4b1f12d661e51cd99b5c65dcc3e7b77710a7c7fabd7e003d9b0d10009a46df",
+        "configs/pilot.json": "113b6160e0d1454d663d40c6a57f6766dbc504a0e5c3225c2200e646fd2d8d4f",
+        "configs/solitary-smoke.json": "dadbf85fb9986013567bbd162d4729e6195a89339a4400397c363222068dfd26",
+        "configs/solitary-refinement-plan.json": "46c32b5753615bd69d94eb9f830fbdc4404adf54ab312788230180fdbe8dcfef",
+        "docs/protocol.md": "a4fdd2c2a16ba7bc1abc835a9b869c983924bdd8107f2770786e61e95bf51511",
+        "docs/migration.md": "6a8673ede5e49c671e882091698889e64842703df61c0463ea9a7cf1af0bf947",
+        "docs/solitary-pilot.md": "b03830594eace0e8cafb0e35cc0d627a2932b9a97211a00fc8a86fcc44ab9fe5"
+      }
+    }
+  }
+}

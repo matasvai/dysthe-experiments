@@ -1,0 +1,93 @@
+{
+  "method": "pinn_scratch",
+  "seed": 29,
+  "case_id": "random-004",
+  "split": "validation",
+  "training_seconds": 1.2629175640004178,
+  "history": [
+    [
+      {
+        "epoch": 50,
+        "training_loss": 0.045486025512218475,
+        "full_dysthe_residual_validation": 0.05514783039689064,
+        "seconds": 0.15811255800053914,
+        "training_epsilon": 0.02103612944483757
+      },
+      {
+        "epoch": 100,
+        "training_loss": 0.00678208377212286,
+        "full_dysthe_residual_validation": 0.0188431516289711,
+        "seconds": 0.313727812000252,
+        "training_epsilon": 0.02103612944483757
+      },
+      {
+        "epoch": 150,
+        "training_loss": 0.009788095019757748,
+        "full_dysthe_residual_validation": 0.010454894974827766,
+        "seconds": 0.4697367140006463,
+        "training_epsilon": 0.02103612944483757
+      },
+      {
+        "epoch": 200,
+        "training_loss": 0.00907877180725336,
+        "full_dysthe_residual_validation": 0.007655254565179348,
+        "seconds": 0.6255854360006197,
+        "training_epsilon": 0.02103612944483757
+      },
+      {
+        "epoch": 250,
+        "training_loss": 0.022274844348430634,
+        "full_dysthe_residual_validation": 0.015651406720280647,
+        "seconds": 0.7879350210005214,
+        "training_epsilon": 0.02103612944483757
+      },
+      {
+        "epoch": 300,
+        "training_loss": 0.011790312826633453,
+        "full_dysthe_residual_validation": 0.024035807698965073,
+        "seconds": 0.9473865400004797,
+        "training_epsilon": 0.02103612944483757
+      },
+      {
+        "epoch": 350,
+        "training_loss": 0.01580064371228218,
+        "full_dysthe_residual_validation": 0.019299527630209923,
+        "seconds": 1.1026249169999573,
+        "training_epsilon": 0.02103612944483757
+      },
+      {
+        "epoch": 400,
+        "training_loss": 0.015766149386763573,
+        "full_dysthe_residual_validation": 0.015410255640745163,
+        "seconds": 1.2629175640004178,
+        "training_epsilon": 0.02103612944483757
+      }
+    ]
+  ],
+  "full_residual_rms_relative": [
+    0.08727390319108963
+  ],
+  "metrics": [
+    {
+      "xi": 0.5,
+      "l2": 0.0026683631914220184,
+      "h1": 0.004917700095116269,
+      "peak": 0.0012255959027763824
+    },
+    {
+      "xi": 1.0,
+      "l2": 0.004784129515350947,
+      "h1": 0.00786817424694954,
+      "peak": 0.003547997782819502
+    },
+    {
+      "xi": 2.0,
+      "l2": 0.010755484773357315,
+      "h1": 0.01691678843939143,
+      "peak": 0.005034123497590438
+    }
+  ],
+  "checkpoints": {
+    "best-0.pt": "56985bf50eeae5b9e20b93252fed65b14cf18e033dcd7125f638340b8663c0d5"
+  }
+}

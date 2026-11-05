@@ -1,0 +1,72 @@
+{
+  "method": "pinn_slabs",
+  "seed": 11,
+  "case_id": "packet-001",
+  "split": "validation",
+  "training_seconds": 0.10198795799988147,
+  "history": [
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.5831955671310425,
+        "full_dysthe_residual_validation": 0.32478541135787964,
+        "seconds": 0.029332959000385017,
+        "training_epsilon": 0.03891041502356529
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.09273870289325714,
+        "full_dysthe_residual_validation": 0.07426688820123672,
+        "seconds": 0.05442135299927031,
+        "training_epsilon": 0.03891041502356529
+      }
+    ],
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.6799377799034119,
+        "full_dysthe_residual_validation": 0.24617980420589447,
+        "seconds": 0.022962008000831702,
+        "training_epsilon": 0.03891041502356529
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.06444599479436874,
+        "full_dysthe_residual_validation": 0.07075148820877075,
+        "seconds": 0.04756660500061116,
+        "training_epsilon": 0.03891041502356529
+      }
+    ]
+  ],
+  "full_residual_rms_relative": [
+    0.27249449491500854,
+    0.26596105098724365
+  ],
+  "metrics": [
+    {
+      "xi": 0.2,
+      "l2": 0.004274419698709185,
+      "h1": 0.005201646894991753,
+      "peak": 0.0018144190816379586
+    }
+  ],
+  "sampled_interval_errors": {
+    "l2": 0.004274419698709185,
+    "h1": 0.005201646894991753,
+    "peak": 0.0018144190816379586
+  },
+  "sampled_interval_tolerances": {
+    "l2": 0.01,
+    "h1": 0.05,
+    "peak": 0.05
+  },
+  "sampled_interval_pass": true,
+  "sampled_station_count": 5,
+  "resumed_from_checkpoint": false,
+  "checkpoints": {
+    "best-0.pt": "0dfeae33e6f4c79df2d315e98a01264a167d80781499f9f60abde0a749a0ebff",
+    "best-1.pt": "92e388c316039d7f39270bff3f371b6b335beda6359139d9417854f472bd7d1a"
+  },
+  "gpu_peak_allocated_bytes": null,
+  "invocation_elapsed_seconds": 0.11559723599930294
+}

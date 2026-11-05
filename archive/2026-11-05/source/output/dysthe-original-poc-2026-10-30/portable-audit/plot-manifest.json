@@ -1,0 +1,194 @@
+{
+  "artifacts": [
+    {
+      "path": "packet-eps0.05-literal-T16-plot.npz",
+      "sha256": "f2524d2ebee22126cb44fc0165e164325b9bac9236e005fceb1f15978b56992a",
+      "key": "packet-eps0.05-literal-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-literal-v1",
+      "reference_source_sha256": "fc1ed9f8f5b6f09d46ffe91d70ab58ea2933c058a7693999b1b9542fe34ebc46",
+      "maximum_action_fraction_omitted_for_plotting": 2.2627589070815925e-08,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "packet-eps0.05-stability-T16-plot.npz",
+      "sha256": "c144acbe1e0a21d8e4d8a826fb9b5310cae52530ad4468a4f31a8a51e1a94062",
+      "key": "packet-eps0.05-stability-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-stability-sign-v1",
+      "reference_source_sha256": "09f4279db55219a098362fed88e1a514c86f5c90a901f4f3f6680023c266064a",
+      "maximum_action_fraction_omitted_for_plotting": 1.4307768540865136e-07,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "packet-eps0.05-nls-T16-plot.npz",
+      "sha256": "88ab01ad18974262c9d99de589751d294b25845de97a994f63501340696c54b8",
+      "key": "packet-eps0.05-nls-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-nls-control-v1",
+      "reference_source_sha256": "e2f5838e2e53c151779a4ad7bfa8a98ab8f6de1494fac9b9bea9cd60e668dc73",
+      "maximum_action_fraction_omitted_for_plotting": 2.2209896121464212e-08,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "packet-eps0.05-meanflow-T16-plot.npz",
+      "sha256": "7d91382a35ab03a4ee2a8345b773c26b902b47da30591c060a9fadc8e58a8699",
+      "key": "packet-eps0.05-meanflow-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-meanflow-only-v1",
+      "reference_source_sha256": "cb5aa265fab0eb57faaa602ecb6c0fb7f55f36d35aacb5db449c63a2c9346242",
+      "maximum_action_fraction_omitted_for_plotting": 5.08802442260258e-11,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "packet-eps0.1-literal-T16-plot.npz",
+      "sha256": "c1811251dd7e0924de2c949ea06a456ebb5a75ba53c679d104ad5d88454246ef",
+      "key": "packet-eps0.1-literal-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-literal-v1",
+      "reference_source_sha256": "dec98a7a5cdbdf86bdd328bd06919332cc9786ef163ff88d45f685ca180c7f92",
+      "maximum_action_fraction_omitted_for_plotting": 0.0006364682930030944,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "packet-eps0.1-stability-T16-plot.npz",
+      "sha256": "19ff4b5f94fda145a48f7d8e7a7faa0d6684ba636e2e810a087b0f433a570a11",
+      "key": "packet-eps0.1-stability-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-stability-sign-v1",
+      "reference_source_sha256": "19e0a113ff3c3b4cbd94750053b692cea4982341f28354080108fca9897d748c",
+      "maximum_action_fraction_omitted_for_plotting": 0.005838635984400637,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "packet-eps0.1-nls-T16-plot.npz",
+      "sha256": "88ab01ad18974262c9d99de589751d294b25845de97a994f63501340696c54b8",
+      "key": "packet-eps0.1-nls-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-nls-control-v1",
+      "reference_source_sha256": "e2f5838e2e53c151779a4ad7bfa8a98ab8f6de1494fac9b9bea9cd60e668dc73",
+      "maximum_action_fraction_omitted_for_plotting": 2.2209896121464212e-08,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "packet-eps0.1-meanflow-T16-plot.npz",
+      "sha256": "5dca7dc65ac09ff1f7a927beda166f1744a3ebb9ef62fa66c6f59584b657c709",
+      "key": "packet-eps0.1-meanflow-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-meanflow-only-v1",
+      "reference_source_sha256": "361402d7d2f84a8e1d1204ea59f87bf42506ceee8c667f0ec24898f1bb24c78f",
+      "maximum_action_fraction_omitted_for_plotting": 3.068017884325328e-13,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "sideband-eps0.05-literal-T16-plot.npz",
+      "sha256": "84f20d0de759ef1c604d8a5eb2bf838dbfbd6075c40504067603c113adc75c5e",
+      "key": "sideband-eps0.05-literal-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-literal-v1",
+      "reference_source_sha256": "7f7d0f9e08410f76f6d024f7dd18c946973f0cfb3c566141748244338f10796d",
+      "maximum_action_fraction_omitted_for_plotting": 4.255252293456172e-08,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "sideband-eps0.05-stability-T16-plot.npz",
+      "sha256": "8c10ddb9a4d6c813e2c10c1483a82be5b0d6c981593bcb419dd5bd6280599777",
+      "key": "sideband-eps0.05-stability-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-stability-sign-v1",
+      "reference_source_sha256": "127df1d0c0a3fbae65ce3faebd8085e589f033a98cde318fb566d7b172df40bc",
+      "maximum_action_fraction_omitted_for_plotting": 2.834559322874418e-07,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "sideband-eps0.05-nls-T16-plot.npz",
+      "sha256": "d9e39d323921bd4fd35f1fe54d89c7454f9922e7380751a3dd95da31fb2daf99",
+      "key": "sideband-eps0.05-nls-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-nls-control-v1",
+      "reference_source_sha256": "679daf27148910b49650f7bffa22705af87548aecd5c1f24ffa8a251ca80ef8b",
+      "maximum_action_fraction_omitted_for_plotting": 3.2220128471316264e-08,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "sideband-eps0.05-meanflow-T16-plot.npz",
+      "sha256": "b4a182531fc4a0e8f6026551f3895fc6d4c423ed988234550f6a24f548648df9",
+      "key": "sideband-eps0.05-meanflow-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-meanflow-only-v1",
+      "reference_source_sha256": "4ff63987c6a72f51082fdf609180d5e8b844e9c2f315b78d21318ea9cc395031",
+      "maximum_action_fraction_omitted_for_plotting": 9.21371738775757e-11,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "sideband-eps0.1-nls-T16-plot.npz",
+      "sha256": "d9e39d323921bd4fd35f1fe54d89c7454f9922e7380751a3dd95da31fb2daf99",
+      "key": "sideband-eps0.1-nls-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-nls-control-v1",
+      "reference_source_sha256": "679daf27148910b49650f7bffa22705af87548aecd5c1f24ffa8a251ca80ef8b",
+      "maximum_action_fraction_omitted_for_plotting": 3.2220128471316264e-08,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "random-eps0.05-literal-T16-plot.npz",
+      "sha256": "96fe98c99953eaeea589c8270b4330b396b78ca161ddb5c32919dcdba129b64b",
+      "key": "random-eps0.05-literal-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-literal-v1",
+      "reference_source_sha256": "b3dfba1f08ef7ea6803f62ffc8aa30b68f37a03c4584c7bcfb6ccb76267998dc",
+      "maximum_action_fraction_omitted_for_plotting": 2.2094364761528186e-07,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "random-eps0.05-stability-T16-plot.npz",
+      "sha256": "89416bb830645a1dc94ed27507012758745cba2334e6c29ac4f5c375a7af47b9",
+      "key": "random-eps0.05-stability-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-stability-sign-v1",
+      "reference_source_sha256": "abf4e1c2c50db27deaa6e308460982199bf94ee613c8ec5d5bb540570cb93795",
+      "maximum_action_fraction_omitted_for_plotting": 1.455208730189879e-06,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "random-eps0.05-nls-T16-plot.npz",
+      "sha256": "f145a3afe50111441a4bec17506c6cc290f5e6dc56f6f0d8787d2290313bdc90",
+      "key": "random-eps0.05-nls-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-nls-control-v1",
+      "reference_source_sha256": "ae352f6cb3b2096e5de11a3201adae16ac78aaf8fd4ae590a313d6136bd3e0fa",
+      "maximum_action_fraction_omitted_for_plotting": 1.0599232055672536e-07,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "random-eps0.05-meanflow-T16-plot.npz",
+      "sha256": "180fcf5ad0380eb4a49d3f7f889f10dad0825825f1ed9add003453270fe23f82",
+      "key": "random-eps0.05-meanflow-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-meanflow-only-v1",
+      "reference_source_sha256": "31d4ccd587aa3bb9e3a94b61edb24c4638e86ea682ccdd5a113c51072aaff91b",
+      "maximum_action_fraction_omitted_for_plotting": 3.7401228241463575e-10,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "random-eps0.1-literal-T16-plot.npz",
+      "sha256": "ae0e52103c07e69c14096669dfcbfec625c07b82f0608d83f0452a556159f5c3",
+      "key": "random-eps0.1-literal-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-literal-v1",
+      "reference_source_sha256": "6ef9941c065b70debbe318530b5bfb49c1032a513ffaf9d7d3832b1ce2580890",
+      "maximum_action_fraction_omitted_for_plotting": 0.0019530908089770685,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "random-eps0.1-stability-T16-plot.npz",
+      "sha256": "2ce14894635126ded73c6c2fe1d34170945687063d5cce1562e66280bd820881",
+      "key": "random-eps0.1-stability-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-stability-sign-v1",
+      "reference_source_sha256": "3eb7218fdf2d34d29bee64a5506dc268d20a5f196a86aabcf55e9380076d6c5b",
+      "maximum_action_fraction_omitted_for_plotting": 0.005821141672584841,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "random-eps0.1-nls-T16-plot.npz",
+      "sha256": "f145a3afe50111441a4bec17506c6cc290f5e6dc56f6f0d8787d2290313bdc90",
+      "key": "random-eps0.1-nls-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-nls-control-v1",
+      "reference_source_sha256": "ae352f6cb3b2096e5de11a3201adae16ac78aaf8fd4ae590a313d6136bd3e0fa",
+      "maximum_action_fraction_omitted_for_plotting": 1.0599232055672536e-07,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    },
+    {
+      "path": "random-eps0.1-meanflow-T16-plot.npz",
+      "sha256": "b428c7244469c873dbbc4a640d026b8b74c9a2b1854732e549c1b538ecf73476",
+      "key": "random-eps0.1-meanflow-T16",
+      "model_id": "dysthe-1979-temporal-potential-1d-meanflow-only-v1",
+      "reference_source_sha256": "216c7df73fd117509f870f4b6abca4f820da679173372f7c953beefaabdd63b2",
+      "maximum_action_fraction_omitted_for_plotting": 3.8354812442102265e-12,
+      "usage": "Visualization only; complex64, Fourier resampled 256 points; full-grid refinement results are in JSON"
+    }
+  ],
+  "source_summary_sha256": "4e935f8a3f597d086071d80074d712702b2b5c7278421ee735bf5bfef5231a45"
+}

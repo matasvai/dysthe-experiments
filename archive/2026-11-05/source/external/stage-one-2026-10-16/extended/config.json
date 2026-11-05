@@ -1,0 +1,43 @@
+{
+  "model_id": "water-wave-dysthe-spatial-v1",
+  "physical_system": "deep-water-gravity-waves",
+  "profile_coordinate": "tau",
+  "evolution_coordinate": "xi",
+  "qualification": {
+    "full_residual_max": 1e-08,
+    "projection_relative_l2_max": 1e-08,
+    "epsilon_peak_screen": 0.1,
+    "epsilon_spectral_sigma_screen": 0.1,
+    "epsilon_spectral_mean_screen": 0.1,
+    "boundary_action_max": 1e-08,
+    "spectral_edge_action_max": 1e-08
+  },
+  "cases": [
+    {
+      "id": "domain-L1280",
+      "profile": "/home/matasvai/Documents/Projects/Dysthe/results/nonlinear/profile_mu2_s0_e0.025.npz",
+      "n": 32768,
+      "length": 1280.0,
+      "epsilon": 0.025,
+      "mu": 2.0,
+      "speed": 0.0,
+      "dxi": 0.000625,
+      "xi_end": 20.0,
+      "samples": 21,
+      "perturbations": [
+        {
+          "id": "control",
+          "kind": "control",
+          "delta": 0.0
+        },
+        {
+          "id": "odd_amplitude_plus",
+          "kind": "odd_amplitude",
+          "delta": 0.001
+        }
+      ],
+      "profile_mode": "recompute",
+      "profile_max_iterations": 200
+    }
+  ]
+}

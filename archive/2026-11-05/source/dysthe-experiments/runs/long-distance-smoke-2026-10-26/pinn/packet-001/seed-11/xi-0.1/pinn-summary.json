@@ -1,0 +1,56 @@
+[
+  {
+    "method": "pinn_slabs",
+    "seed": 11,
+    "case_id": "packet-001",
+    "split": "validation",
+    "training_seconds": 0.1765578619997541,
+    "history": [
+      [
+        {
+          "epoch": 10,
+          "training_loss": 0.5831955671310425,
+          "full_dysthe_residual_validation": 0.32478541135787964,
+          "seconds": 0.12025492599968857,
+          "training_epsilon": 0.03891041502356529
+        },
+        {
+          "epoch": 20,
+          "training_loss": 0.09273870289325714,
+          "full_dysthe_residual_validation": 0.07426688820123672,
+          "seconds": 0.1765578619997541,
+          "training_epsilon": 0.03891041502356529
+        }
+      ]
+    ],
+    "full_residual_rms_relative": [
+      0.27249449491500854
+    ],
+    "metrics": [
+      {
+        "xi": 0.1,
+        "l2": 0.0026934147431119052,
+        "h1": 0.003314795516328507,
+        "peak": 0.0015806802721621464
+      }
+    ],
+    "sampled_interval_errors": {
+      "l2": 0.0026934147431119052,
+      "h1": 0.003314795516328507,
+      "peak": 0.0015806802721621464
+    },
+    "sampled_interval_tolerances": {
+      "l2": 0.01,
+      "h1": 0.05,
+      "peak": 0.05
+    },
+    "sampled_interval_pass": true,
+    "sampled_station_count": 3,
+    "resumed_from_checkpoint": false,
+    "checkpoints": {
+      "best-0.pt": "5421c3e137ed6887282042145df6ef70a70081aea6892c6fda3ada16344d264a"
+    },
+    "gpu_peak_allocated_bytes": null,
+    "invocation_elapsed_seconds": 0.20678878799844824
+  }
+]

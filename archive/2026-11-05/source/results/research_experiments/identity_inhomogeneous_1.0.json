@@ -1,0 +1,35 @@
+{
+  "regime": "inhomogeneous",
+  "width": 1.0,
+  "t": 1.0,
+  "ratio": 0.006917861799225777,
+  "location": [
+    -1.3092527389526367,
+    0.0
+  ],
+  "optimizer_success": true,
+  "domain_change": 2.6415417918612338e-05,
+  "radial_change": 0.0,
+  "spectral_integral_discrepancy": 1.3887941309441382e-05,
+  "levels": [
+    {
+      "peak": 0.006915181899975844,
+      "x_peak": -1.25,
+      "r_peak": 0.0,
+      "edge_to_peak": 0.0002018175432408239
+    },
+    {
+      "peak": 0.006915364572221079,
+      "x_peak": -1.25,
+      "r_peak": 0.0,
+      "edge_to_peak": 5.869982458412616e-05
+    },
+    {
+      "peak": 0.006915364572221079,
+      "x_peak": -1.25,
+      "r_peak": 0.0,
+      "edge_to_peak": 5.869982458412616e-05
+    }
+  ],
+  "passes_screen": true
+}

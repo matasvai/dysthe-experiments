@@ -1,0 +1,224 @@
+{
+  "identity": {
+    "config": {
+      "model_id": "dysthe-1979-temporal-potential-1d-stability-sign-v1",
+      "track": "isolated",
+      "n": 256,
+      "length": 40.0,
+      "epsilon": 0.05,
+      "step": 0.0025,
+      "monitor_interval": 0.01,
+      "max_snapshots_per_stage": 5,
+      "initial_kmax": 1.8849555921538759,
+      "seed": 19791030,
+      "horizons": [
+        0.02,
+        0.04
+      ],
+      "families": [
+        "gaussian"
+      ],
+      "gaussian": {
+        "amplitude": 0.85,
+        "width": 3.0,
+        "center": -2.0,
+        "phase": 0.3,
+        "chirp": 0.08
+      },
+      "two_packet": {
+        "amplitude_each": 0.6,
+        "width_each": 2.2,
+        "centres": [
+          -5.0,
+          5.0
+        ],
+        "phases": [
+          0.0,
+          1.0471975511965976
+        ]
+      },
+      "tolerances": {
+        "h0": 1e-05,
+        "h1": 0.0001,
+        "h2": 0.001,
+        "action": 1e-06,
+        "tail": 1e-08
+      },
+      "purpose": "Small execution and gate smoke only; not evidence of long-time qualification.",
+      "domain_tolerances": {
+        "h0": 0.01,
+        "h1": 0.01,
+        "h2": 0.01,
+        "global_peak_relative_difference": 0.01,
+        "initial_h1": 0.0001,
+        "boundary_action_fraction": 1e-06
+      }
+    },
+    "runner_sha256": "552b36510d05b950de8e89d3d1ddc2356ef9fc34bf59d35c8bdb5d1737d870d3",
+    "solver_sha256": "5689c66826e889d78da11f0931dc1e3bbb651169b29867e0cfaf1613b59d3d84",
+    "initial_helper_sha256": "4b45ea85adc3ab9244d6a10d49f7b8007dc886ea213226919206a40b288cbeaf",
+    "runtime": {
+      "python": "3.14.8",
+      "numpy": "2.4.2",
+      "scipy": "1.17.0",
+      "platform": "Linux-7.2.11-100.fc43.x86_64-x86_64-with-glibc2.42"
+    }
+  },
+  "status": "all_requested_horizons_qualified",
+  "requested_horizons": [
+    0.02,
+    0.04
+  ],
+  "cases": [
+    {
+      "family": "gaussian",
+      "target_horizons": [
+        0.02,
+        0.04
+      ],
+      "qualified_horizon": 0.04,
+      "stages": [
+        {
+          "T": 0.02,
+          "requested_horizon": 0.02,
+          "last_monitored_T": 0.02,
+          "first_failed_monitor_T": null,
+          "checkpoint_stream_times": {
+            "base-fine": 0.02,
+            "base-grid": 0.02,
+            "base-step": 0.02,
+            "double-fine": 0.02,
+            "double-grid": 0.02,
+            "double-step": 0.02
+          },
+          "qualified": true,
+          "status": "qualified",
+          "numerical_checks_passed": true,
+          "domain_checks_passed": true,
+          "initial_domain_comparison": {
+            "h0": 1.4154502964108518e-08,
+            "h1": 3.107795141764529e-08,
+            "h2": 6.62177847031539e-08,
+            "global_peak_relative_difference": 5.698499775663893e-09
+          },
+          "failure": null,
+          "max_checks": {
+            "base": {
+              "grid": {
+                "h0": 3.895549697391833e-15,
+                "h1": 1.9611484581119667e-14,
+                "h2": 1.0492393440018923e-13
+              },
+              "step": {
+                "h0": 4.5248910206599435e-15,
+                "h1": 6.059218804539426e-15,
+                "h2": 3.6838393859191916e-14
+              }
+            },
+            "double": {
+              "grid": {
+                "h0": 3.204939254932297e-15,
+                "h1": 1.6280995468080683e-14,
+                "h2": 9.038729737563853e-14
+              },
+              "step": {
+                "h0": 4.511885408742423e-15,
+                "h1": 6.2188811760407706e-15,
+                "h2": 4.398925583671226e-14
+              }
+            }
+          },
+          "monitor_count_total": 3,
+          "snapshot_count_this_stage": 3,
+          "artifact": {
+            "path": "gaussian-T0.02.npz",
+            "sha256": "c9bce45d965a42174203da44744d38e5ac7ee82bd255f4b51db288f88af445e9",
+            "contains": "Bounded snapshots and per-stream endpoint states; not every internal step."
+          },
+          "stream_total_seconds": {
+            "base-fine": 0.0013927079999120906,
+            "base-grid": 0.0012561319745145738,
+            "base-step": 0.0006755349895684049,
+            "double-fine": 0.0017249200027436018,
+            "double-grid": 0.0013747839984716848,
+            "double-step": 0.0008694779971847311
+          }
+        },
+        {
+          "T": 0.04,
+          "requested_horizon": 0.04,
+          "last_monitored_T": 0.04,
+          "first_failed_monitor_T": null,
+          "checkpoint_stream_times": {
+            "base-fine": 0.04,
+            "base-grid": 0.04,
+            "base-step": 0.04,
+            "double-fine": 0.04,
+            "double-grid": 0.04,
+            "double-step": 0.04
+          },
+          "qualified": true,
+          "status": "qualified",
+          "numerical_checks_passed": true,
+          "domain_checks_passed": true,
+          "initial_domain_comparison": {
+            "h0": 1.4154502964108518e-08,
+            "h1": 3.107795141764529e-08,
+            "h2": 6.62177847031539e-08,
+            "global_peak_relative_difference": 5.698499775663893e-09
+          },
+          "failure": null,
+          "max_checks": {
+            "base": {
+              "grid": {
+                "h0": 2.806557528096114e-14,
+                "h1": 1.4054658918771552e-13,
+                "h2": 7.027303781924929e-13
+              },
+              "step": {
+                "h0": 9.025504498278529e-15,
+                "h1": 1.1579035365631263e-14,
+                "h2": 3.978041039808198e-14
+              }
+            },
+            "double": {
+              "grid": {
+                "h0": 2.3207319915601188e-14,
+                "h1": 1.1670719460991822e-13,
+                "h2": 5.868453955753265e-13
+              },
+              "step": {
+                "h0": 9.028326284238419e-15,
+                "h1": 1.1623945062057761e-14,
+                "h2": 4.398925583671226e-14
+              }
+            }
+          },
+          "monitor_count_total": 5,
+          "snapshot_count_this_stage": 3,
+          "artifact": {
+            "path": "gaussian-T0.04.npz",
+            "sha256": "1ba71daa2846a1adb5bc8ca8c19c791b5b86cd63e9cbb8d00b7c880c9ccc33e4",
+            "contains": "Bounded snapshots and per-stream endpoint states; not every internal step."
+          },
+          "stream_total_seconds": {
+            "base-fine": 0.002811694983392954,
+            "base-grid": 0.002488599988282658,
+            "base-step": 0.001393598984577693,
+            "double-fine": 0.0034672809997573495,
+            "double-grid": 0.002744708996033296,
+            "double-step": 0.0017658860015217215
+          }
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Periodic track measures recurrence and bounded-box evolution, not whole-line decay.",
+    "Isolated track is a two-period approximation with declared gates; not a certified whole-line limit.",
+    "Sampled diagnostics can miss between-monitor-time events.",
+    "No new neural training, GPU use, or cluster execution is implied.",
+    "No automatic grid, domain or step adaptation; change configuration and rerun after a failed gate.",
+    "Checkpoint endpoints are saved, but automatic restart/resume is not implemented."
+  ]
+}

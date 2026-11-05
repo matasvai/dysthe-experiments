@@ -1,0 +1,349 @@
+{
+  "test": "independent_complex_eigenvalue_temporal_MI",
+  "passed": true,
+  "solver_sha256": "5689c66826e889d78da11f0931dc1e3bbb651169b29867e0cfaf1613b59d3d84",
+  "check_script_sha256": "6869fa4aa253f8ea7ea8d72302d0e9466f56eef221dde5454cf808c0d58bd95e",
+  "parameters": {
+    "a": 0.8,
+    "delta": 1e-06,
+    "length": 40.0,
+    "discrete_mode": 5,
+    "ell": 0.7853981633974483,
+    "T_end": 4.0,
+    "samples": 81
+  },
+  "tolerances": {
+    "growth_rate_absolute": 2e-06,
+    "phase_rate_absolute": 2e-06,
+    "complex_branch_relative": 2e-05,
+    "padded_rhs_relative": 2e-12,
+    "semidiscrete_mass_derivative": 2e-12
+  },
+  "runtime": {
+    "python": "3.14.8",
+    "numpy": "2.4.2",
+    "scipy": "1.17.0",
+    "elapsed_seconds": 1.070093927999551
+  },
+  "independent_formula": {
+    "P": "ell^2/8",
+    "h": "epsilon*a^2*ell/4",
+    "omega": "epsilon*(ell^3/16+c*a^2*ell)",
+    "gamma_squared": "P*(a^2*(1-epsilon*abs(ell))-P)-h^2",
+    "unstable_eigenvalue": "gamma-i*omega",
+    "matrix": "[[-i*(omega-h), -P], [P-a^2*(1-epsilon*abs(ell)), -i*(omega+h)]]",
+    "eigenvector": "(1,(-gamma+i*h)/P), Euclidean-normalized; p=delta*Re(v0*exp(i*ell*s)), q=delta*Re(v1*exp(i*ell*s))",
+    "measurement": "Remove exact uniform carrier phase, extract positive-frequency real p/q coefficients, project into growing/stable eigenbasis; fit log modulus and unwrapped phase over all saved times."
+  },
+  "cases": [
+    {
+      "epsilon": 0.05,
+      "c": 1.0,
+      "model_id": "dysthe-1979-temporal-potential-1d-literal-v1",
+      "exact_growth_rate": 0.20353199307207917,
+      "exact_phase_rate": -0.026646719582248613,
+      "exact_modulation_frequency": 0.026646719582248613,
+      "trajectories": [
+        {
+          "n": 128,
+          "step": 0.01,
+          "seconds": 0.04736923900054535,
+          "measured_growth_rate": 0.20353199306935477,
+          "measured_phase_rate": -0.026646719580882276,
+          "growth_rate_absolute_error": 2.7244040357032873e-12,
+          "phase_rate_absolute_error": 1.3663375986183723e-12,
+          "maximum_relative_complex_branch_error": 6.193798700804626e-11,
+          "maximum_phase_error_radians": 3.020572333922722e-11,
+          "initial_growing_coefficient": [
+            4.999999999931514e-07,
+            1.9593645704194296e-17
+          ],
+          "initial_stable_to_growing_coefficient_ratio": 4.15123262426316e-11,
+          "independent_matrix_eigenpair_defect": 2.7755575615628914e-17,
+          "passed": true
+        },
+        {
+          "n": 64,
+          "step": 0.01,
+          "seconds": 0.042095142998732626,
+          "measured_growth_rate": 0.20353199307010203,
+          "measured_phase_rate": -0.026646719580295134,
+          "growth_rate_absolute_error": 1.97714067340371e-12,
+          "phase_rate_absolute_error": 1.9534790451913864e-12,
+          "maximum_relative_complex_branch_error": 7.09271560113853e-11,
+          "maximum_phase_error_radians": 4.6787528712455284e-11,
+          "initial_growing_coefficient": [
+            4.999999999949457e-07,
+            6.74477874616473e-18
+          ],
+          "initial_stable_to_growing_coefficient_ratio": 1.685709901096744e-11,
+          "independent_matrix_eigenpair_defect": 2.7755575615628914e-17,
+          "passed": true
+        },
+        {
+          "n": 128,
+          "step": 0.005,
+          "seconds": 0.09443225200084271,
+          "measured_growth_rate": 0.20353199307255845,
+          "measured_phase_rate": -0.026646719582380823,
+          "growth_rate_absolute_error": 4.792832797306801e-13,
+          "phase_rate_absolute_error": 1.3221021499809638e-13,
+          "maximum_relative_complex_branch_error": 5.3431659128054866e-11,
+          "maximum_phase_error_radians": 3.327838525579718e-11,
+          "initial_growing_coefficient": [
+            4.999999999931514e-07,
+            1.9593645704194296e-17
+          ],
+          "initial_stable_to_growing_coefficient_ratio": 4.15123262426316e-11,
+          "independent_matrix_eigenpair_defect": 2.7755575615628914e-17,
+          "passed": true
+        }
+      ],
+      "grid_change_relative_complex_branch": 6.070962121402395e-11,
+      "step_change_relative_complex_branch": 5.40018202861658e-11
+    },
+    {
+      "epsilon": 0.05,
+      "c": 1.5,
+      "model_id": "dysthe-1979-temporal-potential-1d-stability-sign-v1",
+      "exact_growth_rate": 0.20353199307207917,
+      "exact_phase_rate": -0.03921309019660779,
+      "exact_modulation_frequency": 0.03921309019660779,
+      "trajectories": [
+        {
+          "n": 128,
+          "step": 0.01,
+          "seconds": 0.04985834800027078,
+          "measured_growth_rate": 0.20353199306927738,
+          "measured_phase_rate": -0.03921309019566473,
+          "growth_rate_absolute_error": 2.8017865805196607e-12,
+          "phase_rate_absolute_error": 9.430650704800314e-13,
+          "maximum_relative_complex_branch_error": 4.933964553085768e-11,
+          "maximum_phase_error_radians": 3.049892283168987e-11,
+          "initial_growing_coefficient": [
+            4.999999999931514e-07,
+            1.9593645704194296e-17
+          ],
+          "initial_stable_to_growing_coefficient_ratio": 4.15123262426316e-11,
+          "independent_matrix_eigenpair_defect": 2.7755575615628914e-17,
+          "passed": true
+        },
+        {
+          "n": 64,
+          "step": 0.01,
+          "seconds": 0.04243547200167086,
+          "measured_growth_rate": 0.20353199306964634,
+          "measured_phase_rate": -0.03921309019649259,
+          "growth_rate_absolute_error": 2.4328317138611055e-12,
+          "phase_rate_absolute_error": 1.151995165926678e-13,
+          "maximum_relative_complex_branch_error": 5.323005678036977e-11,
+          "maximum_phase_error_radians": 3.442653107033067e-11,
+          "initial_growing_coefficient": [
+            4.999999999949457e-07,
+            6.74477874616473e-18
+          ],
+          "initial_stable_to_growing_coefficient_ratio": 1.685709901096744e-11,
+          "independent_matrix_eigenpair_defect": 2.7755575615628914e-17,
+          "passed": true
+        },
+        {
+          "n": 128,
+          "step": 0.005,
+          "seconds": 0.09520352899562567,
+          "measured_growth_rate": 0.2035319930715131,
+          "measured_phase_rate": -0.039213090197414584,
+          "growth_rate_absolute_error": 5.660749646807517e-13,
+          "phase_rate_absolute_error": 8.067921331011974e-13,
+          "maximum_relative_complex_branch_error": 5.223971460563244e-11,
+          "maximum_phase_error_radians": 2.550998301487084e-11,
+          "initial_growing_coefficient": [
+            4.999999999931514e-07,
+            1.9593645704194296e-17
+          ],
+          "initial_stable_to_growing_coefficient_ratio": 4.15123262426316e-11,
+          "independent_matrix_eigenpair_defect": 2.7755575615628914e-17,
+          "passed": true
+        }
+      ],
+      "grid_change_relative_complex_branch": 5.581499819397532e-11,
+      "step_change_relative_complex_branch": 4.6293127297198535e-11
+    },
+    {
+      "epsilon": 0.1,
+      "c": 1.0,
+      "model_id": "dysthe-1979-temporal-potential-1d-literal-v1",
+      "exact_growth_rate": 0.19841608971694075,
+      "exact_phase_rate": -0.053293439164497226,
+      "exact_modulation_frequency": 0.053293439164497226,
+      "trajectories": [
+        {
+          "n": 128,
+          "step": 0.01,
+          "seconds": 0.04778637099661864,
+          "measured_growth_rate": 0.19841608971566874,
+          "measured_phase_rate": -0.053293439162803054,
+          "growth_rate_absolute_error": 1.2720102748886575e-12,
+          "phase_rate_absolute_error": 1.6941725800023733e-12,
+          "maximum_relative_complex_branch_error": 5.54558847749779e-11,
+          "maximum_phase_error_radians": 3.672691317735399e-11,
+          "initial_growing_coefficient": [
+            4.999999999800938e-07,
+            4.9847820564166e-18
+          ],
+          "initial_stable_to_growing_coefficient_ratio": 4.104190894104642e-11,
+          "independent_matrix_eigenpair_defect": 0.0,
+          "passed": true
+        },
+        {
+          "n": 64,
+          "step": 0.01,
+          "seconds": 0.04340848800347885,
+          "measured_growth_rate": 0.19841608971602473,
+          "measured_phase_rate": -0.05329343916312812,
+          "growth_rate_absolute_error": 9.16017262042601e-13,
+          "phase_rate_absolute_error": 1.3691062172860313e-12,
+          "maximum_relative_complex_branch_error": 7.207991267471087e-11,
+          "maximum_phase_error_radians": 5.372991634944313e-11,
+          "initial_growing_coefficient": [
+            4.999999999803367e-07,
+            -1.4492780812547798e-17
+          ],
+          "initial_stable_to_growing_coefficient_ratio": 4.8854332372381193e-11,
+          "independent_matrix_eigenpair_defect": 0.0,
+          "passed": true
+        },
+        {
+          "n": 128,
+          "step": 0.005,
+          "seconds": 0.09841940200567478,
+          "measured_growth_rate": 0.19841608971618252,
+          "measured_phase_rate": -0.05329343916244009,
+          "growth_rate_absolute_error": 7.582268146677507e-13,
+          "phase_rate_absolute_error": 2.0571391812218565e-12,
+          "maximum_relative_complex_branch_error": 4.987186451659478e-11,
+          "maximum_phase_error_radians": 3.471763848628129e-11,
+          "initial_growing_coefficient": [
+            4.999999999800938e-07,
+            4.9847820564166e-18
+          ],
+          "initial_stable_to_growing_coefficient_ratio": 4.104190894104642e-11,
+          "independent_matrix_eigenpair_defect": 0.0,
+          "passed": true
+        }
+      ],
+      "grid_change_relative_complex_branch": 7.431662502996288e-11,
+      "step_change_relative_complex_branch": 4.9173452853545527e-11
+    },
+    {
+      "epsilon": 0.1,
+      "c": 1.5,
+      "model_id": "dysthe-1979-temporal-potential-1d-stability-sign-v1",
+      "exact_growth_rate": 0.19841608971694075,
+      "exact_phase_rate": -0.07842618039321558,
+      "exact_modulation_frequency": 0.07842618039321558,
+      "trajectories": [
+        {
+          "n": 128,
+          "step": 0.01,
+          "seconds": 0.05711979099578457,
+          "measured_growth_rate": 0.19841608971558652,
+          "measured_phase_rate": -0.07842618038792994,
+          "growth_rate_absolute_error": 1.3542222898621503e-12,
+          "phase_rate_absolute_error": 5.2856469201501e-12,
+          "maximum_relative_complex_branch_error": 3.7736408019596223e-11,
+          "maximum_phase_error_radians": 2.670985654873448e-11,
+          "initial_growing_coefficient": [
+            4.999999999800938e-07,
+            4.9847820564166e-18
+          ],
+          "initial_stable_to_growing_coefficient_ratio": 4.104190894104642e-11,
+          "independent_matrix_eigenpair_defect": 3.469446951953614e-18,
+          "passed": true
+        },
+        {
+          "n": 64,
+          "step": 0.01,
+          "seconds": 0.04321082700334955,
+          "measured_growth_rate": 0.19841608971630917,
+          "measured_phase_rate": -0.07842618038708947,
+          "growth_rate_absolute_error": 6.315781231336359e-13,
+          "phase_rate_absolute_error": 6.126113505366959e-12,
+          "maximum_relative_complex_branch_error": 5.0885923240260487e-11,
+          "maximum_phase_error_radians": 4.1366965408684564e-11,
+          "initial_growing_coefficient": [
+            4.999999999803367e-07,
+            -1.4492780812547798e-17
+          ],
+          "initial_stable_to_growing_coefficient_ratio": 4.8854332372381193e-11,
+          "independent_matrix_eigenpair_defect": 3.469446951953614e-18,
+          "passed": true
+        },
+        {
+          "n": 128,
+          "step": 0.005,
+          "seconds": 0.0934767689977889,
+          "measured_growth_rate": 0.19841608971741634,
+          "measured_phase_rate": -0.07842618039272577,
+          "growth_rate_absolute_error": 4.755917881738014e-13,
+          "phase_rate_absolute_error": 4.898165206768113e-13,
+          "maximum_relative_complex_branch_error": 4.050029485511469e-11,
+          "maximum_phase_error_radians": 1.8341703156288247e-11,
+          "initial_growing_coefficient": [
+            4.999999999800938e-07,
+            4.9847820564166e-18
+          ],
+          "initial_stable_to_growing_coefficient_ratio": 4.104190894104642e-11,
+          "independent_matrix_eigenpair_defect": 3.469446951953614e-18,
+          "passed": true
+        }
+      ],
+      "grid_change_relative_complex_branch": 7.041375490167644e-11,
+      "step_change_relative_complex_branch": 4.3767032609180924e-11
+    }
+  ],
+  "dealias_audit": {
+    "n": 64,
+    "padded_n": 256,
+    "maximum_retained_mode": 15,
+    "mask": "|m|<N/4",
+    "results": [
+      {
+        "kind": "literal",
+        "c": 1.0,
+        "relative_padded_nonlinear_rhs_defect": 4.258233665234682e-16,
+        "normalized_semidiscrete_mass_derivative_defect": 5.11477561963849e-17
+      },
+      {
+        "kind": "stability",
+        "c": 1.5,
+        "relative_padded_nonlinear_rhs_defect": 4.64331583751299e-16,
+        "normalized_semidiscrete_mass_derivative_defect": 7.877135468412028e-18
+      }
+    ]
+  },
+  "wrong_variant_negative_controls": [
+    {
+      "epsilon": 0.05,
+      "literal_solver_against_c1p5_phase_rate_error": 0.012566370615725516,
+      "phase_test_rejects_wrong_variant": true,
+      "exact_growth_rates_identical": true
+    },
+    {
+      "epsilon": 0.1,
+      "literal_solver_against_c1p5_phase_rate_error": 0.02513274123041253,
+      "phase_test_rejects_wrong_variant": true,
+      "exact_growth_rates_identical": true
+    }
+  ],
+  "artifacts": {
+    "csv_sha256": "5beeda1549af0f4a57e8e04a45bd2e2179f78c88e3cb7511bbe64813f99835bc",
+    "figure_sha256": "124277e68ddf9c589fa43e1ea24130f537e4b89e53da1f5d42ba8f1a0dd09293"
+  },
+  "limitations": [
+    "Tiny perturbation about one uniform wavetrain; T<=4 in scaled temporal coordinates.",
+    "This independent MI test does not replace nonlinear-packet grid and time refinement.",
+    "At this perturbation size the measured errors are near floating-point cancellation limits; these numbers do not measure the asymptotic temporal convergence order.",
+    "No continuum stability/existence theorem or water-wave approximation error bound is established.",
+    "The real drift distinguishes c=1 from c=1.5; growth alone cannot."
+  ]
+}

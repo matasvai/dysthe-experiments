@@ -1,0 +1,72 @@
+{
+  "method": "pinn_slabs",
+  "seed": 11,
+  "case_id": "packet-001",
+  "split": "validation",
+  "training_seconds": 0.2274657779998961,
+  "history": [
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.5831955671310425,
+        "full_dysthe_residual_validation": 0.32478541135787964,
+        "seconds": 0.052501551999739604,
+        "training_epsilon": 0.03891041502356529
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.09273870289325714,
+        "full_dysthe_residual_validation": 0.07426688820123672,
+        "seconds": 0.10699122000005445,
+        "training_epsilon": 0.03891041502356529
+      }
+    ],
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.6799377799034119,
+        "full_dysthe_residual_validation": 0.24617980420589447,
+        "seconds": 0.05406965099973604,
+        "training_epsilon": 0.03891041502356529
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.06444599479436874,
+        "full_dysthe_residual_validation": 0.07075148820877075,
+        "seconds": 0.12047455799984164,
+        "training_epsilon": 0.03891041502356529
+      }
+    ]
+  ],
+  "full_residual_rms_relative": [
+    0.27249449491500854,
+    0.26596105098724365
+  ],
+  "metrics": [
+    {
+      "xi": 0.2,
+      "l2": 0.004274419698709185,
+      "h1": 0.005201646894991753,
+      "peak": 0.0018144190816379586
+    }
+  ],
+  "sampled_interval_errors": {
+    "l2": 0.004274419698709185,
+    "h1": 0.005201646894991753,
+    "peak": 0.0018144190816379586
+  },
+  "sampled_interval_tolerances": {
+    "l2": 0.01,
+    "h1": 0.05,
+    "peak": 0.05
+  },
+  "sampled_interval_pass": true,
+  "sampled_station_count": 5,
+  "resumed_from_checkpoint": false,
+  "checkpoints": {
+    "best-0.pt": "8febd185e5fd66c41668a308e7fa88f87ada94d99739410e837bab0ac550fc4e",
+    "best-1.pt": "62cf8ca77390a5e6f846f7ddd2d3fe4d2724679337db7a4afadc3402e6e34fdb"
+  },
+  "gpu_peak_allocated_bytes": null,
+  "invocation_elapsed_seconds": 0.25761673300075927
+}

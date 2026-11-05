@@ -1,0 +1,93 @@
+{
+  "method": "pinn_nls_warm",
+  "seed": 11,
+  "case_id": "packet-005",
+  "split": "test",
+  "training_seconds": 1.2467054279995864,
+  "history": [
+    [
+      {
+        "epoch": 50,
+        "training_loss": 0.23346112668514252,
+        "full_dysthe_residual_validation": 0.46997514367103577,
+        "seconds": 0.16157471099995746,
+        "training_epsilon": 0.0
+      },
+      {
+        "epoch": 100,
+        "training_loss": 0.2399691641330719,
+        "full_dysthe_residual_validation": 0.12687696516513824,
+        "seconds": 0.3174851590001708,
+        "training_epsilon": 0.0
+      },
+      {
+        "epoch": 150,
+        "training_loss": 0.1921820193529129,
+        "full_dysthe_residual_validation": 0.23793980479240417,
+        "seconds": 0.47380374200020015,
+        "training_epsilon": 0.0335334837436676
+      },
+      {
+        "epoch": 200,
+        "training_loss": 0.11658871918916702,
+        "full_dysthe_residual_validation": 0.05718313157558441,
+        "seconds": 0.6281877270002951,
+        "training_epsilon": 0.0335334837436676
+      },
+      {
+        "epoch": 250,
+        "training_loss": 0.12427251785993576,
+        "full_dysthe_residual_validation": 0.15350297093391418,
+        "seconds": 0.7835424419999981,
+        "training_epsilon": 0.0335334837436676
+      },
+      {
+        "epoch": 300,
+        "training_loss": 0.11710765212774277,
+        "full_dysthe_residual_validation": 0.08195754140615463,
+        "seconds": 0.9363436690000526,
+        "training_epsilon": 0.0335334837436676
+      },
+      {
+        "epoch": 350,
+        "training_loss": 0.14638695120811462,
+        "full_dysthe_residual_validation": 0.1421879231929779,
+        "seconds": 1.0923332849997678,
+        "training_epsilon": 0.0335334837436676
+      },
+      {
+        "epoch": 400,
+        "training_loss": 0.10530594736337662,
+        "full_dysthe_residual_validation": 0.14114074409008026,
+        "seconds": 1.2467054279995864,
+        "training_epsilon": 0.0335334837436676
+      }
+    ]
+  ],
+  "full_residual_rms_relative": [
+    0.2385757565498352
+  ],
+  "metrics": [
+    {
+      "xi": 0.5,
+      "l2": 0.005785114931573533,
+      "h1": 0.009468854960313954,
+      "peak": 0.000187081716277138
+    },
+    {
+      "xi": 1.0,
+      "l2": 0.010956148581807617,
+      "h1": 0.016919771787568174,
+      "peak": 0.002312806132755332
+    },
+    {
+      "xi": 2.0,
+      "l2": 0.02073613369473226,
+      "h1": 0.03280058569529298,
+      "peak": 0.006845918197417915
+    }
+  ],
+  "checkpoints": {
+    "best-0.pt": "104bcf11effed3e28f9d0dff9ba145d263b07f3434decc8c4f797bc91f54b0dd"
+  }
+}

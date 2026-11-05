@@ -1,0 +1,12 @@
+{
+  "source": "formal checkpoint section 3.4 / figure 8",
+  "symbol": "kx^3 - 3*kx*(ky^2+kz^2)",
+  "normalization_divisor": 695.2418713950436,
+  "initial_peak_reference": 0.001438353618712102,
+  "method": "analytic transverse Gaussian integration and longitudinal FFT quadrature",
+  "L": 4096,
+  "N": 16384,
+  "carrier_N": 32768,
+  "carrier": "Re(u exp(3ix))",
+  "frames_per_stage": 65
+}

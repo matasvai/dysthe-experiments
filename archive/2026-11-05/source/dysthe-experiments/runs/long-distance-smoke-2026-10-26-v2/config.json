@@ -1,0 +1,70 @@
+{
+  "model_id": "water-wave-dysthe-spatial-v1",
+  "physical_system": "deep-water-gravity-waves",
+  "seed": 20261028,
+  "length": 40.0,
+  "grid": 64,
+  "output_modes": 8,
+  "initial_modes": 4,
+  "groups_per_family": 3,
+  "train_per_family": 1,
+  "validation_per_family": 1,
+  "reference_grid": 128,
+  "reference_step": 0.005,
+  "sample_step": 0.05,
+  "horizon": 0.2,
+  "train_horizon": 0.05,
+  "operator_step": 0.05,
+  "operator_epochs": 400,
+  "operator_batch": 16,
+  "operator_width": 16,
+  "operator_modes": 8,
+  "operator_depth": 2,
+  "physics_weight": 0.1,
+  "pinn_epochs": 40,
+  "pinn_horizon": 0.2,
+  "pinn_slabs": 2,
+  "seeds": [
+    11
+  ],
+  "threads": 2,
+  "validation_every": 10,
+  "reference_l2_tolerance": 1e-05,
+  "reference_h1_tolerance": 0.0001,
+  "pinn_width": 16,
+  "pinn_depth": 2,
+  "pinn_collocation_slices": 4,
+  "campaign": "long-distance-smoke-v1",
+  "reference_horizons": [
+    0.1,
+    0.2
+  ],
+  "pinn_horizons": [
+    0.1,
+    0.2
+  ],
+  "sensitivity_horizons": [
+    0.1
+  ],
+  "domain_horizons": [
+    0.1
+  ],
+  "slab_length": 0.1,
+  "epochs_per_slab": 20,
+  "reference_h2_tolerance": 0.001,
+  "diagnostics_tail_fraction": 0.8,
+  "spectral_tail_tolerance": 1e-08,
+  "action_drift_tolerance": 1e-06,
+  "recurrence_tolerance": 0.05,
+  "focusing_prominence": 0.02,
+  "sensitivity_delta": 0.001,
+  "sensitivity_tolerance": 0.01,
+  "domain_tolerance": 0.01,
+  "domain_initial_tolerance": 0.001,
+  "pinn_l2_tolerance": 0.01,
+  "pinn_h1_tolerance": 0.05,
+  "pinn_h2_tolerance": 0.05,
+  "pinn_peak_tolerance": 0.05,
+  "study_status": "CPU workflow smoke only; not the scientific long-distance experiment",
+  "interpretation": "Finite-distance periodic numerical evidence; no global existence or physical-validity certificate."
+}

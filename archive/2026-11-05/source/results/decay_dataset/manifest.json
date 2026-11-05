@@ -1,0 +1,519 @@
+{
+  "equation": "S(t)f = inverse_FT(exp(+it*w)*FT(f))",
+  "w": "kx^3 + sign*3*kx*(ky^2+kz^2) + 3*beta*(ky^2+kz^2)",
+  "diagnostic": "t^(1+alpha/3) * || |Dx+beta|^alpha S(t)f ||_infinity / ||f||_1",
+  "interpretation": "Exploratory finite periodic-box ratios, not certified whole-space bounds.",
+  "convention": "Use +itw as in the proofs of Propositions 6.2/6.3; (6.1) has inconsistent printed signs.",
+  "times": [
+    0.25,
+    0.31498026247371824,
+    0.39685026299204984,
+    0.5,
+    0.6299605249474366,
+    0.7937005259840998,
+    1.0,
+    1.2599210498948732,
+    1.5874010519681994,
+    1.9999999999999998,
+    2.5198420997897464,
+    3.1748021039363983,
+    4.0
+  ],
+  "alphas": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "n": 96,
+  "length": 96,
+  "normalization": "discrete L1=1 on each grid",
+  "torch_version": "2.10.0+cu128",
+  "data": [
+    {
+      "family": "gaussian",
+      "regime": "homogeneous_minus",
+      "beta": 0.0,
+      "sign": -1,
+      "normalized_l1": 1.0,
+      "l2": 0.028834386792344794
+    },
+    {
+      "family": "anisotropic",
+      "regime": "homogeneous_minus",
+      "beta": 0.0,
+      "sign": -1,
+      "normalized_l1": 1.0,
+      "l2": 0.017657383671823068
+    },
+    {
+      "family": "smooth_bump",
+      "regime": "homogeneous_minus",
+      "beta": 0.0,
+      "sign": -1,
+      "normalized_l1": 1.0,
+      "l2": 0.022225324317196312
+    },
+    {
+      "family": "two_packets",
+      "regime": "homogeneous_minus",
+      "beta": 0.0,
+      "sign": -1,
+      "normalized_l1": 1.0,
+      "l2": 0.021527884942202157
+    },
+    {
+      "family": "chirped",
+      "regime": "homogeneous_minus",
+      "beta": 0.0,
+      "sign": -1,
+      "normalized_l1": 1.0,
+      "l2": 0.028834386792344794
+    },
+    {
+      "family": "algebraic_tapered",
+      "regime": "homogeneous_minus",
+      "beta": 0.0,
+      "sign": -1,
+      "normalized_l1": 1.0,
+      "l2": 0.027931530906969697
+    },
+    {
+      "family": "near_degeneracy",
+      "regime": "homogeneous_minus",
+      "beta": 0.0,
+      "sign": -1,
+      "normalized_l1": 1.0000000000000002,
+      "l2": 0.020388990432223166
+    },
+    {
+      "family": "away_degeneracy",
+      "regime": "homogeneous_minus",
+      "beta": 0.0,
+      "sign": -1,
+      "normalized_l1": 1.0000000000000002,
+      "l2": 0.020388990432223163
+    },
+    {
+      "family": "random_11",
+      "regime": "homogeneous_minus",
+      "beta": 0.0,
+      "sign": -1,
+      "normalized_l1": 0.9999999999999999,
+      "l2": 0.02911167285723289
+    },
+    {
+      "family": "random_22",
+      "regime": "homogeneous_minus",
+      "beta": 0.0,
+      "sign": -1,
+      "normalized_l1": 1.0,
+      "l2": 0.031539211706507204
+    },
+    {
+      "family": "random_33",
+      "regime": "homogeneous_minus",
+      "beta": 0.0,
+      "sign": -1,
+      "normalized_l1": 1.0,
+      "l2": 0.03548812683031773
+    },
+    {
+      "family": "gaussian",
+      "regime": "inhomogeneous_plus",
+      "beta": 1.0,
+      "sign": 1,
+      "normalized_l1": 1.0,
+      "l2": 0.028834386792344794
+    },
+    {
+      "family": "anisotropic",
+      "regime": "inhomogeneous_plus",
+      "beta": 1.0,
+      "sign": 1,
+      "normalized_l1": 1.0,
+      "l2": 0.017657383671823068
+    },
+    {
+      "family": "smooth_bump",
+      "regime": "inhomogeneous_plus",
+      "beta": 1.0,
+      "sign": 1,
+      "normalized_l1": 1.0,
+      "l2": 0.022225324317196312
+    },
+    {
+      "family": "two_packets",
+      "regime": "inhomogeneous_plus",
+      "beta": 1.0,
+      "sign": 1,
+      "normalized_l1": 1.0,
+      "l2": 0.021527884942202157
+    },
+    {
+      "family": "chirped",
+      "regime": "inhomogeneous_plus",
+      "beta": 1.0,
+      "sign": 1,
+      "normalized_l1": 1.0,
+      "l2": 0.028834386792344794
+    },
+    {
+      "family": "algebraic_tapered",
+      "regime": "inhomogeneous_plus",
+      "beta": 1.0,
+      "sign": 1,
+      "normalized_l1": 1.0,
+      "l2": 0.027931530906969697
+    },
+    {
+      "family": "near_degeneracy",
+      "regime": "inhomogeneous_plus",
+      "beta": 1.0,
+      "sign": 1,
+      "normalized_l1": 1.0000000000000002,
+      "l2": 0.020388990432223163
+    },
+    {
+      "family": "away_degeneracy",
+      "regime": "inhomogeneous_plus",
+      "beta": 1.0,
+      "sign": 1,
+      "normalized_l1": 1.0000000000000002,
+      "l2": 0.020388990432223166
+    },
+    {
+      "family": "random_11",
+      "regime": "inhomogeneous_plus",
+      "beta": 1.0,
+      "sign": 1,
+      "normalized_l1": 0.9999999999999999,
+      "l2": 0.02911167285723289
+    },
+    {
+      "family": "random_22",
+      "regime": "inhomogeneous_plus",
+      "beta": 1.0,
+      "sign": 1,
+      "normalized_l1": 1.0,
+      "l2": 0.031539211706507204
+    },
+    {
+      "family": "random_33",
+      "regime": "inhomogeneous_plus",
+      "beta": 1.0,
+      "sign": 1,
+      "normalized_l1": 1.0,
+      "l2": 0.03548812683031773
+    }
+  ],
+  "checks": [
+    {
+      "regime": "homogeneous_minus",
+      "family": "gaussian",
+      "check": "grid",
+      "relative_field_error": 1.403339313438908e-15,
+      "relative_peak_difference": 2.870476481688723e-16
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "gaussian",
+      "check": "domain",
+      "relative_field_error": 0.04317071783311149,
+      "relative_peak_difference": 0.011713214937489275
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "anisotropic",
+      "check": "grid",
+      "relative_field_error": 6.844633465322698e-15,
+      "relative_peak_difference": 0.004885979786611898
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "anisotropic",
+      "check": "domain",
+      "relative_field_error": 0.08791775457570174,
+      "relative_peak_difference": 0.025513884792854415
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "smooth_bump",
+      "check": "grid",
+      "relative_field_error": 0.012258966989870407,
+      "relative_peak_difference": 0.006530525348654615
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "smooth_bump",
+      "check": "domain",
+      "relative_field_error": 0.06474728069122203,
+      "relative_peak_difference": 0.012151695932587038
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "two_packets",
+      "check": "grid",
+      "relative_field_error": 3.425047254175854e-07,
+      "relative_peak_difference": 3.425047251384453e-07
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "two_packets",
+      "check": "domain",
+      "relative_field_error": 0.04348379826978075,
+      "relative_peak_difference": 0.010310291450047287
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "chirped",
+      "check": "grid",
+      "relative_field_error": 3.3613207609302137e-13,
+      "relative_peak_difference": 2.600007712317698e-15
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "chirped",
+      "check": "domain",
+      "relative_field_error": 0.03496143195601152,
+      "relative_peak_difference": 0.009785561514482406
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "algebraic_tapered",
+      "check": "grid",
+      "relative_field_error": 0.0015145299491458172,
+      "relative_peak_difference": 0.003829300271724688
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "algebraic_tapered",
+      "check": "domain",
+      "relative_field_error": 0.04802178015025155,
+      "relative_peak_difference": 0.018024173558674365
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "near_degeneracy",
+      "check": "grid",
+      "relative_field_error": 6.85593861262498e-15,
+      "relative_peak_difference": 6.524561948885747e-16
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "near_degeneracy",
+      "check": "domain",
+      "relative_field_error": 0.08797652376693663,
+      "relative_peak_difference": 0.026327167693358102
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "away_degeneracy",
+      "check": "grid",
+      "relative_field_error": 5.042694226429109e-15,
+      "relative_peak_difference": 0.0020403534499116123
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "away_degeneracy",
+      "check": "domain",
+      "relative_field_error": 6.423464912301523e-06,
+      "relative_peak_difference": 2.8730029082401166e-10
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "random_11",
+      "check": "grid",
+      "relative_field_error": 3.7333654864271486e-06,
+      "relative_peak_difference": 0.004598125338444249
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "random_11",
+      "check": "domain",
+      "relative_field_error": 0.032622897805195394,
+      "relative_peak_difference": 0.009104316581352492
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "random_22",
+      "check": "grid",
+      "relative_field_error": 6.187417707164672e-05,
+      "relative_peak_difference": 0.009094813534517117
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "random_22",
+      "check": "domain",
+      "relative_field_error": 0.026432704274332558,
+      "relative_peak_difference": 0.010869482711350348
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "random_33",
+      "check": "grid",
+      "relative_field_error": 3.8478558002404096e-05,
+      "relative_peak_difference": 0.0075917598375088175
+    },
+    {
+      "regime": "homogeneous_minus",
+      "family": "random_33",
+      "check": "domain",
+      "relative_field_error": 0.03743637627090978,
+      "relative_peak_difference": 0.014425270697750844
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "gaussian",
+      "check": "grid",
+      "relative_field_error": 7.233396191866386e-16,
+      "relative_peak_difference": 0.010434552647347469
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "gaussian",
+      "check": "domain",
+      "relative_field_error": 0.00024312412182373418,
+      "relative_peak_difference": 1.2585687879965368e-05
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "anisotropic",
+      "check": "grid",
+      "relative_field_error": 2.10144051391229e-15,
+      "relative_peak_difference": 2.493236397375483e-05
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "anisotropic",
+      "check": "domain",
+      "relative_field_error": 4.308031916581402e-06,
+      "relative_peak_difference": 1.755040293193634e-11
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "smooth_bump",
+      "check": "grid",
+      "relative_field_error": 0.005070296410769858,
+      "relative_peak_difference": 0.0004746123463470132
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "smooth_bump",
+      "check": "domain",
+      "relative_field_error": 0.03166355003332977,
+      "relative_peak_difference": 4.0437493546899835e-07
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "two_packets",
+      "check": "grid",
+      "relative_field_error": 3.4250472538909146e-07,
+      "relative_peak_difference": 0.011431973244987638
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "two_packets",
+      "check": "domain",
+      "relative_field_error": 0.0002920143689459465,
+      "relative_peak_difference": 1.1535689757115952e-05
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "chirped",
+      "check": "grid",
+      "relative_field_error": 1.629327066376188e-13,
+      "relative_peak_difference": 0.009718255697834285
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "chirped",
+      "check": "domain",
+      "relative_field_error": 0.0009354041145075997,
+      "relative_peak_difference": 0.00025512497944296095
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "algebraic_tapered",
+      "check": "grid",
+      "relative_field_error": 0.0008191196754173046,
+      "relative_peak_difference": 2.7855484183715043e-05
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "algebraic_tapered",
+      "check": "domain",
+      "relative_field_error": 0.06434570453095258,
+      "relative_peak_difference": 0.0029755359502476107
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "near_degeneracy",
+      "check": "grid",
+      "relative_field_error": 1.600662157959907e-14,
+      "relative_peak_difference": 0.0021148503386864232
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "near_degeneracy",
+      "check": "domain",
+      "relative_field_error": 0.08108468655860157,
+      "relative_peak_difference": 0.018726316691291125
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "away_degeneracy",
+      "check": "grid",
+      "relative_field_error": 2.112959826563813e-15,
+      "relative_peak_difference": 0.0008399257996047564
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "away_degeneracy",
+      "check": "domain",
+      "relative_field_error": 6.0933358322325725e-06,
+      "relative_peak_difference": 3.258636856417062e-11
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "random_11",
+      "check": "grid",
+      "relative_field_error": 3.7333654864222066e-06,
+      "relative_peak_difference": 0.00545313272452952
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "random_11",
+      "check": "domain",
+      "relative_field_error": 0.0019200923264766604,
+      "relative_peak_difference": 0.00018783387506468108
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "random_22",
+      "check": "grid",
+      "relative_field_error": 6.18741770716394e-05,
+      "relative_peak_difference": 0.0035800207486989494
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "random_22",
+      "check": "domain",
+      "relative_field_error": 0.021486436811804236,
+      "relative_peak_difference": 9.891755385246118e-06
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "random_33",
+      "check": "grid",
+      "relative_field_error": 3.84785580024127e-05,
+      "relative_peak_difference": 0.0016331773644137075
+    },
+    {
+      "regime": "inhomogeneous_plus",
+      "family": "random_33",
+      "check": "domain",
+      "relative_field_error": 0.0038202580344405346,
+      "relative_peak_difference": 2.55057423907159e-07
+    }
+  ]
+}

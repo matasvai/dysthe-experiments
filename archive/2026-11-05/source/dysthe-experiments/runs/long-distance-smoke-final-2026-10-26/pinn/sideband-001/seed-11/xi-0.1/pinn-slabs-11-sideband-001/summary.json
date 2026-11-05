@@ -1,0 +1,54 @@
+{
+  "method": "pinn_slabs",
+  "seed": 11,
+  "case_id": "sideband-001",
+  "split": "validation",
+  "training_seconds": 0.05791891800072335,
+  "history": [
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.04317349195480347,
+        "full_dysthe_residual_validation": 0.049283821135759354,
+        "seconds": 0.025761225000678678,
+        "training_epsilon": 0.04458474740386009
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.015177324414253235,
+        "full_dysthe_residual_validation": 0.010152230970561504,
+        "seconds": 0.05791891800072335,
+        "training_epsilon": 0.04458474740386009
+      }
+    ]
+  ],
+  "full_residual_rms_relative": [
+    0.10074435919523239
+  ],
+  "metrics": [
+    {
+      "xi": 0.1,
+      "l2": 0.0017718584068678938,
+      "h1": 0.0019453696652593044,
+      "peak": 0.00120153998194432
+    }
+  ],
+  "sampled_interval_errors": {
+    "l2": 0.0017718584068678938,
+    "h1": 0.0019453696652593044,
+    "peak": 0.00120153998194432
+  },
+  "sampled_interval_tolerances": {
+    "l2": 0.01,
+    "h1": 0.05,
+    "peak": 0.05
+  },
+  "sampled_interval_pass": true,
+  "sampled_station_count": 3,
+  "resumed_from_checkpoint": false,
+  "checkpoints": {
+    "best-0.pt": "05e62f449e919ea31689ba9d6791267c9a9222dc36f637279ba0091fd9c29593"
+  },
+  "gpu_peak_allocated_bytes": null,
+  "invocation_elapsed_seconds": 0.06697711599917966
+}

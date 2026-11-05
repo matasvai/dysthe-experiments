@@ -1,0 +1,94 @@
+{
+  "solver_byte_identical_to_original": true,
+  "solver_sha256": "5689c66826e889d78da11f0931dc1e3bbb651169b29867e0cfaf1613b59d3d84",
+  "driver_sha256": "4b45ea85adc3ab9244d6a10d49f7b8007dc886ea213226919206a40b288cbeaf",
+  "saved_times": 117,
+  "families": [
+    {
+      "family": "gaussian",
+      "all_controls_qualified": true,
+      "source_array_sha256": "1d57d10981ad1f1685b69fdf1b49fc516e4c999bbf09ddc7396622d822bbae37",
+      "linear_spectral_power_change": 5.313713760455404e-16,
+      "initial_parity": {
+        "dysthe": 4.742874840267547e-16,
+        "nls": 4.742874840267547e-16,
+        "linear": 5.978733960281817e-16
+      },
+      "near_zero_first": {
+        "T": 0.005,
+        "nonlinear_minus_linear_h0": 0.00264983355757696,
+        "difference_quotient_h0": 0.5299667115153921,
+        "quotient_minus_initial_nonlinearity_relative_h0": 0.0006946276307168418,
+        "pointwise_max_complex_difference": 0.001506762924736627,
+        "pointwise_max_magnitude_difference": 2.242167192734179e-05
+      },
+      "near_zero_last": {
+        "T": 0.1,
+        "nonlinear_minus_linear_h0": 0.05300634244210007,
+        "difference_quotient_h0": 0.5300634244210007,
+        "quotient_minus_initial_nonlinearity_relative_h0": 0.013896171560115328,
+        "pointwise_max_complex_difference": 0.030147579218732703,
+        "pointwise_max_magnitude_difference": 0.0004582635851175798
+      }
+    },
+    {
+      "family": "random",
+      "all_controls_qualified": true,
+      "source_array_sha256": "b7737701840e7973f949f50e041781ca8051ae842256550c2fcca570dbd44e6d",
+      "linear_spectral_power_change": 4.227847133186617e-16,
+      "initial_parity": {
+        "dysthe": 4.965068306494546e-16,
+        "nls": 4.965068306494546e-16,
+        "linear": 6.77599954797753e-16
+      },
+      "near_zero_first": {
+        "T": 0.005,
+        "nonlinear_minus_linear_h0": 0.003841547025604728,
+        "difference_quotient_h0": 0.7683094051209456,
+        "quotient_minus_initial_nonlinearity_relative_h0": 0.0006811433698453916,
+        "pointwise_max_complex_difference": 0.0015214914534101033,
+        "pointwise_max_magnitude_difference": 1.5168323792003058e-05
+      },
+      "near_zero_last": {
+        "T": 0.1,
+        "nonlinear_minus_linear_h0": 0.07685031142484045,
+        "difference_quotient_h0": 0.7685031142484045,
+        "quotient_minus_initial_nonlinearity_relative_h0": 0.013628189641788182,
+        "pointwise_max_complex_difference": 0.03045157041682654,
+        "pointwise_max_magnitude_difference": 0.00030115728883217674
+      }
+    },
+    {
+      "family": "two_packet",
+      "all_controls_qualified": true,
+      "source_array_sha256": "35d1f445557a2850a7272999de1228b0c2e52badf4b5b7d5debcd19187691d40",
+      "linear_spectral_power_change": 4.0109510203505987e-16,
+      "initial_parity": {
+        "dysthe": 2.4870353767601546e-16,
+        "nls": 2.4870353767601546e-16,
+        "linear": 3.1401849173675503e-16
+      },
+      "near_zero_first": {
+        "T": 0.005,
+        "nonlinear_minus_linear_h0": 0.0011240047155328299,
+        "difference_quotient_h0": 0.22480094310656598,
+        "quotient_minus_initial_nonlinearity_relative_h0": 0.0002509511877155834,
+        "pointwise_max_complex_difference": 0.0005266852792745242,
+        "pointwise_max_magnitude_difference": 1.0756186589189198e-05
+      },
+      "near_zero_last": {
+        "T": 0.1,
+        "nonlinear_minus_linear_h0": 0.022480091041221974,
+        "difference_quotient_h0": 0.22480091041221975,
+        "quotient_minus_initial_nonlinearity_relative_h0": 0.0050190983322570245,
+        "pointwise_max_complex_difference": 0.010533795348114765,
+        "pointwise_max_magnitude_difference": 0.00022146475416945366
+      }
+    }
+  ],
+  "gaussian_tail_audit_passed": true,
+  "numerical_models": 6,
+  "exact_linear_controls": 3,
+  "all_passed": true,
+  "scope": "1Dperiodic temporal potentialDysthe c3/2,epsilon.05,T<=4. NoPINN training,noGPU,noNOAA,no3spatialcoordinates,noMIclaimfromisolatedpackets."
+}

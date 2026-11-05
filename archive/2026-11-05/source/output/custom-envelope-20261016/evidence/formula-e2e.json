@@ -1,0 +1,318 @@
+{
+  "url": "http://127.0.0.1:8765/",
+  "method": "Firefox WebDriver BiDi; fresh profile; actual input events",
+  "checks": [
+    {
+      "name": "Existing three saved references load",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Custom requires preview and has no precomputed reference",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Malformed formula has readable error and cannot run",
+      "passed": true,
+      "details": {
+        "message": "Unsupported command \\unknown at character 1.",
+        "runDisabled": true,
+        "runRequests": 0
+      }
+    },
+    {
+      "name": "Duplicate scalar declaration rejected",
+      "passed": true,
+      "details": "Parameter A is declared more than once."
+    },
+    {
+      "name": "Complex Gaussian preview, scalar edits, warnings and gating",
+      "passed": true,
+      "details": {
+        "canRun": true,
+        "fingerprint": "b8146d8a8d2a9f3f812fa750c5c22f856d0a0fa0b69d765dd16acd645d0702b2",
+        "warnings": [
+          {
+            "code": "exploratory",
+            "message": "Custom input is exploratory: these finite sampling and regime screens do not establish numerical accuracy or physical applicability. Separate grid, step and domain comparisons are still required.",
+            "blocks_run": false
+          }
+        ],
+        "peak": 0.8,
+        "canvases": [
+          {
+            "id": "custom-amplitude-chart",
+            "width": 485,
+            "height": 216
+          },
+          {
+            "id": "custom-phase-chart",
+            "width": 485,
+            "height": 216
+          }
+        ],
+        "caption": "Packet view \u03c4 \u2208 [-12, 12] of the periodic length 160. Phase is masked below 1% of peak amplitude. Plots show sampled formula before the numerical projector; boundary and resolution checks use the full grid."
+      }
+    },
+    {
+      "name": "Desktop layout fits",
+      "passed": true,
+      "details": {
+        "viewport": 1440,
+        "scrollWidth": 1428,
+        "overflow": []
+      }
+    },
+    {
+      "name": "Parameter edit invalidates preview and hides stale plots",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Delayed stale preview cannot enable changed input",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Mobile custom layout fits",
+      "passed": true,
+      "details": {
+        "viewport": 390,
+        "scrollWidth": 378,
+        "overflow": []
+      }
+    },
+    {
+      "name": "Expanded syntax help fits mobile",
+      "passed": true,
+      "details": {
+        "viewport": 390,
+        "scrollWidth": 378,
+        "overflow": []
+      }
+    },
+    {
+      "name": "Sech example previews without propagation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "One four-step custom CPU run; correct formula and exploratory metadata",
+      "passed": true,
+      "details": {
+        "parameters": {
+          "formula": "A \\exp(-\\frac{\\tau^2}{2 w^2}) \\exp(i(k\\tau+c\\tau^2))",
+          "symbols": {
+            "A": 0.8,
+            "c": 0.01,
+            "k": 0.25,
+            "w": 2.2
+          }
+        },
+        "settings": {
+          "n": 1024,
+          "length": 160,
+          "epsilon": 0.025,
+          "dxi": 0.00125,
+          "xi_end": 0.005,
+          "samples": 21
+        },
+        "xi": [
+          0,
+          0.00125,
+          0.0025,
+          0.00375,
+          0.005
+        ],
+        "source": "CUSTOM \u00b7 EXPLORATORY PLAYBACK",
+        "label": "formula = A \\exp(-\\frac{\\tau^2}{2 w^2}) \\exp(i(k\\tau+c\\tau^2)) \u00b7 symbols = A: 0.8; c: 0.01; k: 0.25; w: 2.2",
+        "provenance": {
+          "parser_version": "dysthe-envelope-latex-v1",
+          "formula": "A \\exp(-\\frac{\\tau^2}{2 w^2}) \\exp(i(k\\tau+c\\tau^2))",
+          "symbols": {
+            "A": 0.8,
+            "c": 0.01,
+            "k": 0.25,
+            "w": 2.2
+          },
+          "normalized_expression": "((A * exp((-((tau ^ 2) / (2.0 * (w ^ 2)))))) * exp((i * ((k * tau) + (c * (tau ^ 2))))))",
+          "expression_nodes": 23,
+          "limits": {
+            "characters": 1024,
+            "tokens": 512,
+            "expression_nodes": 256,
+            "nesting": 32,
+            "symbols": 8,
+            "samples": 16384,
+            "absolute_integer_power": 12,
+            "input_magnitude": 1000000,
+            "intermediate_magnitude": 1000000000000
+          },
+          "settings": {
+            "n": 1024,
+            "length": 160,
+            "epsilon": 0.025,
+            "dxi": 0.00125,
+            "xi_end": 0.005,
+            "samples": 21
+          },
+          "model_id": "water-wave-dysthe-spatial-v1",
+          "physical_system": "deep-water-gravity-waves",
+          "parser_source_sha256": "c3dc31e9e8fd60d7dccc87f94e83828d8b8a253ddc4351cdafa360d2775719a0",
+          "core_source_sha256": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8",
+          "simulator_source_sha256": "efd7eb18e751155c22339f74f38315484068bba562363db1f54a80d54aa4badd",
+          "preview_fingerprint": "3ff629b8b97e9c62ac7a919b92d22d4b9d098ca34a82257892903d563ee545bd",
+          "raw_initial_sha256": "05b8e74bcf3b0a2f0cfef46024129e8bcda8e4d49e291214cca4610d240ed798",
+          "projected_initial_sha256": "a86fef211f18c2a848d9a4c9a5a8feda0f7fada0aed25b55475c4b4a4fedc939",
+          "initial_array_dtype": "complex128",
+          "initial_array_shape": [
+            1024
+          ],
+          "projection_relative_l2": 2.5646613420331385e-16,
+          "initial_checks": {
+            "peak_amplitude": 0.8,
+            "projected_peak_amplitude": 0.8,
+            "projection_relative_l2": 2.5646613420331385e-16,
+            "cross_grid_relative_l2": 2.76212596651674e-16,
+            "fine_discarded_band_relative_l2": 1.64639070611399e-16,
+            "boundary_action_fraction": 9.429614358187142e-33,
+            "boundary_peak_relative": 1.6489845386807805e-233,
+            "endpoint_mismatch_relative": 1.3323771929657888e-287,
+            "retained_spectral_edge_action_fraction": 1.1022173624521038e-32,
+            "epsilon_peak": 0.020000000000000004,
+            "epsilon_spectral_sigma": 0.008072862918598293,
+            "epsilon_spectral_mean": 0.0062499999999999995,
+            "circular_concentration": 0.9981357677614897,
+            "failed_run_checks": []
+          },
+          "warnings": [
+            {
+              "code": "exploratory",
+              "message": "Custom input is exploratory: these finite sampling and regime screens do not establish numerical accuracy or physical applicability. Separate grid, step and domain comparisons are still required.",
+              "blocks_run": false
+            }
+          ],
+          "prescription": "Restricted LaTeX formula sampled in retarded time, then projected to strict |mode|<N/4.",
+          "actual_dxi": 0.00125,
+          "steps": 4
+        },
+        "qualification": {
+          "status": "unqualified: numerical refinements pending",
+          "checks_available": false,
+          "design_screens": {
+            "epsilon_peak": {
+              "maximum": 0.020002044989545713,
+              "limit": 0.1,
+              "passed": true
+            },
+            "epsilon_spectral_sigma": {
+              "maximum": 0.00807476098346882,
+              "limit": 0.1,
+              "passed": true
+            },
+            "boundary_action_fraction": {
+              "maximum": 2.0209215309391153e-32,
+              "limit": 1e-08,
+              "passed": true
+            },
+            "retained_spectral_edge_action_fraction": {
+              "maximum": 1.964863916843824e-32,
+              "limit": 1e-08,
+              "passed": true
+            },
+            "absolute_epsilon_spectral_mean": {
+              "maximum": 0.0062500570751020425,
+              "limit": 0.1,
+              "passed": true
+            },
+            "circular_concentration": {
+              "minimum": 0.9981357677614898,
+              "limit": 0.5,
+              "passed": true
+            }
+          },
+          "all_design_screens_pass": true,
+          "notes": [
+            "Design screens do not establish physical applicability.",
+            "Qualification belongs to these exact parameters, domain, grid, step and horizon.",
+            "Finite periodic propagation is not a soliton discovery or stability result.",
+            "Custom input is exploratory: these finite sampling and regime screens do not establish numerical accuracy or physical applicability. Separate grid, step and domain comparisons are still required."
+          ]
+        },
+        "runRequests": 1
+      }
+    },
+    {
+      "name": "Scaled propagation and retarded-time labels",
+      "passed": true,
+      "details": {
+        "playback": "Propagation distance \u03be 1 / 5\u03be = 0 \u00b7 scaled",
+        "xi": "\u03be = 0 \u00b7 scaled",
+        "help": "Each snapshot is the packet trace in retarded time \u03c4 at one downstream station \u03be. Playback moves downstream, not forward in ordinary time. Axes are scaled; A is the complex envelope stored as u, not the carrier surface elevation.",
+        "canvas": "Envelope modulus |A|, initial versus scaled propagation distance \u03be=0. Horizontal axis: retarded time \u03c4 in the moving frame, range -12 to 12. No seconds or meters conversion is configured.",
+        "heatmap": "Envelope amplitude |A(\u03be,\u03c4)|. Horizontal axis: retarded time \u03c4 in the moving frame. Vertical axis: scaled propagation distance \u03be, increasing downward from 0 to 0.005. Linear amplitude scale. Dashed line marks the selected downstream station."
+      }
+    },
+    {
+      "name": "Browser export retains real/imaginary channels and JSON provenance",
+      "passed": true,
+      "details": {
+        "file": "/home/matasvai/Documents/Codex/2026-10-16/task/stage3/qa/installed/downloads/dysthe-complex-fields.npz",
+        "keys": [
+          "tau",
+          "xi",
+          "u",
+          "initial",
+          "raw_initial",
+          "provenance_json"
+        ],
+        "shape": [
+          5,
+          1024
+        ],
+        "dtype": "complex128",
+        "json_fields": [
+          "provenance_json"
+        ]
+      }
+    },
+    {
+      "name": "Mobile custom result fits",
+      "passed": true,
+      "details": {
+        "viewport": 390,
+        "scrollWidth": 378,
+        "overflow": []
+      }
+    },
+    {
+      "name": "No browser script errors",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "screenshots": [
+    "/home/matasvai/Documents/Codex/2026-10-16/task/stage3/qa/installed/desktop-custom-preview.png",
+    "/home/matasvai/Documents/Codex/2026-10-16/task/stage3/qa/installed/mobile-custom-preview.png",
+    "/home/matasvai/Documents/Codex/2026-10-16/task/stage3/qa/installed/desktop-custom-complex-result.png",
+    "/home/matasvai/Documents/Codex/2026-10-16/task/stage3/qa/installed/mobile-custom-result.png"
+  ],
+  "tiny_run": true,
+  "browser": {
+    "acceptInsecureCerts": false,
+    "browserName": "firefox",
+    "browserVersion": "157.0.1",
+    "platformName": "linux",
+    "setWindowRect": true,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0",
+    "moz:buildID": "20261007101859",
+    "moz:headless": true,
+    "moz:platformVersion": "7.2.9-100.fc43.x86_64",
+    "moz:processID": 101352,
+    "moz:profile": "/tmp/dysthe-formula-firefox-vwm0elvu",
+    "moz:shutdownTimeout": 60000
+  },
+  "browser_errors": [],
+  "passed": true
+}

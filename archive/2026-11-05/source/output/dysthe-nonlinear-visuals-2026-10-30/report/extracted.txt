@@ -1,0 +1,948 @@
+Nonlinear wave envelopes:
+a visual companion to the September checkpoint
+Water-wave Dysthe study
+30 October 2026
+
+The opening figures of the supplied September 10 report motivate this visual companion: blue
+carrier traces, orange envelope bounds, shaded surfaces and matched snapshots. The figures below
+use newly computed nonlinear water-wave envelope trajectories. They retain the earlier visual
+language while labelling their actual coordinates and variables.
+T = 4, ε = 0.05 · temporal potential envelope · illustrative carrier wavenumber 3
+
+Nonlinear Gaussian packet: the carrier sits inside the envelope
+Dimensionless amplitude
+
+1.0
+
+Illustrative carrier
+
+Envelope ±|u|
+
+0.5
+
+0.0
+
+−0.5
+
+−1.0
+Normalized shape
+
+1.0
+
+Magnitude / current peak
+Squared magnitude / current peak²
+
+0.8
+0.6
+0.4
+0.2
+0.0
+−10
+
+−5
+
+0
+
+5
+
+10
+
+Moving coordinate s
+
+Figure 1: The computed Gaussian potential envelope at T = 4. The upper trace is the illustrative field
+Re{u(s, T )e3is }, bounded by ±|u|. The lower panel distinguishes magnitude from squared magnitude, each
+normalized by its current peak. The added carrier wavenumber 3 is chosen for readability; this is not a
+calibrated surface-elevation reconstruction.
+
+What is being solved. The separately labelled one-dimensional temporal potential-envelope
+model uses the stability-consistent coefficient c = 3/2, steepness parameter ϵ = 0.05 and period 40.
+All three inputs pass independent space and time refinement checks through T = 4. The equation
+and numerical checks are stated below.
+
+1
+
+The blue surface view, now showing time evolution
+A nonlinear packet evolving in time
+
+0.8
+
+|u|
+
+0.6
+0.4
+0.2
+0.0
+4
+
+−20
+
+3
+
+−10
+
+T
+
+1
+
+10
+20
+
+e
+
+ion s
+
+Ti
+m
+
+Posit
+
+2
+
+0
+0
+
+T=0
+Amplitude
+
+1
+
+Dysthe envelope ±|u|
+
+Exact linear envelope
+
+0
+
+−1
+−15
+
+−10
+
+−5
+
+0
+
+5
+
+10
+
+T=4
+Amplitude
+
+1
+
+Dysthe envelope ±|u|
+
+Exact linear envelope
+
+0
+
+−1
+−15
+
+−10
+
+−5
+
+0
+Moving coordinate s
+
+5
+
+10
+
+The surface axes are position, time and envelope magnitude. The oscillatory traces are illustrative, not calibrated surface elevation.
+
+Figure 2: A direct analogue of the checkpoint’s blue surface and companion traces. Here the horizontal axes
+are position s and evolution time T , and the vertical axis is envelope magnitude. Orange curves select times
+0, 2 and 4. The lower panels compare the nonlinear envelope with the exact linear solution of the same linear
+dispersive operator. The carrier traces are illustrative.
+
+The geometry shows how a packet changes over time. It does not introduce a transverse spatial
+coordinate. Axis scales are fixed, and the lower snapshots use the same amplitude limits. The
+supplied animation uses the same computed Gaussian trajectory and an illustrative carrier of fixed
+spatial phase convention.
+
+2
+
+Three initial profiles, matched visual comparisons
+Smooth random profile
+
+−20
+
+s
+
+2
+
+0
+20
+
+1.0
+
+|u|
+
+|u|
+
+1.0
+
+Two phase-offset packets
+
+1.0
+
+|u|
+
+Gaussian packet
+
+0.5
+
+0.5
+
+0.5
+
+0.0
+4
+
+0.0
+4
+
+0.0
+4
+
+−20
+
+T
+
+s
+
+2
+
+0
+
+0
+
+20
+
+−20
+
+T
+
+s
+
+0
+
+2
+
+0
+20
+
+T
+
+0
+
+Same model, period and amplitude scale. Three-dimensional views of one spatial coordinate evolving in time.
+
+Figure 3: Gaussian, smooth random and phase-offset two-packet data under the same nonlinear equation.
+The camera and amplitude limits are shared. These are space–time surfaces, not the three-spatial-coordinate
+canonical fields in the historical report.
+Matched snapshots · coloured bounds: Dysthe · grey dashed: exact linear
+T = 0; peak 0.850
+T = 2; peak 0.871
+T = 4; peak 0.939
+
+Gaussian packet
+Amplitude
+
+1.0
+0.5
+0.0
+−0.5
+
+Two phase-offset packets
+Amplitude
+
+Smooth random profile
+Amplitude
+
+−1.0
+
+T = 0; peak 0.850
+
+T = 2; peak 0.864
+
+T = 4; peak 0.897
+
+T = 0; peak 0.600
+
+T = 2; peak 0.609
+
+T = 4; peak 0.637
+
+1.0
+0.5
+0.0
+−0.5
+−1.0
+
+1.0
+0.5
+0.0
+−0.5
+−1.0
+−20
+
+−10
+0
+10
+Moving coordinate s
+
+20 −20
+
+−10
+0
+10
+Moving coordinate s
+
+20 −20
+
+−10
+0
+10
+Moving coordinate s
+
+20
+
+Figure 4: Snapshots at T = 0, 2, 4 with a fixed amplitude scale. Coloured curves bound the illustrative
+carrier; grey dashed curves show the exact linear envelope. The random input is a new one-dimensional
+profile, not the historical three-dimensional seed-33 realization. The two-packet case is also explicitly new.
+
+3
+
+Connect the wave shape to its Fourier transform
+Real-space envelope and its Fourier power · nonlinear Dysthe
+Smooth random profile
+Two phase-offset packets
+
+Gaussian packet
+
+4
+
+4
+
+4
+
+3
+
+3
+
+3
+
+2
+
+2
+
+2
+
+1
+
+1
+
+1
+
+0.8
+
+T
+
+0
+−20
+
+−10
+
+0
+Position s
+
+0
+−20
+
+10
+
+−10
+
+0
+Position s
+
+0.2
+0.0
+
+0
+−20
+
+10
+
+−10
+
+0
+Position s
+
+10
+
+4
+
+4
+
+4
+
+3
+
+3
+
+3
+
+−2
+
+2
+
+2
+
+2
+
+−4
+
+1
+
+1
+
+1
+
+−6
+
+0
+
+−3
+
+−2
+−1
+0
+1
+2
+Modulation wavenumber k
+
+3
+
+0
+
+−3
+
+−2
+−1
+0
+1
+2
+Modulation wavenumber k
+
+3
+
+0
+
+|u|
+
+0.4
+
+0
+
+−8
+−3
+
+−2
+−1
+0
+1
+2
+Modulation wavenumber k
+
+log₁₀ mode power / initial total
+
+T
+
+0.6
+
+3
+
+P
+Figure 5: Top: envelope magnitude in position and time. Bottom: log10 (|b
+um (T )|2 / n |b
+un (0)|2 ), the power
+in a mode relative to initial total Fourier power. Colours are fixed across the displayed times and profiles. The
+spectral view displays |k| ≤ 3; complete arrays are retained. Fourier wavenumber here is spatial modulation
+wavenumber, not a NOAA buoy frequency.
+
+‖u(T)‖∞/‖u(0)‖∞
+
+Gaussian packet
+
+Smooth random profile
+
+1.10
+
+1.05
+
+1.08
+
+1.04
+
+1.06
+
+1.03
+
+1.04
+
+1.02
+
+1.02
+
+1.01
+
+1.00
+
+1.00
+0
+
+1
+
+2
+T
+
+3
+
+4
+
+Two phase-offset packets
+1.06
+1.04
+1.02
+1.00
+
+0
+
+Exact linear
+
+1
+
+2
+T
+
+Cubic NLS
+
+3
+
+4
+
+0
+
+1
+
+2
+T
+
+3
+
+4
+
+Dysthe (case colour)
+
+Figure 6: Ordinary envelope maximum P (T ) = maxs |u(s, T )|, divided by its initial value. Linear, NLS and
+Dysthe curves start from the identical projected initial profile within each family. These short-time examples
+exhibit peak growth in the nonlinear models rather than decay. No decay exponent is assumed.
+
+These packet examples illustrate evolution and spectral redistribution; they do not by themselves
+demonstrate Benjamin–Feir instability. That test requires a weakly perturbed wavetrain and
+measurement of sideband growth against a specified linearized prediction.
+
+4
+
+What the smallest Gaussian oscillations mean near zero
+Gaussian near T = 0 · small differences require a controlled initial spectrum
+Whole envelope: almost unchanged near zero
+T=0
+T=0.025
+T=0.1
+
+10−2
+
+0.6
+
+10−4
+
+0.4
+
+10−6
+
+|u|
+
+|u|
+
+0.8
+
+Magnified tails on a logarithmic scale
+
+100
+
+10−8
+0.2
+10−10
+0.0
+−15
+
+−10
+
+−5
+
+0
+s
+
+5
+
+10
+
+15
+
+Absolute initial discrepancy
+
+Initial projection already produces tiny ripples
+10
+
+−8
+
+10−10
+10−12
+
+Initial cutoff 12
+Initial cutoff 24
+
+10−14
+10−16
+10−18
+
+−20
+
+−15
+
+−10
+
+−5
+
+0
+s
+
+5
+
+10
+
+15
+
+10−12
+
+20
+
+20
+
+Maximum absolute complex difference
+
+−20
+
+−20
+
+−15
+
+−10
+
+−5
+
+0
+s
+
+5
+
+10
+
+15
+
+20
+
+A fixed tail region: |u(s, 0)| < 0.01 P(0)
+
+10−5
+
+Effect of initial cutoff
+Dysthe minus linear (cutoff 24)
+
+10−6
+10−7
+10−8
+10−9
+10−10
+10−11
+10−12
+
+0.00
+
+0.02
+
+0.04
+
+0.06
+
+0.08
+
+0.10
+
+T
+
+Figure 7: A separate initial-bandwidth control through T = 0.1. The first two panels use cutoff 24. The
+lower left compares the initial cutoffs with the analytic periodized Gaussian; the lower right uses the same
+fixed tail region throughout time. A logarithmic scale magnifies very small differences; zero differences are
+below its display floor.
+
+Projecting the Gaussian through mode 12 creates a maximum initial discrepancy of approximately
+3.77 × 10−9 . Projection through mode 24 reduces that discrepancy to floating-point roundoff.
+Therefore, features at the first scale cannot be attributed solely to nonlinear dynamics without this
+input check. The short high-cutoff control also passes a finer time-step comparison.
+The main envelope changes little on this near-zero interval. A magnified plot must retain its scale
+label: tiny oscillations in the tails can look dramatic even while the main amplitude remains almost
+unchanged. The original level-surface rule, 30% of each current peak, would hide these features
+entirely.
+
+5
+
+Equation, computation and reproduction
+The model is the same separately versioned temporal potential formulation used in the October 30
+modelling report:
+i
+i
+uT = − uss − |u|2 u
+8
+2
+
+3
+1
+i
+1
+usss − |u|2 us + u2 us + u|Ds |(|u|2 ) .
++ϵ
+16
+2
+4
+2
+Here |Ds | has Fourier symbol |k|. This is the longitudinal temporal potential-envelope restriction,
+not the approved spatial free-surface model and not the historical three-coordinate canonical linear
+equation. The coefficient convention is labelled stability-consistent; the literal printed 1979 equation
+has the previously documented discrepancy. The source is K. B. Dysthe, Proc. R. Soc. Lond. A
+369 (1979), 105–114, equations (2.19) and (3.2)–(3.3). This visual exercise makes no new choice of
+physical setting.
+The coordinates are A = ϵu, s = ϵ(x − t/2) and T = ϵ2 t. A physical carrier and potential-tosurface conversion are needed before displaying calibrated water elevation. The extra carrier in the
+figures supplies neither of these. The linear control is evaluated directly using
+"
+
+k 2 ϵk 3
+−
+8
+16
+
+blin (k, T ) = exp iT
+u
+
+!#
+b0 (k).
+u
+
+Thus it has no numerical time-step error. The NLS control suppresses all terms multiplied by ϵ; it
+is a different equation, not a second discretization of Dysthe.
+Checks. Nonlinear calculations use complex128 Fourier differentiation, cubic dealiasing and
+integrating-factor RK4 at N = 1024, h = 0.0025. Independent comparisons use N = 512 at the
+same step and h = 0.005 at the same grid. The maximum sampled relative errors must satisfy
+E0 ≤ 10−5 , E1 ≤ 10−4 and E2 ≤ 10−3 ; action drift and retained-edge action fraction must be at
+most 10−6 and 10−8 . All six nonlinear model–input runs pass. All three linear controls preserve
+mode power to numerical precision. There are 117 saved times, including increments of 0.005 near
+zero.
+Inputs. The Gaussian has amplitude 0.85, width 3, centre −2 and chirp 0.08. The random
+profile is a saved smooth complex Fourier polynomial. The new pair comprises two amplitude-0.6
+Gaussians of width 2.2, centred at ±5 with relative phase π/3. The main comparisons use initial
+cutoff 12; a separate Gaussian audit compares cutoffs 12 and 24. The scripts and JSON metadata
+define the complete profiles.
+Reproduction. The source bundle contains separate scripts for reference evolution, initialtail auditing and plotting. Run them in the order listed in the README. The PDF source is
+report/main.tex; animation generation requires FFmpeg. Full complex arrays, numerical checks
+and the unchanged solver snapshot are included. No PINN or cluster training is involved in this
+visual companion.
+Interpretation. These are finite-time periodic computations, not proof of global existence, a
+physical breaking prediction or an asymptotic decay result. The next nonlinear-instability panel
+should compare seeded sideband growth in physical space and Fourier space; NOAA remains a later,
+separately calibrated comparison.
+
+6
+
+Near zero and toward thousands: two separate schedules
+Ordinary peak change
+
+Nonlinear deviation from free evolution
+
+Near-zero consistency
+
+Relative defect of (uD − ulin)/T
+
+10−3
+
+30
+‖uD − ulin‖∞
+
+Peak change (ppm)
+
+40
+
+20
+
+10−4
+
+10
+
+0
+
+10−5
+
+0.0001
+
+0.001
+Scaled time T
+
+0.01
+
+0.0001
+Gaussian
+
+0.001
+Scaled time T
+Random
+
+10−3
+
+10−4
+
+10−5
+
+0.01
+
+0.0001
+
+0.001
+Scaled time T
+
+0.01
+
+Two packets
+
+Figure 8: New nonlinear calculations at T = 10−4 , 10−3 , 10−2 . The first panel plots 106 (P (T )/P (0) − 1),
+magnifying ordinary peak changes; the second includes amplitude and phase differences. The third compares
+(uD − ulin )/T with the nonlinear RHS evaluated at the initial profile. Its decreasing defect toward zero checks
+the expected first-order expansion, not a global error theorem.
+
+The new near-zero runs use h = 2.5 × 10−5 and a comparison step twice as large. All eight nonlinear
+model–input cases pass the stated space/time rules, including the separate higher-cutoff Gaussian.
+No result at T = 0 is divided by time.
+
+P(T)/P(0)
+
+Distant-time linear snapshots on a fixed periodic interval · not nonlinear results
+Gaussian
+Random
+Two packets
+1.2
+
+1.2
+
+1.2
+
+1.0
+
+1.0
+
+1.0
+
+0.8
+
+0.8
+
+0.8
+
+0.6
+
+0.6
+
+0.6
+
+0.4
+
+0.4
+
+0.4
+
+0.2
+
+0.2
+
+0.2
+
+0.0
+
+16
+
+64
+
+256
+
+1024
+
+0.0
+
+16
+
+64
+
+256
+
+T
+
+1024
+
+0.0
+
+16
+
+T
+Exact periodic linear evolution
+
+64
+
+256
+
+1024
+
+T
+Conserved-action lower bound
+
+Figure 9: The linear propagator is evaluated directly through T = 1024. These are periodic-box snapshots,
+not
+or nonlinear trajectories. The ordinary peak remains bounded below by
+p isolated-packet asymptotics
+R
+M/L, where M = |u|2 ds. Joining selected times guides the eye; unobserved intermediate peaks may
+occur.
+
+Nonlinear targets. The new CPU framework targets 16, 32, 64, 128, 256, 512, 1024 in two
+tracks: periodic evolution/recurrence, and localized-packet calculations with independent domain
+enlargement. A failed refinement or domain check blocks later stages. The small smoke calculations
+verify execution only; nonlinear T = 1024 has not been run or qualified here. At ϵ = 0.05, T = 1024
+corresponds to dimensionless carrier time 409600, so it is a demanding extension of the current
+short-time runs.
+Use the supplied long_horizon/README.md for configuration and CPU cluster commands. Domain, grid and step may need to grow substantially; an estimate from a short benchmark cannot
+include those unknown costs. Training a PINN is not required for either numerical track.
+
+7
+
+

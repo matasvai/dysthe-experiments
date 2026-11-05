@@ -1,0 +1,352 @@
+[
+  {
+    "regime": "homogeneous",
+    "width": 0.75,
+    "t": 1.0,
+    "ratio": 0.008873829026707358,
+    "location": [
+      1.2914600372314453,
+      0.0
+    ],
+    "optimizer_success": true,
+    "domain_change": 0.000231854412675467,
+    "radial_change": 0.0,
+    "spectral_integral_discrepancy": 0.00012676416580854725,
+    "levels": [
+      {
+        "peak": 0.00886929075777694,
+        "x_peak": 1.25,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.0006560621715870655
+      },
+      {
+        "peak": 0.008871347618868753,
+        "x_peak": 1.25,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.0002318559958317087
+      },
+      {
+        "peak": 0.008871347618868753,
+        "x_peak": 1.25,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.0002318559958317087
+      }
+    ],
+    "passes_screen": true
+  },
+  {
+    "regime": "homogeneous",
+    "width": 1.0,
+    "t": 1.0,
+    "ratio": 0.008233337464519175,
+    "location": [
+      1.0910606384277344,
+      0.0
+    ],
+    "optimizer_success": true,
+    "domain_change": 0.0001406541164331781,
+    "radial_change": 0.0,
+    "spectral_integral_discrepancy": 7.68512994230648e-05,
+    "levels": [
+      {
+        "peak": 0.00822426874697069,
+        "x_peak": 1.0,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.00039791078018948687
+      },
+      {
+        "peak": 0.008225425686952975,
+        "x_peak": 1.0,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.0001406545371605151
+      },
+      {
+        "peak": 0.008225425686952975,
+        "x_peak": 1.0,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.0001406545371605151
+      }
+    ],
+    "passes_screen": true
+  },
+  {
+    "regime": "homogeneous",
+    "width": 1.5,
+    "t": 1.0,
+    "ratio": 0.005840366777415795,
+    "location": [
+      0.7619848251342777,
+      5.476176738739014e-09
+    ],
+    "optimizer_success": true,
+    "domain_change": 8.804632814485862e-05,
+    "radial_change": 0.0,
+    "spectral_integral_discrepancy": 4.815079748433547e-05,
+    "levels": [
+      {
+        "peak": 0.005839464738149147,
+        "x_peak": 0.75,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.0002490581306882288
+      },
+      {
+        "peak": 0.005839978926850099,
+        "x_peak": 0.75,
+        "r_peak": 0.0,
+        "edge_to_peak": 8.804641043936792e-05
+      },
+      {
+        "peak": 0.005839978926850099,
+        "x_peak": 0.75,
+        "r_peak": 0.0,
+        "edge_to_peak": 8.804641043936792e-05
+      }
+    ],
+    "passes_screen": true
+  },
+  {
+    "regime": "homogeneous",
+    "width": 2.0,
+    "t": 1.0,
+    "ratio": 0.0034439787656064366,
+    "location": [
+      0.5309379577636719,
+      0.0
+    ],
+    "optimizer_success": true,
+    "domain_change": 8.399531319186407e-05,
+    "radial_change": 0.0,
+    "spectral_integral_discrepancy": 4.593096252331897e-05,
+    "levels": [
+      {
+        "peak": 0.00344312538803036,
+        "x_peak": 0.5,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.0002375963071890799
+      },
+      {
+        "peak": 0.003443414618719709,
+        "x_peak": 0.5,
+        "r_peak": 0.0,
+        "edge_to_peak": 8.399534174007009e-05
+      },
+      {
+        "peak": 0.003443414618719709,
+        "x_peak": 0.5,
+        "r_peak": 0.0,
+        "edge_to_peak": 8.399534174007009e-05
+      }
+    ],
+    "passes_screen": true
+  },
+  {
+    "regime": "homogeneous",
+    "width": 3.0,
+    "t": 1.0,
+    "ratio": 0.0010718345920382652,
+    "location": [
+      0.2703330993652344,
+      0.0
+    ],
+    "optimizer_success": true,
+    "domain_change": 0.00011994353128163328,
+    "radial_change": 0.0,
+    "spectral_integral_discrepancy": 6.559274026698148e-05,
+    "levels": [
+      {
+        "peak": 0.0010716012447735102,
+        "x_peak": 0.25,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.00033929499515851383
+      },
+      {
+        "peak": 0.001071729791829322,
+        "x_peak": 0.25,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.00011994354011444364
+      },
+      {
+        "peak": 0.001071729791829322,
+        "x_peak": 0.25,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.00011994354011444364
+      }
+    ],
+    "passes_screen": true
+  },
+  {
+    "regime": "inhomogeneous",
+    "width": 0.75,
+    "t": 1.0,
+    "ratio": 0.007395068635935372,
+    "location": [
+      -1.0541786193847669,
+      0.0
+    ],
+    "optimizer_success": true,
+    "domain_change": 7.769132525597231e-06,
+    "radial_change": 0.0,
+    "spectral_integral_discrepancy": 2.8750795142734324e-05,
+    "levels": [
+      {
+        "peak": 0.007392913222171735,
+        "x_peak": -1.0,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.00041783041258595786
+      },
+      {
+        "peak": 0.007392970659140544,
+        "x_peak": -1.0,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.00012150788894678576
+      },
+      {
+        "peak": 0.007392970659140544,
+        "x_peak": -1.0,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.00012150788894678576
+      }
+    ],
+    "passes_screen": true
+  },
+  {
+    "regime": "inhomogeneous",
+    "width": 1.0,
+    "t": 1.0,
+    "ratio": 0.006917861799225777,
+    "location": [
+      -1.3092527389526367,
+      0.0
+    ],
+    "optimizer_success": true,
+    "domain_change": 2.6415417918612338e-05,
+    "radial_change": 0.0,
+    "spectral_integral_discrepancy": 1.3887941309441382e-05,
+    "levels": [
+      {
+        "peak": 0.006915181899975844,
+        "x_peak": -1.25,
+        "r_peak": 0.0,
+        "edge_to_peak": 0.0002018175432408239
+      },
+      {
+        "peak": 0.006915364572221079,
+        "x_peak": -1.25,
+        "r_peak": 0.0,
+        "edge_to_peak": 5.869982458412616e-05
+      },
+      {
+        "peak": 0.006915364572221079,
+        "x_peak": -1.25,
+        "r_peak": 0.0,
+        "edge_to_peak": 5.869982458412616e-05
+      }
+    ],
+    "passes_screen": true
+  },
+  {
+    "regime": "inhomogeneous",
+    "width": 1.5,
+    "t": 1.0,
+    "ratio": 0.005540906508519155,
+    "location": [
+      -1.279606819152832,
+      1.642853021621704e-08
+    ],
+    "optimizer_success": true,
+    "domain_change": 1.1033813629188916e-05,
+    "radial_change": 0.0,
+    "spectral_integral_discrepancy": 4.122454239366912e-06,
+    "levels": [
+      {
+        "peak": 0.0055402978239895585,
+        "x_peak": -1.25,
+        "r_peak": 0.0,
+        "edge_to_peak": 5.989828158932805e-05
+      },
+      {
+        "peak": 0.00554035895527771,
+        "x_peak": -1.25,
+        "r_peak": 0.0,
+        "edge_to_peak": 1.7423023941384745e-05
+      },
+      {
+        "peak": 0.00554035895527771,
+        "x_peak": -1.25,
+        "r_peak": 0.0,
+        "edge_to_peak": 1.7423023941384745e-05
+      }
+    ],
+    "passes_screen": true
+  },
+  {
+    "regime": "inhomogeneous",
+    "width": 2.0,
+    "t": 1.0,
+    "ratio": 0.00400026233239111,
+    "location": [
+      -1.090891265869141,
+      0.0
+    ],
+    "optimizer_success": true,
+    "domain_change": 3.370327198992791e-06,
+    "radial_change": 0.0,
+    "spectral_integral_discrepancy": 1.3378599032053374e-06,
+    "levels": [
+      {
+        "peak": 0.003997291342370517,
+        "x_peak": -1.0,
+        "r_peak": 0.0,
+        "edge_to_peak": 1.9457043180442705e-05
+      },
+      {
+        "peak": 0.003997304814595657,
+        "x_peak": -1.0,
+        "r_peak": 0.0,
+        "edge_to_peak": 5.659565983788023e-06
+      },
+      {
+        "peak": 0.003997304814595657,
+        "x_peak": -1.0,
+        "r_peak": 0.0,
+        "edge_to_peak": 5.659565983788023e-06
+      }
+    ],
+    "passes_screen": true
+  },
+  {
+    "regime": "inhomogeneous",
+    "width": 3.0,
+    "t": 1.0,
+    "ratio": 0.0018832063710715098,
+    "location": [
+      -0.754427146911621,
+      0.0
+    ],
+    "optimizer_success": true,
+    "domain_change": 2.9616768373662977e-07,
+    "radial_change": 0.0,
+    "spectral_integral_discrepancy": 1.0343670852131098e-07,
+    "levels": [
+      {
+        "peak": 0.0018832038336990765,
+        "x_peak": -0.75,
+        "r_peak": 0.0,
+        "edge_to_peak": 1.5045352508161382e-06
+      },
+      {
+        "peak": 0.0018832043914433591,
+        "x_peak": -0.75,
+        "r_peak": 0.0,
+        "edge_to_peak": 4.376124728171943e-07
+      },
+      {
+        "peak": 0.0018832043914433591,
+        "x_peak": -0.75,
+        "r_peak": 0.0,
+        "edge_to_peak": 4.376124728171943e-07
+      }
+    ],
+    "passes_screen": true
+  }
+]

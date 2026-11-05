@@ -1,0 +1,330 @@
+[
+  {
+    "case_id": "packet-001",
+    "initial_condition_id": "packet-001",
+    "split": "validation",
+    "family": "packet",
+    "schema_version": 2,
+    "model_id": "water-wave-dysthe-spatial-v1",
+    "physical_system": "deep-water-gravity-waves",
+    "boundary": "periodic",
+    "axis_order": [
+      "xi",
+      "tau"
+    ],
+    "field_encoding": "complex128",
+    "shape": [
+      128
+    ],
+    "lengths": [
+      40.0
+    ],
+    "propagation_positions": [
+      0.0,
+      0.05,
+      0.1,
+      0.15000000000000002,
+      0.2
+    ],
+    "physics": {
+      "epsilon": 0.03891041489607054
+    },
+    "parameters": {
+      "amplitude_parameter": 0.454793503411659,
+      "phase": 1.1237725763426392,
+      "width": 2.7973985940166957,
+      "chirp": 0.017986557558480304,
+      "center": 2.517942850844709
+    }
+  },
+  {
+    "case_id": "packet-002",
+    "initial_condition_id": "packet-002",
+    "split": "test",
+    "family": "packet",
+    "schema_version": 2,
+    "model_id": "water-wave-dysthe-spatial-v1",
+    "physical_system": "deep-water-gravity-waves",
+    "boundary": "periodic",
+    "axis_order": [
+      "xi",
+      "tau"
+    ],
+    "field_encoding": "complex128",
+    "shape": [
+      128
+    ],
+    "lengths": [
+      40.0
+    ],
+    "propagation_positions": [
+      0.0,
+      0.05,
+      0.1,
+      0.15000000000000002,
+      0.2
+    ],
+    "physics": {
+      "epsilon": 0.029213649570482766
+    },
+    "parameters": {
+      "amplitude_parameter": 0.6048701973042974,
+      "phase": 0.4264208331059134,
+      "width": 2.781120247066024,
+      "chirp": 0.12025069132838825,
+      "center": 3.937420452623286
+    }
+  },
+  {
+    "case_id": "sideband-001",
+    "initial_condition_id": "sideband-001",
+    "split": "validation",
+    "family": "sideband",
+    "schema_version": 2,
+    "model_id": "water-wave-dysthe-spatial-v1",
+    "physical_system": "deep-water-gravity-waves",
+    "boundary": "periodic",
+    "axis_order": [
+      "xi",
+      "tau"
+    ],
+    "field_encoding": "complex128",
+    "shape": [
+      128
+    ],
+    "lengths": [
+      40.0
+    ],
+    "propagation_positions": [
+      0.0,
+      0.05,
+      0.1,
+      0.15000000000000002,
+      0.2
+    ],
+    "physics": {
+      "epsilon": 0.04458474662852772
+    },
+    "parameters": {
+      "amplitude_parameter": 0.41924667734453247,
+      "phase": 0.5843415549356936,
+      "sideband_mode": 4,
+      "sideband_phase": -2.9302197438030277
+    }
+  },
+  {
+    "case_id": "sideband-002",
+    "initial_condition_id": "sideband-002",
+    "split": "test",
+    "family": "sideband",
+    "schema_version": 2,
+    "model_id": "water-wave-dysthe-spatial-v1",
+    "physical_system": "deep-water-gravity-waves",
+    "boundary": "periodic",
+    "axis_order": [
+      "xi",
+      "tau"
+    ],
+    "field_encoding": "complex128",
+    "shape": [
+      128
+    ],
+    "lengths": [
+      40.0
+    ],
+    "propagation_positions": [
+      0.0,
+      0.05,
+      0.1,
+      0.15000000000000002,
+      0.2
+    ],
+    "physics": {
+      "epsilon": 0.022165115718034163
+    },
+    "parameters": {
+      "amplitude_parameter": 0.6973116026451407,
+      "phase": 0.718870260392344,
+      "sideband_mode": 4,
+      "sideband_phase": -1.7333970855696414
+    }
+  },
+  {
+    "case_id": "random-001",
+    "initial_condition_id": "random-001",
+    "split": "validation",
+    "family": "random",
+    "schema_version": 2,
+    "model_id": "water-wave-dysthe-spatial-v1",
+    "physical_system": "deep-water-gravity-waves",
+    "boundary": "periodic",
+    "axis_order": [
+      "xi",
+      "tau"
+    ],
+    "field_encoding": "complex128",
+    "shape": [
+      128
+    ],
+    "lengths": [
+      40.0
+    ],
+    "propagation_positions": [
+      0.0,
+      0.05,
+      0.1,
+      0.15000000000000002,
+      0.2
+    ],
+    "physics": {
+      "epsilon": 0.02774327961164677
+    },
+    "parameters": {
+      "amplitude_parameter": 0.6358271407246975,
+      "phase": -1.7554607469557446,
+      "coefficients": [
+        [
+          -0.0003461591424688756,
+          0.00012420287243684812
+        ],
+        [
+          -0.004312224567861571,
+          0.0054059706127945195
+        ],
+        [
+          0.03541418164756612,
+          0.042735785523362275
+        ],
+        [
+          0.056523627714789894,
+          -0.07676768204687673
+        ],
+        [
+          -0.29768823927895627,
+          -0.2952814134894652
+        ],
+        [
+          1.6010755165950616,
+          0.652439797131962
+        ],
+        [
+          -0.5493128759845916,
+          -1.6600957194769475
+        ],
+        [
+          -1.9530058287292207,
+          0.5277842778436996
+        ],
+        [
+          0.10514125065089185,
+          -0.27572732455689153
+        ],
+        [
+          -0.0523934943680814,
+          -0.093256308228328
+        ],
+        [
+          0.029293840556221234,
+          -0.0065420443465660965
+        ],
+        [
+          -0.00044680121400130553,
+          0.005938215925865904
+        ],
+        [
+          -0.0019176455158688712,
+          -0.00024170576624007924
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "random-002",
+    "initial_condition_id": "random-002",
+    "split": "test",
+    "family": "random",
+    "schema_version": 2,
+    "model_id": "water-wave-dysthe-spatial-v1",
+    "physical_system": "deep-water-gravity-waves",
+    "boundary": "periodic",
+    "axis_order": [
+      "xi",
+      "tau"
+    ],
+    "field_encoding": "complex128",
+    "shape": [
+      128
+    ],
+    "lengths": [
+      40.0
+    ],
+    "propagation_positions": [
+      0.0,
+      0.05,
+      0.1,
+      0.15000000000000002,
+      0.2
+    ],
+    "physics": {
+      "epsilon": 0.037929960858220604
+    },
+    "parameters": {
+      "amplitude_parameter": 0.5721237589213609,
+      "phase": 0.8877950912509158,
+      "coefficients": [
+        [
+          -6.888782949113761e-05,
+          -0.0005668790351801953
+        ],
+        [
+          0.006278014178250126,
+          -0.002951460162716462
+        ],
+        [
+          -0.0722839101427087,
+          0.0195709609148951
+        ],
+        [
+          0.19464637804614204,
+          -0.050937726610718284
+        ],
+        [
+          -0.3926438355182612,
+          -0.23729688174189867
+        ],
+        [
+          -1.3514549759014982,
+          -0.7037851161944969
+        ],
+        [
+          1.601369296822345,
+          -0.0808590666523138
+        ],
+        [
+          2.1745764019853726,
+          0.20945721006914902
+        ],
+        [
+          0.163067976545881,
+          0.0708145411107293
+        ],
+        [
+          0.007221984448625978,
+          -0.24107440847636621
+        ],
+        [
+          -0.04729426316674015,
+          0.05640994202715555
+        ],
+        [
+          0.005931330104018236,
+          0.002203269288505475
+        ],
+        [
+          0.0011304945386954525,
+          -0.0006087922763583673
+        ]
+      ]
+    }
+  }
+]

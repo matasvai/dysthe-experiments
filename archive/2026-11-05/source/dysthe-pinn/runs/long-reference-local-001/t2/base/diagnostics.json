@@ -1,0 +1,962 @@
+{
+  "equation": "Dysthe3D-1.27",
+  "config": {
+    "equation": "Dysthe3D-1.27",
+    "seed": 20260916,
+    "dtype": "float64",
+    "device": "cuda",
+    "deterministic": true,
+    "cpu_threads": 1,
+    "physics": {
+      "epsilon1": 0.00831834509,
+      "epsilon2": 0.00498719622
+    },
+    "domain": {
+      "T": 2,
+      "lengths": [
+        12.0,
+        12.0,
+        12.0
+      ]
+    },
+    "initial": {
+      "amplitude": 0.3,
+      "power": 3,
+      "phase": 0.0
+    },
+    "network": {
+      "width": 64,
+      "depth": 4,
+      "harmonics": 3
+    },
+    "training": {
+      "steps": 20000,
+      "batch_size": 512,
+      "validation_points": 512,
+      "learning_rate": 0.0003,
+      "log_every": 100,
+      "checkpoint_every": 500,
+      "gradient_clip": 100.0
+    },
+    "reference": {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "dt": 0.01,
+      "snapshots": 129
+    }
+  },
+  "dt": 0.0078125,
+  "steps": 256,
+  "initial_projection_relative_l2": 3.084109021299818e-16,
+  "max_relative_mass_drift": 2.73615432545654e-15,
+  "max_spectral_edge_fraction": 7.068881120979637e-10,
+  "rows": [
+    {
+      "t": 0.0,
+      "mass": 1.7853456813097,
+      "peak": 0.2999999999999999,
+      "spectral_edge_fraction": 4.2886398542279844e-33,
+      "relative_mass_drift": 0.0
+    },
+    {
+      "t": 0.015625,
+      "mass": 1.7853456813096995,
+      "peak": 0.29997173493212437,
+      "spectral_edge_fraction": 6.124344865591799e-12,
+      "relative_mass_drift": -2.487413023142309e-16
+    },
+    {
+      "t": 0.03125,
+      "mass": 1.7853456813097,
+      "peak": 0.29988693959875873,
+      "spectral_edge_fraction": 2.4282287597176928e-11,
+      "relative_mass_drift": 0.0
+    },
+    {
+      "t": 0.046875,
+      "mass": 1.7853456813097004,
+      "peak": 0.29974561423412505,
+      "spectral_edge_fraction": 5.38360642426044e-11,
+      "relative_mass_drift": 2.487413023142309e-16
+    },
+    {
+      "t": 0.0625,
+      "mass": 1.7853456813097006,
+      "peak": 0.2995477612809838,
+      "spectral_edge_fraction": 9.374759402248389e-11,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.078125,
+      "mass": 1.7853456813097006,
+      "peak": 0.29929338838046343,
+      "spectral_edge_fraction": 1.426151257151711e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.09375,
+      "mass": 1.7853456813097006,
+      "peak": 0.2989825123853152,
+      "spectral_edge_fraction": 1.9872321372288875e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.109375,
+      "mass": 1.7853456813097006,
+      "peak": 0.298615164235399,
+      "spectral_edge_fraction": 2.601046066035908e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.125,
+      "mass": 1.7853456813097006,
+      "peak": 0.2981913945034126,
+      "spectral_edge_fraction": 3.24612134756736e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.140625,
+      "mass": 1.785345681309701,
+      "peak": 0.29771127939805925,
+      "spectral_edge_fraction": 3.8999817280375553e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.15625,
+      "mass": 1.785345681309701,
+      "peak": 0.29717492700170894,
+      "spectral_edge_fraction": 4.539987676487547e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.171875,
+      "mass": 1.7853456813097017,
+      "peak": 0.2965824835202184,
+      "spectral_edge_fraction": 5.144191175803294e-10,
+      "relative_mass_drift": 9.949652092569235e-16
+    },
+    {
+      "t": 0.1875,
+      "mass": 1.7853456813097015,
+      "peak": 0.2959341393332784,
+      "spectral_edge_fraction": 5.692168158348036e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 0.203125,
+      "mass": 1.7853456813097017,
+      "peak": 0.2952301346532795,
+      "spectral_edge_fraction": 6.165791821072683e-10,
+      "relative_mass_drift": 9.949652092569235e-16
+    },
+    {
+      "t": 0.21875,
+      "mass": 1.7853456813097017,
+      "peak": 0.2944707646275587,
+      "spectral_edge_fraction": 6.549911312313707e-10,
+      "relative_mass_drift": 9.949652092569235e-16
+    },
+    {
+      "t": 0.234375,
+      "mass": 1.7853456813097022,
+      "peak": 0.29365638375103703,
+      "spectral_edge_fraction": 6.832903827637627e-10,
+      "relative_mass_drift": 1.2437065115711544e-15
+    },
+    {
+      "t": 0.25,
+      "mass": 1.7853456813097017,
+      "peak": 0.2927874094915602,
+      "spectral_edge_fraction": 7.007073883145981e-10,
+      "relative_mass_drift": 9.949652092569235e-16
+    },
+    {
+      "t": 0.265625,
+      "mass": 1.7853456813097017,
+      "peak": 0.2918643250665775,
+      "spectral_edge_fraction": 7.068881120979637e-10,
+      "relative_mass_drift": 9.949652092569235e-16
+    },
+    {
+      "t": 0.28125,
+      "mass": 1.7853456813097017,
+      "peak": 0.29088768134516696,
+      "spectral_edge_fraction": 7.018986922176183e-10,
+      "relative_mass_drift": 9.949652092569235e-16
+    },
+    {
+      "t": 0.296875,
+      "mass": 1.7853456813097015,
+      "peak": 0.28985809788211203,
+      "spectral_edge_fraction": 6.8621197078417e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 0.3125,
+      "mass": 1.7853456813097015,
+      "peak": 0.2887762631193882,
+      "spectral_edge_fraction": 6.606768392885417e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 0.328125,
+      "mass": 1.7853456813097015,
+      "peak": 0.2876429338140651,
+      "spectral_edge_fraction": 6.264722332372748e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 0.34375,
+      "mass": 1.785345681309701,
+      "peak": 0.28645893376969467,
+      "spectral_edge_fraction": 5.85048366769502e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.359375,
+      "mass": 1.785345681309701,
+      "peak": 0.2852251519605999,
+      "spectral_edge_fraction": 5.380583776136351e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.375,
+      "mass": 1.785345681309701,
+      "peak": 0.2839425401452713,
+      "spectral_edge_fraction": 4.872839257482563e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.390625,
+      "mass": 1.785345681309701,
+      "peak": 0.28261211006682,
+      "spectral_edge_fraction": 4.3455844367285757e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.40625,
+      "mass": 1.7853456813097006,
+      "peak": 0.2812349303357972,
+      "spectral_edge_fraction": 3.8169167733189496e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.421875,
+      "mass": 1.7853456813097015,
+      "peak": 0.2798121230845261,
+      "spectral_edge_fraction": 3.3039890371394327e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 0.4375,
+      "mass": 1.7853456813097015,
+      "peak": 0.27834486047327345,
+      "spectral_edge_fraction": 2.822377944026331e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 0.453125,
+      "mass": 1.785345681309701,
+      "peak": 0.2768343611180136,
+      "spectral_edge_fraction": 2.3855535144763087e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.46875,
+      "mass": 1.785345681309701,
+      "peak": 0.27528188649802066,
+      "spectral_edge_fraction": 2.0044671392592496e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.484375,
+      "mass": 1.785345681309701,
+      "peak": 0.2736887373898176,
+      "spectral_edge_fraction": 1.6872696186774577e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.5,
+      "mass": 1.785345681309701,
+      "peak": 0.27205625036268094,
+      "spectral_edge_fraction": 1.4391636759860363e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.515625,
+      "mass": 1.785345681309701,
+      "peak": 0.27038579436045684,
+      "spectral_edge_fraction": 1.26238897592738e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.53125,
+      "mass": 1.785345681309701,
+      "peak": 0.2686787673851945,
+      "spectral_edge_fraction": 1.1563317943718208e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.546875,
+      "mass": 1.785345681309701,
+      "peak": 0.2669365932902705,
+      "spectral_edge_fraction": 1.1177464125421199e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.5625,
+      "mass": 1.785345681309701,
+      "peak": 0.26516071868435986,
+      "spectral_edge_fraction": 1.1410712124716798e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.578125,
+      "mass": 1.7853456813097006,
+      "peak": 0.26335260994281084,
+      "spectral_edge_fraction": 1.218819432152255e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.59375,
+      "mass": 1.7853456813097006,
+      "peak": 0.261513750319637,
+      "spectral_edge_fraction": 1.3420226445494218e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.609375,
+      "mass": 1.785345681309701,
+      "peak": 0.2596456371513313,
+      "spectral_edge_fraction": 1.5007042481084288e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.625,
+      "mass": 1.7853456813097006,
+      "peak": 0.25774977914286984,
+      "spectral_edge_fraction": 1.6843605444672501e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.640625,
+      "mass": 1.785345681309701,
+      "peak": 0.2558276937264286,
+      "spectral_edge_fraction": 1.882428238893856e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.65625,
+      "mass": 1.7853456813097006,
+      "peak": 0.25388090448428563,
+      "spectral_edge_fraction": 2.0847193034108696e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.671875,
+      "mass": 1.7853456813097006,
+      "peak": 0.25191093862892755,
+      "spectral_edge_fraction": 2.281806937784119e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.6875,
+      "mass": 1.7853456813097006,
+      "peak": 0.24991932453532728,
+      "spectral_edge_fraction": 2.4653496762361504e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.703125,
+      "mass": 1.7853456813097006,
+      "peak": 0.24790758932253035,
+      "spectral_edge_fraction": 2.628344333597444e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.71875,
+      "mass": 1.7853456813097006,
+      "peak": 0.24587725648390862,
+      "spectral_edge_fraction": 2.765302277329707e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.734375,
+      "mass": 1.7853456813097006,
+      "peak": 0.24382984356756948,
+      "spectral_edge_fraction": 2.872347270186944e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.75,
+      "mass": 1.7853456813097006,
+      "peak": 0.2417668599103186,
+      "spectral_edge_fraction": 2.947236687514656e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.765625,
+      "mass": 1.7853456813097006,
+      "peak": 0.23968980443016613,
+      "spectral_edge_fraction": 2.9893111274869083e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.78125,
+      "mass": 1.7853456813097006,
+      "peak": 0.23760016348356552,
+      "spectral_edge_fraction": 2.9993801854674326e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.796875,
+      "mass": 1.7853456813097006,
+      "peak": 0.23549940879433387,
+      "spectral_edge_fraction": 2.979554367910435e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.8125,
+      "mass": 1.7853456813097006,
+      "peak": 0.23338899546150318,
+      "spectral_edge_fraction": 2.933034722173554e-10,
+      "relative_mass_drift": 3.731119534713464e-16
+    },
+    {
+      "t": 0.828125,
+      "mass": 1.785345681309701,
+      "peak": 0.23127036005319776,
+      "spectral_edge_fraction": 2.863872733340552e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.84375,
+      "mass": 1.785345681309701,
+      "peak": 0.22914491879304863,
+      "spectral_edge_fraction": 2.776713394625772e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.859375,
+      "mass": 1.785345681309701,
+      "peak": 0.22701406584469966,
+      "spectral_edge_fraction": 2.6765341262950195e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.875,
+      "mass": 1.785345681309701,
+      "peak": 0.22487917169868354,
+      "spectral_edge_fraction": 2.5683914545498587e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.890625,
+      "mass": 1.785345681309701,
+      "peak": 0.22274158166444535,
+      "spectral_edge_fraction": 2.457186137656906e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.90625,
+      "mass": 1.785345681309701,
+      "peak": 0.22060261446863988,
+      "spectral_edge_fraction": 2.3474558261089944e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.921875,
+      "mass": 1.785345681309701,
+      "peak": 0.21846356095913036,
+      "spectral_edge_fraction": 2.2432024594320134e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.9375,
+      "mass": 1.7853456813097015,
+      "peak": 0.2163256829124569,
+      "spectral_edge_fraction": 2.1477595311855534e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 0.953125,
+      "mass": 1.785345681309701,
+      "peak": 0.21419021194101168,
+      "spectral_edge_fraction": 2.0637021931655665e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.96875,
+      "mass": 1.785345681309701,
+      "peak": 0.2120583484948313,
+      "spectral_edge_fraction": 1.9928010169196787e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 0.984375,
+      "mass": 1.7853456813097015,
+      "peak": 0.20993126095185566,
+      "spectral_edge_fraction": 1.9360181744865066e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 1.0,
+      "mass": 1.7853456813097015,
+      "peak": 0.2078100847897592,
+      "spectral_edge_fraction": 1.8935429261740822e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 1.015625,
+      "mass": 1.7853456813097015,
+      "peak": 0.2056959218320505,
+      "spectral_edge_fraction": 1.8648616822888243e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 1.03125,
+      "mass": 1.785345681309701,
+      "peak": 0.2035898395610797,
+      "spectral_edge_fraction": 1.8488565993423454e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 1.046875,
+      "mass": 1.7853456813097015,
+      "peak": 0.20149287049086967,
+      "spectral_edge_fraction": 1.84392572267863e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 1.0625,
+      "mass": 1.7853456813097015,
+      "peak": 0.1994060115932684,
+      "spectral_edge_fraction": 1.848117124378088e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 1.078125,
+      "mass": 1.7853456813097015,
+      "peak": 0.1973302237717751,
+      "spectral_edge_fraction": 1.859269314896359e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 1.09375,
+      "mass": 1.7853456813097015,
+      "peak": 0.19526643137845417,
+      "spectral_edge_fraction": 1.8751504181029025e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 1.109375,
+      "mass": 1.785345681309701,
+      "peak": 0.19321552177058068,
+      "spectral_edge_fraction": 1.8935891619903705e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 1.125,
+      "mass": 1.7853456813097015,
+      "peak": 0.19117834490498956,
+      "spectral_edge_fraction": 1.9125916044072814e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 1.140625,
+      "mass": 1.785345681309701,
+      "peak": 0.1891557129694825,
+      "spectral_edge_fraction": 1.9304386242314955e-10,
+      "relative_mass_drift": 6.218532557855772e-16
+    },
+    {
+      "t": 1.15625,
+      "mass": 1.7853456813097015,
+      "peak": 0.18714840005202898,
+      "spectral_edge_fraction": 1.9457604933317212e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 1.171875,
+      "mass": 1.7853456813097015,
+      "peak": 0.18515714184983362,
+      "spectral_edge_fraction": 1.9575862284825146e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 1.1875,
+      "mass": 1.7853456813097015,
+      "peak": 0.18318263542159746,
+      "spectral_edge_fraction": 1.965366829209056e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 1.203125,
+      "mass": 1.7853456813097015,
+      "peak": 0.18122553898742536,
+      "spectral_edge_fraction": 1.9689728672842175e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 1.21875,
+      "mass": 1.7853456813097017,
+      "peak": 0.17928647178179558,
+      "spectral_edge_fraction": 1.9686681427927564e-10,
+      "relative_mass_drift": 9.949652092569235e-16
+    },
+    {
+      "t": 1.234375,
+      "mass": 1.7853456813097015,
+      "peak": 0.177366013965761,
+      "spectral_edge_fraction": 1.9650622094436963e-10,
+      "relative_mass_drift": 8.705945580998082e-16
+    },
+    {
+      "t": 1.25,
+      "mass": 1.7853456813097017,
+      "peak": 0.17546470660504618,
+      "spectral_edge_fraction": 1.9590454592085905e-10,
+      "relative_mass_drift": 9.949652092569235e-16
+    },
+    {
+      "t": 1.265625,
+      "mass": 1.7853456813097017,
+      "peak": 0.17358305172090074,
+      "spectral_edge_fraction": 1.9517111185268134e-10,
+      "relative_mass_drift": 9.949652092569235e-16
+    },
+    {
+      "t": 1.28125,
+      "mass": 1.7853456813097022,
+      "peak": 0.1717215124204029,
+      "spectral_edge_fraction": 1.9442689324403783e-10,
+      "relative_mass_drift": 1.2437065115711544e-15
+    },
+    {
+      "t": 1.296875,
+      "mass": 1.7853456813097017,
+      "peak": 0.1698805131123531,
+      "spectral_edge_fraction": 1.9379554982599322e-10,
+      "relative_mass_drift": 9.949652092569235e-16
+    },
+    {
+      "t": 1.3125,
+      "mass": 1.7853456813097022,
+      "peak": 0.16806043981391314,
+      "spectral_edge_fraction": 1.933946164928074e-10,
+      "relative_mass_drift": 1.2437065115711544e-15
+    },
+    {
+      "t": 1.328125,
+      "mass": 1.7853456813097022,
+      "peak": 0.16626164055173479,
+      "spectral_edge_fraction": 1.9332731533314712e-10,
+      "relative_mass_drift": 1.2437065115711544e-15
+    },
+    {
+      "t": 1.34375,
+      "mass": 1.7853456813097022,
+      "peak": 0.16448442585950296,
+      "spectral_edge_fraction": 1.9367540979410368e-10,
+      "relative_mass_drift": 1.2437065115711544e-15
+    },
+    {
+      "t": 1.359375,
+      "mass": 1.7853456813097022,
+      "peak": 0.1627290693716523,
+      "spectral_edge_fraction": 1.944934585374733e-10,
+      "relative_mass_drift": 1.2437065115711544e-15
+    },
+    {
+      "t": 1.375,
+      "mass": 1.7853456813097026,
+      "peak": 0.16099580851059714,
+      "spectral_edge_fraction": 1.958047499789786e-10,
+      "relative_mass_drift": 1.4924478138853855e-15
+    },
+    {
+      "t": 1.390625,
+      "mass": 1.7853456813097026,
+      "peak": 0.15928484526228037,
+      "spectral_edge_fraction": 1.975991107927907e-10,
+      "relative_mass_drift": 1.4924478138853855e-15
+    },
+    {
+      "t": 1.40625,
+      "mass": 1.7853456813097026,
+      "peak": 0.15759634703234385,
+      "spectral_edge_fraction": 1.9983268627664258e-10,
+      "relative_mass_drift": 1.4924478138853855e-15
+    },
+    {
+      "t": 1.421875,
+      "mass": 1.7853456813097026,
+      "peak": 0.15593044757293667,
+      "spectral_edge_fraction": 2.0242969103302617e-10,
+      "relative_mass_drift": 1.4924478138853855e-15
+    },
+    {
+      "t": 1.4375,
+      "mass": 1.7853456813097028,
+      "peak": 0.15428724796826854,
+      "spectral_edge_fraction": 2.0528602884968699e-10,
+      "relative_mass_drift": 1.6168184650425009e-15
+    },
+    {
+      "t": 1.453125,
+      "mass": 1.7853456813097028,
+      "peak": 0.15266681766563264,
+      "spectral_edge_fraction": 2.0827458532093095e-10,
+      "relative_mass_drift": 1.6168184650425009e-15
+    },
+    {
+      "t": 1.46875,
+      "mass": 1.7853456813097028,
+      "peak": 0.15106919553787895,
+      "spectral_edge_fraction": 2.112519099328429e-10,
+      "relative_mass_drift": 1.6168184650425009e-15
+    },
+    {
+      "t": 1.484375,
+      "mass": 1.7853456813097028,
+      "peak": 0.1494943909632554,
+      "spectral_edge_fraction": 2.1406593055938808e-10,
+      "relative_mass_drift": 1.6168184650425009e-15
+    },
+    {
+      "t": 1.5,
+      "mass": 1.7853456813097033,
+      "peak": 0.14794238490914974,
+      "spectral_edge_fraction": 2.1656428667184148e-10,
+      "relative_mass_drift": 1.8655597673567317e-15
+    },
+    {
+      "t": 1.515625,
+      "mass": 1.7853456813097028,
+      "peak": 0.1464131310074572,
+      "spectral_edge_fraction": 2.1860283167775293e-10,
+      "relative_mass_drift": 1.6168184650425009e-15
+    },
+    {
+      "t": 1.53125,
+      "mass": 1.7853456813097037,
+      "peak": 0.1449065566109419,
+      "spectral_edge_fraction": 2.2005384238642984e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.546875,
+      "mass": 1.7853456813097037,
+      "peak": 0.14342256382184385,
+      "spectral_edge_fraction": 2.2081348615259354e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.5625,
+      "mass": 1.7853456813097033,
+      "peak": 0.14196103048590328,
+      "spectral_edge_fraction": 2.2080813383515043e-10,
+      "relative_mass_drift": 1.8655597673567317e-15
+    },
+    {
+      "t": 1.578125,
+      "mass": 1.7853456813097037,
+      "peak": 0.14052181114671525,
+      "spectral_edge_fraction": 2.1999916783790072e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.59375,
+      "mass": 1.7853456813097037,
+      "peak": 0.13910473795671588,
+      "spectral_edge_fraction": 2.1838601593577983e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.609375,
+      "mass": 1.7853456813097037,
+      "peak": 0.13770962154202981,
+      "spectral_edge_fraction": 2.1600723882378246e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.625,
+      "mass": 1.7853456813097037,
+      "peak": 0.1363362518188431,
+      "spectral_edge_fraction": 2.1293960637732628e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.640625,
+      "mass": 1.7853456813097037,
+      "peak": 0.1349843987589841,
+      "spectral_edge_fraction": 2.0929520799008763e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.65625,
+      "mass": 1.7853456813097037,
+      "peak": 0.13365381310215166,
+      "spectral_edge_fraction": 2.05216749032475e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.671875,
+      "mass": 1.7853456813097037,
+      "peak": 0.13234422701196624,
+      "spectral_edge_fraction": 2.0087128193374723e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.6875,
+      "mass": 1.7853456813097037,
+      "peak": 0.13105535467302076,
+      "spectral_edge_fraction": 1.96442700690103e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.703125,
+      "mass": 1.7853456813097037,
+      "peak": 0.12978689282666647,
+      "spectral_edge_fraction": 1.921233873215882e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.71875,
+      "mass": 1.7853456813097037,
+      "peak": 0.12853852124464502,
+      "spectral_edge_fraction": 1.8810543484318544e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.734375,
+      "mass": 1.7853456813097037,
+      "peak": 0.1273099031420414,
+      "spectral_edge_fraction": 1.8457188260354357e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.75,
+      "mass": 1.785345681309704,
+      "peak": 0.12610068553444653,
+      "spectral_edge_fraction": 1.816883868636743e-10,
+      "relative_mass_drift": 2.238671720828078e-15
+    },
+    {
+      "t": 1.765625,
+      "mass": 1.7853456813097037,
+      "peak": 0.12491049954858399,
+      "spectral_edge_fraction": 1.7959571445401235e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.78125,
+      "mass": 1.785345681309704,
+      "peak": 0.12373896070072578,
+      "spectral_edge_fraction": 1.7840339369794963e-10,
+      "relative_mass_drift": 2.238671720828078e-15
+    },
+    {
+      "t": 1.796875,
+      "mass": 1.7853456813097037,
+      "peak": 0.1225856691626043,
+      "spectral_edge_fraction": 1.7818478896497192e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.8125,
+      "mass": 1.785345681309704,
+      "peak": 0.1214502100396954,
+      "spectral_edge_fraction": 1.7897378811421647e-10,
+      "relative_mass_drift": 2.238671720828078e-15
+    },
+    {
+      "t": 1.828125,
+      "mass": 1.7853456813097037,
+      "peak": 0.12033215369112293,
+      "spectral_edge_fraction": 1.8076321073304478e-10,
+      "relative_mass_drift": 2.114301069670963e-15
+    },
+    {
+      "t": 1.84375,
+      "mass": 1.785345681309704,
+      "peak": 0.11923105612341382,
+      "spectral_edge_fraction": 1.8350496418663483e-10,
+      "relative_mass_drift": 2.238671720828078e-15
+    },
+    {
+      "t": 1.859375,
+      "mass": 1.785345681309704,
+      "peak": 0.1181464594913759,
+      "spectral_edge_fraction": 1.8711189819701106e-10,
+      "relative_mass_drift": 2.238671720828078e-15
+    },
+    {
+      "t": 1.875,
+      "mass": 1.785345681309704,
+      "peak": 0.11707789273806456,
+      "spectral_edge_fraction": 1.9146124022087195e-10,
+      "relative_mass_drift": 2.238671720828078e-15
+    },
+    {
+      "t": 1.890625,
+      "mass": 1.7853456813097044,
+      "peak": 0.11602487240191857,
+      "spectral_edge_fraction": 1.9639943561105644e-10,
+      "relative_mass_drift": 2.487413023142309e-15
+    },
+    {
+      "t": 1.90625,
+      "mass": 1.785345681309704,
+      "peak": 0.11498690361267797,
+      "spectral_edge_fraction": 2.0174816974864865e-10,
+      "relative_mass_drift": 2.238671720828078e-15
+    },
+    {
+      "t": 1.921875,
+      "mass": 1.7853456813097044,
+      "peak": 0.11396348128889269,
+      "spectral_edge_fraction": 2.0731131434294795e-10,
+      "relative_mass_drift": 2.487413023142309e-15
+    },
+    {
+      "t": 1.9375,
+      "mass": 1.785345681309704,
+      "peak": 0.11295409153918111,
+      "spectral_edge_fraction": 2.1288251668304397e-10,
+      "relative_mass_drift": 2.238671720828078e-15
+    },
+    {
+      "t": 1.953125,
+      "mass": 1.7853456813097044,
+      "peak": 0.11195821325759667,
+      "spectral_edge_fraction": 2.182531378477498e-10,
+      "relative_mass_drift": 2.487413023142309e-15
+    },
+    {
+      "t": 1.96875,
+      "mass": 1.7853456813097044,
+      "peak": 0.11097531989136807,
+      "spectral_edge_fraction": 2.2322024275734406e-10,
+      "relative_mass_drift": 2.487413023142309e-15
+    },
+    {
+      "t": 1.984375,
+      "mass": 1.7853456813097044,
+      "peak": 0.11000488134782206,
+      "spectral_edge_fraction": 2.275943504282756e-10,
+      "relative_mass_drift": 2.487413023142309e-15
+    },
+    {
+      "t": 2.0,
+      "mass": 1.7853456813097048,
+      "peak": 0.10904636599740992,
+      "spectral_edge_fraction": 2.3120666601938386e-10,
+      "relative_mass_drift": 2.73615432545654e-15
+    }
+  ],
+  "qualification": "Reference candidate; requires independent time-step and spatial refinement before accuracy claims."
+}

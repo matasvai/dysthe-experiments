@@ -1,0 +1,182 @@
+[
+  {
+    "name": "collision_e0_N2048_L160_h0.0025",
+    "epsilon": 0,
+    "n": 2048,
+    "L": 160,
+    "dt": 0.0025,
+    "peak_centers": [
+      -16.71875,
+      16.71875
+    ],
+    "tail_outside_two_radius6_cores": 1.2881886011907021e-05,
+    "initial_tail_fraction": 1.189958069218381e-05,
+    "excess_tail_fraction": 9.823053197232105e-07,
+    "outgoing_fits": [
+      {
+        "speed": 2,
+        "aligned_error": 8.214172118718715e-08,
+        "translation": 16.693147178564093,
+        "phase": 1.1519830646933968,
+        "peak": 1.413750175126469
+      },
+      {
+        "speed": -2,
+        "aligned_error": 8.214175911779975e-08,
+        "translation": -16.693147178546045,
+        "phase": 1.1519830647114484,
+        "peak": 1.4137501751264692
+      }
+    ]
+  },
+  {
+    "name": "collision_e0_N2048_L160_h0.00125",
+    "epsilon": 0,
+    "n": 2048,
+    "L": 160,
+    "dt": 0.00125,
+    "peak_centers": [
+      -16.71875,
+      16.71875
+    ],
+    "tail_outside_two_radius6_cores": 1.2881858455658609e-05,
+    "initial_tail_fraction": 1.189958069218381e-05,
+    "excess_tail_fraction": 9.822777634747982e-07,
+    "outgoing_fits": [
+      {
+        "speed": 2,
+        "aligned_error": 7.981694250625941e-08,
+        "translation": 16.69314718142455,
+        "phase": 1.1519830329073342,
+        "peak": 1.413750177033359
+      },
+      {
+        "speed": -2,
+        "aligned_error": 7.981695936460551e-08,
+        "translation": -16.693147181424628,
+        "phase": 1.1519830329073082,
+        "peak": 1.4137501770333563
+      }
+    ]
+  },
+  {
+    "name": "collision_e0.15_N2048_L160_h0.0025",
+    "epsilon": 0.15,
+    "n": 2048,
+    "L": 160,
+    "dt": 0.0025,
+    "peak_centers": [
+      -13.515625,
+      15.0
+    ],
+    "tail_outside_two_radius6_cores": 0.01726510988420574,
+    "initial_tail_fraction": 6.3292894797055464e-06,
+    "excess_tail_fraction": 0.017258780594726034,
+    "outgoing_fits": [
+      {
+        "speed": 2,
+        "aligned_error": 0.2248238155824594,
+        "translation": 14.998985669233562,
+        "phase": -0.24684694990663167,
+        "peak": 1.4565206938984236
+      },
+      {
+        "speed": -2,
+        "aligned_error": 0.17431998667299792,
+        "translation": -13.48122052750364,
+        "phase": -0.2284935511958056,
+        "peak": 1.0681059821275047
+      }
+    ]
+  },
+  {
+    "name": "collision_e0.15_N2048_L160_h0.00125",
+    "epsilon": 0.15,
+    "n": 2048,
+    "L": 160,
+    "dt": 0.00125,
+    "peak_centers": [
+      -13.515625,
+      15.0
+    ],
+    "tail_outside_two_radius6_cores": 0.017275187896809478,
+    "initial_tail_fraction": 6.3292894797055464e-06,
+    "excess_tail_fraction": 0.01726885860732977,
+    "outgoing_fits": [
+      {
+        "speed": 2,
+        "aligned_error": 0.22483769258282613,
+        "translation": 14.997534307493794,
+        "phase": -0.2461516152942911,
+        "peak": 1.4565393855266697
+      },
+      {
+        "speed": -2,
+        "aligned_error": 0.17442942344804718,
+        "translation": -13.479118495098383,
+        "phase": -0.22819953677486265,
+        "peak": 1.068098620232193
+      }
+    ]
+  },
+  {
+    "name": "collision_e0.15_N4096_L160_h0.00125",
+    "epsilon": 0.15,
+    "n": 4096,
+    "L": 160,
+    "dt": 0.00125,
+    "peak_centers": [
+      -13.4375,
+      14.9609375
+    ],
+    "tail_outside_two_radius6_cores": 0.017846555726592366,
+    "initial_tail_fraction": 6.587311592882931e-06,
+    "excess_tail_fraction": 0.017839968414999484,
+    "outgoing_fits": [
+      {
+        "speed": 2,
+        "aligned_error": 0.23036948194620274,
+        "translation": 14.962556503427372,
+        "phase": -0.18623509142982314,
+        "peak": 1.4487729445853001
+      },
+      {
+        "speed": -2,
+        "aligned_error": 0.1778015501192412,
+        "translation": -13.418906597611882,
+        "phase": -0.1935830543344881,
+        "peak": 1.0702524127747408
+      }
+    ]
+  },
+  {
+    "name": "collision_e0.15_N4096_L320_h0.00125",
+    "epsilon": 0.15,
+    "n": 4096,
+    "L": 320,
+    "dt": 0.00125,
+    "peak_centers": [
+      -13.515625,
+      15.0
+    ],
+    "tail_outside_two_radius6_cores": 0.017276005774706088,
+    "initial_tail_fraction": 6.330407281222802e-06,
+    "excess_tail_fraction": 0.017269675367424867,
+    "outgoing_fits": [
+      {
+        "speed": 2,
+        "aligned_error": 0.22485554510338165,
+        "translation": 14.997562442363003,
+        "phase": -0.24650689874445392,
+        "peak": 1.4564983105525025
+      },
+      {
+        "speed": -2,
+        "aligned_error": 0.17443084178428866,
+        "translation": -13.479080733665326,
+        "phase": -0.2286516908275767,
+        "peak": 1.068090778899175
+      }
+    ]
+  }
+]

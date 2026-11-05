@@ -1,0 +1,13 @@
+cd /home/matasvai/Documents/Projects/Dysthe/dysthe-experiments
+export PYTHONPATH=/home/matasvai/Documents/Projects/Dysthe/dysthe-core/src:/home/matasvai/Documents/Projects/Dysthe/dysthe-experiments/src:/home/matasvai/Documents/Projects/Dysthe/dysthe-learning/src
+export PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
+python3 -m unittest discover -s tests -p test_envelope_formula.py -v
+python3 -m unittest discover -s tests -p test_custom_simulator.py -v
+python3 -m unittest discover -s tests -p 'test_simulator*.py' -v
+python3 scripts/check_scope.py
+/home/matasvai/.local/bin/node --check src/dysthe_experiments/simulator_web/app.js
+
+# Browser verification uses the existing local service and a fresh Firefox profile.
+# This full check performs exactly one four-step N1024 custom run.
+python3 /home/matasvai/Documents/Codex/2026-10-16/task/stage3/qa/formula_e2e.py --url http://127.0.0.1:8765/ --output /tmp/dysthe-formula-ui-review
+# Add --skip-run to check input/preview without another propagation solve.

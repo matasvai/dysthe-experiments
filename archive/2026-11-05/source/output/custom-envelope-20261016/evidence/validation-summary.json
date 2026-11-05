@@ -1,0 +1,40 @@
+{
+  "checked_utc": "2026-10-16T19:08:55.232239+00:00",
+  "project": "/home/matasvai/Documents/Projects/Dysthe/dysthe-experiments",
+  "url": "http://127.0.0.1:8765/",
+  "test_results": {
+    "parser": {
+      "passed": 13,
+      "includes": "analytic Gaussian/sech/chirped phase, rejection/type/depth/work bounds",
+      "fuzz": {
+        "seed": 7482,
+        "samples": 20000,
+        "unexpected_exceptions": 0
+      }
+    },
+    "custom_integration": {
+      "passed": 9,
+      "log": "custom-simulator-final-tests.log",
+      "smoke": "two N256,L40,xi_end=.005,dxi=.0025 two-step solves in final module execution"
+    },
+    "existing_simulator_regressions": {
+      "passed": 6,
+      "log": "simulator-regression.log"
+    },
+    "scope": "passed",
+    "python_and_javascript_syntax": "passed",
+    "installed_browser": {
+      "passed": 16,
+      "report": "../qa/installed/formula-e2e.json",
+      "tiny_run": true,
+      "rendering": "desktop 1440 and mobile 390 pixels; visually reviewed",
+      "browser_errors": []
+    }
+  },
+  "limits": [
+    "No custom-input convergence campaign was run; all custom inputs remain exploratory.",
+    "N/2N sampling is a finite diagnostic, not a resolution or physical validity proof.",
+    "No FNO, paid compute or HPC job was started.",
+    "Existing transient service remains loopback-only; no firewall, boot autostart or persistent-access installation."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "method": "pinn_slabs",
+  "seed": 11,
+  "case_id": "packet-001",
+  "split": "validation",
+  "training_seconds": 0.0812565899996116,
+  "history": [
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.20337162911891937,
+        "full_dysthe_residual_validation": 0.1673603504896164,
+        "seconds": 0.0531197489999613,
+        "training_epsilon": 0.03891041502356529,
+        "gradient_norm_before_clip": 71.44979858398438
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.05433441698551178,
+        "full_dysthe_residual_validation": 0.03155351057648659,
+        "seconds": 0.0812565899996116,
+        "training_epsilon": 0.03891041502356529,
+        "gradient_norm_before_clip": 29.9462833404541
+      }
+    ]
+  ],
+  "full_residual_rms_relative": [
+    0.17761516571044922
+  ],
+  "metrics": [
+    {
+      "xi": 0.1,
+      "l2": 0.0017615392494411944,
+      "h1": 0.0019930968453891486,
+      "h2": 0.0024007940830903162,
+      "peak": 9.461234043176112e-05
+    }
+  ],
+  "sampled_interval_errors": {
+    "l2": 0.0017615392494411944,
+    "h1": 0.0019930968453891486,
+    "h2": 0.0024007940830903162,
+    "peak": 9.461234043176112e-05
+  },
+  "sampled_interval_tolerances": {
+    "l2": 0.01,
+    "h1": 0.05,
+    "h2": 0.05,
+    "peak": 0.05
+  },
+  "sampled_interval_gate_version": "complex-l2-h1-h2-peak-v2",
+  "sampled_interval_pass": true,
+  "sampled_station_count": 3,
+  "resumed_from_checkpoint": false,
+  "checkpoints": {
+    "best-0.pt": "3192b88dae88c36d0147fc894671fe2842317850990d563c76ce9fa18e7e8f04"
+  },
+  "gpu_peak_allocated_bytes": null,
+  "invocation_elapsed_seconds": 0.0908795100003772
+}

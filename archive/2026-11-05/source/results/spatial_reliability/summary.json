@@ -1,0 +1,282 @@
+[
+  {
+    "regime": "homogeneous_minus",
+    "family": "gaussian",
+    "base": {
+      "peak": 1.548747813290718e-05,
+      "x": -20.75,
+      "r": 0.0
+    },
+    "longitudinal": {
+      "peak": 1.548546945003537e-05,
+      "x": -20.75,
+      "r": 0.0,
+      "boundary_amplitude": 2.008666837377653e-09
+    },
+    "radial_annulus": {
+      "peak": 7.839659242131232e-12,
+      "x": -9.0,
+      "r": 2050.0,
+      "boundary_amplitude": 3.448824966661327e-17
+    },
+    "second_longitudinal": {
+      "peak": 1.548475931062247e-05,
+      "x": -20.75,
+      "r": 0.0,
+      "boundary_amplitude": 7.101379960841489e-10
+    },
+    "checks": {
+      "first_longitudinal_change": 0.00012971404440099513,
+      "transverse_expansion_change": 0.0,
+      "second_longitudinal_change": 4.586053929881705e-05,
+      "local_refinement_change": 2.4991139554086205e-05,
+      "quadrature_tightening_change": 1.9255258845200105e-14,
+      "final_spectral_integral_discrepancy": 2.508222819012471e-05,
+      "final_polished_peak_drift": 4.586053510710677e-05,
+      "final_polished_location_drift": 0.0,
+      "boundary_to_peak": 4.586159390638692e-05
+    },
+    "polished": [
+      {
+        "length": 32768,
+        "peak": 1.5487479543354803e-05,
+        "x": -20.74692087173462,
+        "r": 3.4466385841369633e-07,
+        "success": true
+      },
+      {
+        "length": 65536,
+        "peak": 1.54854708604855e-05,
+        "x": -20.74692087173462,
+        "r": 3.4466385841369633e-07,
+        "success": true
+      },
+      {
+        "length": 131072,
+        "peak": 1.5484760721072828e-05,
+        "x": -20.74692087173462,
+        "r": 3.4466385841369633e-07,
+        "success": true
+      }
+    ],
+    "continuum_candidate": {
+      "peak": 1.5484372338512452e-05,
+      "ratio": 0.009988652366695295,
+      "x": -20.74692087173462,
+      "r": 3.4466385841369633e-07,
+      "quadrature_error_estimate": 2.981555974335137e-19,
+      "success": true
+    },
+    "passes_peak_screen": true
+  },
+  {
+    "regime": "homogeneous_minus",
+    "family": "near_degeneracy",
+    "base": {
+      "peak": 1.3754001380940158e-05,
+      "x": 8.25,
+      "r": 6.0
+    },
+    "longitudinal": {
+      "peak": 1.3754273191634651e-05,
+      "x": 8.25,
+      "r": 6.0,
+      "boundary_amplitude": 2.008666895000457e-09
+    },
+    "radial_annulus": {
+      "peak": 4.2685338330020566e-17,
+      "x": 1499.25,
+      "r": 2050.0,
+      "boundary_amplitude": 1.1659537455622149e-27
+    },
+    "second_longitudinal": {
+      "peak": 1.3754369295462577e-05,
+      "x": 8.25,
+      "r": 6.0,
+      "boundary_amplitude": 7.101380011748169e-10
+    },
+    "checks": {
+      "first_longitudinal_change": 1.9761908950483192e-05,
+      "transverse_expansion_change": 0.0,
+      "second_longitudinal_change": 6.9871490187082976e-06,
+      "local_refinement_change": 0.0008596567642733839,
+      "quadrature_tightening_change": 8.983363514159782e-15,
+      "final_spectral_integral_discrepancy": 2.624565024281218e-06,
+      "final_polished_peak_drift": 4.7966689978911916e-06,
+      "final_polished_location_drift": 0.0007917880002804408,
+      "boundary_to_peak": 5.158560970677188e-05
+    },
+    "polished": [
+      {
+        "length": 32768,
+        "peak": 1.3765914739830507e-05,
+        "x": 7.793796929406386,
+        "r": 6.540685730211271,
+        "success": true
+      },
+      {
+        "length": 65536,
+        "peak": 1.376610134751358e-05,
+        "x": 7.795316143806306,
+        "r": 6.539042948008553,
+        "success": true
+      },
+      {
+        "length": 131072,
+        "peak": 1.3766167379261869e-05,
+        "x": 7.795853710348142,
+        "r": 6.538461612949842,
+        "success": true
+      }
+    ],
+    "continuum_candidate": {
+      "peak": 1.3766203505424379e-05,
+      "ratio": 0.008880296741693836,
+      "x": 7.796142449164786,
+      "r": 6.538146924524793,
+      "quadrature_error_estimate": 1.2366681029912785e-19,
+      "success": true
+    },
+    "passes_peak_screen": true
+  },
+  {
+    "regime": "inhomogeneous_plus",
+    "family": "gaussian",
+    "base": {
+      "peak": 5.772342779792693e-06,
+      "x": -9.0,
+      "r": 0.0
+    },
+    "longitudinal": {
+      "peak": 5.7723394152225835e-06,
+      "x": -9.0,
+      "r": 0.0,
+      "boundary_amplitude": 3.3852227802542185e-08
+    },
+    "radial_annulus": {
+      "peak": 3.361293994692531e-08,
+      "x": -810.75,
+      "r": 2050.0,
+      "boundary_amplitude": 1.1399060814204243e-11
+    },
+    "second_longitudinal": {
+      "peak": 5.7723418506346815e-06,
+      "x": -9.0,
+      "r": 0.0,
+      "boundary_amplitude": 1.139906081420424e-11
+    },
+    "checks": {
+      "first_longitudinal_change": 5.828780790285323e-07,
+      "transverse_expansion_change": 0.0,
+      "second_longitudinal_change": 4.219105799881175e-07,
+      "local_refinement_change": 4.2354585610707335e-05,
+      "quadrature_tightening_change": 2.2060383518153018e-14,
+      "final_spectral_integral_discrepancy": 6.930818862180282e-08,
+      "final_polished_peak_drift": 4.051450791645906e-07,
+      "final_polished_location_drift": 2.0405936703067442e-05,
+      "boundary_to_peak": 1.9746886630516876e-06
+    },
+    "polished": [
+      {
+        "length": 32768,
+        "peak": 5.7725869281304766e-06,
+        "x": -8.915412139892577,
+        "r": 3.4064054489135737e-06,
+        "success": true
+      },
+      {
+        "length": 65536,
+        "peak": 5.7725836422953496e-06,
+        "x": -8.91539173413359,
+        "r": 3.491569483458079e-06,
+        "success": true
+      },
+      {
+        "length": 131072,
+        "peak": 5.772585981030154e-06,
+        "x": -8.915412139892577,
+        "r": 3.4064054489135737e-06,
+        "success": true
+      }
+    ],
+    "continuum_candidate": {
+      "peak": 5.772586346137274e-06,
+      "ratio": 0.0037237775615150525,
+      "x": -8.915412139892577,
+      "r": 3.4064054489135737e-06,
+      "quadrature_error_estimate": 1.2734546868744188e-19,
+      "success": true
+    },
+    "passes_peak_screen": true
+  },
+  {
+    "regime": "inhomogeneous_plus",
+    "family": "near_degeneracy",
+    "base": {
+      "peak": 9.08734892625558e-06,
+      "x": -841.25,
+      "r": 0.0
+    },
+    "longitudinal": {
+      "peak": 9.087647390664946e-06,
+      "x": -841.25,
+      "r": 0.0,
+      "boundary_amplitude": 3.1087544727001355e-10
+    },
+    "radial_annulus": {
+      "peak": 3.872944348917461e-17,
+      "x": -4494.0,
+      "r": 2050.0,
+      "boundary_amplitude": 9.075773896734639e-28
+    },
+    "second_longitudinal": {
+      "peak": 9.087414369209705e-06,
+      "x": -841.25,
+      "r": 0.0,
+      "boundary_amplitude": 2.387547116371944e-10
+    },
+    "checks": {
+      "first_longitudinal_change": 3.284286862545958e-05,
+      "transverse_expansion_change": 0.0,
+      "second_longitudinal_change": 2.564221744193458e-05,
+      "local_refinement_change": 3.856488599260803e-06,
+      "quadrature_tightening_change": 3.671153502439772e-14,
+      "final_spectral_integral_discrepancy": 3.957995209073831e-06,
+      "final_polished_peak_drift": 2.5641814231259287e-05,
+      "final_polished_location_drift": 0.000213623046875,
+      "boundary_to_peak": 2.6273219498054146e-05
+    },
+    "polished": [
+      {
+        "length": 32768,
+        "peak": 9.087348958725676e-06,
+        "x": -841.2463073730469,
+        "r": 0.0,
+        "success": true
+      },
+      {
+        "length": 65536,
+        "peak": 9.087647417917905e-06,
+        "x": -841.2466125488281,
+        "r": 0.0,
+        "success": true
+      },
+      {
+        "length": 131072,
+        "peak": 9.087414400126015e-06,
+        "x": -841.2463989257812,
+        "r": 0.0,
+        "success": true
+      }
+    ],
+    "continuum_candidate": {
+      "peak": 9.087379323834946e-06,
+      "ratio": 0.005862082815221295,
+      "x": -841.2463607788086,
+      "r": 0.0,
+      "quadrature_error_estimate": 3.3361164432695434e-19,
+      "success": true
+    },
+    "passes_peak_screen": true
+  }
+]

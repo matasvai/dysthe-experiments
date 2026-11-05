@@ -1,0 +1,10 @@
+{
+  "stage": "pinn",
+  "task_index": 0,
+  "case_id": "packet-001",
+  "split": "validation",
+  "seed": 11,
+  "results": [],
+  "status": "execution_error",
+  "error": "ValueError: Padded invariant quadrature requires a retained-band field"
+}

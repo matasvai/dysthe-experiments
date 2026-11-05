@@ -1,0 +1,82 @@
+[
+  {
+    "method": "pinn_slabs",
+    "seed": 11,
+    "case_id": "random-001",
+    "split": "validation",
+    "training_seconds": 0.10536833699916315,
+    "history": [
+      [
+        {
+          "epoch": 10,
+          "training_loss": 0.04067036509513855,
+          "full_dysthe_residual_validation": 0.028596678748726845,
+          "seconds": 0.025984862999393954,
+          "training_epsilon": 0.027743279933929443,
+          "gradient_norm_before_clip": 6.473245143890381
+        },
+        {
+          "epoch": 20,
+          "training_loss": 0.005983270704746246,
+          "full_dysthe_residual_validation": 0.005865439306944609,
+          "seconds": 0.05257840599915653,
+          "training_epsilon": 0.027743279933929443,
+          "gradient_norm_before_clip": 2.133866310119629
+        }
+      ],
+      [
+        {
+          "epoch": 10,
+          "training_loss": 0.04318854957818985,
+          "full_dysthe_residual_validation": 0.0394403375685215,
+          "seconds": 0.026143089000470354,
+          "training_epsilon": 0.027743279933929443,
+          "gradient_norm_before_clip": 6.094362735748291
+        },
+        {
+          "epoch": 20,
+          "training_loss": 0.004930717870593071,
+          "full_dysthe_residual_validation": 0.004754353314638138,
+          "seconds": 0.05278993100000662,
+          "training_epsilon": 0.027743279933929443,
+          "gradient_norm_before_clip": 1.843201756477356
+        }
+      ]
+    ],
+    "full_residual_rms_relative": [
+      0.07656343281269073,
+      0.06893346458673477
+    ],
+    "metrics": [
+      {
+        "xi": 0.2,
+        "l2": 0.0034711098345912017,
+        "h1": 0.0036431769787562884,
+        "h2": 0.0038816542868597144,
+        "peak": 0.0003889660522052844
+      }
+    ],
+    "sampled_interval_errors": {
+      "l2": 0.0034711098345912017,
+      "h1": 0.0036431769787562884,
+      "h2": 0.0038816542868597144,
+      "peak": 0.0004898894313740901
+    },
+    "sampled_interval_tolerances": {
+      "l2": 0.01,
+      "h1": 0.05,
+      "h2": 0.05,
+      "peak": 0.05
+    },
+    "sampled_interval_gate_version": "complex-l2-h1-h2-peak-v2",
+    "sampled_interval_pass": true,
+    "sampled_station_count": 5,
+    "resumed_from_checkpoint": false,
+    "checkpoints": {
+      "best-0.pt": "177aa34bb4f27634eb47912121be82b30c96f5df65b3592645a3a0645b9fec15",
+      "best-1.pt": "4c0331b8494d116e12e2e95a495cb271a967f5fe08cf4236867af5a4b4f4aff1"
+    },
+    "gpu_peak_allocated_bytes": null,
+    "invocation_elapsed_seconds": 0.1189665279998735
+  }
+]

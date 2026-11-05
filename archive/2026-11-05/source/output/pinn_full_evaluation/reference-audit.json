@@ -1,0 +1,134 @@
+{
+  "status": "pass",
+  "gate": "provisional fixed-period engineering screen",
+  "thresholds": {
+    "relative_l2": 0.001,
+    "relative_peak_error": 0.005
+  },
+  "comparisons": {
+    "grid": {
+      "rows": [
+        {
+          "t": 0.0,
+          "relative_l2": 3.696065621737105e-16,
+          "relative_peak_error": 0.0
+        },
+        {
+          "t": 0.05,
+          "relative_l2": 9.137315416410002e-07,
+          "relative_peak_error": 1.8392499902709092e-07
+        },
+        {
+          "t": 0.1,
+          "relative_l2": 1.7058417675534272e-06,
+          "relative_peak_error": 7.096430725569135e-07
+        },
+        {
+          "t": 0.15,
+          "relative_l2": 2.2712526381030675e-06,
+          "relative_peak_error": 1.4681264651566106e-06
+        },
+        {
+          "t": 0.2,
+          "relative_l2": 2.5409437067484824e-06,
+          "relative_peak_error": 2.2725691599764394e-06
+        },
+        {
+          "t": 0.25,
+          "relative_l2": 2.502782764687236e-06,
+          "relative_peak_error": 2.9701727821818814e-06
+        },
+        {
+          "t": 0.3,
+          "relative_l2": 2.2191247352676773e-06,
+          "relative_peak_error": 3.524906017017084e-06
+        },
+        {
+          "t": 0.35000000000000003,
+          "relative_l2": 1.8401243058344646e-06,
+          "relative_peak_error": 3.958345244840013e-06
+        },
+        {
+          "t": 0.4,
+          "relative_l2": 1.5955287990210443e-06,
+          "relative_peak_error": 4.234861088621385e-06
+        },
+        {
+          "t": 0.45,
+          "relative_l2": 1.6433905746911998e-06,
+          "relative_peak_error": 4.238831193928669e-06
+        },
+        {
+          "t": 0.5,
+          "relative_l2": 1.8610655853966717e-06,
+          "relative_peak_error": 3.870674180412953e-06
+        }
+      ],
+      "max_relative_l2": 2.5409437067484824e-06,
+      "max_relative_peak_error": 4.238831193928669e-06
+    },
+    "time_on_fine_grid": {
+      "rows": [
+        {
+          "t": 0.0,
+          "relative_l2": 0.0,
+          "relative_peak_error": 0.0
+        },
+        {
+          "t": 0.05,
+          "relative_l2": 3.2515375121606597e-15,
+          "relative_peak_error": 3.7043165889792067e-16
+        },
+        {
+          "t": 0.1,
+          "relative_l2": 6.645903623399155e-15,
+          "relative_peak_error": 9.287691706190983e-16
+        },
+        {
+          "t": 0.15,
+          "relative_l2": 9.744486076946329e-15,
+          "relative_peak_error": 1.1199417122357605e-15
+        },
+        {
+          "t": 0.2,
+          "relative_l2": 1.285062632635813e-14,
+          "relative_peak_error": 1.6914044562927186e-15
+        },
+        {
+          "t": 0.25,
+          "relative_l2": 1.6369968255864188e-14,
+          "relative_peak_error": 2.2751382561260718e-15
+        },
+        {
+          "t": 0.3,
+          "relative_l2": 1.9406105108855163e-14,
+          "relative_peak_error": 1.724859979347297e-15
+        },
+        {
+          "t": 0.35000000000000003,
+          "relative_l2": 2.2727239845157598e-14,
+          "relative_peak_error": 1.9411361617259233e-15
+        },
+        {
+          "t": 0.4,
+          "relative_l2": 2.5565576333753313e-14,
+          "relative_peak_error": 1.7729368213931401e-15
+        },
+        {
+          "t": 0.45,
+          "relative_l2": 2.907269721746263e-14,
+          "relative_peak_error": 1.6023942838387108e-15
+        },
+        {
+          "t": 0.5,
+          "relative_l2": 3.232674006346207e-14,
+          "relative_peak_error": 1.836379155514747e-15
+        }
+      ],
+      "max_relative_l2": 3.232674006346207e-14,
+      "max_relative_peak_error": 2.2751382561260718e-15
+    }
+  },
+  "recommended_reference": "/home1/mvaitkeviciu2024/Dysthe/dysthe-pinn/runs/reference-001/grid_dt/reference.npz",
+  "qualification": "No domain enlargement, continuum supremum certification, or whole-space claim. Reference pass does not imply PINN pass."
+}

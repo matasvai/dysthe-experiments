@@ -1,0 +1,208 @@
+                                        Three complex initial envelopes
+                               A bounded spatial Dysthe simulator demonstration
+
+                                                       16 October 2026
+
+
+
+1         Problem and prescribed inputs
+The simulator advances the scaled complex free-surface envelope u(ξ, τ ), where ξ is propagation
+distance and τ retarded time:
+
+                               uξ = −iuτ τ − i|u|2 u − ϵ 8|u|2 uτ + 2u2 uτ + 2iu|Dτ |(|u|2 ) .
+                                                                                                                    
+
+
+The model contract is water-wave-dysthe-spatial-v1. The coefficients are (1, 1, 8, 2, 2). The
+periodic interval is [−80, 80), N = 4096, ϵ = 0.025, ∆ξ = 0.00125, and 0 ≤ ξ ≤ 4. There are 81
+saved positions. The Fourier method retains |m| < N/4, uses mean-flow symbol |k| with zero mean
+mode, and applies Lawson integrating-factor RK4.
+   Let F be the recomputed periodic branch with µ = 2, s = 0, and full traveling residual 2.03×10−11 .
+The three initial fields are F (τ ); F (τ )[1+0.02 exp(−((τ −1.3)/2)2 )]; and exp(−τ 2 /8) exp(0.3iτ ). The
+second is a shifted localized amplitude perturbation. The third has amplitude 1, width parameter 2,
+wavenumber 0.3, and zero chirp. The plots retain physical coordinates and show envelope amplitude,
+rather than reconstructed surface elevation.
+                        (a) Reference profile                                              (b) Localized perturbation
+          2                                                                  2
+                                                   ξ=0                                                                         ξ=0
+                                                   ξ=4                                                                         ξ=4
+    |u|
+
+
+
+
+                                                             |u|
+
+
+
+
+          1                                                                  1
+
+
+
+          0                                                                  0
+              −8   −6   −4    −2    0     2    4   6     8                       −8   −6     −4    −2    0    2         4     6      8
+                             Retarded time τ                                                      Retarded time τ
+                        (c) Complex Gaussian                                                (d) Gaussian evolution
+                                                                             4
+                                                             Propagation ξ
+
+
+
+
+                                                   ξ=0
+      1.0                                                                    3                                                             1.0
+                                                   ξ=4
+|u|
+
+
+
+
+                                                                                                                                                 |u|
+
+
+
+
+                                                                             2
+      0.5                                                                                                                                  0.5
+                                                                             1
+      0.0                                                                    0
+              −8   −6   −4    −2    0     2    4   6     8                   −10.0 −7.5 −5.0 −2.5       0.0   2.5       5.0   7.5   10.0
+                             Retarded time τ                                                      Retarded time τ
+
+
+Figure 1: Initial and final amplitudes for all three cases, and the Gaussian trajectory. These are
+central-window views of the saved full-domain complex fields.
+
+
+
+
+                                                                             1
+2                             Observed evolution
+The reference keeps its amplitude and width to the reported accuracy while its fitted global phase
+changes by −8.000000 radians. Its final shape distance is 2.77 × 10−10 . The perturbed profile
+deforms modestly and develops exterior action. The Gaussian focuses to maximum amplitude
+1.406646 and ends at amplitude 1.325587. Its final shape distance is 39.31% despite a net width
+change of only 0.0197%. Width alone therefore misses substantial complex-envelope evolution.
+
+                                                  (a) Peak amplitude                                                                                     (b) RMS width
+
+
+
+
+                                                                                                  Width / initial width
+                              1.4                                                                                               1.00
+        Peak / initial peak
+
+
+
+
+                                           Reference profile
+                                           Localized perturbation                                                               0.95
+                              1.3
+                                           Complex Gaussian
+                              1.2                                                                                               0.90
+
+                              1.1                                                                                               0.85
+
+                                                                                                                                0.80
+                              1.0
+                                    0.0   0.5   1.0   1.5   2.0     2.5    3.0   3.5   4.0                                             0.0   0.5   1.0   1.5    2.0    2.5   3.0   3.5   4.0
+                                                 Propagation distance ξ                                                                             Propagation distance ξ
+
+                                                                                             Action fraction beyond radius 8
+                                          (c) Action-centroid displacement                                                                           (d) Exterior action
+                                                                                                                               10−2
+                              0.0
+
+                                                                                                                               10−4
+c(ξ) − c(0)
+
+
+
+
+                      −0.5
+
+                      −1.0                                                                                                     10−6
+
+                      −1.5                                                                                                     10−8
+
+                      −2.0
+                                    0.0   0.5   1.0   1.5   2.0     2.5    3.0   3.5   4.0                                             0.0   0.5   1.0   1.5    2.0    2.5   3.0   3.5   4.0
+                                                 Propagation distance ξ                                                                             Propagation distance ξ
+
+
+Figure 2: Peak and width relative to their own initial values; action-centroid displacement; and
+action beyond periodic distance 8 from that centroid. The exterior fraction includes packet tails
+and spreading and is not automatically radiation.
+
+
+Table 1: Final values at ξ = 4. Shape is the relative complex L2 distance to each case’s initial field
+after removing translation and constant phase, without amplitude rescaling.
+                              Case                                  Peak     RMS width                                         Displacement                    Shape     Tail fraction
+                              Reference profile               1.958116           0.623359                                      −3.21 × 10−10        2.77 × 10−8 %       2.72 × 10−10
+                              Localized perturbation          2.018419           0.606491                                           0.054528                2.57%        4.96 × 10−5
+                              Complex Gaussian                1.325587           1.414492                                          -1.936173              39.31%         6.22 × 10−3
+
+   The centroid is obtained from the first circular action moment; displacement is unwrapped relative
+to its initial value. RMS width is the action-weighted shortest periodic distance about that centroid.
+These statistics become ambiguous for broad or wrapped fields. Here circular concentration remains
+above 0.998. The complex shape diagnostic also detects phase variation that amplitude plots cannot
+show.
+
+
+
+
+                                                                                         2
+3    Numerical qualification and reproducibility
+Each default case has independent comparisons with N = 8192 at fixed domain, ∆ξ = 0.000625 at
+fixed grid, and (L, N ) = (320, 8192) at fixed spacing. All nine comparisons and the recorded design
+screens pass. Profiles are recomputed for each period. The table reports maxima over all 81 saved
+positions, retaining complex phase in the raw comparisons.
+
+Table 2: Maximum relative complex L2 differences. Domain comparisons use common physical
+coordinates in the central [−80, 80) window. The last column additionally removes translation and
+constant phase.
+          Case                             Grid           Step       Domain    Domain orbital
+                                            −15             −9            −6
+          Reference profile        4.17 × 10       3.07 × 10     1.54 × 10         1.54 × 10−6
+          Localized perturbation   3.09 × 10−15    4.08 × 10−9   2.26 × 10−6       1.83 × 10−6
+          Complex Gaussian         9.28 × 10−16   4.05 × 10−11   2.18 × 10−5       9.66 × 10−9
+
+    The raw-field normalization is the refined field norm at each position. The chosen gates are
+2×10−4 for raw differences and 10−4 for orbital differences and signed-shape discrepancies. The latter
+compare each solution’s deformation from its own initial field. Their additional relative response
+gate is 0.02, used only above a 10−7 field-norm response floor. The tiny reference response falls
+below that floor. Two levels demonstrate agreement; they provide neither an observed convergence
+order nor a rigorous error bound. Periodic mean flow can depend on L even when boundary action
+is tiny; domain differences include that dependence.
+    Signed-shape comparisons can have an approximately 10−8 fitting floor under the inherited
+orbital optimizer even when raw grid differences are near 10−15 . This is a diagnostic precision limit,
+not evidence of an unresolved propagated field. Action conservation is supporting evidence; padded
+continuum energy and momentum are not assumed exact invariants of the projected equation or
+RK map.
+    The stored arrays tau, xi, u, and initial are available in each case’s fields.npz; u is complex128
+of shape (81, 4096). Reports record parameters, definitions, qualification, source hashes, and field
+checksums. Plotting verifies those checksums and metadata against the saved summary before
+reading the fields. The completed 12-trajectory campaign, including refinements, used 106.3 seconds
+of solver/diagnostic time and peak process RSS 197.0 MiB.
+    From the task root, reproduce these plots and tables without rerunning propagation:
+
+python3 stage2/plot_demo.py
+cd stage2/report
+pdflatex -interaction=nonstopmode -halt-on-error report.tex
+pdflatex -interaction=nonstopmode -halt-on-error report.tex
+
+The plot manifest, source data, and earlier numerical-reference report are:
+stage2/results/plot-manifest.json
+stage2/results/demo/
+stage2/review/dysthe-stage-one-reference.pdf
+
+   These checks qualify only the exact three defaults and ξ ∈ [0, 4]. Custom parameters and
+longer horizons require their own refinements. This small simulator demonstrates varied complex
+initial envelopes and preserves their full fields; it establishes no soliton discovery, stability theorem,
+Euler-model validation, training dataset, or learned operator.
+
+
+                                                    3
+

@@ -1,0 +1,72 @@
+{
+  "method": "pinn_slabs",
+  "seed": 11,
+  "case_id": "sideband-002",
+  "split": "test",
+  "training_seconds": 0.11051077200136206,
+  "history": [
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.24432627856731415,
+        "full_dysthe_residual_validation": 0.1751122772693634,
+        "seconds": 0.02921392600001127,
+        "training_epsilon": 0.022165115922689438
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.03967297449707985,
+        "full_dysthe_residual_validation": 0.03981871157884598,
+        "seconds": 0.05765236800107232,
+        "training_epsilon": 0.022165115922689438
+      }
+    ],
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.2793605625629425,
+        "full_dysthe_residual_validation": 0.20078276097774506,
+        "seconds": 0.025706873000672203,
+        "training_epsilon": 0.022165115922689438
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.030748646706342697,
+        "full_dysthe_residual_validation": 0.03244572505354881,
+        "seconds": 0.05285840400028974,
+        "training_epsilon": 0.022165115922689438
+      }
+    ]
+  ],
+  "full_residual_rms_relative": [
+    0.19954408705234528,
+    0.1801283210515976
+  ],
+  "metrics": [
+    {
+      "xi": 0.2,
+      "l2": 0.018303850242312878,
+      "h1": 0.018380508578751564,
+      "peak": 0.004287330113705344
+    }
+  ],
+  "sampled_interval_errors": {
+    "l2": 0.018303850242312878,
+    "h1": 0.018380508578751564,
+    "peak": 0.004287330113705344
+  },
+  "sampled_interval_tolerances": {
+    "l2": 0.01,
+    "h1": 0.05,
+    "peak": 0.05
+  },
+  "sampled_interval_pass": false,
+  "sampled_station_count": 5,
+  "resumed_from_checkpoint": false,
+  "checkpoints": {
+    "best-0.pt": "5ce283af85ff737c2f9131deec80a881a6608d33e7ed4b0f6f7067f3ce96c9a5",
+    "best-1.pt": "5fb959a4182f77d023a223aee62b5a40cc8dae0f47f4a15ec8e67f574f3d7b19"
+  },
+  "gpu_peak_allocated_bytes": null,
+  "invocation_elapsed_seconds": 0.12414593799985596
+}

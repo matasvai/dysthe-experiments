@@ -1,0 +1,56 @@
+{
+  "times": [
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "levels": [
+    [
+      "base",
+      8192,
+      0.5,
+      512,
+      4
+    ],
+    [
+      "length",
+      16384,
+      0.5,
+      512,
+      4
+    ],
+    [
+      "fine",
+      16384,
+      0.25,
+      1024,
+      2
+    ]
+  ],
+  "C": [
+    1.0,
+    0.7978845608028654,
+    0.9678828980765735
+  ],
+  "widths": [
+    3,
+    6
+  ],
+  "orders": [
+    0,
+    1,
+    2
+  ],
+  "bump_cases": {
+    "3": "gap support kx in (0.5,1)",
+    "4": "control support kx in (-0.25,0.25)"
+  },
+  "bump_L1": 1.2286263019986632,
+  "bump_norm_relative_change": 5.0962694830847255e-06,
+  "symbol": "kx^3-3*kx*(ky^2+kz^2)",
+  "alpha": 0.5,
+  "normalization": "exact continuum L1=1",
+  "wall_seconds": 20.02147102355957
+}

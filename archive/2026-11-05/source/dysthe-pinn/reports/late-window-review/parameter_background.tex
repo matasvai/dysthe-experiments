@@ -1,0 +1,33 @@
+\clearpage
+\section{Where the coefficients $\epsilon_1$ and $\epsilon_2$ come from}
+These coefficients were fixed from a physically motivated optical example. They were not learned by the PINN or tuned to produce the observed oscillations. Equation (1.27) of the supplied manuscript follows the model in its reference [77]: Zozulya and Diddams (1999).\footnote{A. A. Zozulya and S. A. Diddams, ``Dynamics of self-focused femtosecond laser pulses in the near and far fields,'' Optics Express 4(9) (1999), 336--343. Model: p. 337, equation (2); normalization and physical parameters: p. 338. Source PDF: \texttt{https://tf.nist.gov/general/pdf/2968.pdf}.}
+
+In that source the corresponding coefficients are denoted $\epsilon_\omega$ and $\epsilon_3$. After normalization and the coordinate relabelling used in (1.27),
+\[
+\boxed{\epsilon_1=\frac{1}{\omega_0\tau}},\qquad
+\boxed{\epsilon_2=\frac{k'''(\omega_0)}{3k''(\omega_0)\tau}}.
+\]
+Here $\omega_0$ is the carrier angular frequency, $\tau$ the chosen characteristic pulse duration, and $k'',k'''$ the second and third derivatives of the material wavenumber with respect to angular frequency. These formulas give dimensionless numbers.
+\begin{center}\begin{tabular}{ll}\toprule
+Source's fused-silica example & Value\\\midrule
+Carrier wavelength $\lambda_0$ & $800\ \mathrm{nm}$\\
+Intensity FWHM & $90\ \mathrm{fs}$\\
+Second-order dispersion $k''$ & $360\ \mathrm{fs}^2/\mathrm{cm}$\\
+Third-order dispersion $k'''$ & $275\ \mathrm{fs}^3/\mathrm{cm}$\\\bottomrule\end{tabular}\end{center}
+The source uses a temporal hyperbolic-secant field, so its intensity is proportional to $\operatorname{sech}^2(T/\tau)$. Converting its intensity full width at half maximum (FWHM) to $\tau$, and using the vacuum carrier wavelength to calculate frequency, gives
+\[
+\tau=\frac{90}{2\operatorname{arcosh}\sqrt2}\approx51.0567\ \mathrm{fs},
+\qquad \omega_0=\frac{2\pi c}{\lambda_0}\approx2.35456\ \mathrm{fs}^{-1}.
+\]
+Direct substitution yields
+\[
+\epsilon_1\approx0.00831834509,\qquad
+\epsilon_2=\frac{275}{3(360)(51.0567)}\approx0.00498719622.
+\]
+The factor $1/3$ in the dispersion ratio is consistent with the ratio of the Taylor coefficients $k'''/6$ and $k''/2$, with one additional inverse duration supplied by the extra derivative.
+
+\paragraph{Physical meaning.}
+The $\epsilon_1$ terms describe space--time coupling and nonlinear pulse steepening; $\epsilon_2$ weights third-order dispersion. Relative to the normalized leading terms, both scale as $1/\tau$ for fixed material and carrier frequency. Shorter duration scales therefore increase these coefficients together. Their small numerical values alone do not guarantee small effects on a field with large derivatives.
+
+\paragraph{Scope of the physical connection.}
+These numbers motivate a mathematical benchmark, not a calibrated reproduction of the optical experiment. Our initial packet is trigonometric rather than the source's temporal sech pulse and spatial Gaussian. Its physical duration, beam width, and amplitude were not independently calibrated. Equation (1.27) also omits the delayed Raman response present in the source model. In particular, the $90$ fs parameter used above must not be interpreted as a measured duration of our synthetic packet.

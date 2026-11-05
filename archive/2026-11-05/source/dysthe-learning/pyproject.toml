@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dysthe-learning"
+version = "0.0.2"
+description = "Comparable learning methods consuming the same water-wave Dysthe fields and contracts."
+requires-python = ">=3.10"
+dependencies = ["dysthe-core @ git+https://github.com/matasvai/dysthe-core.git@a47a42321475feb6bc55031f4b752419f4b7fda9"]
+
+[project.optional-dependencies]
+pilot = ["numpy>=1.24", "scipy>=1.10", "torch>=2.6,<3"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

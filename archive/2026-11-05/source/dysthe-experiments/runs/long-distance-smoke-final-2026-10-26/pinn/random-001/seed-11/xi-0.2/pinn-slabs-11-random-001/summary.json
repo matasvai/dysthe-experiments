@@ -1,0 +1,72 @@
+{
+  "method": "pinn_slabs",
+  "seed": 11,
+  "case_id": "random-001",
+  "split": "validation",
+  "training_seconds": 0.1084359830019821,
+  "history": [
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.0377546027302742,
+        "full_dysthe_residual_validation": 0.0352712981402874,
+        "seconds": 0.025873874999888358,
+        "training_epsilon": 0.027743279933929443
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.0077525535598397255,
+        "full_dysthe_residual_validation": 0.005018021445721388,
+        "seconds": 0.053183753001576406,
+        "training_epsilon": 0.027743279933929443
+      }
+    ],
+    [
+      {
+        "epoch": 10,
+        "training_loss": 0.03927341103553772,
+        "full_dysthe_residual_validation": 0.041678886860609055,
+        "seconds": 0.02566146800018032,
+        "training_epsilon": 0.027743279933929443
+      },
+      {
+        "epoch": 20,
+        "training_loss": 0.006966054439544678,
+        "full_dysthe_residual_validation": 0.006558151915669441,
+        "seconds": 0.05525223000040569,
+        "training_epsilon": 0.027743279933929443
+      }
+    ]
+  ],
+  "full_residual_rms_relative": [
+    0.07081294804811478,
+    0.08095686137676239
+  ],
+  "metrics": [
+    {
+      "xi": 0.2,
+      "l2": 0.0033472795950379433,
+      "h1": 0.0035920382339608495,
+      "peak": 0.0006544399052799896
+    }
+  ],
+  "sampled_interval_errors": {
+    "l2": 0.0033472795950379433,
+    "h1": 0.0035920382339608495,
+    "peak": 0.0006544399052799896
+  },
+  "sampled_interval_tolerances": {
+    "l2": 0.01,
+    "h1": 0.05,
+    "peak": 0.05
+  },
+  "sampled_interval_pass": true,
+  "sampled_station_count": 5,
+  "resumed_from_checkpoint": false,
+  "checkpoints": {
+    "best-0.pt": "c1ea56ff932402beb4df88a1beb6ee30343dc8a8401b13743fc5a504c9c81e53",
+    "best-1.pt": "0e1bda00b4197234066ff41ba6ee0e1c787375f7e6fa34521f01e1bd0eaf9e1b"
+  },
+  "gpu_peak_allocated_bytes": null,
+  "invocation_elapsed_seconds": 0.12183179999919957
+}

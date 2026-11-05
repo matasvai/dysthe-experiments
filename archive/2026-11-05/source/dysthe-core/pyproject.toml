@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dysthe-core"
+version = "0.0.2"
+description = "Equation specification, reference solvers, initial fields, diagnostics, and shared data contracts."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+reference = ["numpy>=1.24", "scipy>=1.10"]
+learning = ["torch>=2.6,<3"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

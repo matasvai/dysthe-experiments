@@ -1,0 +1,165 @@
+{
+  "interpretation": "Best possible Fourier-truncation error at a fixed maximum retained mode; no neural fitting error included. Relative norm, not fraction of squared energy.",
+  "cases": [
+    {
+      "family": "packet",
+      "epsilon": 0.05,
+      "T": 16,
+      "cutoffs": {
+        "32": {
+          "h0_omitted_relative_norm": 0.11286399542265928,
+          "h1_omitted_relative_norm": 0.3348192748948064,
+          "h2_omitted_relative_norm": 0.6683048317500494
+        },
+        "48": {
+          "h0_omitted_relative_norm": 0.03864491157391641,
+          "h1_omitted_relative_norm": 0.1596218570790163,
+          "h2_omitted_relative_norm": 0.42629820389282624
+        },
+        "64": {
+          "h0_omitted_relative_norm": 0.014026038022075698,
+          "h1_omitted_relative_norm": 0.07427757468811191,
+          "h2_omitted_relative_norm": 0.2499478300052893
+        },
+        "128": {
+          "h0_omitted_relative_norm": 0.00035915192647239277,
+          "h1_omitted_relative_norm": 0.0036237225652044815,
+          "h2_omitted_relative_norm": 0.03018573334016559
+        },
+        "256": {
+          "h0_omitted_relative_norm": 2.858409106261344e-05,
+          "h1_omitted_relative_norm": 0.0009145046555804221,
+          "h2_omitted_relative_norm": 0.022618241587334692
+        }
+      }
+    },
+    {
+      "family": "packet",
+      "epsilon": 0.1,
+      "T": 16,
+      "cutoffs": {
+        "32": {
+          "h0_omitted_relative_norm": 0.14229709580565436,
+          "h1_omitted_relative_norm": 0.7725945169035683,
+          "h2_omitted_relative_norm": 0.9979550547406346
+        },
+        "48": {
+          "h0_omitted_relative_norm": 0.0915930292156593,
+          "h1_omitted_relative_norm": 0.7722913689593494,
+          "h2_omitted_relative_norm": 0.9979309234322737
+        },
+        "64": {
+          "h0_omitted_relative_norm": 0.07891122898192311,
+          "h1_omitted_relative_norm": 0.7722503624126553,
+          "h2_omitted_relative_norm": 0.9979241665058948
+        },
+        "128": {
+          "h0_omitted_relative_norm": 0.0763776022828317,
+          "h1_omitted_relative_norm": 0.7706363170683612,
+          "h2_omitted_relative_norm": 0.9960905781141468
+        },
+        "256": {
+          "h0_omitted_relative_norm": 2.169647900176989e-05,
+          "h1_omitted_relative_norm": 0.00036933338453021687,
+          "h2_omitted_relative_norm": 0.0013137614134829426
+        }
+      }
+    },
+    {
+      "family": "sideband",
+      "epsilon": 0.05,
+      "T": 16,
+      "cutoffs": {
+        "32": {
+          "h0_omitted_relative_norm": 0.11090156944824484,
+          "h1_omitted_relative_norm": 0.35561419518289983,
+          "h2_omitted_relative_norm": 0.7061946244625579
+        },
+        "48": {
+          "h0_omitted_relative_norm": 0.04270215086960803,
+          "h1_omitted_relative_norm": 0.18663122121613349,
+          "h2_omitted_relative_norm": 0.48525933142297306
+        },
+        "64": {
+          "h0_omitted_relative_norm": 0.017381738205458575,
+          "h1_omitted_relative_norm": 0.09619169369752575,
+          "h2_omitted_relative_norm": 0.31090209848717276
+        },
+        "128": {
+          "h0_omitted_relative_norm": 0.0005324057966320819,
+          "h1_omitted_relative_norm": 0.005738061886981716,
+          "h2_omitted_relative_norm": 0.036734339765291835
+        },
+        "256": {
+          "h0_omitted_relative_norm": 4.226569516119394e-05,
+          "h1_omitted_relative_norm": 0.0008957033792481511,
+          "h2_omitted_relative_norm": 0.011181491524313256
+        }
+      }
+    },
+    {
+      "family": "random",
+      "epsilon": 0.05,
+      "T": 16,
+      "cutoffs": {
+        "32": {
+          "h0_omitted_relative_norm": 0.10180492226899968,
+          "h1_omitted_relative_norm": 0.39772820875713794,
+          "h2_omitted_relative_norm": 0.792434138911242
+        },
+        "48": {
+          "h0_omitted_relative_norm": 0.042905518142373957,
+          "h1_omitted_relative_norm": 0.23068270886952943,
+          "h2_omitted_relative_norm": 0.5993436690660913
+        },
+        "64": {
+          "h0_omitted_relative_norm": 0.019093958570247847,
+          "h1_omitted_relative_norm": 0.13090726334199376,
+          "h2_omitted_relative_norm": 0.42447055193005945
+        },
+        "128": {
+          "h0_omitted_relative_norm": 0.001163237460191908,
+          "h1_omitted_relative_norm": 0.016357451387043555,
+          "h2_omitted_relative_norm": 0.30796372019142293
+        },
+        "256": {
+          "h0_omitted_relative_norm": 0.0002724114708478273,
+          "h1_omitted_relative_norm": 0.007962520043002071,
+          "h2_omitted_relative_norm": 0.17046342921330598
+        }
+      }
+    },
+    {
+      "family": "random",
+      "epsilon": 0.1,
+      "T": 16,
+      "cutoffs": {
+        "32": {
+          "h0_omitted_relative_norm": 0.11214264859912089,
+          "h1_omitted_relative_norm": 0.7771517610096167,
+          "h2_omitted_relative_norm": 0.9978814354094261
+        },
+        "48": {
+          "h0_omitted_relative_norm": 0.0840801695192354,
+          "h1_omitted_relative_norm": 0.7765599567672662,
+          "h2_omitted_relative_norm": 0.9978516227945105
+        },
+        "64": {
+          "h0_omitted_relative_norm": 0.07772948806897673,
+          "h1_omitted_relative_norm": 0.7764552062469336,
+          "h2_omitted_relative_norm": 0.9978446521565891
+        },
+        "128": {
+          "h0_omitted_relative_norm": 0.07611759402624702,
+          "h1_omitted_relative_norm": 0.7710875766925172,
+          "h2_omitted_relative_norm": 0.9924190799957211
+        },
+        "256": {
+          "h0_omitted_relative_norm": 6.514047129135153e-05,
+          "h1_omitted_relative_norm": 0.0012597068473723572,
+          "h2_omitted_relative_norm": 0.0033795641054706316
+        }
+      }
+    }
+  ]
+}

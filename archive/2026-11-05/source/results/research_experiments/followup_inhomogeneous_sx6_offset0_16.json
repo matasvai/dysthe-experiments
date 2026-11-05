@@ -1,0 +1,31 @@
+{
+  "name": "inhomogeneous_sx6_offset0",
+  "t": 16,
+  "original_ratio": 0.0034855290496014065,
+  "refined_ratio": 0.0034459655974521004,
+  "location": [
+    -57.59134864807129,
+    6.229151040315629e-09
+  ],
+  "optimizer_success": true,
+  "domain_and_radial_change": 1.1408768200890273e-05,
+  "original_to_refined": 0.011481093188672246,
+  "sampled_to_integral": 1.0983194669235597e-05,
+  "quadrature_order_change": 4.467154704817015e-15,
+  "boundary_to_peak": 1.4023345883066318e-05,
+  "levels": [
+    {
+      "peak": 0.0001356733555013425,
+      "x_peak": -57.5,
+      "r_peak": 0.0,
+      "edge_to_peak": 0.00013316434228745583
+    },
+    {
+      "peak": 0.0001356749033848659,
+      "x_peak": -57.5,
+      "r_peak": 0.0,
+      "edge_to_peak": 1.4023345883066318e-05
+    }
+  ],
+  "passes_followup": true
+}

@@ -1,0 +1,849 @@
+{
+  "purpose": "Bounded CPU workflow exercise, not scientific accuracy qualification",
+  "run": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/experiments/runs/h2-cpu-workflow-20261027",
+  "configuration": {
+    "model_id": "water-wave-dysthe-spatial-v1",
+    "physical_system": "deep-water-gravity-waves",
+    "seed": 20261028,
+    "length": 40.0,
+    "grid": 64,
+    "output_modes": 8,
+    "initial_modes": 4,
+    "groups_per_family": 3,
+    "train_per_family": 1,
+    "validation_per_family": 1,
+    "reference_grid": 128,
+    "reference_step": 0.005,
+    "sample_step": 0.05,
+    "horizon": 0.2,
+    "train_horizon": 0.05,
+    "operator_step": 0.05,
+    "operator_epochs": 400,
+    "operator_batch": 16,
+    "operator_width": 16,
+    "operator_modes": 8,
+    "operator_depth": 2,
+    "physics_weight": 0.1,
+    "pinn_epochs": 40,
+    "pinn_horizon": 0.2,
+    "pinn_slabs": 2,
+    "seeds": [
+      11
+    ],
+    "threads": 2,
+    "validation_every": 10,
+    "reference_l2_tolerance": 1e-05,
+    "reference_h1_tolerance": 0.0001,
+    "pinn_width": 16,
+    "pinn_depth": 2,
+    "pinn_collocation_slices": 4,
+    "campaign": "long-distance-h2-smoke-v2",
+    "reference_horizons": [
+      0.1,
+      0.2
+    ],
+    "pinn_horizons": [
+      0.1,
+      0.2
+    ],
+    "sensitivity_horizons": [
+      0.1
+    ],
+    "domain_horizons": [
+      0.1
+    ],
+    "slab_length": 0.1,
+    "epochs_per_slab": 20,
+    "reference_h2_tolerance": 0.001,
+    "diagnostics_tail_fraction": 0.8,
+    "spectral_tail_tolerance": 1e-08,
+    "action_drift_tolerance": 1e-06,
+    "recurrence_tolerance": 0.05,
+    "focusing_prominence": 0.02,
+    "sensitivity_delta": 0.001,
+    "sensitivity_tolerance": 0.01,
+    "domain_tolerance": 0.01,
+    "domain_initial_tolerance": 0.001,
+    "pinn_l2_tolerance": 0.01,
+    "pinn_h1_tolerance": 0.05,
+    "pinn_h2_tolerance": 0.05,
+    "pinn_peak_tolerance": 0.05,
+    "study_status": "CPU workflow smoke only; not the scientific long-distance experiment",
+    "interpretation": "Finite-distance periodic numerical evidence; no global existence or physical-validity certificate.",
+    "pinn_coefficient_scaling": "inverse_1_plus_k2"
+  },
+  "binding": {
+    "inlet_schema_version": 1,
+    "configuration": {
+      "model_id": "water-wave-dysthe-spatial-v1",
+      "physical_system": "deep-water-gravity-waves",
+      "seed": 20261028,
+      "length": 40.0,
+      "grid": 64,
+      "output_modes": 8,
+      "initial_modes": 4,
+      "groups_per_family": 3,
+      "train_per_family": 1,
+      "validation_per_family": 1,
+      "reference_grid": 128,
+      "reference_step": 0.005,
+      "sample_step": 0.05,
+      "horizon": 0.2,
+      "train_horizon": 0.05,
+      "operator_step": 0.05,
+      "operator_epochs": 400,
+      "operator_batch": 16,
+      "operator_width": 16,
+      "operator_modes": 8,
+      "operator_depth": 2,
+      "physics_weight": 0.1,
+      "pinn_epochs": 40,
+      "pinn_horizon": 0.2,
+      "pinn_slabs": 2,
+      "seeds": [
+        11
+      ],
+      "threads": 2,
+      "validation_every": 10,
+      "reference_l2_tolerance": 1e-05,
+      "reference_h1_tolerance": 0.0001,
+      "pinn_width": 16,
+      "pinn_depth": 2,
+      "pinn_collocation_slices": 4,
+      "campaign": "long-distance-h2-smoke-v2",
+      "reference_horizons": [
+        0.1,
+        0.2
+      ],
+      "pinn_horizons": [
+        0.1,
+        0.2
+      ],
+      "sensitivity_horizons": [
+        0.1
+      ],
+      "domain_horizons": [
+        0.1
+      ],
+      "slab_length": 0.1,
+      "epochs_per_slab": 20,
+      "reference_h2_tolerance": 0.001,
+      "diagnostics_tail_fraction": 0.8,
+      "spectral_tail_tolerance": 1e-08,
+      "action_drift_tolerance": 1e-06,
+      "recurrence_tolerance": 0.05,
+      "focusing_prominence": 0.02,
+      "sensitivity_delta": 0.001,
+      "sensitivity_tolerance": 0.01,
+      "domain_tolerance": 0.01,
+      "domain_initial_tolerance": 0.001,
+      "pinn_l2_tolerance": 0.01,
+      "pinn_h1_tolerance": 0.05,
+      "pinn_h2_tolerance": 0.05,
+      "pinn_peak_tolerance": 0.05,
+      "study_status": "CPU workflow smoke only; not the scientific long-distance experiment",
+      "interpretation": "Finite-distance periodic numerical evidence; no global existence or physical-validity certificate.",
+      "pinn_coefficient_scaling": "inverse_1_plus_k2"
+    },
+    "source_sha256": {
+      "dysthe_experiments.long_distance": "36487d86e47ba5b1248ac1c375cbdee58201dd92cef999d6059b1ce0c3506cd7",
+      "dysthe_experiments.long_reference": "05953daafb6af055bda6094097ebf9351fa0ba36876c9beaf0afa167ad8e7bbe",
+      "dysthe_experiments.cpu_pilot": "351301aa0885ee4c8560edf09d4f2ef0d27e1997bffd6afd567501fb63532a14",
+      "dysthe_experiments.pilot_sensitivity": "ad65d7b3114137634554a012bd7f2650a1720b0a5a71dae68bb7d3caa2593e2e",
+      "dysthe_core.contracts": "aa6bba2a4dad1594004b0a922acc2f8c9852402cd66b96ac4780c4ec450c48c8",
+      "dysthe_core.reference.spatial": "4091833d58921bfbf2a4604e9cc46691316394c513643ee732066e7528235db8",
+      "dysthe_core.torch_spatial": "d74e28e87e9934a08626608c828ad9f404c5f50a2cb1c676570331252d2d19d5",
+      "dysthe_learning.pilot_models": "fbe57fd4da3697b2ee11c4ed60c5646987e9cac6b44a951b0ad32991ecd37e71"
+    },
+    "runtime": {
+      "python": "3.14.8",
+      "numpy": "2.4.2",
+      "scipy": "1.17.0",
+      "torch": "2.10.0+cu128",
+      "cuda_build": "12.8"
+    },
+    "inlets": {
+      "manifest": "inlets.json",
+      "sha256": "ac109a52a3acdfebcc2fdacca597e48ac8f10f22d2c70cabc7118d90fe6dd968"
+    }
+  },
+  "tasks": [
+    {
+      "stage": "reference",
+      "case_id": "packet-001",
+      "status": "completed"
+    },
+    {
+      "stage": "reference",
+      "case_id": "packet-002",
+      "status": "completed"
+    },
+    {
+      "stage": "reference",
+      "case_id": "sideband-001",
+      "status": "completed"
+    },
+    {
+      "stage": "reference",
+      "case_id": "sideband-002",
+      "status": "completed"
+    },
+    {
+      "stage": "reference",
+      "case_id": "random-001",
+      "status": "completed"
+    },
+    {
+      "stage": "reference",
+      "case_id": "random-002",
+      "status": "completed"
+    },
+    {
+      "stage": "pinn",
+      "case_id": "packet-001",
+      "status": "completed"
+    },
+    {
+      "stage": "pinn",
+      "case_id": "packet-002",
+      "status": "completed"
+    },
+    {
+      "stage": "pinn",
+      "case_id": "sideband-001",
+      "status": "completed"
+    },
+    {
+      "stage": "pinn",
+      "case_id": "sideband-002",
+      "status": "stopped_at_gate"
+    },
+    {
+      "stage": "pinn",
+      "case_id": "random-001",
+      "status": "completed"
+    },
+    {
+      "stage": "pinn",
+      "case_id": "random-002",
+      "status": "completed"
+    },
+    {
+      "stage": "sensitivity",
+      "case_id": "packet-001",
+      "status": "completed"
+    },
+    {
+      "stage": "sensitivity",
+      "case_id": "packet-002",
+      "status": "completed"
+    },
+    {
+      "stage": "sensitivity",
+      "case_id": "sideband-001",
+      "status": "completed"
+    },
+    {
+      "stage": "sensitivity",
+      "case_id": "sideband-002",
+      "status": "completed"
+    },
+    {
+      "stage": "sensitivity",
+      "case_id": "random-001",
+      "status": "completed"
+    },
+    {
+      "stage": "sensitivity",
+      "case_id": "random-002",
+      "status": "completed"
+    },
+    {
+      "stage": "domain",
+      "case_id": "packet-001",
+      "status": "stopped_at_gate"
+    },
+    {
+      "stage": "domain",
+      "case_id": "packet-002",
+      "status": "stopped_at_gate"
+    },
+    {
+      "stage": "domain",
+      "case_id": "sideband-001",
+      "status": "not_applicable"
+    },
+    {
+      "stage": "domain",
+      "case_id": "sideband-002",
+      "status": "not_applicable"
+    },
+    {
+      "stage": "domain",
+      "case_id": "random-001",
+      "status": "not_applicable"
+    },
+    {
+      "stage": "domain",
+      "case_id": "random-002",
+      "status": "not_applicable"
+    }
+  ],
+  "summary": {
+    "campaign": "long-distance-h2-smoke-v2",
+    "model_id": "water-wave-dysthe-spatial-v1",
+    "tasks": [
+      {
+        "stage": "reference",
+        "task_index": 0,
+        "case_id": "packet-001",
+        "seed": null,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          },
+          {
+            "horizon": 0.2,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.2
+      },
+      {
+        "stage": "reference",
+        "task_index": 1,
+        "case_id": "packet-002",
+        "seed": null,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          },
+          {
+            "horizon": 0.2,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.2
+      },
+      {
+        "stage": "reference",
+        "task_index": 2,
+        "case_id": "sideband-001",
+        "seed": null,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          },
+          {
+            "horizon": 0.2,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.2
+      },
+      {
+        "stage": "reference",
+        "task_index": 3,
+        "case_id": "sideband-002",
+        "seed": null,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          },
+          {
+            "horizon": 0.2,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.2
+      },
+      {
+        "stage": "reference",
+        "task_index": 4,
+        "case_id": "random-001",
+        "seed": null,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          },
+          {
+            "horizon": 0.2,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.2
+      },
+      {
+        "stage": "reference",
+        "task_index": 5,
+        "case_id": "random-002",
+        "seed": null,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          },
+          {
+            "horizon": 0.2,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.2
+      },
+      {
+        "stage": "pinn",
+        "task_index": 0,
+        "case_id": "packet-001",
+        "seed": 11,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "passed",
+            "qualified": true,
+            "first_failed_station": null
+          },
+          {
+            "horizon": 0.2,
+            "status": "passed",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.2
+      },
+      {
+        "stage": "pinn",
+        "task_index": 1,
+        "case_id": "packet-002",
+        "seed": 11,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "passed",
+            "qualified": true,
+            "first_failed_station": null
+          },
+          {
+            "horizon": 0.2,
+            "status": "passed",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.2
+      },
+      {
+        "stage": "pinn",
+        "task_index": 2,
+        "case_id": "sideband-001",
+        "seed": 11,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "passed",
+            "qualified": true,
+            "first_failed_station": null
+          },
+          {
+            "horizon": 0.2,
+            "status": "passed",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.2
+      },
+      {
+        "stage": "pinn",
+        "task_index": 3,
+        "case_id": "sideband-002",
+        "seed": 11,
+        "status": "stopped_at_gate",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "passed",
+            "qualified": true,
+            "first_failed_station": null
+          },
+          {
+            "horizon": 0.2,
+            "status": "accuracy_gate_failed",
+            "qualified": false,
+            "first_failed_station": 0.15000000000000002
+          }
+        ],
+        "last_passed_horizon": 0.1
+      },
+      {
+        "stage": "pinn",
+        "task_index": 4,
+        "case_id": "random-001",
+        "seed": 11,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "passed",
+            "qualified": true,
+            "first_failed_station": null
+          },
+          {
+            "horizon": 0.2,
+            "status": "passed",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.2
+      },
+      {
+        "stage": "pinn",
+        "task_index": 5,
+        "case_id": "random-002",
+        "seed": 11,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "passed",
+            "qualified": true,
+            "first_failed_station": null
+          },
+          {
+            "horizon": 0.2,
+            "status": "passed",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.2
+      },
+      {
+        "stage": "sensitivity",
+        "task_index": 0,
+        "case_id": "packet-001",
+        "seed": null,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.1
+      },
+      {
+        "stage": "sensitivity",
+        "task_index": 1,
+        "case_id": "packet-002",
+        "seed": null,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.1
+      },
+      {
+        "stage": "sensitivity",
+        "task_index": 2,
+        "case_id": "sideband-001",
+        "seed": null,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.1
+      },
+      {
+        "stage": "sensitivity",
+        "task_index": 3,
+        "case_id": "sideband-002",
+        "seed": null,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.1
+      },
+      {
+        "stage": "sensitivity",
+        "task_index": 4,
+        "case_id": "random-001",
+        "seed": null,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.1
+      },
+      {
+        "stage": "sensitivity",
+        "task_index": 5,
+        "case_id": "random-002",
+        "seed": null,
+        "status": "completed",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "complete",
+            "qualified": true,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": 0.1
+      },
+      {
+        "stage": "domain",
+        "task_index": 0,
+        "case_id": "packet-001",
+        "seed": null,
+        "status": "stopped_at_gate",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "domain_sensitive_or_unresolved",
+            "qualified": false,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": null
+      },
+      {
+        "stage": "domain",
+        "task_index": 1,
+        "case_id": "packet-002",
+        "seed": null,
+        "status": "stopped_at_gate",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "domain_sensitive_or_unresolved",
+            "qualified": false,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": null
+      },
+      {
+        "stage": "domain",
+        "task_index": 2,
+        "case_id": "sideband-001",
+        "seed": null,
+        "status": "not_applicable",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "not_applicable",
+            "qualified": null,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": null
+      },
+      {
+        "stage": "domain",
+        "task_index": 3,
+        "case_id": "sideband-002",
+        "seed": null,
+        "status": "not_applicable",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "not_applicable",
+            "qualified": null,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": null
+      },
+      {
+        "stage": "domain",
+        "task_index": 4,
+        "case_id": "random-001",
+        "seed": null,
+        "status": "not_applicable",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "not_applicable",
+            "qualified": null,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": null
+      },
+      {
+        "stage": "domain",
+        "task_index": 5,
+        "case_id": "random-002",
+        "seed": null,
+        "status": "not_applicable",
+        "horizons": [
+          {
+            "horizon": 0.1,
+            "status": "not_applicable",
+            "qualified": null,
+            "first_failed_station": null
+          }
+        ],
+        "last_passed_horizon": null
+      }
+    ],
+    "pinn_aggregates": [
+      {
+        "split": "validation",
+        "horizon": 0.1,
+        "expected_case_seed_pairs": 3,
+        "evaluated_case_seed_pairs": 3,
+        "passed_case_seed_pairs": 3,
+        "complete": true,
+        "worst_errors": {
+          "l2": 0.001993351643327478,
+          "h1": 0.002089728119855426,
+          "h2": 0.0024007940830903162,
+          "peak": 0.0009132372767736167
+        },
+        "median_errors": {
+          "l2": 0.0017615392494411944,
+          "h1": 0.0019930968453891486,
+          "h2": 0.002234604800248103,
+          "peak": 0.0004435192764079039
+        }
+      },
+      {
+        "split": "validation",
+        "horizon": 0.2,
+        "expected_case_seed_pairs": 3,
+        "evaluated_case_seed_pairs": 3,
+        "passed_case_seed_pairs": 3,
+        "complete": true,
+        "worst_errors": {
+          "l2": 0.0034711098345912017,
+          "h1": 0.0036431769787562884,
+          "h2": 0.0038816542868597144,
+          "peak": 0.002547710828369952
+        },
+        "median_errors": {
+          "l2": 0.002881961529846227,
+          "h1": 0.003187976884377323,
+          "h2": 0.0038679596915413444,
+          "peak": 0.0012754236633918013
+        }
+      },
+      {
+        "split": "test",
+        "horizon": 0.1,
+        "expected_case_seed_pairs": 3,
+        "evaluated_case_seed_pairs": 3,
+        "passed_case_seed_pairs": 3,
+        "complete": true,
+        "worst_errors": {
+          "l2": 0.009576224693324184,
+          "h1": 0.009610721266746827,
+          "h2": 0.00967004886019172,
+          "peak": 0.000990704701260501
+        },
+        "median_errors": {
+          "l2": 0.0017621962779623553,
+          "h1": 0.0020868502247871935,
+          "h2": 0.002675263757702015,
+          "peak": 0.0006076744266605841
+        }
+      },
+      {
+        "split": "test",
+        "horizon": 0.2,
+        "expected_case_seed_pairs": 3,
+        "evaluated_case_seed_pairs": 3,
+        "passed_case_seed_pairs": 2,
+        "complete": true,
+        "worst_errors": {
+          "l2": 0.018173436933022074,
+          "h1": 0.018210143165620533,
+          "h2": 0.018269303434558064,
+          "peak": 0.001386517994723463
+        },
+        "median_errors": {
+          "l2": 0.0029531839338302244,
+          "h1": 0.003426609457410985,
+          "h2": 0.004715842033604703,
+          "peak": 0.001268363600753606
+        }
+      }
+    ],
+    "complete": true,
+    "all_requested_gates_passed": false,
+    "interpretation": "Missing, blocked and failed tasks remain visible. No global-existence conclusion."
+  },
+  "elapsed_seconds": 1.999612186999002,
+  "export": {
+    "path": "/home/matasvai/Documents/Projects/Dysthe/worktrees/h2-rerun/experiments/runs/h2-cpu-workflow-export-20261027-v2",
+    "verified": true,
+    "metadata_file_count": 233,
+    "raw_artifact_count": 181,
+    "source_integrity_findings": [],
+    "missing_expected_evidence": [],
+    "evidence_manifest_sha256": "cef6032d46e41cab6d79279e39cbd9e7d86a947e76de3b8f323bad1a9d67d4ce"
+  }
+}

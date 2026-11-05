@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-30",
+  "context": "ZIP extracted to a fresh directory, using already prepared Python dependencies; no cluster execution",
+  "unit_tests_passed": 14,
+  "MI_trajectories_passed": 12,
+  "full_T4_configuration_cases_passed": 24,
+  "slurm_shell_syntax": "passed",
+  "tested_solver_sha256": "5689c66826e889d78da11f0931dc1e3bbb651169b29867e0cfaf1613b59d3d84",
+  "tested_rerun_cli_sha256": "8fd2571c627caf026ed05d1f1a14cf3cf17c3f0223600719f880130e7777c069",
+  "tested_mi_sha256": "6869fa4aa253f8ea7ea8d72302d0e9466f56eef221dde5454cf808c0d58bd95e"
+}

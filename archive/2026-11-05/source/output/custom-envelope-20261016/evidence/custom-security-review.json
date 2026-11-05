@@ -1,0 +1,43 @@
+{
+  "scope": "Independent parser, preview/run contract, numerical guard and UI stale-response review; water-wave-dysthe-spatial-v1 only",
+  "reviewed_files": [
+    "src/dysthe_experiments/envelope_formula.py",
+    "src/dysthe_experiments/simulator.py",
+    "src/dysthe_experiments/simulator_server.py",
+    "src/dysthe_experiments/simulator_web/app.js",
+    "docs/custom-envelope.md"
+  ],
+  "security_observations": [
+    "Own tokenizer and recursive-descent allowlisted AST; no eval, dynamic imports, filesystem access or symbolic algebra route observed.",
+    "Length, token, node, depth, exponent, scalar-parameter and sample-count bounds constrain evaluation work.",
+    "Each numerical intermediate is complex128, finite, magnitude-bounded and scalar or exactly axis-shaped.",
+    "Preview resamples on N and independent 2N grids and checks retained-band loss before permitting propagation.",
+    "Run independently validates/resamples and requires the exact normalized formula/settings fingerprint; untrusted fingerprints do not bypass checks.",
+    "Formula, parameters and errors are rendered with textContent, with request-token and exact-request-key checks preventing stale preview enablement.",
+    "Near-zero circular action moments produce unavailable packet-center metrics instead of numerical roundoff displacement."
+  ],
+  "tests": {
+    "file": "tests/test_custom_simulator.py",
+    "passed": 9,
+    "seconds": 1.079,
+    "log": "stage3/results/custom-simulator-tests.log",
+    "final_run_smokes": "Two N=256, length=40, xi_end=0.005, dxi=0.0025 custom simulations, two propagation steps each; one through real loopback HTTP.",
+    "coverage": [
+      "Gaussian complex initializer agreement including chirp",
+      "Sech formula agreement and scalar broadcast",
+      "Zero, underflowed, excessive-amplitude and aliased input rejection",
+      "Settings, finite-value/type and local work-budget rejection",
+      "Fingerprint changes for formula, symbols and every adjustable numerical setting",
+      "Complex128 raw/projected/propagated arrays and scalar Unicode provenance JSON survive export without pickle",
+      "Malformed and NaN/Infinity JSON creates no jobs or output",
+      "Stale/missing preview fingerprints create no jobs",
+      "Uniform periodic fields do not invent packet center, width or exterior-action metrics"
+    ]
+  },
+  "limitations": [
+    "Finite N/2N sampling and regime screens cannot prove resolution or physical applicability of an arbitrary analytic formula.",
+    "No custom-input grid, step or domain convergence campaign was performed; all custom results remain exploratory.",
+    "Independent UI code inspection complements, but does not replace, root agent browser end-to-end verification."
+  ],
+  "remaining_security_blockers": []
+}

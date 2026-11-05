@@ -1,0 +1,77 @@
+{
+  "config": {
+    "equation": "Dysthe3D-1.27",
+    "seed": 20260916,
+    "dtype": "float64",
+    "device": "cuda",
+    "deterministic": true,
+    "cpu_threads": 1,
+    "physics": {
+      "epsilon1": 0.00831834509,
+      "epsilon2": 0.00498719622
+    },
+    "domain": {
+      "T": 12288.0,
+      "lengths": [
+        12.0,
+        12.0,
+        12.0
+      ]
+    },
+    "initial": {
+      "amplitude": 0.3,
+      "power": 3,
+      "phase": 0.0
+    },
+    "network": {
+      "width": 64,
+      "depth": 4,
+      "harmonics": 3
+    },
+    "training": {
+      "steps": 20000,
+      "batch_size": 512,
+      "validation_points": 512,
+      "learning_rate": 0.0003,
+      "log_every": 100,
+      "checkpoint_every": 500,
+      "gradient_clip": 100.0
+    },
+    "reference": {
+      "shape": [
+        32,
+        32,
+        32
+      ],
+      "dt": 0.5,
+      "snapshots": 776
+    }
+  },
+  "start": 1500.0,
+  "end": 2500.0,
+  "dt": 0.5,
+  "snapshots": 501,
+  "algorithm": "full-1.27-IFRK4-window-v1",
+  "diagnostics_every_steps": 2,
+  "mass_gate": 0.001,
+  "spectral_edge_gate": 0.001,
+  "breathing_diagnostics": true,
+  "window_diagnostics_every_steps": 1,
+  "frame_storage": "individual-npy-v1",
+  "showcase_centers": [
+    1000,
+    2000,
+    3000,
+    4000,
+    5000,
+    6000,
+    7000,
+    8000,
+    9000,
+    10000,
+    11000,
+    12000
+  ],
+  "showcase_halfwidth": 24,
+  "showcase_frame_spacing": 2
+}

@@ -1,0 +1,89 @@
+[
+  {
+    "example": "gaussian",
+    "formula": "A \\exp(-\\frac{\\tau^2}{2 w^2}) \\exp(i(k\\tau+c\\tau^2))",
+    "symbols": {
+      "A": 1,
+      "w": 2,
+      "k": 0.3,
+      "c": 0
+    },
+    "can_run": true,
+    "summary": {
+      "peak_amplitude": 1.0,
+      "projected_peak_amplitude": 1.0,
+      "projection_relative_l2": 2.4037853095505437e-16,
+      "cross_grid_relative_l2": 2.6663519369097886e-16,
+      "fine_discarded_band_relative_l2": 1.6655725325698401e-16,
+      "boundary_action_fraction": 8.977355844686361e-33,
+      "boundary_peak_relative": 2.1519494537910584e-282,
+      "endpoint_mismatch_relative": 0.0,
+      "retained_spectral_edge_action_fraction": 9.652213175011716e-33,
+      "epsilon_peak": 0.025,
+      "epsilon_spectral_sigma": 0.008838834764831846,
+      "epsilon_spectral_mean": 0.0075,
+      "circular_concentration": 0.9984590627771489,
+      "failed_run_checks": []
+    },
+    "fingerprint": "7879fe64ae7175e6af1e4bd60fbf808cb3662b7961ce8943b3a27162f4a042fd"
+  },
+  {
+    "example": "shifted_sech",
+    "formula": "A \\sech(\\frac{\\tau-b}{w}) \\exp(i(k\\tau+c\\tau^2))",
+    "symbols": {
+      "A": 1.1,
+      "w": 1.8,
+      "b": 0.4,
+      "k": -0.3,
+      "c": 0.02
+    },
+    "can_run": true,
+    "summary": {
+      "peak_amplitude": 1.09919813883773,
+      "projected_peak_amplitude": 1.0991981388371135,
+      "projection_relative_l2": 1.087387165933307e-12,
+      "cross_grid_relative_l2": 3.624753130960542e-16,
+      "fine_discarded_band_relative_l2": 1.0874184918928995e-12,
+      "boundary_action_fraction": 6.65533982544883e-27,
+      "boundary_peak_relative": 1.0436081701742636e-17,
+      "endpoint_mismatch_relative": 1.8630628621876294e-19,
+      "retained_spectral_edge_action_fraction": 9.802018200447449e-20,
+      "epsilon_peak": 0.027499627011594297,
+      "epsilon_spectral_sigma": 0.00818322703527941,
+      "epsilon_spectral_mean": -0.007100000000000002,
+      "circular_concentration": 0.9979482284698107,
+      "failed_run_checks": []
+    },
+    "fingerprint": "b89aa3c0ab91ed67558b071314362d1da5e779a6ea4e19155b8cffff67554449"
+  },
+  {
+    "example": "modulated_gaussian",
+    "formula": "A \\exp(-\\frac{\\tau^2}{2 w^2}) (1+b \\cos(q\\tau)) \\exp(i(k\\tau+p))",
+    "symbols": {
+      "A": 0.8,
+      "w": 2,
+      "b": 0.1,
+      "q": 0.5,
+      "k": 0.2,
+      "p": 0.4
+    },
+    "can_run": true,
+    "summary": {
+      "peak_amplitude": 0.8800000000000001,
+      "projected_peak_amplitude": 0.8800000000000002,
+      "projection_relative_l2": 3.0612600148574707e-16,
+      "cross_grid_relative_l2": 3.1596503169252616e-16,
+      "fine_discarded_band_relative_l2": 1.9775558194620775e-16,
+      "boundary_action_fraction": 1.0248949571563862e-32,
+      "boundary_peak_relative": 1.934318471240648e-282,
+      "endpoint_mismatch_relative": 0.0,
+      "retained_spectral_edge_action_fraction": 1.7685015001664046e-32,
+      "epsilon_peak": 0.022000000000000006,
+      "epsilon_spectral_sigma": 0.009166810433028019,
+      "epsilon_spectral_mean": 0.004999999999999999,
+      "circular_concentration": 0.9985670952858086,
+      "failed_run_checks": []
+    },
+    "fingerprint": "03de64c6d5e09ec9caa37025a243addecbd2934324099b4ecf4ffc3b0ce738c9"
+  }
+]

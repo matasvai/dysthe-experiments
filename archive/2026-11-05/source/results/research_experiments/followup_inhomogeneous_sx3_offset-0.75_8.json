@@ -1,0 +1,31 @@
+{
+  "name": "inhomogeneous_sx3_offset-0.75",
+  "t": 8,
+  "original_ratio": 0.001928767647953952,
+  "refined_ratio": 0.0019296057448253332,
+  "location": [
+    -62.09097099304199,
+    1.5470199286937718e-08
+  ],
+  "optimizer_success": true,
+  "domain_and_radial_change": 5.009656021210117e-07,
+  "original_to_refined": 0.0004343358085601737,
+  "sampled_to_integral": 1.614749688803062e-05,
+  "quadrature_order_change": 1.4276168920358467e-14,
+  "boundary_to_peak": 8.916709205846862e-07,
+  "levels": [
+    {
+      "peak": 0.00017055199480755747,
+      "x_peak": -62.0,
+      "r_peak": 0.0,
+      "edge_to_peak": 8.44354032646947e-06
+    },
+    {
+      "peak": 0.0001705519093669175,
+      "x_peak": -62.0,
+      "r_peak": 0.0,
+      "edge_to_peak": 8.916709205846862e-07
+    }
+  ],
+  "passes_followup": true
+}

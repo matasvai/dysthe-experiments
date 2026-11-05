@@ -1,0 +1,48 @@
+{
+  "model_id": "water-wave-dysthe-spatial-v1",
+  "physical_system": "deep-water-gravity-waves",
+  "profile_coordinate": "tau",
+  "evolution_coordinate": "xi",
+  "qualification": {
+    "full_residual_max": 1e-06,
+    "projection_relative_l2_max": 1e-08,
+    "epsilon_peak_screen": 0.1,
+    "epsilon_spectral_sigma_screen": 0.1,
+    "boundary_action_max": 1e-08,
+    "spectral_edge_action_max": 1e-08,
+    "epsilon_spectral_mean_screen": 0.1
+  },
+  "cases": [
+    {
+      "id": "smoke-e025",
+      "profile": "../../results/nonlinear/profile_mu2_s0_e0.025.npz",
+      "n": 4096,
+      "length": 160.0,
+      "epsilon": 0.025,
+      "mu": 2.0,
+      "speed": 0.0,
+      "dxi": 0.00125,
+      "xi_end": 0.1,
+      "samples": 5,
+      "perturbations": [
+        {
+          "id": "control",
+          "kind": "control",
+          "delta": 0.0
+        },
+        {
+          "id": "shifted_amplitude_plus",
+          "kind": "amplitude",
+          "delta": 0.001
+        },
+        {
+          "id": "shifted_phase_plus",
+          "kind": "phase",
+          "delta": 0.001
+        }
+      ],
+      "profile_mode": "recompute",
+      "profile_max_iterations": 200
+    }
+  ]
+}

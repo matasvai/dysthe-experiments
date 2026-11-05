@@ -1,0 +1,13 @@
+{
+  "times": [
+    512,
+    1024
+  ],
+  "alpha": 0.5,
+  "scope": "four Gaussian-based cases; sampled whole-domain searches, not certified continuum suprema",
+  "screen": 0.001,
+  "radial_extent": 8192,
+  "full_scan_max_L": 65536,
+  "pointwise_period_max_L": 131072,
+  "wall_seconds": 256.6409754753113
+}

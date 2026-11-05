@@ -1,0 +1,100 @@
+{
+  "interpretation": "Physical relative modulation wavenumber is epsilon*k under s=epsilon*(x-t/2); these descriptive bands are not universal validity cutoffs. High weighted-derivative contribution can coexist with little wave action.",
+  "cases": [
+    {
+      "family": "packet",
+      "epsilon": 0.05,
+      "T": 16,
+      "bands": {
+        "0.25": {
+          "maximum_action_fraction": 0.014640237694530534,
+          "maximum_h2_squared_fraction": 0.4686405635036803
+        },
+        "0.5": {
+          "maximum_action_fraction": 0.00022273001488357812,
+          "maximum_h2_squared_fraction": 0.06701688291696094
+        },
+        "1.0": {
+          "maximum_action_fraction": 1.4307768540865136e-07,
+          "maximum_h2_squared_fraction": 0.0009111784972836183
+        }
+      }
+    },
+    {
+      "family": "packet",
+      "epsilon": 0.1,
+      "T": 16,
+      "bands": {
+        "0.25": {
+          "maximum_action_fraction": 0.1269841724887385,
+          "maximum_h2_squared_fraction": 0.9965291974924123
+        },
+        "0.5": {
+          "maximum_action_fraction": 0.021855950365285263,
+          "maximum_h2_squared_fraction": 0.9959184920838737
+        },
+        "1.0": {
+          "maximum_action_fraction": 0.006275823662647317,
+          "maximum_h2_squared_fraction": 0.9958531956564434
+        }
+      }
+    },
+    {
+      "family": "sideband",
+      "epsilon": 0.05,
+      "T": 16,
+      "bands": {
+        "0.25": {
+          "maximum_action_fraction": 0.012299158106083872,
+          "maximum_h2_squared_fraction": 0.4987108476198132
+        },
+        "0.5": {
+          "maximum_action_fraction": 0.00030212482304309827,
+          "maximum_h2_squared_fraction": 0.09666011484372768
+        },
+        "1.0": {
+          "maximum_action_fraction": 2.834559322874418e-07,
+          "maximum_h2_squared_fraction": 0.001349411717991901
+        }
+      }
+    },
+    {
+      "family": "random",
+      "epsilon": 0.05,
+      "T": 16,
+      "bands": {
+        "0.25": {
+          "maximum_action_fraction": 0.011603217038522773,
+          "maximum_h2_squared_fraction": 0.6462219936836098
+        },
+        "0.5": {
+          "maximum_action_fraction": 0.00040237404543946864,
+          "maximum_h2_squared_fraction": 0.18859052918615202
+        },
+        "1.0": {
+          "maximum_action_fraction": 1.455208730189879e-06,
+          "maximum_h2_squared_fraction": 0.09484165295522777
+        }
+      }
+    },
+    {
+      "family": "random",
+      "epsilon": 0.1,
+      "T": 16,
+      "bands": {
+        "0.25": {
+          "maximum_action_fraction": 0.057812177590552516,
+          "maximum_h2_squared_fraction": 0.9969759391492364
+        },
+        "0.5": {
+          "maximum_action_fraction": 0.013318626225550115,
+          "maximum_h2_squared_fraction": 0.9957716387447664
+        },
+        "1.0": {
+          "maximum_action_fraction": 0.006062974622566295,
+          "maximum_h2_squared_fraction": 0.9956946204254227
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+test_fno_checkpoint_and_float_precision (test_pilot_models.PilotModels.test_fno_checkpoint_and_float_precision) ... ok
+test_fno_hard_projected_inlet_and_output_bandwidth (test_pilot_models.PilotModels.test_fno_hard_projected_inlet_and_output_bandwidth) ... ok
+test_fno_jvp_finite_difference_and_parameter_gradient (test_pilot_models.PilotModels.test_fno_jvp_finite_difference_and_parameter_gradient) ... ok
+test_rejects_invalid_shapes_and_nyquist_bandwidth (test_pilot_models.PilotModels.test_rejects_invalid_shapes_and_nyquist_bandwidth) ... ok
+test_spectral_pinn_checkpoint_float_and_single_inlet_scope (test_pilot_models.PilotModels.test_spectral_pinn_checkpoint_float_and_single_inlet_scope) ... ok
+test_spectral_pinn_initial_bandwidth_and_jvp (test_pilot_models.PilotModels.test_spectral_pinn_initial_bandwidth_and_jvp) ... ok
+test_spectral_scaling_checkpoint_configuration_and_legacy_loading (test_pilot_models.PilotModels.test_spectral_scaling_checkpoint_configuration_and_legacy_loading) ... ok
+test_spectral_scaling_is_invertible_and_preserves_the_initial_field (test_pilot_models.PilotModels.test_spectral_scaling_is_invertible_and_preserves_the_initial_field) ... ok
+test_spectral_scaling_uses_physical_wavenumbers_after_precision_conversion (test_pilot_models.PilotModels.test_spectral_scaling_uses_physical_wavenumbers_after_precision_conversion) ... ok
+test_gp_has_a_distinct_prediction_target (test_registry.Registry.test_gp_has_a_distinct_prediction_target) ... ok
+test_scaffold_cannot_start_training (test_registry.Registry.test_scaffold_cannot_start_training) ... ok
+test_rejects_different_physical_setting_and_dimension (test_scope.Scope.test_rejects_different_physical_setting_and_dimension) ... ok
+test_rejects_mixed_physics_artifact (test_scope.Scope.test_rejects_mixed_physics_artifact) ... ok
+test_repository_scope (test_scope.Scope.test_repository_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.438s
+
+OK
+Scaffold checks passed; no scientific performance claim.

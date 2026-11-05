@@ -1,0 +1,31 @@
+{
+  "name": "inhomogeneous_cancel",
+  "t": 4,
+  "original_ratio": 0.003701889291408852,
+  "refined_ratio": 0.0036687322604309148,
+  "location": [
+    -5.056941032409668,
+    4.2596831917762756e-08
+  ],
+  "optimizer_success": true,
+  "domain_and_radial_change": 1.5268917028402007e-08,
+  "original_to_refined": 0.009037735278628,
+  "sampled_to_integral": 0.00034473361605145584,
+  "quadrature_order_change": 3.330294038247831e-16,
+  "boundary_to_peak": 1.0833079331894747e-07,
+  "levels": [
+    {
+      "peak": 0.0007277177370353324,
+      "x_peak": -5.0,
+      "r_peak": 0.0,
+      "edge_to_peak": 1.0333862151649044e-06
+    },
+    {
+      "peak": 0.0007277177259238708,
+      "x_peak": -5.0,
+      "r_peak": 0.0,
+      "edge_to_peak": 1.0833079331894747e-07
+    }
+  ],
+  "passes_followup": true
+}

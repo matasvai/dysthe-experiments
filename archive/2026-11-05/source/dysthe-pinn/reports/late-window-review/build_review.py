@@ -1,0 +1,172 @@
+from pathlib import Path
+import json,hashlib,shutil,os
+import numpy as np
+os.environ['MPLCONFIGDIR']='/tmp/dysthe-pinn-mpl'
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+out=Path(__file__).resolve().parent
+p=out/'summary.json';s=json.loads(p.read_text());settings=json.loads((p.parent/'settings.json').read_text())
+rows=s['rows'];t=np.array([q['t'] for q in rows]);peak=np.array([q['peak'] for q in rows]);mass=np.array([q['mass'] for q in rows]);drift=np.array([q['relative_mass_drift'] for q in rows]);edge=np.array([q['spectral_edge_fraction'] for q in rows]);mask=t>=1024
+assert s['config']==settings['config'];assert np.isfinite([t,peak,mass,drift,edge]).all();assert np.array_equal(t,np.arange(2049));assert np.array_equal(np.array([q['step'] for q in rows]),100*np.arange(2049));assert s['remaining_steps']==0
+assert np.allclose(drift,(mass-mass[0])/mass[0],rtol=1e-10,atol=1e-16)
+assert max(abs(drift))==s['max_relative_mass_drift'];assert max(edge)==s['max_spectral_edge_fraction']
+def fit(x,y):
+ slope,intercept=np.polyfit(np.log(x),np.log(y),1);pred=intercept+slope*np.log(x);rsq=1-np.sum((np.log(y)-pred)**2)/np.sum((np.log(y)-np.log(y).mean())**2)
+ return dict(alpha=float(-slope),r_squared=float(rsq),log_C=float(intercept))
+bins=[]
+for lo,hi in [(1024,1280),(1280,1536),(1536,1792),(1792,2048)]:
+ m=(t>=lo)&((t<hi) if hi<2048 else (t<=hi));bins.append(dict(start=lo,end=hi,n=int(m.sum()),mean=float(peak[m].mean()),minimum=float(peak[m].min()),maximum=float(peak[m].max()),**fit(t[m],peak[m])))
+V=np.prod(s['config']['domain']['lengths']);floor=float(np.sqrt(mass[0]/V));f=fit(t[mask],peak[mask]);stats=dict(source_sha256=hashlib.sha256(p.read_bytes()).hexdigest(),source_commit='599d25b',late_fit=f,bins=bins,mass_floor=floor,late_min=float(peak[mask].min()),late_max=float(peak[mask].max()),late_mean=float(peak[mask].mean()),late_median=float(np.median(peak[mask])),start_peak=float(peak[1024]),end_peak=float(peak[-1]),runtime_hours=s['invocation_seconds']/3600)
+(out/'review-statistics.json').write_text(json.dumps(stats,indent=2));print(json.dumps(stats,indent=2))
+plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False})
+fig,ax=plt.subplots(2,1,figsize=(10,6),layout='constrained')
+ax[0].plot(t,peak,lw=.7,label='Grid-sampled peak');ax[0].axvspan(1024,2048,color='gray',alpha=.12,label='Observation window');ax[0].axhline(floor,color='black',ls='--',label='Mass / volume lower bound');ax[0].set(xlabel='Propagation coordinate t',ylabel='Peak magnitude',title='Original trajectory: integer-time diagnostics');ax[0].legend(fontsize=8,ncol=3)
+ax[1].plot(t[mask],peak[mask],lw=.8);ax[1].axhline(floor,color='black',ls='--');ax[1].set(xlabel='Propagation coordinate t',ylabel='Peak magnitude',title='Late interval: repeated rises rather than steady decay')
+for a in ax:a.grid(alpha=.2)
+fig.savefig(out/'peak_history.png',dpi=180);plt.close(fig)
+fig,ax=plt.subplots(1,2,figsize=(10,3.4),layout='constrained')
+ax[0].plot(t,drift*1e12);ax[0].set(xlabel='Propagation coordinate t',ylabel='Relative mass drift (× 10⁻¹²)',title='Small accumulated conservation error')
+ax[1].semilogy(t,edge);ax[1].set(xlabel='Propagation coordinate t',ylabel='Fraction of spectral squared magnitude',title='Occupancy near the retained cutoff')
+for a in ax:a.grid(alpha=.2)
+fig.savefig(out/'diagnostics.png',dpi=180);plt.close(fig)
+fig,ax=plt.subplots(figsize=(9,3.5),layout='constrained');x=t[mask];y=peak[mask]
+ax.loglog(x,y,lw=.7,label='Sampled peak');pred=np.exp(f['log_C'])*x**(-f['alpha']);ax.loglog(x,pred,lw=2,label=f"Descriptive fit: alpha={f['alpha']:.3f}, R²={f['r_squared']:.4f}")
+for alpha in [1,7/6]:ax.loglog(x,np.exp(f['log_C'])*1024**(-f['alpha'])*(x/1024)**(-alpha),'--',label=f'Illustrative slope −{alpha:.3g}')
+ax.set(xlabel='Propagation coordinate t',ylabel='Peak magnitude',title='Log–log fit is not evidence for a decay law');ax.legend(fontsize=8,ncol=2);ax.grid(alpha=.2);fig.savefig(out/'fit.png',dpi=180);plt.close(fig)
+# Architecture image is included in the reproducibility bundle.
+binrows='\n'.join(f"{b['start']}--{b['end']} & {b['n']} & {b['mean']:.5f} & {b['minimum']:.5f} & {b['maximum']:.5f} & {b['alpha']:.3f} \\\\" for b in bins)
+tex=r'''\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,graphicx,booktabs}
+\setlength{\emergencystretch}{3em}
+\title{Technical Review of the Late-Time Equation (1.27) Experiment}
+\author{}\date{18 September 2026}
+\begin{document}\maketitle
+\begin{abstract}
+This report introduces the equation, initial data, physically motivated coefficients, and PINN framework before reviewing two periodic reference calculations. The $64^3$, $\Delta t=0.01$ run reaches $t=2048$ with excellent mass conservation but no sustained late-time peak decay. The separate $32^3$, $\Delta t=0.5$ preview reaches $t=10321$ before its mass-drift stop threshold is crossed. Its peak and concentration diagnostics are compatible with breathing-like modulation, but neither calculation establishes a localized breather or validates a whole-space decay law. No new long-time PINN prediction is reported.
+\end{abstract}
+
+\section{Equation, coordinates, and initial data}
+The target is equation (1.27) in the supplied manuscript by R. Mosincat, D. Pilod, and J.-C. Saut, \textit{On third order nonlinear Schr\"odinger equations} (\texttt{Dysthe3D-2.pdf}),
+\[
+iE_t+(1-i\epsilon_1\partial_z)(E_{xx}+E_{yy})-E_{zz}
+-i\epsilon_2E_{zzz}+(1+i\epsilon_1\partial_z)(|E|^2E)=0,
+\]
+with $(\epsilon_1,\epsilon_2)=(0.00831834509,0.00498719622)$. The field is a complex optical envelope: $t$ denotes normalized propagation, $x,y$ transverse coordinates, and $z$ retarded time. On $[-6,6)^3$ with periodic boundaries,
+\[
+E_0=0.3\prod_{q\in\{x,y,z\}}\left[\frac{1+\cos(2\pi q/12)}{2}\right]^3.
+\]
+
+Here $E_0(x,y,z)=E(0,x,y,z)$ is the initial data: a smooth, centered, real nonnegative pulse with zero initial phase and maximum $0.3$. The same formula is $0.3\prod_q\cos^6(\pi q/12)$. It vanishes at the faces and extends smoothly and periodically. Its finite Fourier bandwidth makes its initial representation unusually easy to resolve. It was chosen as a controlled numerical starting point, not as experimental data or a known soliton.
+
+\paragraph{What the plots measure.}
+The envelope magnitude $|E|$ describes the strength of the complex optical envelope. The plotted peak is $P_h(t)=\max_{i,j,k}|E(t,x_i,y_j,z_k)|$, taken over the entire grid; its location can change. The integrated squared magnitude $M_h=\Delta V\sum|E|^2$ measures the total squared envelope amplitude. A rising peak can accompany spatial redistribution without an increase in this integral. The periodic box repeats the field across opposite faces and is not the whole-space domain used in dispersive decay theorems.
+
+\input{parameter_background.tex}
+\clearpage
+\section{Background: neural networks and physics-informed learning}
+A neural network is an adjustable mathematical function. In this project its inputs are four numbers, $(t,x,y,z)$, describing a propagation coordinate and a location. Its output estimates the wave envelope at that point. The network does not represent individual water waves or particles; it represents a function of coordinates.
+
+\paragraph{Layers, neurons, and weights.}
+A layer is a collection of simple calculations. Each ``neuron'' takes a weighted sum of the preceding numbers, adds an adjustable offset, and applies a nonlinear function. Schematically,
+\[
+h^{(\ell+1)}=\tanh\!\left(W^{(\ell)}h^{(\ell)}+b^{(\ell)}\right).
+\]
+The entries of $W$ are called weights and those of $b$ are biases. Stacking layers allows the network to describe more complicated functions. A hidden layer is simply an intermediate layer between the inputs and outputs. Here there are four hidden layers with 64 neurons each. The smooth function $\tanh$ is useful because equation (1.27) requires derivatives up to third order.
+
+\paragraph{Why the output has two numbers.}
+The envelope is complex: $E=u+iv$. The real numbers $u$ and $v$ together specify its magnitude $|E|=\sqrt{u^2+v^2}$ and phase, which describes its position in an oscillation cycle. Two fields can have the same magnitude but different phases. This is why a small peak error does not necessarily imply a small complex-field error.
+
+\paragraph{What training means.}
+Training adjusts the weights and biases to reduce a numerical error measure called the loss. An optimizer, here Adam, repeatedly computes how changing each adjustable number changes the loss and then updates those numbers. A training step is one such update; it is not a step forward in physical propagation. The coefficients $\epsilon_1$ and $\epsilon_2$ are fixed inputs to the equation in this experiment, not quantities learned by the network.
+
+\paragraph{What makes a PINN physics-informed.}
+A physics-informed neural network (PINN) is trained to satisfy a differential equation. At sampled coordinates, called collocation points, its predicted field and derivatives are inserted into the left-hand side of equation (1.27). The resulting complex number $\mathcal R[E_\theta]$ is the residual: it would vanish for an exact solution. In this implementation the loss is the mean of the squared real and imaginary residual components,
+\[
+\mathcal L(\theta)=\frac{1}{2N}\sum_{j=1}^{N}
+\left[(\operatorname{Re}\mathcal R_j)^2+(\operatorname{Im}\mathcal R_j)^2\right].
+\]
+Here $\theta$ denotes all trainable weights and biases. Automatic differentiation computes derivatives of the network by applying the chain rule through its calculations. It does not obtain those derivatives by advancing the wave through time. Reference-solver field samples are not used in the present PINN training loss.
+
+\paragraph{Training success and solution accuracy are different.}
+A low residual at sampled points means that the network approximately satisfies the equation there. It does not by itself guarantee accuracy at other points, a correct phase, or reliable extrapolation to larger $t$. Evaluation compares the trained field with a separate numerical solution. That reference solution also has discretization errors. Neither method becomes exact merely because a program finishes successfully.
+\clearpage
+\section{Reading the architecture and distinguishing the two solvers}
+\begin{center}\includegraphics[width=.85\linewidth]{pinn_structure.png}\end{center}
+\noindent\textbf{Figure 1.} The implemented PINN, shown schematically. Arrows show the sequence of calculations used to predict a field and form its training loss. The loss box omits an overall constant factor; the precise normalization is given in the preceding section. This network did not generate the late-time data reviewed here.
+
+\paragraph{From coordinates to a field.}
+The first transformation expresses each spatial coordinate using sine and cosine functions with three harmonics. There are $3\times3\times2=18$ spatial features and one normalized propagation feature, $2t/T-1$, giving 19 inputs to the hidden layers. These periodic features ensure that the prediction and its spatial derivatives match across opposite box faces. The network produces two real numbers, $N_R$ and $N_I$, interpreted as $N_\theta=N_R+iN_I$.
+
+The final envelope is constructed as
+\[
+E_\theta(t,x,y,z)=E_0(x,y,z)+(t/T)N_\theta(t,x,y,z).
+\]
+At $t=0$, the correction vanishes, so the initial pulse is reproduced exactly for every choice of weights. This is a \textbf{hard initial condition}: it is built into the formula rather than merely encouraged by an additional loss term. The network learns the subsequent change in the field. $T$ is the end of its training interval.
+
+\paragraph{Which method produced this report's data?}
+The late-time results came from a Fourier numerical solver. It represents the field on a spatial grid, computes spatial derivatives through Fourier modes, and advances the equation in increments of the propagation coordinate. The fine-step run uses $\Delta t=0.01$, while the separate coarse preview uses $0.5$. It has no trainable weights, neural-network layers, or training loss. In contrast, the PINN represents the field as an adjustable function of all four coordinates and optimizes that function over a specified interval. Accordingly, the late-time oscillations in this report are not evidence of neural-network overfitting or an architectural failure.
+
+The existing PINN has been evaluated only through $t=0.5$. The trajectory to $t=2048$ provides no new measurement of that network's accuracy. The distinction also explains why configuration entries for network width, training steps, or CUDA are not evidence that a neural network or GPU produced this reference calculation.
+\clearpage
+\section{Numerical experiments and available evidence}
+The calculation evolves from $t=0$; the late window is not an independently restarted copy of the initial packet. The reference uses $64^3$ spatial points, strict retained modes $|m_j|<16$, and integrating-factor RK4 at $\Delta t=0.01$. There are 31 retained modes per coordinate. Scalar diagnostics have spacing $1$ in $t$; saved field frames have spacing $4$. The total simulation runtime was $5.117$ hours.
+
+These settings describe the original fine-step run. The separate preview uses $32^3$ points and $\Delta t=0.5$, targeting $12288$ with detailed observation on $1500$--$2500$. Its stop at $10321$ and concentration results are described in the final addition. Neither run restarts the original packet at the beginning of a late observation window.
+\subsection{Fine-step data and integrity checks}
+The reviewed inputs are the submitted \texttt{summary.json} and \texttt{settings.json} in \texttt{results/\allowbreak late-window-\allowbreak 1024-2048}, commit \texttt{599d25b}. Their configurations agree. All diagnostic entries are finite, times are exactly $0,1,\ldots,2048$, step numbers agree with $\Delta t$, and recorded extrema of mass drift and spectral-edge fraction agree with recomputation from the rows. Status is \texttt{completed\_unvalidated}; zero steps remain.
+
+The summary reports 257 saved frames, but neither the field archive nor the numerical checkpoint was pushed. Consequently this review cannot independently verify those frames, reconstruct three-dimensional structure, inspect phase, or recompute spectral diagnostics from the fields. The inherited configuration contains CUDA and training entries, but this run uses the NumPy reference solver and does not train or evaluate a PINN. Hardware and executed source revision are not recorded in the submitted run summary.
+\clearpage
+\section{Observed peak dynamics}
+\begin{center}\includegraphics[width=\linewidth]{peak_history.png}\end{center}
+\noindent\textbf{Figure 2.} Peaks computed on the spatial grid at integer propagation times. Shading marks the late observation interval. The dashed lower bound follows from the conserved integral and box volume; it is not a fitted curve. Connecting lines do not establish behavior between samples.
+
+On $1024\leq t\leq2048$, the minimum is $0.0737686$ at $t=1492$ and the maximum is $0.237073$ at $t=1649$, a ratio of approximately $3.21$. The mean is $0.130717$ and median $0.127753$. The final peak is $0.142427$, compared with the initial peak $0.3$. A smaller endpoint than the initial value does not establish monotonic or asymptotic decay.
+\begin{center}\small\begin{tabular}{rrrrrr}\toprule
+Interval & $n$ & Mean & Minimum & Maximum & Fitted $\alpha$\\\midrule
+BINROWS
+\bottomrule\end{tabular}\end{center}
+\noindent The first three intervals are half-open; the final interval includes $2048$. Statistics therefore do not double-count shared endpoints. The fitted slopes change sign. The late behavior is consistent with persistent oscillatory dynamics; exact recurrence, localization, and soliton structure cannot be diagnosed from peaks alone.
+\clearpage
+\input{oscillation_fit.tex}
+\input{peak_envelopes.tex}
+\clearpage
+\section{Numerical reliability: what passed and what did not}
+\begin{center}\includegraphics[width=\linewidth]{diagnostics.png}\end{center}
+\noindent\textbf{Figure 4.} Conservation and high-mode occupancy over the full trajectory. Neither diagnostic compares this trajectory with an independently refined one.
+
+Let $M_h=\Delta V\sum |E|^2$. The initial value is $1.785345681310$ and the final value is $1.785345681297$. The maximum relative drift is $7.39085\times10^{-12}$, far below the $10^{-3}$ operational stop threshold. This is excellent numerical conservation, not a $10^{-11}$ bound on solution error. A phase-shifted field can have identical mass and a large complex-field error.
+
+The largest spectral-edge fraction is $3.27698\times10^{-18}$. The code measures energy in retained modes outside the inner region $|m_j|<12.8$. Thus the numerator includes retained modes with some coordinate magnitude $13$, $14$, or $15$. This suggests that the retained solution has little activity near the cutoff. The algorithm explicitly removes modes $|m_j|\geq16$; low edge occupancy is a useful diagnostic, not a direct measurement of all omitted spectral content.
+
+The initial projection error is $3.56\times10^{-16}$, as expected for this low-degree trigonometric packet. No long-time $\Delta t/2$ or spatial refinement was supplied. In the earlier $T=8$ test, the $32^3$--$64^3$ peak difference reached $0.795\%$, exceeding the $0.5\%$ threshold, even though complex-field agreement was much better. The present run does not resolve that failure. A sampled maximum can change when its location falls between grid points; Fourier interpolation and a refined comparison are needed to separate peak sampling error from evolution error.
+
+The periodic box also limits interpretation independently of numerical accuracy. Waves can repeatedly interact through the boundaries. The observed oscillations are compatible with such dynamics, but the available scalar data do not identify their mechanism.
+\section{Provisional verdict}
+Execution and internal consistency pass. Conservation and retained spectral occupancy are encouraging. Long-time field accuracy, peak accuracy, continuum resolution, and physical calibration remain unestablished. The appropriate label is a completed exploratory periodic trajectory, not a validated late-time reference for PINN training or theorem testing.
+\clearpage
+\section{Decay inequalities and the fixed-box obstruction}
+For a smooth periodic solution with conserved $M=\int_\Omega|E|^2\,dV>0$, elementary integration yields
+\[
+M\leq |\Omega|\|E(t)\|_\infty^2,
+\qquad \|E(t)\|_\infty\geq\sqrt{M/|\Omega|}.
+\]
+Here $|\Omega|=12^3=1728$, giving the positive lower bound
+\[
+\|E(t)\|_\infty\geq FLOOR.
+\]
+The same inequality holds algebraically for $P_h=\max|E|$ and $M_h$ on a uniform grid. Mass conservation for (1.27) follows by periodic integration by parts: the linear Fourier multiplier is purely imaginary, the local cubic term contributes no real change to $M$, and the derivative cubic term integrates to a derivative of $|E|^4$. This argument assumes sufficient regularity.
+
+Therefore a nonzero fixed-box solution cannot obey $P(t)\leq Ct^{-\alpha}$ for all sufficiently large $t$ with finite $C$ and $\alpha>0$. The current oscillations are not a counterexample to a whole-space estimate: its domain, hypotheses, norm, and constants must first match the experiment. On any finite time interval, a bound with freely chosen sufficiently large $C$ is not disproved by a rebound.
+\begin{center}\includegraphics[width=\linewidth]{fit.png}\end{center}
+\noindent\textbf{Figure 5.} Ordinary least squares of $\log P_h$ against $\log t$ on integer samples $1024$ through $2048$. The comparison slopes $-1$ and $-7/6$ are illustrative and normalized to the fitted curve at $1024$; they are not imported claims about this periodic solution.
+
+The fitted $\alpha=ALPHA$ is slightly negative and $R^2=RSQ$ is very small. This describes an oscillatory finite record; it does not establish growth or a sharper decay exponent. Subinterval slopes are unstable, and serially dependent deterministic samples do not justify ordinary independent-sample confidence intervals. The time span covers only a factor of two in $t$.
+\paragraph{Reproducibility.} The source bundle includes submitted JSON inputs, recomputed statistics, analysis code, figures, and this LaTeX source. The source summary hash is recorded in \texttt{review-statistics.json}. This review computes no new long-time PDE solution and makes no experimental-data validation claim.
+\input{preview_addition.tex}
+\end{document}
+'''.replace('ALPHA',f"{f['alpha']:.4f}").replace('RSQ',f"{f['r_squared']:.5f}").replace('FLOOR',f'{floor:.7f}').replace('BINROWS',binrows)
+(out/'report.tex').write_text(tex)
+

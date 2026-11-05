@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "model_id": "water-wave-dysthe-spatial-v1",
+  "physical_system": "deep-water-gravity-waves",
+  "path": "inlets.npz",
+  "sha256": "6c857f0c6669215dfc3eb601cc20004abbd7173948d1c7ae92d04cee07065f98",
+  "cases_sha256": "21c38e65006cf8fe22d8a428361978299b2cb8b9146b368c3208139ce770ee21",
+  "case_ids": [
+    "packet-001",
+    "packet-002",
+    "sideband-001",
+    "sideband-002",
+    "random-001",
+    "random-002"
+  ],
+  "dtype": "complex128",
+  "shape": [
+    6,
+    64
+  ],
+  "interpretation": "Canonical sampled inlets generated once; all stages load these exact bytes."
+}

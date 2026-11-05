@@ -1,0 +1,62 @@
+{
+  "project": "/home/matasvai/Documents/Projects/Dysthe/dysthe-experiments",
+  "changes": [
+    {
+      "path": "docs/custom-envelope.md",
+      "old_sha256": null,
+      "new_sha256": "97fc01641a6e2ef939ef359940bff44550adee8fcb5c785f01603211aa104988"
+    },
+    {
+      "path": "docs/small-simulator.md",
+      "old_sha256": "9cfe7fd763008ad002d6da18b7489eb2d42583bddfcd46d4aeb9bc909db02b4c",
+      "new_sha256": "c6e1f3da4678acaf2e9fcbe02075b027dc552e3ad04d137989f31b71a28ec118"
+    },
+    {
+      "path": "src/dysthe_experiments/envelope_formula.py",
+      "old_sha256": null,
+      "new_sha256": "c3dc31e9e8fd60d7dccc87f94e83828d8b8a253ddc4351cdafa360d2775719a0"
+    },
+    {
+      "path": "src/dysthe_experiments/simulator.py",
+      "old_sha256": "b3e918bd1185a7359d514df0427f2e0c301e4871c45ffca1a2d8be69d062ad86",
+      "new_sha256": "efd7eb18e751155c22339f74f38315484068bba562363db1f54a80d54aa4badd"
+    },
+    {
+      "path": "src/dysthe_experiments/simulator_server.py",
+      "old_sha256": "7c92c0f64905a32596a7cf4bedad7d195b1970d9007588b281f566332a399114",
+      "new_sha256": "9e347d5d7dc3c9c4faa46dc5edcd82bf50445407ecdf0a49b27e9ddfd0eb68aa"
+    },
+    {
+      "path": "src/dysthe_experiments/simulator_web/app.js",
+      "old_sha256": "3c91a3687c5cb8c3898413f2f51614c960bbf4b6bf8d0f0aae26d5312439b780",
+      "new_sha256": "d6596c054cf170b337c6b13286c5d0e4af23055e77a8b03367c13798257154ab"
+    },
+    {
+      "path": "src/dysthe_experiments/simulator_web/index.html",
+      "old_sha256": "3c894d1f466ba2af86972fcc1c699f9616dc1838e34523c6c7a7f17f80af26f4",
+      "new_sha256": "eef35c4789fbf84adbcf981c83084320d7b20073154cde9f35d760c43fc6b6de"
+    },
+    {
+      "path": "src/dysthe_experiments/simulator_web/style.css",
+      "old_sha256": "bd746511d46a4da0e09d8d70de10771c675345eb3d23099f9fde28a015d5c33a",
+      "new_sha256": "38f25a8d2ec3d1f90c150f437f0306c8c4685fc347b033fc44648c6dc172e2a0"
+    },
+    {
+      "path": "tests/test_custom_simulator.py",
+      "old_sha256": null,
+      "new_sha256": "47194fd2b6fea84d3e53dc8c0566422100841d7b1444613b6a926fd8df5899bb"
+    },
+    {
+      "path": "tests/test_envelope_formula.py",
+      "old_sha256": null,
+      "new_sha256": "b58f58dc22c799999d5558b2487e0ca0e7f5a61580a46dd9254124daa0af7e42"
+    },
+    {
+      "path": "tests/test_simulator_server.py",
+      "old_sha256": "884f627f61ea60cfd9d5caf39b3c5ff3299c5e15e357521558655774fa532b28",
+      "new_sha256": "fe2f0ef4eeffc956800e42b1fcfa096b19a35653f3b9d7fbe19fd102ded19827"
+    }
+  ],
+  "unrelated_initial_files_preserved": true,
+  "backup": "/home/matasvai/Documents/Codex/2026-10-16/task/stage3/install-backup"
+}

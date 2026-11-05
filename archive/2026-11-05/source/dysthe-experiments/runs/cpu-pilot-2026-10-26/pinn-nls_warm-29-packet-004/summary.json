@@ -1,0 +1,93 @@
+{
+  "method": "pinn_nls_warm",
+  "seed": 29,
+  "case_id": "packet-004",
+  "split": "validation",
+  "training_seconds": 1.410015845000089,
+  "history": [
+    [
+      {
+        "epoch": 50,
+        "training_loss": 1.700563907623291,
+        "full_dysthe_residual_validation": 1.718126893043518,
+        "seconds": 0.18533688899970002,
+        "training_epsilon": 0.0
+      },
+      {
+        "epoch": 100,
+        "training_loss": 0.27298057079315186,
+        "full_dysthe_residual_validation": 0.20649394392967224,
+        "seconds": 0.3710558239999955,
+        "training_epsilon": 0.0
+      },
+      {
+        "epoch": 150,
+        "training_loss": 0.4682762324810028,
+        "full_dysthe_residual_validation": 0.4837099611759186,
+        "seconds": 0.560769311000513,
+        "training_epsilon": 0.03637821599841118
+      },
+      {
+        "epoch": 200,
+        "training_loss": 0.3373594582080841,
+        "full_dysthe_residual_validation": 0.3700120449066162,
+        "seconds": 0.7295086000003721,
+        "training_epsilon": 0.03637821599841118
+      },
+      {
+        "epoch": 250,
+        "training_loss": 0.17462030053138733,
+        "full_dysthe_residual_validation": 0.3996403217315674,
+        "seconds": 0.8941042770002241,
+        "training_epsilon": 0.03637821599841118
+      },
+      {
+        "epoch": 300,
+        "training_loss": 0.6295270323753357,
+        "full_dysthe_residual_validation": 0.4808095395565033,
+        "seconds": 1.077708466000331,
+        "training_epsilon": 0.03637821599841118
+      },
+      {
+        "epoch": 350,
+        "training_loss": 0.40752556920051575,
+        "full_dysthe_residual_validation": 0.5155622959136963,
+        "seconds": 1.2498054429997865,
+        "training_epsilon": 0.03637821599841118
+      },
+      {
+        "epoch": 400,
+        "training_loss": 0.2694339156150818,
+        "full_dysthe_residual_validation": 0.363899827003479,
+        "seconds": 1.410015845000089,
+        "training_epsilon": 0.03637821599841118
+      }
+    ]
+  ],
+  "full_residual_rms_relative": [
+    0.4523046314716339
+  ],
+  "metrics": [
+    {
+      "xi": 0.5,
+      "l2": 0.007733983674631405,
+      "h1": 0.012736408822189267,
+      "peak": 0.0006858691971878082
+    },
+    {
+      "xi": 1.0,
+      "l2": 0.013234065558009864,
+      "h1": 0.019028794383124235,
+      "peak": 0.0005129959977378855
+    },
+    {
+      "xi": 2.0,
+      "l2": 0.026920030282226188,
+      "h1": 0.042714009133298494,
+      "peak": 0.0017412240437972364
+    }
+  ],
+  "checkpoints": {
+    "best-0.pt": "234bb845020970a5fe31c744e4605e73561e01be39781a820c510d878481ab70"
+  }
+}

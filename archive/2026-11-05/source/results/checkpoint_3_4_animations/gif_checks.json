@@ -1,0 +1,35 @@
+[
+  {
+    "file": "early_t0_to_8.gif",
+    "frames": 65,
+    "size": [
+      1200,
+      800
+    ],
+    "playback_ms": 9280,
+    "max_view_boundary_to_peak": 0.0001494954485727494,
+    "last_peak": 0.0008441007917615336
+  },
+  {
+    "file": "middle_t8_to_64.gif",
+    "frames": 65,
+    "size": [
+      1200,
+      800
+    ],
+    "playback_ms": 9280,
+    "max_view_boundary_to_peak": 0.001922850712974309,
+    "last_peak": 0.00022057388697457075
+  },
+  {
+    "file": "late_t64_to_256.gif",
+    "frames": 65,
+    "size": [
+      1200,
+      800
+    ],
+    "playback_ms": 9280,
+    "max_view_boundary_to_peak": 0.002464049109446815,
+    "last_peak": 6.69040501678413e-05
+  }
+]

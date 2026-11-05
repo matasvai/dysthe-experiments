@@ -1,0 +1,443 @@
+{
+  "audited_at_utc": "2026-10-27T19:00:01.537500+00:00",
+  "remote_head": "723883f27a6b3489bfc36f55d9d15b52e8635ad0",
+  "remote_unchanged_since_snapshot": true,
+  "imports": "Exact c04b44ba experiments / a47a423 core / db7274f learning archives in /tmp; source unchanged in results-only 723883f commit.",
+  "error_identification": {
+    "method": "Reconstruct the exact error JSON emitted by the published run_task function; compare complete bytes and SHA-256 to the manifest for each unpublished task record.",
+    "all_12_error_records_match": true,
+    "records": [
+      {
+        "task": 24,
+        "reconstructed_contents": {
+          "stage": "pinn",
+          "task_index": 24,
+          "case_id": "random-008",
+          "split": "validation",
+          "seed": 11,
+          "results": [],
+          "status": "execution_error",
+          "error": "ValueError: Prepared reference identity differs from this campaign"
+        },
+        "bytes_match": true,
+        "sha256_match": true,
+        "manifest_sha256": "9875a5f6f97e1fd4749f5990c30894e8842943a4410840a685f45eddf2a4a707"
+      },
+      {
+        "task": 25,
+        "reconstructed_contents": {
+          "stage": "pinn",
+          "task_index": 25,
+          "case_id": "random-008",
+          "split": "validation",
+          "seed": 29,
+          "results": [],
+          "status": "execution_error",
+          "error": "ValueError: Prepared reference identity differs from this campaign"
+        },
+        "bytes_match": true,
+        "sha256_match": true,
+        "manifest_sha256": "1e7bbc1f2d6bd1296c43d3dadce282ce6628cb552f290da2404d5e52c1c37850"
+      },
+      {
+        "task": 26,
+        "reconstructed_contents": {
+          "stage": "pinn",
+          "task_index": 26,
+          "case_id": "random-008",
+          "split": "validation",
+          "seed": 47,
+          "results": [],
+          "status": "execution_error",
+          "error": "ValueError: Prepared reference identity differs from this campaign"
+        },
+        "bytes_match": true,
+        "sha256_match": true,
+        "manifest_sha256": "93a87b7cf80205c7fa3cb0c64292a15aa45eebf7b555499625dd89bb9f4e4144"
+      },
+      {
+        "task": 27,
+        "reconstructed_contents": {
+          "stage": "pinn",
+          "task_index": 27,
+          "case_id": "random-009",
+          "split": "validation",
+          "seed": 11,
+          "results": [],
+          "status": "execution_error",
+          "error": "ValueError: Prepared reference identity differs from this campaign"
+        },
+        "bytes_match": true,
+        "sha256_match": true,
+        "manifest_sha256": "72e7645480ab650b375a55f90ab3b9fa0a625bae5a3f20dd8b78835adf6e484f"
+      },
+      {
+        "task": 28,
+        "reconstructed_contents": {
+          "stage": "pinn",
+          "task_index": 28,
+          "case_id": "random-009",
+          "split": "validation",
+          "seed": 29,
+          "results": [],
+          "status": "execution_error",
+          "error": "ValueError: Prepared reference identity differs from this campaign"
+        },
+        "bytes_match": true,
+        "sha256_match": true,
+        "manifest_sha256": "b0c409d7b634df7f96ae1d4b0189b09924430be0899fb10e56c0a5755a3a724e"
+      },
+      {
+        "task": 29,
+        "reconstructed_contents": {
+          "stage": "pinn",
+          "task_index": 29,
+          "case_id": "random-009",
+          "split": "validation",
+          "seed": 47,
+          "results": [],
+          "status": "execution_error",
+          "error": "ValueError: Prepared reference identity differs from this campaign"
+        },
+        "bytes_match": true,
+        "sha256_match": true,
+        "manifest_sha256": "ad41f891137f37de35d7e8e49ea9068a124fbaa12f17a0630536179f929db789"
+      },
+      {
+        "task": 30,
+        "reconstructed_contents": {
+          "stage": "pinn",
+          "task_index": 30,
+          "case_id": "random-010",
+          "split": "test",
+          "seed": 11,
+          "results": [],
+          "status": "execution_error",
+          "error": "ValueError: Prepared reference identity differs from this campaign"
+        },
+        "bytes_match": true,
+        "sha256_match": true,
+        "manifest_sha256": "378d7d12f7ebcfc8dcfcab11eec826122028eea534a2892c6de8b7b9c32508cc"
+      },
+      {
+        "task": 31,
+        "reconstructed_contents": {
+          "stage": "pinn",
+          "task_index": 31,
+          "case_id": "random-010",
+          "split": "test",
+          "seed": 29,
+          "results": [],
+          "status": "execution_error",
+          "error": "ValueError: Prepared reference identity differs from this campaign"
+        },
+        "bytes_match": true,
+        "sha256_match": true,
+        "manifest_sha256": "af68032cfd48625fb5a42269c035f45fb74def4f8b56f4c729324e55368eeb32"
+      },
+      {
+        "task": 32,
+        "reconstructed_contents": {
+          "stage": "pinn",
+          "task_index": 32,
+          "case_id": "random-010",
+          "split": "test",
+          "seed": 47,
+          "results": [],
+          "status": "execution_error",
+          "error": "ValueError: Prepared reference identity differs from this campaign"
+        },
+        "bytes_match": true,
+        "sha256_match": true,
+        "manifest_sha256": "49de24fddf73794909cb77ecd067c9bd68c77919f6590edc143cc32157eacb8d"
+      },
+      {
+        "task": 33,
+        "reconstructed_contents": {
+          "stage": "pinn",
+          "task_index": 33,
+          "case_id": "random-011",
+          "split": "test",
+          "seed": 11,
+          "results": [],
+          "status": "execution_error",
+          "error": "ValueError: Prepared reference identity differs from this campaign"
+        },
+        "bytes_match": true,
+        "sha256_match": true,
+        "manifest_sha256": "2ac1097ba459afb85f368dc0f74a4641b8434ead968b6e07e0c750256d754309"
+      },
+      {
+        "task": 34,
+        "reconstructed_contents": {
+          "stage": "pinn",
+          "task_index": 34,
+          "case_id": "random-011",
+          "split": "test",
+          "seed": 29,
+          "results": [],
+          "status": "execution_error",
+          "error": "ValueError: Prepared reference identity differs from this campaign"
+        },
+        "bytes_match": true,
+        "sha256_match": true,
+        "manifest_sha256": "7c1d37cefda9215350263910be2b7c650a5fba7f82137f684f6291df1945e27b"
+      },
+      {
+        "task": 35,
+        "reconstructed_contents": {
+          "stage": "pinn",
+          "task_index": 35,
+          "case_id": "random-011",
+          "split": "test",
+          "seed": 47,
+          "results": [],
+          "status": "execution_error",
+          "error": "ValueError: Prepared reference identity differs from this campaign"
+        },
+        "bytes_match": true,
+        "sha256_match": true,
+        "manifest_sha256": "71bf5e3ae23d7b538544163ca4f1d07848011a75f47c2cd14dba1da6aeb67fd6"
+      }
+    ]
+  },
+  "blas_dispatch_reproduction": {
+    "directory": "/tmp/dysthe-random-inlet-debug-d9q84w7r",
+    "imports": [
+      "/tmp/dysthe-remote-audit-20261027-fgx9piub/dysthe-experiments/src/dysthe_experiments/cpu_pilot.py",
+      "/tmp/dysthe-remote-audit-20261027-fgx9piub/dysthe-experiments/src/dysthe_experiments/cpu_pilot.py"
+    ],
+    "methods": {
+      "HASWELL": {
+        "module": "/tmp/dysthe-remote-audit-20261027-fgx9piub/dysthe-experiments/src/dysthe_experiments/cpu_pilot.py",
+        "records": [
+          {
+            "case": "packet-008",
+            "hash": "04aaf0388f42bddadcc454382c4c2bb613c9204543465b9a1ad9626a24e080e0"
+          },
+          {
+            "case": "packet-009",
+            "hash": "843bb5b347549c49e59d8e74b98fa2e41c9f6615b96cb668c2e27fa6fc997e5d"
+          },
+          {
+            "case": "packet-010",
+            "hash": "db144e4f804fe28d372c7672ca1da0e0b9fa9849e80ceed84c80c8e833570f3e"
+          },
+          {
+            "case": "packet-011",
+            "hash": "dce6d552a8fae86548873b9674050d5d42903e234b7b6858f583d5a22dcd9d2b"
+          },
+          {
+            "case": "sideband-008",
+            "hash": "c77ec892bc6ca30385f12c531d42290d4e8023cc6a0d8bc005a8f38e995b8d6f"
+          },
+          {
+            "case": "sideband-009",
+            "hash": "c4f44bc37abff46cecb0ad4c0f212a4104ec6c827ab7cb960a8d6fd0a94496e2"
+          },
+          {
+            "case": "sideband-010",
+            "hash": "a4c0884bb964a263f48aaf5b4ee1396b37f07fb30d372c6615d0bbeefed06ef3"
+          },
+          {
+            "case": "sideband-011",
+            "hash": "cd5cde4faa88399d5d27fd19f73cdcfc6fcd271d518acea148b37dddce081e00"
+          },
+          {
+            "case": "random-008",
+            "hash": "4fba856d2e686075ea8279255ee8b4a4dbae3e810b59afa0c5c0b7d496f01c9f"
+          },
+          {
+            "case": "random-009",
+            "hash": "0025c6f0128a735d744dd05943274bdb6b20c76576667cf6c7a299c2294ac064"
+          },
+          {
+            "case": "random-010",
+            "hash": "7da14fe90309d3f9cc78edfe9046c353d3754c4c538204b658985ae019dddf6d"
+          },
+          {
+            "case": "random-011",
+            "hash": "4731f15da8fbf640df85ed2bd3ca52e67a8fea3d3b28b8465bb8b53d0a592767"
+          }
+        ]
+      },
+      "NEHALEM": {
+        "module": "/tmp/dysthe-remote-audit-20261027-fgx9piub/dysthe-experiments/src/dysthe_experiments/cpu_pilot.py",
+        "records": [
+          {
+            "case": "packet-008",
+            "hash": "04aaf0388f42bddadcc454382c4c2bb613c9204543465b9a1ad9626a24e080e0"
+          },
+          {
+            "case": "packet-009",
+            "hash": "843bb5b347549c49e59d8e74b98fa2e41c9f6615b96cb668c2e27fa6fc997e5d"
+          },
+          {
+            "case": "packet-010",
+            "hash": "db144e4f804fe28d372c7672ca1da0e0b9fa9849e80ceed84c80c8e833570f3e"
+          },
+          {
+            "case": "packet-011",
+            "hash": "dce6d552a8fae86548873b9674050d5d42903e234b7b6858f583d5a22dcd9d2b"
+          },
+          {
+            "case": "sideband-008",
+            "hash": "c77ec892bc6ca30385f12c531d42290d4e8023cc6a0d8bc005a8f38e995b8d6f"
+          },
+          {
+            "case": "sideband-009",
+            "hash": "c4f44bc37abff46cecb0ad4c0f212a4104ec6c827ab7cb960a8d6fd0a94496e2"
+          },
+          {
+            "case": "sideband-010",
+            "hash": "a4c0884bb964a263f48aaf5b4ee1396b37f07fb30d372c6615d0bbeefed06ef3"
+          },
+          {
+            "case": "sideband-011",
+            "hash": "cd5cde4faa88399d5d27fd19f73cdcfc6fcd271d518acea148b37dddce081e00"
+          },
+          {
+            "case": "random-008",
+            "hash": "e098f5a6ecfd867c2df0d7366f9fc08f0777b9d4b86eceef983dec35469e9184"
+          },
+          {
+            "case": "random-009",
+            "hash": "72fc6ef8703a50b55436bfa4f6a5eb7525611884ff300a1fe3f03a7b6c1caa6a"
+          },
+          {
+            "case": "random-010",
+            "hash": "8a183c470a0a2afd8b30c9471352c0ea3bfd1893c7084d630bc197f4c856ca5e"
+          },
+          {
+            "case": "random-011",
+            "hash": "4dde186e903962697a1543d7196371b440f41c3eaf26fcbe84707335ba965e06"
+          }
+        ]
+      }
+    },
+    "comparison": [
+      {
+        "case": "packet-008",
+        "same_hash": true,
+        "max_absolute_difference": 0.0,
+        "relative_l2_difference": 0.0
+      },
+      {
+        "case": "packet-009",
+        "same_hash": true,
+        "max_absolute_difference": 0.0,
+        "relative_l2_difference": 0.0
+      },
+      {
+        "case": "packet-010",
+        "same_hash": true,
+        "max_absolute_difference": 0.0,
+        "relative_l2_difference": 0.0
+      },
+      {
+        "case": "packet-011",
+        "same_hash": true,
+        "max_absolute_difference": 0.0,
+        "relative_l2_difference": 0.0
+      },
+      {
+        "case": "sideband-008",
+        "same_hash": true,
+        "max_absolute_difference": 0.0,
+        "relative_l2_difference": 0.0
+      },
+      {
+        "case": "sideband-009",
+        "same_hash": true,
+        "max_absolute_difference": 0.0,
+        "relative_l2_difference": 0.0
+      },
+      {
+        "case": "sideband-010",
+        "same_hash": true,
+        "max_absolute_difference": 0.0,
+        "relative_l2_difference": 0.0
+      },
+      {
+        "case": "sideband-011",
+        "same_hash": true,
+        "max_absolute_difference": 0.0,
+        "relative_l2_difference": 0.0
+      },
+      {
+        "case": "random-008",
+        "same_hash": false,
+        "max_absolute_difference": 2.3714374201337736e-16,
+        "relative_l2_difference": 2.871772969419272e-16
+      },
+      {
+        "case": "random-009",
+        "same_hash": false,
+        "max_absolute_difference": 3.1401849173675503e-16,
+        "relative_l2_difference": 3.015235549664944e-16
+      },
+      {
+        "case": "random-010",
+        "same_hash": false,
+        "max_absolute_difference": 1.2412670766236366e-16,
+        "relative_l2_difference": 1.390206834305028e-16
+      },
+      {
+        "case": "random-011",
+        "same_hash": false,
+        "max_absolute_difference": 1.1443916996305594e-16,
+        "relative_l2_difference": 1.7925273403461905e-16
+      }
+    ]
+  },
+  "bounded_reference_residual_test": {
+    "reference_run": "/tmp/dysthe-random-reference-roundtrip-2ychnc9q",
+    "case": "random-008",
+    "horizon": 0.05,
+    "reference_qualified": true,
+    "exact_inlet_load_succeeds": true,
+    "cross_blas_load_rejection": {
+      "type": "ValueError",
+      "message": "Prepared reference identity differs from this campaign"
+    },
+    "reference_checks": {
+      "grid_h0": true,
+      "grid_h1": true,
+      "grid_h2": true,
+      "step_h0": true,
+      "step_h1": true,
+      "step_h2": true,
+      "spectral_tail": true,
+      "action_drift": true
+    },
+    "reference_errors": {
+      "grid": {
+        "h0": 5.0741710375606e-16,
+        "h1": 1.3532707357056045e-14,
+        "h2": 6.580523371763408e-13
+      },
+      "step": {
+        "h0": 1.6890414568628724e-15,
+        "h1": 9.073663636675094e-15,
+        "h2": 5.525244637234737e-13
+      }
+    },
+    "positive_finite_pinn_residual": true,
+    "pinn_residual_value": 2.637408494949341,
+    "all_parameter_gradients_finite": true,
+    "elapsed_seconds": 0.454861994001476,
+    "u0_sha256": "4fba856d2e686075ea8279255ee8b4a4dbae3e810b59afa0c5c0b7d496f01c9f",
+    "other_sha256": "e098f5a6ecfd867c2df0d7366f9fc08f0777b9d4b86eceef983dec35469e9184",
+    "maximum_absolute_input_difference": 2.3714374201337736e-16,
+    "interpretation": "Short CPU reference/load/residual diagnostic only; no scientific campaign or optimizer training."
+  },
+  "diagnosis": "The random inlet uses a BLAS matrix product whose last bits vary with CPU kernel dispatch. The load_reference identity compares exact array bytes, causing random-family cross-host rejection before neural training. The exact cluster error is hash-verified; the cross-host CPU-dispatch mechanism is independently reproduced locally. Missing cluster runtime logs prevent proving which exact BLAS kernels executed in the original jobs.",
+  "minimal_robust_fix": "Materialize selected complex128 initial arrays once under the run initialization lock and store a checksummed canonical inlet artifact plus case/config identity. Every stage must load that canonical artifact rather than regenerating u0 independently on each host. Preserve exact source/config/artifact checks; never bypass the existing guard or globally replace it with allclose. Use a fresh run directory for revised source.",
+  "regression_tests": [
+    "Create a reference from a canonical inlet, regenerate the mathematically identical random field under a different BLAS core, and verify stage input loading uses the stored inlet so reference loading succeeds.",
+    "Tampering with the stored inlet bytes, case mapping or array checksum must fail before training.",
+    "Altered source/config/model identifiers must remain rejected.",
+    "A bounded random-008 smoke must reach PINN residual/backprop and produce finite derivatives; do not require accuracy qualification after a tiny optimizer budget."
+  ],
+  "repository_edits": false
+}

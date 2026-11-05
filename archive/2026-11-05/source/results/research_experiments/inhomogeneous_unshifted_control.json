@@ -1,0 +1,194 @@
+[
+  {
+    "name": "inhomogeneous_unshifted_control",
+    "regime": "inhomogeneous",
+    "sign": 1,
+    "beta": 1.0,
+    "sx": 3.0,
+    "sy": 3.0,
+    "qx": 0.0,
+    "qy": 0.0,
+    "kind": "gaussian",
+    "group": "control",
+    "offset": 1.0,
+    "t": 4,
+    "peak": 0.0007875946408664106,
+    "ratio": 0.003969228267247935,
+    "location": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "boundary_to_peak": 2.39636210010196e-05,
+    "absolute_integral": 1.0,
+    "domain_change": 5.9260996594500736e-05,
+    "grid_change": 0.010552245345398635,
+    "passes_screen": true,
+    "levels": {
+      "small": {
+        "t": 4,
+        "peak": 0.0007959526989046199,
+        "ratio": 0.004011350240282267,
+        "location": [
+          -1.5,
+          0.0,
+          0.0
+        ],
+        "boundary_to_peak": 0.0001698601860659511,
+        "absolute_integral": 1.0
+      },
+      "large": {
+        "t": 4,
+        "peak": 0.0007959055327495541,
+        "ratio": 0.004011112537755826,
+        "location": [
+          -1.5,
+          0.0,
+          0.0
+        ],
+        "boundary_to_peak": 2.3713318034998515e-05,
+        "absolute_integral": 1.0000000000000002
+      },
+      "fine": {
+        "t": 4,
+        "peak": 0.0007875946408664106,
+        "ratio": 0.003969228267247935,
+        "location": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "boundary_to_peak": 2.39636210010196e-05,
+        "absolute_integral": 1.0
+      }
+    }
+  },
+  {
+    "name": "inhomogeneous_unshifted_control",
+    "regime": "inhomogeneous",
+    "sign": 1,
+    "beta": 1.0,
+    "sx": 3.0,
+    "sy": 3.0,
+    "qx": 0.0,
+    "qy": 0.0,
+    "kind": "gaussian",
+    "group": "control",
+    "offset": 1.0,
+    "t": 8,
+    "peak": 0.00039993126035454404,
+    "ratio": 0.004524705699282893,
+    "location": [
+      -2.0,
+      0.0,
+      0.0
+    ],
+    "boundary_to_peak": 0.00024696021594145754,
+    "absolute_integral": 1.0,
+    "domain_change": 2.6740374799632023e-05,
+    "grid_change": 0.011051534743482003,
+    "passes_screen": true,
+    "levels": {
+      "small": {
+        "t": 8,
+        "peak": 0.00039552198225896885,
+        "ratio": 0.004474820412218596,
+        "location": [
+          -1.5,
+          0.0,
+          0.0
+        ],
+        "boundary_to_peak": 0.004586143368959295,
+        "absolute_integral": 1.0
+      },
+      "large": {
+        "t": 8,
+        "peak": 0.00039551140613573125,
+        "ratio": 0.004474700757043237,
+        "location": [
+          -1.5,
+          0.0,
+          0.0
+        ],
+        "boundary_to_peak": 0.0002475656689396478,
+        "absolute_integral": 1.0000000000000002
+      },
+      "fine": {
+        "t": 8,
+        "peak": 0.00039993126035454404,
+        "ratio": 0.004524705699282893,
+        "location": [
+          -2.0,
+          0.0,
+          0.0
+        ],
+        "boundary_to_peak": 0.00024696021594145754,
+        "absolute_integral": 1.0
+      }
+    }
+  },
+  {
+    "name": "inhomogeneous_unshifted_control",
+    "regime": "inhomogeneous",
+    "sign": 1,
+    "beta": 1.0,
+    "sx": 3.0,
+    "sy": 3.0,
+    "qx": 0.0,
+    "qy": 0.0,
+    "kind": "gaussian",
+    "group": "control",
+    "offset": 1.0,
+    "t": 16,
+    "peak": 0.00018423285024032164,
+    "ratio": 0.004679222724457382,
+    "location": [
+      -3.0,
+      0.0,
+      0.0
+    ],
+    "boundary_to_peak": 0.06433371085897253,
+    "absolute_integral": 1.0,
+    "domain_change": 0.00026957711365378263,
+    "grid_change": 8.89727334659384e-11,
+    "passes_screen": true,
+    "levels": {
+      "small": {
+        "t": 16,
+        "peak": 0.0001842825151839335,
+        "ratio": 0.004680484135397149,
+        "location": [
+          -3.0,
+          0.0,
+          0.0
+        ],
+        "boundary_to_peak": 0.21247522046684475,
+        "absolute_integral": 1.0
+      },
+      "large": {
+        "t": 16,
+        "peak": 0.00018423285022392994,
+        "ratio": 0.004679222724041059,
+        "location": [
+          -3.0,
+          0.0,
+          0.0
+        ],
+        "boundary_to_peak": 0.06423163051779056,
+        "absolute_integral": 1.0000000000000002
+      },
+      "fine": {
+        "t": 16,
+        "peak": 0.00018423285024032164,
+        "ratio": 0.004679222724457382,
+        "location": [
+          -3.0,
+          0.0,
+          0.0
+        ],
+        "boundary_to_peak": 0.06433371085897253,
+        "absolute_integral": 1.0
+      }
+    }
+  }
+]

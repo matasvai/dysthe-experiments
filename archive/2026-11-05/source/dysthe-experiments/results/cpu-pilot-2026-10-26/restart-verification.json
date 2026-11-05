@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "model_id": "water-wave-dysthe-spatial-v1",
+  "verified_at_utc": "2026-10-26T16:03:24.293497+00:00",
+  "original_run": "runs/cpu-pilot-2026-10-26",
+  "config": "configs/cpu-pilot.json",
+  "original_training_driver_sha256": "c4fb66a77d130efef61d5855ec6b121b4b0927dbbb31f2dad4db05d6f738c708",
+  "replay_driver_sha256": "3af332cfb4181e4bae0800a5ecaa7efef87527829d67fb002ef23f73abd63730",
+  "driver_change_note": "Current driver adds configuration checks, selected PINN variants, HPC model options, explicit precision settings, and sampled-interval/cost reporting. This verification re-evaluates completed checkpoints; it does not retrain with the original driver or establish equivalence of an interrupted PINN training run.",
+  "dependency_pins": {
+    "dysthe-core": "a47a42321475feb6bc55031f4b752419f4b7fda9",
+    "dysthe-learning": "db7274f8cfe959cf187351f56b3dd4bf89f0e9b4"
+  },
+  "completed_checkpoint_replay": {
+    "status": "passed",
+    "isolated_temporary_copy": true,
+    "original_run_unchanged": true,
+    "stages": [
+      "prepare",
+      "pinns --pinn-variants slabs"
+    ],
+    "device": "cpu",
+    "checkpoint_files_compared": 96,
+    "completed_last_checkpoints": 48,
+    "additional_training_updates": 0,
+    "case_seed_results": 12,
+    "max_existing_metric_difference": 0.0,
+    "checkpoint_bytes_unchanged": true,
+    "history_times_and_residual_audits_unchanged": true,
+    "dataset_and_manifest_unchanged": true,
+    "stage_wall_seconds": {
+      "prepare": 2.656658451000112,
+      "pinns": 3.1745502660005513
+    }
+  },
+  "new_sampled_interval_reporting": {
+    "station_count_per_case": 41,
+    "interval": [
+      0.0,
+      2.0
+    ],
+    "step": 0.05,
+    "tolerances": {
+      "l2": 0.01,
+      "h1": 0.05,
+      "peak": 0.05
+    },
+    "passing_case_seed_results": 12,
+    "worst_errors": {
+      "l2": 0.009792199218475031,
+      "h1": 0.020706940884141958,
+      "peak": 0.010894324396729035
+    },
+    "cases": [
+      {
+        "case_id": "packet-004",
+        "seed": 11,
+        "split": "validation",
+        "sampled_interval_errors": {
+          "l2": 0.009792199218475031,
+          "h1": 0.020706940884141958,
+          "peak": 0.002682570448257167
+        },
+        "sampled_interval_pass": true,
+        "sampled_station_count": 41,
+        "invocation_elapsed_seconds": 0.07270525500007352,
+        "resumed_from_checkpoint": true,
+        "gpu_peak_allocated_bytes": null
+      },
+      {
+        "case_id": "packet-005",
+        "seed": 11,
+        "split": "test",
+        "sampled_interval_errors": {
+          "l2": 0.009409099665504024,
+          "h1": 0.018184686970561317,
+          "peak": 0.0033335490698597594
+        },
+        "sampled_interval_pass": true,
+        "sampled_station_count": 41,
+        "invocation_elapsed_seconds": 0.03223618100037129,
+        "resumed_from_checkpoint": true,
+        "gpu_peak_allocated_bytes": null
+      },
+      {
+        "case_id": "sideband-004",
+        "seed": 11,
+        "split": "validation",
+        "sampled_interval_errors": {
+          "l2": 0.007618293490837402,
+          "h1": 0.013344784120603193,
+          "peak": 0.00825560030494654
+        },
+        "sampled_interval_pass": true,
+        "sampled_station_count": 41,
+        "invocation_elapsed_seconds": 0.03153839200058428,
+        "resumed_from_checkpoint": true,
+        "gpu_peak_allocated_bytes": null
+      },
+      {
+        "case_id": "sideband-005",
+        "seed": 11,
+        "split": "test",
+        "sampled_interval_errors": {
+          "l2": 0.00801818046526666,
+          "h1": 0.015939155419273154,
+          "peak": 0.010894324396729035
+        },
+        "sampled_interval_pass": true,
+        "sampled_station_count": 41,
+        "invocation_elapsed_seconds": 0.0359857399998873,
+        "resumed_from_checkpoint": true,
+        "gpu_peak_allocated_bytes": null
+      },
+      {
+        "case_id": "random-004",
+        "seed": 11,
+        "split": "validation",
+        "sampled_interval_errors": {
+          "l2": 0.006032862570574475,
+          "h1": 0.01159757660844074,
+          "peak": 0.003724490394530167
+        },
+        "sampled_interval_pass": true,
+        "sampled_station_count": 41,
+        "invocation_elapsed_seconds": 0.03370061700024962,
+        "resumed_from_checkpoint": true,
+        "gpu_peak_allocated_bytes": null
+      },
+      {
+        "case_id": "random-005",
+        "seed": 11,
+        "split": "test",
+        "sampled_interval_errors": {
+          "l2": 0.006389445173156029,
+          "h1": 0.011740293667222028,
+          "peak": 0.004291011372695554
+        },
+        "sampled_interval_pass": true,
+        "sampled_station_count": 41,
+        "invocation_elapsed_seconds": 0.029404942999462946,
+        "resumed_from_checkpoint": true,
+        "gpu_peak_allocated_bytes": null
+      },
+      {
+        "case_id": "packet-004",
+        "seed": 29,
+        "split": "validation",
+        "sampled_interval_errors": {
+          "l2": 0.00938540559842263,
+          "h1": 0.01936411512024739,
+          "peak": 0.0034387785084016233
+        },
+        "sampled_interval_pass": true,
+        "sampled_station_count": 41,
+        "invocation_elapsed_seconds": 0.03240882499994768,
+        "resumed_from_checkpoint": true,
+        "gpu_peak_allocated_bytes": null
+      },
+      {
+        "case_id": "packet-005",
+        "seed": 29,
+        "split": "test",
+        "sampled_interval_errors": {
+          "l2": 0.008371998280855199,
+          "h1": 0.018444115997486844,
+          "peak": 0.00415356237167799
+        },
+        "sampled_interval_pass": true,
+        "sampled_station_count": 41,
+        "invocation_elapsed_seconds": 0.032150459999684244,
+        "resumed_from_checkpoint": true,
+        "gpu_peak_allocated_bytes": null
+      },
+      {
+        "case_id": "sideband-004",
+        "seed": 29,
+        "split": "validation",
+        "sampled_interval_errors": {
+          "l2": 0.006420133309307786,
+          "h1": 0.01175110082153476,
+          "peak": 0.004118074223263938
+        },
+        "sampled_interval_pass": true,
+        "sampled_station_count": 41,
+        "invocation_elapsed_seconds": 0.03254673300034483,
+        "resumed_from_checkpoint": true,
+        "gpu_peak_allocated_bytes": null
+      },
+      {
+        "case_id": "sideband-005",
+        "seed": 29,
+        "split": "test",
+        "sampled_interval_errors": {
+          "l2": 0.009629655182493436,
+          "h1": 0.018814046515568634,
+          "peak": 0.010871616034228353
+        },
+        "sampled_interval_pass": true,
+        "sampled_station_count": 41,
+        "invocation_elapsed_seconds": 0.02918088299975352,
+        "resumed_from_checkpoint": true,
+        "gpu_peak_allocated_bytes": null
+      },
+      {
+        "case_id": "random-004",
+        "seed": 29,
+        "split": "validation",
+        "sampled_interval_errors": {
+          "l2": 0.006597366087561208,
+          "h1": 0.01038990579104248,
+          "peak": 0.003262338594776293
+        },
+        "sampled_interval_pass": true,
+        "sampled_station_count": 41,
+        "invocation_elapsed_seconds": 0.029271212999447016,
+        "resumed_from_checkpoint": true,
+        "gpu_peak_allocated_bytes": null
+      },
+      {
+        "case_id": "random-005",
+        "seed": 29,
+        "split": "test",
+        "sampled_interval_errors": {
+          "l2": 0.005536413277493938,
+          "h1": 0.013309706047480696,
+          "peak": 0.002250428747488277
+        },
+        "sampled_interval_pass": true,
+        "sampled_station_count": 41,
+        "invocation_elapsed_seconds": 0.03144061900002271,
+        "resumed_from_checkpoint": true,
+        "gpu_peak_allocated_bytes": null
+      }
+    ]
+  },
+  "focused_tests": {
+    "status": "passed",
+    "count": 6,
+    "command": "python -m unittest discover -s tests -p test_cpu_pilot.py -v",
+    "coverage": [
+      "group split isolation",
+      "scope rejection",
+      "complex phase error",
+      "interior error despite exact endpoints",
+      "plane-wave refinement",
+      "separate synthetic Adam optimizer/RNG next-step bitwise restart"
+    ]
+  },
+  "shell_smoke": {
+    "status": "passed",
+    "syntax": [
+      "bash -n",
+      "embedded Python compile"
+    ],
+    "scheduler": "isolated fake srun; no submission",
+    "dispatched_stages": [
+      [
+        "prepare",
+        "cpu"
+      ],
+      [
+        "pinns",
+        "cuda"
+      ],
+      [
+        "diagnostics",
+        "cpu"
+      ]
+    ],
+    "variant": "slabs",
+    "standalone_pinn_stage": true,
+    "space_paths": true,
+    "rejections": [
+      "no allocation",
+      "job array",
+      "multiple tasks",
+      "concurrent run directory"
+    ]
+  },
+  "provenance_note": "The CLI rewrites environment-cpu.json per invocation and pinn-summary.json for selected variants. Replay ran in a copy; original training metadata and full comparison summaries remain unchanged.",
+  "limitations": [
+    "No GPU or cluster execution; CUDA parity, peak memory and GPU resume remain unmeasured.",
+    "Completed-checkpoint replay does not test recovery after interrupting an actual PINN update. The separate synthetic Adam test checks optimizer and RNG continuation.",
+    "Sampled-interval gates evaluate saved stations only and do not certify between-station error or solution existence.",
+    "Replay invocation seconds describe checkpoint loading and evaluation, not fresh training cost. Shared dataset loading and reference generation are outside the per-case timer."
+  ]
+}

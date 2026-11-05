@@ -1,0 +1,19 @@
+{
+  "t": 256,
+  "alpha": 0.5,
+  "dx": 0.25,
+  "dr": 2,
+  "lengths": [
+    32768,
+    65536,
+    131072
+  ],
+  "radii": [
+    2048,
+    4096
+  ],
+  "peak_tolerance": 0.001,
+  "scope": "same four Gaussian-family cases; finite spatial search, not a certified supremum",
+  "quadrature": "64 k-panels plus cusp split; k=-beta +/- u^2; Gauss-Legendre orders 256 and 512",
+  "wall_seconds_current_invocation": 25.194971588993212
+}

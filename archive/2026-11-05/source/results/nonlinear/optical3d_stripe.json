@@ -1,0 +1,64 @@
+{
+  "name": "optical3d_stripe",
+  "shape": [
+    128,
+    16,
+    16
+  ],
+  "lengths": [
+    40.0,
+    12.566370614359172,
+    12.566370614359172
+  ],
+  "kind": "optical",
+  "epsilon": 0.0,
+  "epsilon1": 1,
+  "epsilon2": 1,
+  "nonlinear": true,
+  "diagnostics": [
+    {
+      "t": 0.0,
+      "mass": 631.6544597659655,
+      "peak": 1.4134569889662405,
+      "spectral_edge_mass": 6.434158674902947e-06,
+      "transverse_fraction": 2.483725641566039e-16,
+      "complex_error": 0.0005927123349877163
+    },
+    {
+      "t": 2.0,
+      "mass": 631.6544635215981,
+      "peak": 1.4131846343173076,
+      "spectral_edge_mass": 6.191361710885809e-06,
+      "transverse_fraction": 1.5691974404449086e-16,
+      "complex_error": 0.0006804053483662776
+    },
+    {
+      "t": 4.0,
+      "mass": 631.6544673089844,
+      "peak": 1.413231522428375,
+      "spectral_edge_mass": 6.283736715675499e-06,
+      "transverse_fraction": 2.767276270832229e-16,
+      "complex_error": 0.0009066746859517274
+    },
+    {
+      "t": 6.0,
+      "mass": 631.6544710960135,
+      "peak": 1.4132503794949935,
+      "spectral_edge_mass": 6.215803570685375e-06,
+      "transverse_fraction": 2.2725432000603405e-16,
+      "complex_error": 0.0011110290067216425
+    },
+    {
+      "t": 8.0,
+      "mass": 631.6544748746245,
+      "peak": 1.4132083291939446,
+      "spectral_edge_mass": 6.206572695060242e-06,
+      "transverse_fraction": 2.1090382469296117e-16,
+      "complex_error": 0.0013792861999163718
+    }
+  ],
+  "dt": 0.02,
+  "T": 8,
+  "perturbation": "none",
+  "full_equation": true
+}
